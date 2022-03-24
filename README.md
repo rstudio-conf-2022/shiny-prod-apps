@@ -37,7 +37,13 @@ LEARNING_OBJECTIVES
 
 ## Is this course for me?
 
-THREE_QUESTIONS
+This workshop will be appropriate for attendees who answer yes to these questions:
+
+- Have you built successful proof-of-concept (POC) Shiny apps and want to take them to the next level for production use?
+
+- Do you want to leverage best practices for integrating your Shiny app with other languages or services?
+
+- Do you want to construct Shiny apps with new functionality either from the vast community of Shiny extensions or building your own customizations?
 
 ## Prework
 
