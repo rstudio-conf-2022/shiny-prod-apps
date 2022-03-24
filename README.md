@@ -33,7 +33,7 @@ This workshop is for the Shiny developer who has entered this stage of their app
 
 ## Learning objectives
 
-LEARNING_OBJECTIVES
+[ADD AN ITEMIZED LIST OF LEARNING OBJECTIVES.]
 
 ## Is this course for me?
 
