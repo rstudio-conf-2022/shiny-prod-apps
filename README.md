@@ -1,4 +1,4 @@
-Building production-quality Shiny applications
+Eric Nantz is a principal research scientist at Eli Lilly and Company, creating innovative analytical pipelines and capabilities for clinical designs and advanced statistical methodologies used in multiple phases of development.  Outside of his day job, Eric is passionate about connecting with and showcasing the brilliant R community in multiple ways. You may recognize his voice from the R-Podcast that he launched in 2012. Eric is also the creator of the Shiny Developer Series where he interviews many authors of Shiny-related packages and practitioners developing innovative applications, as well as sharing his own R and Shiny adventures via livestreams. In addition, Eric is a curator for the RWeekly project and co-host of the RWeekly Highlights podcast which accompanies every issue.uilding production-quality Shiny applications
 ================
 
 ### rstudio::conf 2022
