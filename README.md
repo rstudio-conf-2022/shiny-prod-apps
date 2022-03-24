@@ -3,7 +3,7 @@ Building production-quality Shiny applications
 
 ### rstudio::conf 2022
 
-by INSTRUCTOR_NAME
+by Eric Nantz
 
 -----
 
