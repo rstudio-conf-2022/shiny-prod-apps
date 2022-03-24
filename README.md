@@ -1,4 +1,4 @@
-WORKSHOP_TITLE
+Building production-quality Shiny applications
 ================
 
 ### rstudio::conf 2022
