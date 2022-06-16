@@ -1,0 +1,18 @@
+[
+  {
+    "listing": "/schedule.html",
+    "items": [
+      "/units/d1-01-welcome.html",
+      "/units/d1-01b-break.html",
+      "/units/d1-02b-lunch.html",
+      "/units/d1-03b-break.html",
+      "/units/d2-01b-break.html",
+      "/units/d2-02b-lunch.html",
+      "/units/d2-03b-break.html"
+    ]
+  },
+  {
+    "listing": "/units/d1-01-welcome.html",
+    "items": []
+  }
+]
