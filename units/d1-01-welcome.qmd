@@ -1,0 +1,38 @@
+---
+title: "Welcome!"
+subtitle: "9:00 - 10:30"
+author: "Eric Nantz"
+date: "2022-07-25"
+listing:
+  - id: exercises
+    contents:
+      - ../materials/01-welcome/ex-*.qmd
+    type: table
+    fields: [subtitle, title]
+    field-display-names: 
+      subtitle: "Exercise"
+    sort: [filename]
+    sort-ui: false
+    filter-ui: false
+    image-placeholder: assets/img/placeholder.png
+tbl-colwidths: [5,20,75]
+---
+
+::: callout-warning
+This page is under construction and will be updated continuously until the workshop date.
+:::
+
+## Outline
+
+## Slides
+
+[View slides in full screen](../materials/01-welcome/index.html)
+
+```{=html}
+<iframe class="slide-deck" src="../materials/01-welcome/" height="420" width="747" style="border: 1px solid #2e3846;"></iframe>
+```
+
+## Exercises
+
+::: {#exercises}
+:::

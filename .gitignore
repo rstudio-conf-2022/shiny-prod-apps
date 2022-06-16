@@ -2,3 +2,8 @@
 .Rhistory
 .RData
 .Ruserdata
+prototyping/*
+!prototyping/README.md
+/.quarto/
+.Renviron
+_site/

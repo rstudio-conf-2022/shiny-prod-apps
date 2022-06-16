@@ -1,0 +1,28 @@
+---
+title: "Building Production-Quality Shiny Applications"
+format:
+  html:
+    css: youtube.css
+---
+
+
+🗓️ July 25 and 26, 2022
+
+⏰ 09:00 - 17:00
+
+🏨 {{< var room >}}
+
+✍️ [Click here to register](https://www.rstudio.com/conference/2022/workshops/shiny-prod-apps/)
+
+## Overview 
+
+```{=html}
+<div class="embed-youtube">
+    <iframe src="https://www.youtube.com/embed/5T2sn8tolNo" width="750" height="563"></iframe>
+</div>
+```
+
+<br />
+
+
+Shiny empowers R users to create innovative web applications, without requiring substantial expertise in web development frameworks to get up and running. The positive impact of Shiny in data science workflows across academia and a variety of industries is well-known and growing by the year. It is quite common for an early prototype of a Shiny app to generate tremendous excitement for key stakeholders and decision makers, often leading to requests for enhancements and ultimately be included in a production pipeline or process. The road to meeting this goal is challenging, especially for data scientists and statisticians not accustomed to software development!

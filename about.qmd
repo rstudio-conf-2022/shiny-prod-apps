@@ -1,0 +1,28 @@
+---
+title: "About"
+---
+
+In this two-day course, you'll learn valuable techniques for establishing a solid foundation with dependency management via renv and organizing the code base of your app using modules and package infrastructure. We will also highlight ways to integrate a Shiny app with other services such as APIs and connections to databases since for many production-grade applications, "it's never just Shiny." Throughout the workshop, students will build upon practical Shiny apps inspired by real-life projects illustrating user-interface improvements, efficient reactive programming, streamlined testing of backend and frontend components, intuitive debugging approaches, and more.
+
+This workshop is for the Shiny developer who has entered this stage of their application development journey. The user is ready to learn how essential workflows, best practices, and the expanding community of Shiny-related packages can help them climb the ladder of Shiny development.
+
+
+## Is this course for me ?
+
+This workshop will be appropriate for attendees who answer yes to these questions:
+
+- Have you built successful proof-of-concept (POC) Shiny apps and want to take them to the next level for production use?
+- Do you want to leverage best practices for integrating your Shiny app with other languages or services?
+- Do you want to construct Shiny apps with new functionality either from the vast community of Shiny extensions or building your own customizations?
+
+
+
+
+
+
+
+
+
+
+
+

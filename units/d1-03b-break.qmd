@@ -1,0 +1,9 @@
+---
+title: "Coffee & refreshments break"
+subtitle: "15:00 - 15:30"
+date: "2022-07-25"
+image: "assets/img/break.png"
+image-alt: "Coffee and Break Time"
+---
+
+It's time for a well-deserved break! Coffee and refreshments are served at {{< var break_location >}}. If you have any questions during the break, please discuss with the workshop instructor or a workshop TA.

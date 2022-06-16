@@ -1,0 +1,15 @@
+---
+title: "Lunch Break"
+subtitle: "12:30 - 13:30"
+date: "2022-07-26"
+image: "assets/img/lunch.jpg"
+image-alt: "Lunch time image"
+---
+
+It's time to replenish that Shiny learning energy with a delicious lunch! Before you head over to the {{< var lunch_location> }}, we would greatly appreciate if you take a minute to provide your feedback on how the workshop is going so far:
+
+* Write one positive thing such as a new technique/capability you learned on a green sticky note
+* Write one item that could use improvement, such as a topic going too fast or not clear enough on a pink sticky note. 
+
+Your workshop team is also using this time to re-charge. If you have any questions, please wait to ask until we re-convene for the next unit.
+

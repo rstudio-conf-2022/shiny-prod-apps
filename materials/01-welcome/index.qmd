@@ -1,0 +1,63 @@
+---
+title: "Building Production-Quality Shiny Applications"
+format: 
+  revealjs:
+    theme: [moon] # moon= teal bg  |  dark
+    scrollable: true
+    incremental: true
+    slide-number: c/t # c/t | c | h/v | h.v
+    slide-tone: false #true
+    title-slide-attributes:
+      data-background-image: assets/img/bg/vincentiu-solomon-ln5drpv_ImI-unsplash.jpg
+    
+---
+
+## Hello!
+
+Welcome to making Production Quality Shiny Apps!
+
+![](assets/img/Shiny.png)
+
+## Overview 
+
+1. intro 
+2. breaks
+3. hammer time
+4. deploy it
+
+
+## July 26
+
+- your 
+- world 
+- will 
+- change !
+
+
+
+
+
+## Next day
+
+:::: panel-tabset
+### Deploy App
+
+Learn where to deploy your Shiny app
+
+### Monitor App
+
+Now your app is in the wild, watch over it like a hawk 
+::::
+
+
+## Libraries 
+
+![apps](assets/img/apps.png)
+
+## Timer
+
+```{r}
+#| label: timer
+library(countdown)
+countdown(minutes = 0, seconds = 45)
+```

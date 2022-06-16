@@ -1,0 +1,35 @@
+project:
+  type: website
+  render:
+    - "*.qmd"
+    - "!EDA/"
+    - "!prototyping/"
+website:
+  title: "prod-shiny-workshop"
+  logo: images/shinybrain.png
+  page-navigation: true
+  navbar:
+    background: primary
+    logo: images/Shiny.png
+    #foreground: '#00264d' # primary, secondary, success, danger, warning, info, light, dark
+    left:
+      - href: index.qmd
+        text: Home
+      - about.qmd
+      - href: schedule.qmd
+        text: Schedule
+      - href: resources.qmd
+        text: Resources
+      - href: setup.qmd
+        text: Setup
+
+format:
+  html:
+    theme: 
+      light: flatly
+      dark: darkly
+    #css: styles.css
+    toc: true
+
+# https://quarto.org/docs/output-formats/html-themes.html#dark-mode
+

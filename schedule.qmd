@@ -1,0 +1,51 @@
+---
+title: "Workshop Schedule"
+subtitle: "{{< var room >}}"
+listing:
+  - id: schedule-day1
+    contents:
+      - units/d1-*.qmd
+    type: table
+    fields: [subtitle, title, author]
+    field-display-names: 
+      subtitle: "Time"
+      title: "Module"
+      author: "Presenter"
+    date-format: "MMMM DD YYYY"
+    sort: [filename]
+    sort-ui: false
+    filter-ui: false
+  - id: schedule-day2
+    contents:
+      - units/d2-*.qmd
+    type: table
+    fields: [subtitle, title, author]
+    field-display-names: 
+      subtitle: "Time"
+      title: "Module"
+      author: "Presenter"
+    date-format: "MMMM DD YYYY"
+    sort: [filename]
+    sort-ui: false
+    filter-ui: false
+tbl-colwidths: [20, 50, 25]
+format: html
+---
+
+::: callout-warning
+This page is under construction and will be updated as the materials are posted online. Ordering of topics is subject to change.
+:::
+
+# Day 1
+
+Monday, July 25, 2022
+
+::: {#schedule-day1}
+:::
+
+# Day 2
+
+Tuesday, July 26, 2022
+
+::: {#schedule-day2}
+:::
