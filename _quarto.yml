@@ -7,6 +7,7 @@ project:
 website:
   title: "prod-shiny-workshop"
   logo: images/shinybrain.png
+  site-url: "https://rstudio-conf-2022.github.io/shiny-prod-apps/"
   page-navigation: true
   navbar:
     background: primary
