@@ -6,8 +6,13 @@ project:
     - "!prototyping/"
 website:
   title: "prod-shiny-workshop"
+  description: "Website for the rstudio::conf(2022) workshop on building Production-Quality Shiny Applications"
   logo: images/shinybrain.png
-  site-url: "https://rstudio-conf-2022.github.io/shiny-prod-apps/"
+  favicon: images/favicon.ico
+  site-url: "https://shinyprod.com/"
+  repo-url: "https://github.com/rstudio-conf-2022/shiny-prod-apps"
+  repo-actions: [edit, issue]
+  opengraph: true
   page-navigation: true
   navbar:
     background: primary
@@ -23,6 +28,9 @@ website:
         text: Resources
       - href: setup.qmd
         text: Setup
+  twitter-card:
+    creator: "@theRcast"
+    image: "/images/twitter-card.png"
 
 format:
   html:
