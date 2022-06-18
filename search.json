@@ -28,43 +28,43 @@
     "text": "Overview\n\n    \n\n\nShiny empowers R users to create innovative web applications, without requiring substantial expertise in web development frameworks to get up and running. The positive impact of Shiny in data science workflows across academia and a variety of industries is well-known and growing by the year. It is quite common for an early prototype of a Shiny app to generate tremendous excitement for key stakeholders and decision makers, often leading to requests for enhancements and ultimately be included in a production pipeline or process. The road to meeting this goal is challenging, especially for data scientists and statisticians not accustomed to software development!"
   },
   {
-    "objectID": "materials/01-welcome/index.html#hello",
-    "href": "materials/01-welcome/index.html#hello",
+    "objectID": "materials/d1-01-welcome/index.html#hello",
+    "href": "materials/d1-01-welcome/index.html#hello",
     "title": "Building Production-Quality Shiny Applications",
     "section": "Hello!",
     "text": "Hello!\nWelcome to making Production Quality Shiny Apps!"
   },
   {
-    "objectID": "materials/01-welcome/index.html#overview",
-    "href": "materials/01-welcome/index.html#overview",
+    "objectID": "materials/d1-01-welcome/index.html#overview",
+    "href": "materials/d1-01-welcome/index.html#overview",
     "title": "Building Production-Quality Shiny Applications",
     "section": "Overview",
     "text": "Overview\n\nintro\nbreaks\nhammer time\ndeploy it"
   },
   {
-    "objectID": "materials/01-welcome/index.html#july-26",
-    "href": "materials/01-welcome/index.html#july-26",
+    "objectID": "materials/d1-01-welcome/index.html#july-26",
+    "href": "materials/d1-01-welcome/index.html#july-26",
     "title": "Building Production-Quality Shiny Applications",
     "section": "July 26",
     "text": "July 26\n\nyour\nworld\nwill\nchange !"
   },
   {
-    "objectID": "materials/01-welcome/index.html#next-day",
-    "href": "materials/01-welcome/index.html#next-day",
+    "objectID": "materials/d1-01-welcome/index.html#next-day",
+    "href": "materials/d1-01-welcome/index.html#next-day",
     "title": "Building Production-Quality Shiny Applications",
     "section": "Next day",
     "text": "Next day\n\nDeploy AppMonitor App\n\n\nLearn where to deploy your Shiny app\n\n\nNow your app is in the wild, watch over it like a hawk"
   },
   {
-    "objectID": "materials/01-welcome/index.html#libraries",
-    "href": "materials/01-welcome/index.html#libraries",
+    "objectID": "materials/d1-01-welcome/index.html#libraries",
+    "href": "materials/d1-01-welcome/index.html#libraries",
     "title": "Building Production-Quality Shiny Applications",
     "section": "Libraries",
     "text": "Libraries\n\napps"
   },
   {
-    "objectID": "materials/01-welcome/index.html#timer",
-    "href": "materials/01-welcome/index.html#timer",
+    "objectID": "materials/d1-01-welcome/index.html#timer",
+    "href": "materials/d1-01-welcome/index.html#timer",
     "title": "Building Production-Quality Shiny Applications",
     "section": "Timer",
     "text": "Timer\n\n\n\n00:45"
@@ -81,7 +81,7 @@
     "href": "schedule.html",
     "title": "Workshop Schedule",
     "section": "",
-    "text": "Day 1\nMonday, July 25, 2022\n\n\n\n\n\n\nTime\n\n\nModule\n\n\nPresenter\n\n\n\n\n\n\n9:00 - 10:30\n\n\nWelcome!\n\n\nEric Nantz\n\n\n\n\n10:30 - 11:00\n\n\nCoffee & refreshments break\n\n\n\n\n\n\n12:30 - 13:30\n\n\nLunch break\n\n\n\n\n\n\n15:00 - 15:30\n\n\nCoffee & refreshments break\n\n\n\n\n\n\n\n\nNo matching items\n\n\n\n\nDay 2\nTuesday, July 26, 2022\n\n\n\n\n\n\nTime\n\n\nModule\n\n\nPresenter\n\n\n\n\n\n\n10:30 - 11:00\n\n\nCoffee & refreshments break\n\n\n\n\n\n\n12:30 - 13:30\n\n\nLunch Break\n\n\n\n\n\n\n15:00 - 15:30\n\n\nCoffee & refreshments break\n\n\n\n\n\n\n\n\nNo matching items"
+    "text": "Day 1\nMonday, July 25, 2022\n\n\n\n\n\n\nTime\n\n\nModule\n\n\nPresenter\n\n\n\n\n\n\n9:00 - 10:30\n\n\nWelcome & Reactivity\n\n\nEric Nantz\n\n\n\n\n10:30 - 11:00\n\n\nCoffee & refreshments break\n\n\n\n\n\n\n11:00 - 12:30\n\n\nDesign & User Experience\n\n\nEric Nantz\n\n\n\n\n12:30 - 13:30\n\n\nLunch break\n\n\n\n\n\n\n13:30 - 15:00\n\n\nAll About Modules\n\n\nEric Nantz\n\n\n\n\n15:00 - 15:30\n\n\nCoffee & refreshments break\n\n\n\n\n\n\n15:30 - 17:00\n\n\nDatabases & APIs\n\n\nEric Nantz\n\n\n\n\n\n\nNo matching items\n\n\n\n\nDay 2\nTuesday, July 26, 2022\n\n\n\n\n\n\nTime\n\n\nModule\n\n\nPresenter\n\n\n\n\n\n\n9:00 - 10:30\n\n\nExploring User Patterns\n\n\nEric Nantz\n\n\n\n\n10:30 - 11:00\n\n\nCoffee & refreshments break\n\n\n\n\n\n\n11:00 - 12:30\n\n\nDevelopment Best Practices\n\n\nEric Nantz\n\n\n\n\n12:30 - 13:30\n\n\nLunch Break\n\n\n\n\n\n\n13:30 - 15:00\n\n\nPowerup with RStudio-Connect\n\n\nEric Nantz\n\n\n\n\n15:00 - 15:30\n\n\nCoffee & refreshments break\n\n\n\n\n\n\n15:30 - 17:00\n\n\nTales from the Dev SHop\n\n\nEric Nantz\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "setup.html",
@@ -93,28 +93,28 @@
   {
     "objectID": "units/d1-01-welcome.html",
     "href": "units/d1-01-welcome.html",
-    "title": "Welcome!",
+    "title": "Welcome & Reactivity",
     "section": "",
     "text": "Warning\n\n\n\nThis page is under construction and will be updated continuously until the workshop date."
   },
   {
     "objectID": "units/d1-01-welcome.html#outline",
     "href": "units/d1-01-welcome.html#outline",
-    "title": "Welcome!",
+    "title": "Welcome & Reactivity",
     "section": "Outline",
     "text": "Outline"
   },
   {
     "objectID": "units/d1-01-welcome.html#slides",
     "href": "units/d1-01-welcome.html#slides",
-    "title": "Welcome!",
+    "title": "Welcome & Reactivity",
     "section": "Slides",
     "text": "Slides\nView slides in full screen"
   },
   {
     "objectID": "units/d1-01-welcome.html#exercises",
     "href": "units/d1-01-welcome.html#exercises",
-    "title": "Welcome!",
+    "title": "Welcome & Reactivity",
     "section": "Exercises",
     "text": "Exercises\n\n\n\n\n\n\nExercise\n\n\nTitle\n\n\n\n\n\n\n\n\nNo matching items"
   },
@@ -126,11 +126,67 @@
     "text": "It’s time for a well-deserved break! Coffee and refreshments are served at Break location TBD. If you have any questions during the break, please discuss with the workshop instructor or a workshop TA."
   },
   {
+    "objectID": "units/d1-02-user-experience.html",
+    "href": "units/d1-02-user-experience.html",
+    "title": "Design & User Experience",
+    "section": "",
+    "text": "Warning\n\n\n\nThis page is under construction and will be updated continuously until the workshop date."
+  },
+  {
+    "objectID": "units/d1-02-user-experience.html#outline",
+    "href": "units/d1-02-user-experience.html#outline",
+    "title": "Design & User Experience",
+    "section": "Outline",
+    "text": "Outline"
+  },
+  {
+    "objectID": "units/d1-02-user-experience.html#slides",
+    "href": "units/d1-02-user-experience.html#slides",
+    "title": "Design & User Experience",
+    "section": "Slides",
+    "text": "Slides\nView slides in full screen"
+  },
+  {
+    "objectID": "units/d1-02-user-experience.html#exercises",
+    "href": "units/d1-02-user-experience.html#exercises",
+    "title": "Design & User Experience",
+    "section": "Exercises",
+    "text": "Exercises\n\n\n\n\n\n\nExercise\n\n\nTitle\n\n\n\n\n\n\n\n\nNo matching items"
+  },
+  {
     "objectID": "units/d1-02b-lunch.html",
     "href": "units/d1-02b-lunch.html",
     "title": "Lunch break",
     "section": "",
     "text": "Write one positive thing such as a new technique/capability you learned on a green sticky note\nWrite one item that could use improvement, such as a topic going too fast or not clear enough on a pink sticky note.\n\nYour workshop team is also using this time to re-charge. If you have any questions, please wait to ask until we re-convene for the next unit."
+  },
+  {
+    "objectID": "units/d1-03-modules.html",
+    "href": "units/d1-03-modules.html",
+    "title": "All About Modules",
+    "section": "",
+    "text": "Warning\n\n\n\nThis page is under construction and will be updated continuously until the workshop date."
+  },
+  {
+    "objectID": "units/d1-03-modules.html#outline",
+    "href": "units/d1-03-modules.html#outline",
+    "title": "All About Modules",
+    "section": "Outline",
+    "text": "Outline"
+  },
+  {
+    "objectID": "units/d1-03-modules.html#slides",
+    "href": "units/d1-03-modules.html#slides",
+    "title": "All About Modules",
+    "section": "Slides",
+    "text": "Slides\nView slides in full screen"
+  },
+  {
+    "objectID": "units/d1-03-modules.html#exercises",
+    "href": "units/d1-03-modules.html#exercises",
+    "title": "All About Modules",
+    "section": "Exercises",
+    "text": "Exercises\n\n\n\n\n\n\nExercise\n\n\nTitle\n\n\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "units/d1-03b-break.html",
@@ -140,11 +196,95 @@
     "text": "It’s time for a well-deserved break! Coffee and refreshments are served at Break location TBD. If you have any questions during the break, please discuss with the workshop instructor or a workshop TA."
   },
   {
+    "objectID": "units/d1-04-db-api.html",
+    "href": "units/d1-04-db-api.html",
+    "title": "Databases & APIs",
+    "section": "",
+    "text": "Warning\n\n\n\nThis page is under construction and will be updated continuously until the workshop date."
+  },
+  {
+    "objectID": "units/d1-04-db-api.html#outline",
+    "href": "units/d1-04-db-api.html#outline",
+    "title": "Databases & APIs",
+    "section": "Outline",
+    "text": "Outline"
+  },
+  {
+    "objectID": "units/d1-04-db-api.html#slides",
+    "href": "units/d1-04-db-api.html#slides",
+    "title": "Databases & APIs",
+    "section": "Slides",
+    "text": "Slides\nView slides in full screen"
+  },
+  {
+    "objectID": "units/d1-04-db-api.html#exercises",
+    "href": "units/d1-04-db-api.html#exercises",
+    "title": "Databases & APIs",
+    "section": "Exercises",
+    "text": "Exercises\n\n\n\n\n\n\nExercise\n\n\nTitle\n\n\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "units/d2-01-user-patterns.html",
+    "href": "units/d2-01-user-patterns.html",
+    "title": "Exploring User Patterns",
+    "section": "",
+    "text": "Warning\n\n\n\nThis page is under construction and will be updated continuously until the workshop date."
+  },
+  {
+    "objectID": "units/d2-01-user-patterns.html#outline",
+    "href": "units/d2-01-user-patterns.html#outline",
+    "title": "Exploring User Patterns",
+    "section": "Outline",
+    "text": "Outline"
+  },
+  {
+    "objectID": "units/d2-01-user-patterns.html#slides",
+    "href": "units/d2-01-user-patterns.html#slides",
+    "title": "Exploring User Patterns",
+    "section": "Slides",
+    "text": "Slides\nView slides in full screen"
+  },
+  {
+    "objectID": "units/d2-01-user-patterns.html#exercises",
+    "href": "units/d2-01-user-patterns.html#exercises",
+    "title": "Exploring User Patterns",
+    "section": "Exercises",
+    "text": "Exercises\n\n\n\n\n\n\nExercise\n\n\nTitle\n\n\n\n\n\n\n\n\nNo matching items"
+  },
+  {
     "objectID": "units/d2-01b-break.html",
     "href": "units/d2-01b-break.html",
     "title": "Coffee & refreshments break",
     "section": "",
     "text": "It’s time for a well-deserved break! Coffee and refreshments are served at Break location TBD. If you have any questions during the break, please discuss with the workshop instructor or a workshop TA."
+  },
+  {
+    "objectID": "units/d2-02-dev-best-practices.html",
+    "href": "units/d2-02-dev-best-practices.html",
+    "title": "Development Best Practices",
+    "section": "",
+    "text": "Warning\n\n\n\nThis page is under construction and will be updated continuously until the workshop date."
+  },
+  {
+    "objectID": "units/d2-02-dev-best-practices.html#outline",
+    "href": "units/d2-02-dev-best-practices.html#outline",
+    "title": "Development Best Practices",
+    "section": "Outline",
+    "text": "Outline"
+  },
+  {
+    "objectID": "units/d2-02-dev-best-practices.html#slides",
+    "href": "units/d2-02-dev-best-practices.html#slides",
+    "title": "Development Best Practices",
+    "section": "Slides",
+    "text": "Slides\nView slides in full screen"
+  },
+  {
+    "objectID": "units/d2-02-dev-best-practices.html#exercises",
+    "href": "units/d2-02-dev-best-practices.html#exercises",
+    "title": "Development Best Practices",
+    "section": "Exercises",
+    "text": "Exercises\n\n\n\n\n\n\nExercise\n\n\nTitle\n\n\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "units/d2-02b-lunch.html",
@@ -154,10 +294,66 @@
     "text": "Write one positive thing such as a new technique/capability you learned on a green sticky note\nWrite one item that could use improvement, such as a topic going too fast or not clear enough on a pink sticky note.\n\nYour workshop team is also using this time to re-charge. If you have any questions, please wait to ask until we re-convene for the next unit."
   },
   {
+    "objectID": "units/d2-03-rsconnect.html",
+    "href": "units/d2-03-rsconnect.html",
+    "title": "Powerup with RStudio-Connect",
+    "section": "",
+    "text": "Warning\n\n\n\nThis page is under construction and will be updated continuously until the workshop date."
+  },
+  {
+    "objectID": "units/d2-03-rsconnect.html#outline",
+    "href": "units/d2-03-rsconnect.html#outline",
+    "title": "Powerup with RStudio-Connect",
+    "section": "Outline",
+    "text": "Outline"
+  },
+  {
+    "objectID": "units/d2-03-rsconnect.html#slides",
+    "href": "units/d2-03-rsconnect.html#slides",
+    "title": "Powerup with RStudio-Connect",
+    "section": "Slides",
+    "text": "Slides\nView slides in full screen"
+  },
+  {
+    "objectID": "units/d2-03-rsconnect.html#exercises",
+    "href": "units/d2-03-rsconnect.html#exercises",
+    "title": "Powerup with RStudio-Connect",
+    "section": "Exercises",
+    "text": "Exercises\n\n\n\n\n\n\nExercise\n\n\nTitle\n\n\n\n\n\n\n\n\nNo matching items"
+  },
+  {
     "objectID": "units/d2-03b-break.html",
     "href": "units/d2-03b-break.html",
     "title": "Coffee & refreshments break",
     "section": "",
     "text": "It’s time for a well-deserved break! Coffee and refreshments are served at Break location TBD. If you have any questions during the break, please discuss with the workshop instructor or a workshop TA."
+  },
+  {
+    "objectID": "units/d2-04-storytime.html",
+    "href": "units/d2-04-storytime.html",
+    "title": "Tales from the Dev SHop",
+    "section": "",
+    "text": "Warning\n\n\n\nThis page is under construction and will be updated continuously until the workshop date."
+  },
+  {
+    "objectID": "units/d2-04-storytime.html#outline",
+    "href": "units/d2-04-storytime.html#outline",
+    "title": "Tales from the Dev SHop",
+    "section": "Outline",
+    "text": "Outline"
+  },
+  {
+    "objectID": "units/d2-04-storytime.html#slides",
+    "href": "units/d2-04-storytime.html#slides",
+    "title": "Tales from the Dev SHop",
+    "section": "Slides",
+    "text": "Slides\nView slides in full screen"
+  },
+  {
+    "objectID": "units/d2-04-storytime.html#exercises",
+    "href": "units/d2-04-storytime.html#exercises",
+    "title": "Tales from the Dev SHop",
+    "section": "Exercises",
+    "text": "Exercises\n\n\n\n\n\n\nExercise\n\n\nTitle\n\n\n\n\n\n\n\n\nNo matching items"
   }
 ]
