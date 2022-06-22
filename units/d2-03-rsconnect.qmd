@@ -1,12 +1,12 @@
 ---
-title: "Welcome & Reactivity"
-subtitle: "9:00 - 10:30"
+title: "Powerup with RStudio-Connect"
+subtitle: "13:30 - 15:00"
 author: "Eric Nantz"
-date: "2022-07-25"
+date: "2022-07-26"
 listing:
   - id: exercises
     contents:
-      - ../materials/d1-01-welcome/ex-*.qmd
+      - ../materials/d2-03-rsconnect/ex-*.qmd
     type: table
     fields: [subtitle, title]
     field-display-names: 
@@ -26,10 +26,10 @@ This page is under construction and will be updated continuously until the works
 
 ## Slides
 
-[View slides in full screen](../materials/d1-01-welcome/index.html)
+[View slides in full screen](../materials/d2-03-rsconnect/index.html)
 
 ```{=html}
-<iframe class="slide-deck" src="../materials/d1-01-welcome/" height="420" width="747" style="border: 1px solid #2e3846;"></iframe>
+<iframe class="slide-deck" src="../materials/d2-03-rsconnect/" height="420" width="747" style="border: 1px solid #2e3846;"></iframe>
 ```
 
 ## Exercises
