@@ -1,9 +1,121 @@
 ---
 title: "Resources for Building Production-Quality Shiny Applications"
-format: html
+format:
+  html:
+    page-layout: full
+execute:
+  echo: false
+  message: false
+  warning: false
 ---
+
+```{r}
+#| label: setup
+library(pins)
+library(reactable)
+library(htmltools)
+library(dplyr)
+
+# register board for pins package
+board <- board_s3(
+  bucket = "shinyworkshop-pinboard",
+  prefix = "data_dictionary/",
+  versioned = TRUE,
+  access_key = Sys.getenv("AWS_ACCESS_KEY_ID"),
+  secret_access_key = Sys.getenv("AWS_SECRET_ACCESS_KEY_ID"),
+  region = Sys.getenv("AWS_REGION")
+)
+
+df <- board %>% pin_read("dictionary_list")
+df_names <- names(df)
+
+df <- purrr::map2(df, df_names, ~{
+  subdf <- mutate(.x, dataset = .y)
+  tibble::as_tibble(subdf)
+})
+
+df_all <- dplyr::bind_rows(df) %>%
+  distinct() %>%
+  arrange(dataset, variable)
+```
+
 
 ::: callout-warning
 This page is under construction and will be updated as the materials are posted online.
 :::
+
+## Workshop Data Guide
+
+Throughout this workshop, each of the exercises and live-coding sessions will utilize data from the [Metropolitan Museum of Art](https://www.metmuseum.org){target="_blank"}, otherwise known as the MET, located in New York, United States. The museum offers data sets associated with the art and objects hosted in the museum via their public [API](https://metmuseum.github.io){target="_blank"}. Additional metadata associated with each image of the art piece or object was also generated using the [Google Vision API](https://cloud.google.com/vision){target="_blank"}, and in particular the following methods:
+
+* [Label detection](https://cloud.google.com/vision/docs/labels){target="_blank"}: Detect and extract information about entities in an image across a broad group of categories.
+* [Object annotation](https://cloud.google.com/vision/docs/object-localizer){target="_blank"}: Detect and extract information about multiple objects in an image.
+* [Image properties](https://cloud.google.com/vision/docs/detecting-properties){target="_blank"}: Detect color attributes of an image.
+* [Crop hints](https://cloud.google.com/vision/docs/detecting-crop-hints){target="_blank"}: Obtain vertices of a cropped region for an image.
+
+```{r}
+#| label: art-metadata
+#| eval: true
+tagList(
+  div(
+    div(tags$label("Dataset Filter", `for` = "art-type-filter")),
+    tags$select(
+      id = "art-type-filter",
+      onchange = "Reactable.setFilter('art-filter-table', 'dataset', this.value)",
+      tags$option("All", value = ""),
+      lapply(unique(df_all$dataset), tags$option)
+    )
+  ),
+  
+  tags$hr("aria-hidden" = "false"),
+
+  reactable(
+    df_all,
+    columns = list(
+      variable = colDef(
+        name = "Variable",
+        minWidth = 200,
+        cell = function(value, index) {
+          type <- df_all$type[index]
+          div(
+            div(style = list(fontweight = 500), value),
+            div(style = list(fontSize = "0.75rem"), type)
+          )
+        }
+      ),
+      type = colDef(show = FALSE),
+      description = colDef(minWidth = 400),
+      dataset = colDef(show = FALSE),
+      example = colDef(minWidth = 300)
+    ),
+    defaultPageSize = 10, 
+    elementId = "art-filter-table")
+)
+
+```
+
+```{r}
+#| label: test
+#| eval: false
+
+library(htmltools)
+
+data <- MASS::Cars93[1:15, c("Manufacturer", "Model", "Type", "Price")]
+
+  tagList(
+    div(
+      div(tags$label("Filter Type", `for` = "cars-type-filter")),
+      tags$select(
+        id = "cars-type-filter",
+        onchange = "Reactable.setFilter('cars-filter-table', 'Type', this.value)",
+        tags$option("All", value = ""),
+        lapply(unique(data$Type), tags$option)
+      )
+    ),
+    
+    tags$hr("aria-hidden" = "false"),
+
+    reactable(data, defaultPageSize = 5, elementId = "cars-filter-table")
+  )
+```
 

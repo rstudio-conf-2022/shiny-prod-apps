@@ -1,0 +1,3 @@
+AWS_ACCESS_KEY_ID="changeme"
+AWS_SECRET_ACCESS_KEY_ID="changemeagain"
+AWS_REGION="us-east-2"
