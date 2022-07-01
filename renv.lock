@@ -37,7 +37,7 @@
       "Package": "MASS",
       "Version": "7.3-55",
       "Source": "Repository",
-      "Repository": "CRAN",
+      "Repository": "RSPM",
       "Hash": "c5232ffb549f6d7a04a152c34ca1353d",
       "Requirements": []
     },
@@ -45,7 +45,7 @@
       "Package": "Matrix",
       "Version": "1.4-0",
       "Source": "Repository",
-      "Repository": "CRAN",
+      "Repository": "RSPM",
       "Hash": "130c0caba175739d98f2963c6a407cf6",
       "Requirements": [
         "lattice"
@@ -161,6 +161,23 @@
       "Requirements": [
         "BH",
         "Rcpp"
+      ]
+    },
+    "arrow": {
+      "Package": "arrow",
+      "Version": "8.0.0",
+      "Source": "Repository",
+      "Repository": "RSPM",
+      "Hash": "58b7ef7a5c997e324767b86ae0bb0896",
+      "Requirements": [
+        "R6",
+        "assertthat",
+        "bit64",
+        "cpp11",
+        "purrr",
+        "rlang",
+        "tidyselect",
+        "vctrs"
       ]
     },
     "askpass": {
@@ -622,6 +639,14 @@
       "Source": "Repository",
       "Repository": "RSPM",
       "Hash": "77bd60a6157420d4ffa93b27cf6a58b8",
+      "Requirements": []
+    },
+    "filelock": {
+      "Package": "filelock",
+      "Version": "1.0.2",
+      "Source": "Repository",
+      "Repository": "RSPM",
+      "Hash": "38ec653c2613bed60052ba3787bd8a2c",
       "Requirements": []
     },
     "fontawesome": {
@@ -1099,7 +1124,7 @@
       "Package": "mgcv",
       "Version": "1.8-39",
       "Source": "Repository",
-      "Repository": "CRAN",
+      "Repository": "RSPM",
       "Hash": "055265005c238024e306fe0b600c89ff",
       "Requirements": [
         "Matrix",
@@ -1142,7 +1167,7 @@
       "Package": "nlme",
       "Version": "3.1-155",
       "Source": "Repository",
-      "Repository": "CRAN",
+      "Repository": "RSPM",
       "Hash": "74ad940dccc9e977189a5afe5fcdb7ba",
       "Requirements": [
         "lattice"
@@ -1174,6 +1199,30 @@
       "Hash": "022489ebce2ef2438db4583fae118240",
       "Requirements": []
     },
+    "paws.common": {
+      "Package": "paws.common",
+      "Version": "0.3.17",
+      "Source": "Repository",
+      "Repository": "RSPM",
+      "Hash": "5e4560e5d04ecef2c8975b7afd933b49",
+      "Requirements": [
+        "base64enc",
+        "digest",
+        "httr",
+        "jsonlite",
+        "xml2"
+      ]
+    },
+    "paws.storage": {
+      "Package": "paws.storage",
+      "Version": "0.1.12",
+      "Source": "Repository",
+      "Repository": "RSPM",
+      "Hash": "533b13818105b2cff51ae444070e62f6",
+      "Requirements": [
+        "paws.common"
+      ]
+    },
     "pillar": {
       "Package": "pillar",
       "Version": "1.7.0",
@@ -1190,6 +1239,35 @@
         "rlang",
         "utf8",
         "vctrs"
+      ]
+    },
+    "pins": {
+      "Package": "pins",
+      "Version": "1.0.1",
+      "Source": "Repository",
+      "Repository": "RSPM",
+      "Hash": "895dab97fa344ed6946bbeb4effb3810",
+      "Requirements": [
+        "arrow",
+        "cli",
+        "digest",
+        "ellipsis",
+        "filelock",
+        "fs",
+        "glue",
+        "httr",
+        "jsonlite",
+        "lifecycle",
+        "magrittr",
+        "mime",
+        "openssl",
+        "rappdirs",
+        "rlang",
+        "tibble",
+        "whisker",
+        "withr",
+        "yaml",
+        "zip"
       ]
     },
     "pkgconfig": {
@@ -2036,6 +2114,14 @@
       "Source": "Repository",
       "Repository": "RSPM",
       "Hash": "458bb38374d73bf83b1bb85e353da200",
+      "Requirements": []
+    },
+    "zip": {
+      "Package": "zip",
+      "Version": "2.2.0",
+      "Source": "Repository",
+      "Repository": "RSPM",
+      "Hash": "c7eef2996ac270a18c2715c997a727c5",
       "Requirements": []
     },
     "zoo": {

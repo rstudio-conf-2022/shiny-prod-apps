@@ -36,6 +36,9 @@ library(withr)
 library(fs)
 library(reactlog)
 library(dbplot)
+library(pins)
+library(paws.storage)
+library(reactable)
 
 ## GitHub (dev) packages
 # renv::install("rstudio/connectapi")
