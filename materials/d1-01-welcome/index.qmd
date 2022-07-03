@@ -11,6 +11,7 @@ format:
     incremental: true
     slide-number: c/t # c/t | c | h/v | h.v
     slide-tone: false #true
+    code-line-numbers: false
     #title-slide-attributes:
       #data-background-image: assets/img/bg/vincentiu-solomon-ln5drpv_ImI-unsplash.jpg
     
@@ -192,6 +193,19 @@ Add mini slide-show on side with a few example images
 :::
 
 # Reactivity Primer
+
+## The `reactive`
+
+
+```r
+current_image_df <- reactive({
+  dplyr::filter(art_random, department == input$dept)
+})
+```
+
+## Rendering a reactivelog
+
+
 
 ## Overview 
 
