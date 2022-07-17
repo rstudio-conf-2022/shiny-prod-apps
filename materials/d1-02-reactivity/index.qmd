@@ -11,6 +11,7 @@ format:
     slide-number: c/t # c/t | c | h/v | h.v
     slide-tone: false #true
     code-line-numbers: false
+    history: false
     #title-slide-attributes:
       #data-background-image: assets/img/bg/vincentiu-solomon-ln5drpv_ImI-unsplash.jpg
     

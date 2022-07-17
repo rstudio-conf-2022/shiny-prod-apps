@@ -13,6 +13,7 @@ format:
     slide-tone: false #true
     code-line-numbers: true
     chalkboard: true
+    history: false
     #title-slide-attributes:
       #data-background-image: assets/img/bg/vincentiu-solomon-ln5drpv_ImI-unsplash.jpg
     
