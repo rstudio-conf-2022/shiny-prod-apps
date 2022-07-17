@@ -28,6 +28,13 @@ website:
         text: Resources
       - href: setup.qmd
         text: Setup
+    right:
+      - href: "https://github.com/rstudio-conf-2022/shiny-prod-apps"
+        icon: "github"
+        aria-label: "GitHub Repository at github.com/rstudio-conf-2022/shiny-prod-apps"
+      - href: "https://github.com/rpodcast/shinyprod"
+        icon: "box"
+        aria-label: "Workshop package repository at github.com/rpodcast/shinyprod"
   twitter-card:
     creator: "@theRcast"
     image: "/images/twitter-card.png"
