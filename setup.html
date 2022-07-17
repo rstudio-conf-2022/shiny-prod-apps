@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-0.9.612">
+<meta name="generator" content="quarto-1.0.28">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -35,8 +35,8 @@ ul.task-list{list-style: none;}
 <link href="site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-text-highlighting-styles">
 <script src="site_libs/bootstrap/bootstrap.min.js"></script>
 <link href="site_libs/bootstrap/bootstrap-icons.css" rel="stylesheet">
-<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme">
-<link href="site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate">
+<link href="site_libs/bootstrap/bootstrap.min.css" rel="stylesheet" class="quarto-color-scheme" id="quarto-bootstrap" data-mode="light">
+<link href="site_libs/bootstrap/bootstrap-dark.min.css" rel="prefetch" class="quarto-color-scheme quarto-color-alternate" id="quarto-bootstrap" data-mode="dark">
 <script id="quarto-search-options" type="application/json">{
   "location": "navbar",
   "copy-button": false,
@@ -59,7 +59,7 @@ ul.task-list{list-style: none;}
 
 
 <meta name="twitter:title" content="prod-shiny-workshop - Setup">
-<meta name="twitter:description" content="We are excited to have you join us for our two-day workshop on building production-quality Shiny applications!">
+<meta name="twitter:description" content="We are excited to have you join us for our two-day workshop Building Production-Quality Shiny Applications!">
 <meta name="twitter:image" content="https://shinyprod.com//images/twitter-card.png">
 <meta name="twitter:creator" content="@theRcast">
 <meta name="twitter:image-height" content="675">
@@ -115,9 +115,14 @@ ul.task-list{list-style: none;}
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#logistics" id="toc-logistics" class="nav-link active" data-scroll-target="#logistics">Logistics</a></li>
-  <li><a href="#assumptions" id="toc-assumptions" class="nav-link" data-scroll-target="#assumptions">Assumptions</a></li>
+  <li><a href="#assumptions" id="toc-assumptions" class="nav-link active" data-scroll-target="#assumptions">Assumptions</a></li>
+  <li><a href="#logistics" id="toc-logistics" class="nav-link" data-scroll-target="#logistics">Logistics</a></li>
+  <li><a href="#pre-work" id="toc-pre-work" class="nav-link" data-scroll-target="#pre-work">Pre-Work</a>
+  <ul class="collapse">
+  <li><a href="#accounts" id="toc-accounts" class="nav-link" data-scroll-target="#accounts">Accounts</a></li>
+  <li><a href="#environment-configuration" id="toc-environment-configuration" class="nav-link" data-scroll-target="#environment-configuration">Environment Configuration</a></li>
   <li><a href="#setup-and-requirements" id="toc-setup-and-requirements" class="nav-link" data-scroll-target="#setup-and-requirements">Setup and Requirements</a></li>
+  </ul></li>
   </ul>
 <div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/rstudio-conf-2022/shiny-prod-apps/edit/main/setup.qmd" class="toc-action">Edit this page</a></p><p><a href="https://github.com/rstudio-conf-2022/shiny-prod-apps/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
     </div>
@@ -140,14 +145,45 @@ ul.task-list{list-style: none;}
 
 </header>
 
-<p>We are excited to have you join us for our two-day workshop on building production-quality Shiny applications! The format of the workshop will be a mix of presentation slides, example Shiny applications, and hands-on exercises. To ensure you are ready for the journey, please review the following logistics and instructions:</p>
+<p>We are excited to have you join us for our two-day workshop <strong>Building Production-Quality Shiny Applications</strong>! The format of the workshop will be a mix of presentation slides, example Shiny applications, and hands-on exercises. To ensure you are ready for the journey, please review the following logistics and instructions:</p>
+<section id="assumptions" class="level3">
+<h3 class="anchored" data-anchor-id="assumptions">Assumptions</h3>
+<p>This workshop assumes you have intermediate knowledge of Shiny application development. Specifically, that you have basic familiarity with binding inputs to outputs and application layout. If you consider yourself a beginner with Shiny, the material in this workshop may be difficult to follow during the two days. If you intended to enroll in a workshop geared towards an introduction to Shiny, please contact RStudio to see if you can switch to the <strong>Getting Started with Shiny</strong> workshop led by Colin Rundel.</p>
+<p>Although Shiny is certainly the main focus of this workshop, we will be leveraging other capabilities of R in the materials and example applications:</p>
+<ul>
+<li>We will be using packages from the <a href="https://www.tidyverse.org/">tidyverse</a> to assist with data munging and processing. The majority of example code and exercises will provide the necessary code, but if you wish to make modifications we recommend <a href="https://r4ds.had.co.nz/">R for Data Science</a> as a great reference for becoming familiar with the tidyverse.</li>
+<li>In certain situations the Shiny applications we create will leverage APIs deployed via the <a href="https://www.rplumber.io/"><code>{plumber}</code></a> package. You won’t be expected to create APIs from scratch in the workshop, but you are welcome to visit the package website to learn more about how APIs are created with plumber. To invoke the APIs from Shiny, we will leverage the <a href="https://httr2.r-lib.org/"><code>{httr2}</code></a> package.</li>
+</ul>
+</section>
 <section id="logistics" class="level3">
 <h3 class="anchored" data-anchor-id="logistics">Logistics</h3>
 <p>Each day of the workshop will start at 9 AM and end at 5 PM, with multiple coffee breaks and a lunch break throughout. I will be presenting the majority of the content, but we have an amazing collection of five teaching assistants ready to assist with any technical issues or questions. All materials for the course will be viewable online at <a href="https://shinyprod.com">shinyprod.com</a> and hosted on GitHub at <a href="https://github.com/rstudio-conf-2022/shiny-prod-apps">github.com/rstudio-conf-2022/shiny-prod-apps</a>. We also have a <a href="https://github.com/rstudio-conf-2022/shiny-prod-apps/discussions">discussion board</a> within the GitHub repository available for collaboration on questions and issues. Also, be aware that the workshop materials are in active development, so please check back to the site and GitHub repository regularly before the workshop. We plan on sending additional emails as we get closer to the workshop dates.</p>
 </section>
-<section id="assumptions" class="level3">
-<h3 class="anchored" data-anchor-id="assumptions">Assumptions</h3>
-<p>This workshop assumes you have intermediate knowledge of Shiny application development. Specifically, that you have familiarity with the concepts of reactivity and binding inputs to outputs. If you consider yourself a beginner with Shiny, the material in this workshop may be difficult to follow during the two days. If you intended to enroll in a workshop geared towards an introduction to Shiny, please contact RStudio to see if you can switch to the <strong>Getting Started with Shiny</strong> workshop led by Colin Rundel.</p>
+<section id="pre-work" class="level2">
+<h2 class="anchored" data-anchor-id="pre-work">Pre-Work</h2>
+<p>This workshop will be a blend of teaching materials, live-coding demonstrations, and hands-on exercises to practice key concepts. RStudio has generously provided us access to a dedicated workshop coding environment using <a href="https://rstudio.cloud">RStudio Cloud</a>, which is accessible with a modern web browser such as Google Chrome, Microsoft Edge, Firefox, or others. In addition, RStudio is also providing a dedicated instance of the <strong>RStudio Connect</strong> platform ((URL Forthcoming)) for hosting Shiny applications that you create and view throughout the workshop.</p>
+<p>To leverage these platforms as well as other capabilities, please ensure you have the following established prior to the conference:</p>
+<section id="accounts" class="level3">
+<h3 class="anchored" data-anchor-id="accounts">Accounts</h3>
+<ul>
+<li>GitHub account: You can create a GitHub account for free using the instructions provided in the <a href="https://happygitwithr.com/github-acct.html#github-acct">Register for GitHub</a> chapter of Jenny Bryan’s <a href="https://happygitwithr.com/index.html">Happy Git and GitHub for the UseR</a>. If you already have an acount, you are welcome to use it for the workshop.</li>
+<li>RStudio Cloud account: Visit <a href="https://rstudio.cloud">rstudio.cloud</a> and click the Sign Up link. Then create a <strong>Free</strong> account. If you already have an account, you do not need to create a new one.</li>
+</ul>
+</section>
+<section id="environment-configuration" class="level3">
+<h3 class="anchored" data-anchor-id="environment-configuration">Environment Configuration</h3>
+<p>In the first session of the workshop, we will provide you with the instructions for connecting to the workshop environment within RStudio Cloud and the workshop RStudio Connect server. You can view the steps in the screencasts below, or view the written instructions.</p>
+<div class="panel-tabset">
+<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true">RStudio Connect Account &amp; API Key</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false">Integrating RStudio Connect &amp; RStudio Cloud</a></li></ul>
+<div class="tab-content">
+<div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
+<p>something</p>
+</div>
+<div id="tabset-1-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-2-tab">
+<p>else</p>
+</div>
+</div>
+</div>
 </section>
 <section id="setup-and-requirements" class="level3">
 <h3 class="anchored" data-anchor-id="setup-and-requirements">Setup and Requirements</h3>
@@ -164,10 +200,29 @@ ul.task-list{list-style: none;}
 
 
 </section>
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">
 window.document.addEventListener("DOMContentLoaded", function (event) {
+  const toggleBodyColorMode = (bsSheetEl) => {
+    const mode = bsSheetEl.getAttribute("data-mode");
+    const bodyEl = window.document.querySelector("body");
+    if (mode === "dark") {
+      bodyEl.classList.add("quarto-dark");
+      bodyEl.classList.remove("quarto-light");
+    } else {
+      bodyEl.classList.add("quarto-light");
+      bodyEl.classList.remove("quarto-dark");
+    }
+  }
+  const toggleBodyColorPrimary = () => {
+    const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+    if (bsSheetEl) {
+      toggleBodyColorMode(bsSheetEl);
+    }
+  }
+  toggleBodyColorPrimary();  
   const disableStylesheet = (stylesheets) => {
     for (let i=0; i < stylesheets.length; i++) {
       const stylesheet = stylesheets[i];
@@ -197,8 +252,14 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
     manageTransitions('#quarto-margin-sidebar .nav-link', false);
     if (alternate) {
       enableStylesheet(alternateStylesheets);
+      for (const sheetNode of alternateStylesheets) {
+        if (sheetNode.id === "quarto-bootstrap") {
+          toggleBodyColorMode(sheetNode);
+        }
+      }
     } else {
       disableStylesheet(alternateStylesheets);
+      toggleBodyColorPrimary();
     }
     manageTransitions('#quarto-margin-sidebar .nav-link', true);
     // Switch the toggles
@@ -340,6 +401,20 @@ window.document.addEventListener("DOMContentLoaded", function (event) {
       return popup.innerHTML;
     });
   }
+    var localhostRegex = new RegExp(/^(?:http|https):\/\/localhost\:?[0-9]*\//);
+      var filterRegex = new RegExp(/https:\/\/shinyprod\.com\//);
+    var isInternal = (href) => {
+        return filterRegex.test(href) || localhostRegex.test(href);
+    }
+    // Inspect non-navigation links and adorn them if external
+    var links = window.document.querySelectorAll('a:not(.nav-link):not(.navbar-brand):not(.toc-action):not(.sidebar-link):not(.sidebar-item-toggle):not(.pagination-link):not(.no-external)');
+    for (var i=0; i<links.length; i++) {
+      const link = links[i];
+      if (!isInternal(link.href)) {
+          // target, if specified
+          link.setAttribute("target", "_blank");
+      }
+    }
 });
 </script>
 </div> <!-- /content -->

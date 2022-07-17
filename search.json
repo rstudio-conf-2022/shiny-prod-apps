@@ -28,137 +28,529 @@
     "text": "Overview\n\n    \n\n\nShiny empowers R users to create innovative web applications, without requiring substantial expertise in web development frameworks to get up and running. The positive impact of Shiny in data science workflows across academia and a variety of industries is well-known and growing by the year. It is quite common for an early prototype of a Shiny app to generate tremendous excitement for key stakeholders and decision makers, often leading to requests for enhancements and ultimately be included in a production pipeline or process. The road to meeting this goal is challenging, especially for data scientists and statisticians not accustomed to software development!"
   },
   {
-    "objectID": "materials/d1-01-welcome/index.html#hello",
-    "href": "materials/d1-01-welcome/index.html#hello",
+    "objectID": "index.html#prework-setup",
+    "href": "index.html#prework-setup",
     "title": "Building Production-Quality Shiny Applications",
-    "section": "Hello!",
-    "text": "Hello!\nWelcome to making Production Quality Shiny Apps!"
+    "section": "Prework & Setup",
+    "text": "Prework & Setup\nYou can find complete details on the required pre-work and setup instructions at the setup tab."
+  },
+  {
+    "objectID": "index.html#meet-the-workshop-team",
+    "href": "index.html#meet-the-workshop-team",
+    "title": "Building Production-Quality Shiny Applications",
+    "section": "Meet the Workshop Team",
+    "text": "Meet the Workshop Team\n\nInstructor\n Eric Nantz is a director within the statistical innovation center at Eli Lilly and Company, creating analytical pipelines and capabilities of advanced statistical methodologies for clinical design used in multiple phases of development. Outside of his day job, Eric is passionate about connecting with and showcasing the brilliant R community in multiple ways. You may recognize his voice from the R-Podcast that he launched in 2012. Eric is also the creator of the Shiny Developer Series where he interviews authors of Shiny-related packages and practitioners developing applications, as well as sharing his own R and Shiny adventures via livestreams on his Twitch channel. In addition, Eric is a curator for the RWeekly project and co-host of the RWeekly Highlights podcast which accompanies every issue.\n\n\nTeaching Assistants\n\nTanya Cashorali is the founder of TCB Analytics, a boutique data and analytics consultancy. After graduating from Northeastern University with dual Computer Science and Biology degrees, Tanya started her career in the data-rich field of bioinformatics in the early 2000s. The next decade of Tanya’s career included more commercial use cases for data science and analytics. Tanya also hosts a world-wide community network of over 500 data enthusiasts, has helped universities launch data science programs, and is a frequent speaker at tech conferences.\n\nIan Dinnie’s background is in social science. Prior to joining RStudio’s customer success team, Ian worked for a non-profit economic and public policy consulting company based in Massachusetts, where he worked on projects primarily regarding economic impact analysis, demography, and housing policy. During his time there, he developed a shiny app that displayed enrollment projections for the state’s public universities and community colleges.\n\nAaron Jacobs biography forthcoming. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam pharetra dui sit amet est volutpat efficitur ut et tortor. Nam in metus ligula. Aliquam pellentesque finibus ligula quis dignissim. Vestibulum at erat a enim tincidunt elementum. Phasellus ornare velit nec lorem varius rutrum. In scelerisque lectus vitae elit blandit, ut finibus dui aliquam. Morbi sit amet blandit dolor. Praesent cursus magna eu ligula faucibus fermentum. Curabitur condimentum neque a orci imperdiet egestas. Duis venenatis, erat et fringilla tincidunt, sapien elit dictum risus, vel tincidunt sapien magna et libero. Donec vel ultricies nunc, ut porttitor elit. Mauris vitae libero consequat, ultrices lectus quis, pharetra mauris. Quisque eget condimentum nisi.\n\nDerrick Kearney biography forthcoming. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam pharetra dui sit amet est volutpat efficitur ut et tortor. Nam in metus ligula. Aliquam pellentesque finibus ligula quis dignissim. Vestibulum at erat a enim tincidunt elementum. Phasellus ornare velit nec lorem varius rutrum. In scelerisque lectus vitae elit blandit, ut finibus dui aliquam. Morbi sit amet blandit dolor. Praesent cursus magna eu ligula faucibus fermentum. Curabitur condimentum neque a orci imperdiet egestas. Duis venenatis, erat et fringilla tincidunt, sapien elit dictum risus, vel tincidunt sapien magna et libero. Donec vel ultricies nunc, ut porttitor elit. Mauris vitae libero consequat, ultrices lectus quis, pharetra mauris. Quisque eget condimentum nisi.\n\nKelly O’Briant biography forthcoming. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam pharetra dui sit amet est volutpat efficitur ut et tortor. Nam in metus ligula. Aliquam pellentesque finibus ligula quis dignissim. Vestibulum at erat a enim tincidunt elementum. Phasellus ornare velit nec lorem varius rutrum. In scelerisque lectus vitae elit blandit, ut finibus dui aliquam. Morbi sit amet blandit dolor. Praesent cursus magna eu ligula faucibus fermentum. Curabitur condimentum neque a orci imperdiet egestas. Duis venenatis, erat et fringilla tincidunt, sapien elit dictum risus, vel tincidunt sapien magna et libero. Donec vel ultricies nunc, ut porttitor elit. Mauris vitae libero consequat, ultrices lectus quis, pharetra mauris. Quisque eget condimentum nisi."
+  },
+  {
+    "objectID": "materials/d1-01-welcome/index.html#more-to-come",
+    "href": "materials/d1-01-welcome/index.html#more-to-come",
+    "title": "Welcome!",
+    "section": "More to come",
+    "text": "More to come\n\n\n\n\n\n\nWarning\n\n\nThese slides are under construction and will be updated continuously until the workshop date."
+  },
+  {
+    "objectID": "materials/d1-01-welcome/index.html#welcome-to-rstudioconf2022",
+    "href": "materials/d1-01-welcome/index.html#welcome-to-rstudioconf2022",
+    "title": "Welcome!",
+    "section": "Welcome to rstudio::conf(2022)!",
+    "text": "Welcome to rstudio::conf(2022)!\n\n\n\n\n\n\nWarning\n\n\nAdd fun image"
+  },
+  {
+    "objectID": "materials/d1-01-welcome/index.html#workshop-policies",
+    "href": "materials/d1-01-welcome/index.html#workshop-policies",
+    "title": "Welcome!",
+    "section": "Workshop Policies",
+    "text": "Workshop Policies\n\nVerify location of quiet room and if wearing red lanyards will be happening again\n\n\n\n\nIdentify the exits closes to you in case of emergency\nPlease review the rstudio::conf Code of Conduct & COVID Policy that applies to all workshops. Issues can be addressed in three ways\n\nIn person: contact an rstudio::conf staff member or the conference registration desk\nBy email: send a message to conf@rstudio.com.\nBy phone: call 844—448—1212\n\nA quiet room is available for neurologically diverse attendees at Quiet location TBD."
+  },
+  {
+    "objectID": "materials/d1-01-welcome/index.html#meet-the-team",
+    "href": "materials/d1-01-welcome/index.html#meet-the-team",
+    "title": "Welcome!",
+    "section": "Meet the Team!",
+    "text": "Meet the Team!"
+  },
+  {
+    "objectID": "materials/d1-01-welcome/index.html#your-turn",
+    "href": "materials/d1-01-welcome/index.html#your-turn",
+    "title": "Welcome!",
+    "section": "Your Turn",
+    "text": "Your Turn\nIntroduce yourself to your neighbor(s)\nHave fun!\n\n\n\n02:00"
+  },
+  {
+    "objectID": "materials/d1-01-welcome/index.html#about-those-post-its",
+    "href": "materials/d1-01-welcome/index.html#about-those-post-its",
+    "title": "Welcome!",
+    "section": "About those post-its",
+    "text": "About those post-its\n\n\n\n    \n        Done with activity\n    \n\n\n\n    \n        I'd like help"
+  },
+  {
+    "objectID": "materials/d1-01-welcome/index.html#the-beginning",
+    "href": "materials/d1-01-welcome/index.html#the-beginning",
+    "title": "Welcome!",
+    "section": "The Beginning …",
+    "text": "The Beginning …\n\n\nYou’ve seen Shiny could be a game-changer for a project\nBuild an application quickly, purely with R code\nYou send it to a key stakeholder, and they love it"
+  },
+  {
+    "objectID": "materials/d1-01-welcome/index.html#enter-a-new-world",
+    "href": "materials/d1-01-welcome/index.html#enter-a-new-world",
+    "title": "Welcome!",
+    "section": "Enter a new world",
+    "text": "Enter a new world\n\n\n\n\n\n\nWarning\n\n\nAdd fun image\n\n\n\n\n\nEveryone who sees it thinks the app is amazing\nSuddenly you are asked (or told) this needs to get into PRODUCTION\n….. and now what?"
+  },
+  {
+    "objectID": "materials/d1-01-welcome/index.html#your-turn-1",
+    "href": "materials/d1-01-welcome/index.html#your-turn-1",
+    "title": "Welcome!",
+    "section": "Your Turn",
+    "text": "Your Turn\nWhat does production-quality mean to you?\n\n\n\n02:00"
+  },
+  {
+    "objectID": "materials/d1-01-welcome/index.html#many-users",
+    "href": "materials/d1-01-welcome/index.html#many-users",
+    "title": "Welcome!",
+    "section": "Many Users",
+    "text": "Many Users\n\n\n\n\n\n\nWarning\n\n\nadd image with big crowd"
+  },
+  {
+    "objectID": "materials/d1-01-welcome/index.html#high-profile-situations",
+    "href": "materials/d1-01-welcome/index.html#high-profile-situations",
+    "title": "Welcome!",
+    "section": "High-Profile Situations",
+    "text": "High-Profile Situations\n\n\n\n\n\n\nWarning\n\n\nadd with people watching an important demo or presentation or a pilot in a space shuttle"
+  },
+  {
+    "objectID": "materials/d1-01-welcome/index.html#part-of-a-critical-pipeline",
+    "href": "materials/d1-01-welcome/index.html#part-of-a-critical-pipeline",
+    "title": "Welcome!",
+    "section": "Part of a Critical Pipeline",
+    "text": "Part of a Critical Pipeline\n\n\n\n\n\n\nWarning\n\n\nadd image of a key technology network"
+  },
+  {
+    "objectID": "materials/d1-01-welcome/index.html#the-personas-behind-the-app",
+    "href": "materials/d1-01-welcome/index.html#the-personas-behind-the-app",
+    "title": "Welcome!",
+    "section": "The Personas Behind the App",
+    "text": "The Personas Behind the App\n\nFind images that convey the UI/UX, Backend Logic, External Connections, and Dev Best Practices"
+  },
+  {
+    "objectID": "materials/d1-01-welcome/index.html#the-journey-ahead",
+    "href": "materials/d1-01-welcome/index.html#the-journey-ahead",
+    "title": "Welcome!",
+    "section": "The Journey Ahead",
+    "text": "The Journey Ahead\n\n\n\n\n\n\nWarning\n\n\nAdd fun image in side, other side is text\n\n\n\n\n\nProduction can mean many different things to different people\nIn my opinion, production means it is never just Shiny\nNot meant to be scary!\nThe tooling in the R ecosystem, especially around Shiny today, is able to create another pit of success"
+  },
+  {
+    "objectID": "materials/d1-01-welcome/index.html#section",
+    "href": "materials/d1-01-welcome/index.html#section",
+    "title": "Welcome!",
+    "section": "",
+    "text": "Play this video as background in slide https://player.vimeo.com/video/652518341?background=1\nThe Metropolitan Museum of Art (aka the MET) was founded in 1870\nTwo locations in New York\nOver 5,000 years of art from around the world\nWhile we can’t visit the museum ourselves right now, we have another way …"
+  },
+  {
+    "objectID": "materials/d1-01-welcome/index.html#the-met-collection-api",
+    "href": "materials/d1-01-welcome/index.html#the-met-collection-api",
+    "title": "Welcome!",
+    "section": "The MET Collection API",
+    "text": "The MET Collection API\n\n\n\n\n\n\nWarning\n\n\nAdd mini slide-show on side with a few example images\n\n\n\n\n\nhttps://www.metmuseum.org/blogs/now-at-the-met/2018/met-collection-api\nLaunched in 2018\nOver 400,000 art pieces without copyright\nRich amount of metadata associated with each piece of art\nImages themselves have potential to obtain additional data thanks to the Google Vision APIs"
+  },
+  {
+    "objectID": "materials/d1-01-welcome/index.html#previewing-the-workshop-data",
+    "href": "materials/d1-01-welcome/index.html#previewing-the-workshop-data",
+    "title": "Welcome!",
+    "section": "Previewing the workshop data",
+    "text": "Previewing the workshop data\n\nOver 112,000 works across 17 collection departments\nA full history going all the way back to the Lower Paleolithic Period up to the last century"
+  },
+  {
+    "objectID": "materials/d1-01-welcome/index.html#the-art-science-of-building-shiny-apps",
+    "href": "materials/d1-01-welcome/index.html#the-art-science-of-building-shiny-apps",
+    "title": "Welcome!",
+    "section": "The Art & Science of Building Shiny Apps",
+    "text": "The Art & Science of Building Shiny Apps\n\n\nIn today’s workshop, we’re going to take solid first-draft of Shiny apps and up their quality to be production ready\nLike most of R itself, there are certainly more than one way to solve the issues we discuss in the next two days\nMy goals are to share not just solutions, but give you a lense into the thought process and creativity that many times happens organically."
   },
   {
     "objectID": "materials/d1-01-welcome/index.html#overview",
     "href": "materials/d1-01-welcome/index.html#overview",
-    "title": "Building Production-Quality Shiny Applications",
+    "title": "Welcome!",
     "section": "Overview",
     "text": "Overview\n\nintro\nbreaks\nhammer time\ndeploy it"
   },
   {
     "objectID": "materials/d1-01-welcome/index.html#july-26",
     "href": "materials/d1-01-welcome/index.html#july-26",
-    "title": "Building Production-Quality Shiny Applications",
+    "title": "Welcome!",
     "section": "July 26",
     "text": "July 26\n\nyour\nworld\nwill\nchange !"
   },
   {
     "objectID": "materials/d1-01-welcome/index.html#next-day",
     "href": "materials/d1-01-welcome/index.html#next-day",
-    "title": "Building Production-Quality Shiny Applications",
+    "title": "Welcome!",
     "section": "Next day",
     "text": "Next day\n\nDeploy AppMonitor App\n\n\nLearn where to deploy your Shiny app\n\n\nNow your app is in the wild, watch over it like a hawk"
   },
   {
     "objectID": "materials/d1-01-welcome/index.html#libraries",
     "href": "materials/d1-01-welcome/index.html#libraries",
-    "title": "Building Production-Quality Shiny Applications",
+    "title": "Welcome!",
     "section": "Libraries",
     "text": "Libraries\n\napps"
   },
   {
     "objectID": "materials/d1-01-welcome/index.html#timer",
     "href": "materials/d1-01-welcome/index.html#timer",
-    "title": "Building Production-Quality Shiny Applications",
+    "title": "Welcome!",
     "section": "Timer",
-    "text": "Timer\n\n\n\n00:45"
+    "text": "Timer\n\n\n\n00:45\n\n\n\n\n\nshinyprod.com"
   },
   {
-    "objectID": "resources.html",
-    "href": "resources.html",
-    "title": "Resources for Building Production-Quality Shiny Applications",
+    "objectID": "materials/d1-02-reactivity/ex-1.html",
+    "href": "materials/d1-02-reactivity/ex-1.html",
+    "title": "Reactivity Enhancement",
     "section": "",
-    "text": "Warning\n\n\n\nThis page is under construction and will be updated as the materials are posted online."
+    "text": "The application contained in the materials/d1-01-welcome/ex-1/app.R script has two inputs utilized for a visualization of the most annotated objects within the art collection of particular departments. Nothing is causing errors during app runtime, however the reactivity flow within the server-side processing is not optimal. Take the next 5 minutes to find ways of improving the structure of reactive components."
+  },
+  {
+    "objectID": "materials/d1-02-reactivity/ex-2.html",
+    "href": "materials/d1-02-reactivity/ex-2.html",
+    "title": "Multiple Controls",
+    "section": "",
+    "text": "The application contained in the materials/d1-01-welcome/ex-2/app.R script introduces an additional input defining the range of confidence scores to subset the derived data for the visualization. Once again, the application code does not contain errors that prevent execution. But there are multiple issues to solve regarding validity of results and to minimize unneccessary calculations. Take the next 5 minutes to pinpoint the logic error and to further streamline the reactive flow of the backend processing."
+  },
+  {
+    "objectID": "materials/d1-02-reactivity/index.html#more-to-come",
+    "href": "materials/d1-02-reactivity/index.html#more-to-come",
+    "title": "Windows of Reactivity",
+    "section": "More to come",
+    "text": "More to come\n\n\n\n\n\n\nWarning\n\n\nThese slides are under construction and will be updated continuously until the workshop date."
+  },
+  {
+    "objectID": "materials/d1-02-reactivity/index.html#default-perspective",
+    "href": "materials/d1-02-reactivity/index.html#default-perspective",
+    "title": "Windows of Reactivity",
+    "section": "Default Perspective",
+    "text": "Default Perspective"
+  },
+  {
+    "objectID": "materials/d1-02-reactivity/index.html#default-perspective-1",
+    "href": "materials/d1-02-reactivity/index.html#default-perspective-1",
+    "title": "Windows of Reactivity",
+    "section": "Default Perspective",
+    "text": "Default Perspective\n\n\n\nselectInput(\n  \"dept\",\n  \"Select Department\",\n  choices = dept_choices,\n  selected = dept_choices[1],\n  multiple = FALSE\n)\n\n\n\noutput$top_objects <- renderPlot({\n  df <- art_data |>\n    filter(department == input$dept)\n  \n  # more data processing ....\n  \n  ggplot(df, aes(x = name, y = n)) +\n    geom_col() +\n    xlab(NULL) +\n    ylab(\"Frequency of Annotation\") +\n    ggtitle(\"Top 5 Objects Annotated\")\n})"
+  },
+  {
+    "objectID": "materials/d1-02-reactivity/index.html#default-perspecive",
+    "href": "materials/d1-02-reactivity/index.html#default-perspecive",
+    "title": "Windows of Reactivity",
+    "section": "Default Perspecive",
+    "text": "Default Perspecive\n\n\n\n\n\nreactive input: input$dept\n\n\n\n\n\n\noutput: output$top_objects\n\n\n\n\nThe beginning (and end) of a typical Shiny interaction\n\nCan this approach scale to multiple inputs?"
+  },
+  {
+    "objectID": "materials/d1-02-reactivity/index.html#default-perspective-2",
+    "href": "materials/d1-02-reactivity/index.html#default-perspective-2",
+    "title": "Windows of Reactivity",
+    "section": "Default Perspective",
+    "text": "Default Perspective"
+  },
+  {
+    "objectID": "materials/d1-02-reactivity/index.html#default-perspective-3",
+    "href": "materials/d1-02-reactivity/index.html#default-perspective-3",
+    "title": "Windows of Reactivity",
+    "section": "Default Perspective",
+    "text": "Default Perspective\n\n\n\nselectInput(\n  \"dept\",\n  \"Select Department\",\n  choices = dept_choices,\n  selected = dept_choices[1],\n  multiple = FALSE\n)\n\nsliderInput(\n  \"n_top\",\n  \"Top Annotations\",\n  min = 1,\n  max = 10,\n  value = 5,\n  step = 1\n)\n\n\n\noutput$top_objects <- renderPlot({\n  df <- art_data |>\n    filter(department == input$dept)\n  \n  df2 <- df |>\n    # more data processing \n    # using input$n_top\n  \n  ggplot(df2, aes(x = name, y = n)) +\n    geom_col() +\n    xlab(NULL) +\n    ylab(\"Frequency of Annotation\")\n})"
+  },
+  {
+    "objectID": "materials/d1-02-reactivity/index.html#your-turn",
+    "href": "materials/d1-02-reactivity/index.html#your-turn",
+    "title": "Windows of Reactivity",
+    "section": "Your Turn",
+    "text": "Your Turn"
+  },
+  {
+    "objectID": "materials/d1-02-reactivity/index.html#the-middle",
+    "href": "materials/d1-02-reactivity/index.html#the-middle",
+    "title": "Windows of Reactivity",
+    "section": "The Middle",
+    "text": "The Middle\n\n\n\n\n\n\n\n\nreactive expressions"
+  },
+  {
+    "objectID": "materials/d1-02-reactivity/index.html#the-building-blocks-of-reactivity",
+    "href": "materials/d1-02-reactivity/index.html#the-building-blocks-of-reactivity",
+    "title": "Windows of Reactivity",
+    "section": "The Building Blocks of Reactivity",
+    "text": "The Building Blocks of Reactivity\n\nInputs & Reactive ValuesReactive ExpressionsOutputs & Observers\n\n\nThe sources used in downstream endpoints\n\n\nNot only the classic input widgets within your UI\n\n\n\n\nIntermediate bridges between sources and endpoints.\n\n\nBoth consume and produce\n\n\n\n\nConsumers of one or more sources.\n\n\nGoal is to produce a side-effect"
+  },
+  {
+    "objectID": "materials/d1-02-reactivity/index.html#the-metaphor",
+    "href": "materials/d1-02-reactivity/index.html#the-metaphor",
+    "title": "Windows of Reactivity",
+    "section": "The metaphor",
+    "text": "The metaphor\nTODO: Make side by side images of a cat waiting to do something and a dog going crazy\nCat https://i.redd.it/ld6eza8y2o591.jpg (credit catswithjobs reddit https://www.reddit.com/r/Catswithjobs/comments/vcfvqz/barista_cat/)\nDog"
+  },
+  {
+    "objectID": "materials/d1-02-reactivity/index.html#the-reactive",
+    "href": "materials/d1-02-reactivity/index.html#the-reactive",
+    "title": "Windows of Reactivity",
+    "section": "The reactive",
+    "text": "The reactive\ncurrent_image_df <- reactive({\n  dplyr::filter(art_random, department == input$dept)\n})"
+  },
+  {
+    "objectID": "materials/d1-02-reactivity/index.html#overview",
+    "href": "materials/d1-02-reactivity/index.html#overview",
+    "title": "Windows of Reactivity",
+    "section": "Overview",
+    "text": "Overview\n\nintro\nbreaks\nhammer time\ndeploy it"
+  },
+  {
+    "objectID": "materials/d1-02-reactivity/index.html#july-26",
+    "href": "materials/d1-02-reactivity/index.html#july-26",
+    "title": "Windows of Reactivity",
+    "section": "July 26",
+    "text": "July 26\n\nyour\nworld\nwill\nchange !"
+  },
+  {
+    "objectID": "materials/d1-02-reactivity/index.html#next-day",
+    "href": "materials/d1-02-reactivity/index.html#next-day",
+    "title": "Windows of Reactivity",
+    "section": "Next day",
+    "text": "Next day\n\nDeploy AppMonitor App\n\n\nLearn where to deploy your Shiny app\n\n\nNow your app is in the wild, watch over it like a hawk"
+  },
+  {
+    "objectID": "materials/d1-02-reactivity/index.html#libraries",
+    "href": "materials/d1-02-reactivity/index.html#libraries",
+    "title": "Windows of Reactivity",
+    "section": "Libraries",
+    "text": "Libraries\n\napps"
+  },
+  {
+    "objectID": "materials/d1-02-reactivity/index.html#timer",
+    "href": "materials/d1-02-reactivity/index.html#timer",
+    "title": "Windows of Reactivity",
+    "section": "Timer",
+    "text": "Timer\n\n\n\n00:45\n\n\n\n\n\nshinyprod.com"
+  },
+  {
+    "objectID": "materials/d1-03-modules/index.html#more-to-come",
+    "href": "materials/d1-03-modules/index.html#more-to-come",
+    "title": "Modules",
+    "section": "More to come",
+    "text": "More to come\n\n\n\n\n\n\nWarning\n\n\nThese slides are under construction and will be updated continuously until the workshop date."
+  },
+  {
+    "objectID": "materials/d1-03-modules/index.html#what-are-modules",
+    "href": "materials/d1-03-modules/index.html#what-are-modules",
+    "title": "Modules",
+    "section": "What are Modules?",
+    "text": "What are Modules?\nBuilding blocks to compose any Shiny app out of smaller, more understandable pieces\n\nAvoids namespace collisions when using same widget across different areas of your app\nAllow you to encapsulate distinct app interfaces\nOrganize code into logical and easy-to-understand components\nFacilitate collaboration"
+  },
+  {
+    "objectID": "materials/d1-03-modules/index.html#sound-familiar",
+    "href": "materials/d1-03-modules/index.html#sound-familiar",
+    "title": "Modules",
+    "section": "Sound familiar?",
+    "text": "Sound familiar?\n\nR functions also help avoid collisions in variable names with general R code\nEssential for creating non-trivial and extensive workflows"
+  },
+  {
+    "objectID": "materials/d1-03-modules/index.html#anatomy-of-a-function-ui",
+    "href": "materials/d1-03-modules/index.html#anatomy-of-a-function-ui",
+    "title": "Modules",
+    "section": "Anatomy of a Function (UI)",
+    "text": "Anatomy of a Function (UI)\n\n\nartUI <- function() {\n  tagList(\n    checkboxInput(\n      \"input1\",\n      \"Check Here\"\n    ),\n    selectInput(\n      \"input2\",\n      \"Select Object\",\n      choices = c(\"jar\", \"vase\"),\n      selected = \"jar\",\n      multiple = FALSE\n    ),\n    plotOutput(\"plot1\")\n  )\n}\n\nHello"
+  },
+  {
+    "objectID": "materials/d1-03-modules/index.html#anatomy-of-a-module-ui",
+    "href": "materials/d1-03-modules/index.html#anatomy-of-a-module-ui",
+    "title": "Modules",
+    "section": "Anatomy of a Module (UI)",
+    "text": "Anatomy of a Module (UI)\n\n\nartUI <- function(id) {\n  ns <- NS(id)\n  tagList(\n    checkboxInput(\n      ns(\"input1\"),\n      \"Check Here\"\n    ),\n    selectInput(\n      ns(\"input2\"),\n      \"Select Object\",\n      choices = c(\"jar\", \"vase\"),\n      selected = \"jar\",\n      multiple = FALSE\n    ),\n    plotOutput(ns(\"plot1\"))\n  )\n}\n\nHello"
+  },
+  {
+    "objectID": "materials/d1-03-modules/index.html#anatomy-of-a-module-ui-1",
+    "href": "materials/d1-03-modules/index.html#anatomy-of-a-module-ui-1",
+    "title": "Modules",
+    "section": "Anatomy of a Module (UI)",
+    "text": "Anatomy of a Module (UI)\n\n\nartUI <- function(id) {\n  ns <- NS(id)\n  tagList(\n    checkboxInput(\n      ns(\"input1\"),\n      \"Check Here\"\n    ),\n    selectInput(\n      ns(\"input2\"),\n      \"Select Object\",\n      choices = c(\"jar\", \"vase\"),\n      selected = \"jar\",\n      multiple = FALSE\n    )\n  )\n}\n\n\nid: String to use for namespace\nns <- NS(id): Create proper namespace function"
+  },
+  {
+    "objectID": "materials/d1-03-modules/index.html#anatomy-of-a-module-server",
+    "href": "materials/d1-03-modules/index.html#anatomy-of-a-module-server",
+    "title": "Modules",
+    "section": "Anatomy of a Module (Server)",
+    "text": "Anatomy of a Module (Server)\n\n\nartServer <- function(input, output, session) {\n  df <- reactive({\n    # do something fancy\n  })\n  \n  output$plot1 <- renderPlot({\n    ggplot(df(), aes(x = x, y = y)) +\n      geom_point()\n  })\n}\n\nHello"
+  },
+  {
+    "objectID": "materials/d1-03-modules/index.html#anatomy-of-a-module-server-1",
+    "href": "materials/d1-03-modules/index.html#anatomy-of-a-module-server-1",
+    "title": "Modules",
+    "section": "Anatomy of a Module (Server)",
+    "text": "Anatomy of a Module (Server)\n\n\nartServer <- function(id) {\n  moduleServer(\n    id,\n    function(input, output, session) {\n      df <- reactive({\n        # do something fancy\n      })\n      \n      output$plot1 <- renderPlot({\n        ggplot(df(), aes(x = x, y = y)) +\n          geom_point()\n      })\n    }\n  )\n}\n\nHello"
+  },
+  {
+    "objectID": "materials/d1-03-modules/index.html#anatomy-of-a-module-server-2",
+    "href": "materials/d1-03-modules/index.html#anatomy-of-a-module-server-2",
+    "title": "Modules",
+    "section": "Anatomy of a Module (Server)",
+    "text": "Anatomy of a Module (Server)\n\n\nartServer <- function(id) {\n  moduleServer(id,\n    function(input, output, session) {\n      df <- reactive({\n        # do something fancy\n      })\n      \n      output$plot1 <- renderPlot({\n        ggplot(df(), aes(x = x, y = y)) +\n          geom_point()\n      })\n    }\n  )\n}\n\n🤔 id\n\n\n\n`moduleServer(): Encapsulate server-side logic with namespace applied."
+  },
+  {
+    "objectID": "materials/d1-03-modules/index.html#invoking-modules",
+    "href": "materials/d1-03-modules/index.html#invoking-modules",
+    "title": "Modules",
+    "section": "Invoking Modules",
+    "text": "Invoking Modules\nui <- fluidPage(\n  fluidRow(\n    artUI(\"mod1\")\n  )\n)\n\nserver <- function(input, output, session) {\n  artServer(\"mod1\")\n}\n\nshinyApp(ui, server)"
+  },
+  {
+    "objectID": "materials/d1-03-modules/index.html#giving-and-receiving",
+    "href": "materials/d1-03-modules/index.html#giving-and-receiving",
+    "title": "Modules",
+    "section": "Giving and Receiving",
+    "text": "Giving and Receiving\n\n\nartUI <- function(id, choices = c(\"jar\", \"vase\")) {\n  ns <- NS(id)\n  tagList(\n    checkboxInput(\n      ns(\"input1\"),\n      \"Check Here\"\n    ),\n    selectInput(\n      ns(\"input2\"),\n      \"Select Object\",\n      choices = choices,\n      selected = choices[1],\n      multiple = FALSE\n    ),\n    plotOutput(ns(\"plot1\"))\n  )\n}\n\n\nReasonable inputs: static values, vectors, flags\nAvoid reactive parameters\nReturn value: tagList() of inputs, output placeholders, and other UI elements"
+  },
+  {
+    "objectID": "materials/d1-03-modules/index.html#giving-and-receiving-1",
+    "href": "materials/d1-03-modules/index.html#giving-and-receiving-1",
+    "title": "Modules",
+    "section": "Giving and Receiving",
+    "text": "Giving and Receiving\nartServer <- function(id, df, title = \"My Plot\") {\n  moduleServer(id,\n    function(input, output, session) {\n      user_selections <- reactive({\n        list(input1 = input$input1,\n             input2 = input$input2)\n      })\n      \n      output$plot1 <- renderPlot({\n        ggplot(df(), aes(x = x, y = y)) +\n          geom_point() +\n          ggtitle(title)\n      })\n      \n      user_selections\n    }\n  )\n}\n\nInput parameters (and return values) can be a mix of static and reactive objects"
+  },
+  {
+    "objectID": "materials/d1-03-modules/index.html#to-or-not-to",
+    "href": "materials/d1-03-modules/index.html#to-or-not-to",
+    "title": "Modules",
+    "section": "To () or not to ()",
+    "text": "To () or not to ()\n\n\n# app server\ndf <- reactive({\n  art_data |>\n    filter(dept == input$dept)\n})\n\nartServer(\"mod1\", df)\n\nartServer <- function(id, df, title = \"Amazing\") {\n  moduleServer(id,\n    function(input, output, session) {\n      user_selections <- reactive({\n        list(input1 = input$input1,\n             input2 = input$input2)\n      })\n      \n      output$plot1 <- renderPlot({\n        ggplot(df(), aes(x = x, y = y)) +\n          geom_point() +\n          ggtitle(title)\n      })\n      \n      user_selections\n    }\n  )\n}\n\n\n\nReactive parameters reference by name: df\nInside module, invoke reactive parameter as you would any other reactive in Shiny: df()\nAny reactive(s) returned by module should also be reference by name: user_selections, user_selections()\n\n\n\nshinyprod.com"
+  },
+  {
+    "objectID": "materials/d1-04-design-ux/index.html#more-to-come",
+    "href": "materials/d1-04-design-ux/index.html#more-to-come",
+    "title": "Design & User Experience",
+    "section": "More to come",
+    "text": "More to come\n\n\n\n\n\n\nWarning\n\n\nThese slides are under construction and will be updated continuously until the workshop date.\n\n\n\n\n\nshinyprod.com"
+  },
+  {
+    "objectID": "materials/d1-05-db-api/index.html#more-to-come",
+    "href": "materials/d1-05-db-api/index.html#more-to-come",
+    "title": "Databases & APIs",
+    "section": "More to come",
+    "text": "More to come\n\n\n\n\n\n\nWarning\n\n\nThese slides are under construction and will be updated continuously until the workshop date.\n\n\n\n\n\nshinyprod.com"
+  },
+  {
+    "objectID": "materials/d2-01-user-patterns/index.html#more-to-come",
+    "href": "materials/d2-01-user-patterns/index.html#more-to-come",
+    "title": "Exploring App Usage Patterns",
+    "section": "More to come",
+    "text": "More to come\n\n\n\n\n\n\nWarning\n\n\nThese slides are under construction and will be updated continuously until the workshop date.\n\n\n\n\n\nshinyprod.com"
+  },
+  {
+    "objectID": "materials/d2-02-dev-practices/index.html#more-to-come",
+    "href": "materials/d2-02-dev-practices/index.html#more-to-come",
+    "title": "Development Best Practices",
+    "section": "More to come",
+    "text": "More to come\n\n\n\n\n\n\nWarning\n\n\nThese slides are under construction and will be updated continuously until the workshop date.\n\n\n\n\n\nshinyprod.com"
+  },
+  {
+    "objectID": "materials/d2-03-rsconnect/index.html#more-to-come",
+    "href": "materials/d2-03-rsconnect/index.html#more-to-come",
+    "title": "Powerup with RStudio Connect",
+    "section": "More to come",
+    "text": "More to come\n\n\n\n\n\n\nWarning\n\n\nThese slides are under construction and will be updated continuously until the workshop date.\n\n\n\n\n\nshinyprod.com"
+  },
+  {
+    "objectID": "materials/d2-04-storytime/index.html#more-to-come",
+    "href": "materials/d2-04-storytime/index.html#more-to-come",
+    "title": "Tales from the Dev Shop",
+    "section": "More to come",
+    "text": "More to come\n\n\n\n\n\n\nWarning\n\n\nThese slides are under construction and will be updated continuously until the workshop date.\n\n\n\n\n\nshinyprod.com"
+  },
+  {
+    "objectID": "resources.html#workshop-data-guide",
+    "href": "resources.html#workshop-data-guide",
+    "title": "Resources for Building Production-Quality Shiny Applications",
+    "section": "Workshop Data Guide",
+    "text": "Workshop Data Guide\nThroughout this workshop, each of the exercises and live-coding sessions will utilize data from the Metropolitan Museum of Art, otherwise known as the MET, located in New York, United States. The museum offers data sets associated with the art and objects hosted in the museum via their public API. Additional metadata associated with each image of the art piece or object was also generated using the Google Vision API, and in particular the following methods:\n\nLabel detection: Detect and extract information about entities in an image across a broad group of categories.\nObject annotation: Detect and extract information about multiple objects in an image.\nImage properties: Detect color attributes of an image.\nCrop hints: Obtain vertices of a cropped region for an image.\n\n\n\n\n\n\nDataset Filter\n\n\nAll\nart_dict\ncrop_dict\nimage_annotation_dict\nlabel_annotation_dict\nobject_annotation_dict"
   },
   {
     "objectID": "schedule.html",
     "href": "schedule.html",
     "title": "Workshop Schedule",
     "section": "",
-    "text": "Day 1\nMonday, July 25, 2022\n\n\n\n\n\n\nTime\n\n\nModule\n\n\nPresenter\n\n\n\n\n\n\n9:00 - 10:30\n\n\nWelcome & Reactivity\n\n\nEric Nantz\n\n\n\n\n10:30 - 11:00\n\n\nCoffee & refreshments break\n\n\n\n\n\n\n11:00 - 12:30\n\n\nDesign & User Experience\n\n\nEric Nantz\n\n\n\n\n12:30 - 13:30\n\n\nLunch break\n\n\n\n\n\n\n13:30 - 15:00\n\n\nAll About Modules\n\n\nEric Nantz\n\n\n\n\n15:00 - 15:30\n\n\nCoffee & refreshments break\n\n\n\n\n\n\n15:30 - 17:00\n\n\nDatabases & APIs\n\n\nEric Nantz\n\n\n\n\n\n\nNo matching items\n\n\n\n\nDay 2\nTuesday, July 26, 2022\n\n\n\n\n\n\nTime\n\n\nModule\n\n\nPresenter\n\n\n\n\n\n\n9:00 - 10:30\n\n\nExploring User Patterns\n\n\nEric Nantz\n\n\n\n\n10:30 - 11:00\n\n\nCoffee & refreshments break\n\n\n\n\n\n\n11:00 - 12:30\n\n\nDevelopment Best Practices\n\n\nEric Nantz\n\n\n\n\n12:30 - 13:30\n\n\nLunch Break\n\n\n\n\n\n\n13:30 - 15:00\n\n\nPowerup with RStudio-Connect\n\n\nEric Nantz\n\n\n\n\n15:00 - 15:30\n\n\nCoffee & refreshments break\n\n\n\n\n\n\n15:30 - 17:00\n\n\nTales from the Dev Shop\n\n\nEric Nantz\n\n\n\n\n\n\nNo matching items"
+    "text": "Day 1\nMonday, July 25, 2022\n\n\n\n\n\n\nTime\n\n\nModule\n\n\nPresenter\n\n\n\n\n\n\n9:00 - 9:30\n\n\nWelcome & Setup\n\n\nEric Nantz\n\n\n\n\n9:30 - 10:30\n\n\nReactivity\n\n\nEric Nantz\n\n\n\n\n10:30 - 11:00\n\n\nCoffee & refreshments break\n\n\n\n\n\n\n11:00 - 12:30\n\n\nAll About Modules\n\n\nEric Nantz\n\n\n\n\n12:30 - 13:30\n\n\nLunch break\n\n\n\n\n\n\n13:30 - 15:00\n\n\nDesign & User Experience\n\n\nEric Nantz\n\n\n\n\n15:00 - 15:30\n\n\nCoffee & refreshments break\n\n\n\n\n\n\n15:30 - 17:00\n\n\nDatabases & APIs\n\n\nEric Nantz\n\n\n\n\n\n\nNo matching items\n\n\n\n\nDay 2\nTuesday, July 26, 2022\n\n\n\n\n\n\nTime\n\n\nModule\n\n\nPresenter\n\n\n\n\n\n\n9:00 - 10:30\n\n\nExploring User Patterns\n\n\nEric Nantz\n\n\n\n\n10:30 - 11:00\n\n\nCoffee & refreshments break\n\n\n\n\n\n\n11:00 - 12:30\n\n\nDevelopment Best Practices\n\n\nEric Nantz\n\n\n\n\n12:30 - 13:30\n\n\nLunch Break\n\n\n\n\n\n\n13:30 - 15:00\n\n\nPowerup with RStudio-Connect\n\n\nEric Nantz\n\n\n\n\n15:00 - 15:30\n\n\nCoffee & refreshments break\n\n\n\n\n\n\n15:30 - 17:00\n\n\nTales from the Dev Shop\n\n\nEric Nantz\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "setup.html",
     "href": "setup.html",
     "title": "Setup",
     "section": "",
-    "text": "Logistics\nEach day of the workshop will start at 9 AM and end at 5 PM, with multiple coffee breaks and a lunch break throughout. I will be presenting the majority of the content, but we have an amazing collection of five teaching assistants ready to assist with any technical issues or questions. All materials for the course will be viewable online at shinyprod.com and hosted on GitHub at github.com/rstudio-conf-2022/shiny-prod-apps. We also have a discussion board within the GitHub repository available for collaboration on questions and issues. Also, be aware that the workshop materials are in active development, so please check back to the site and GitHub repository regularly before the workshop. We plan on sending additional emails as we get closer to the workshop dates.\n\n\nAssumptions\nThis workshop assumes you have intermediate knowledge of Shiny application development. Specifically, that you have familiarity with the concepts of reactivity and binding inputs to outputs. If you consider yourself a beginner with Shiny, the material in this workshop may be difficult to follow during the two days. If you intended to enroll in a workshop geared towards an introduction to Shiny, please contact RStudio to see if you can switch to the Getting Started with Shiny workshop led by Colin Rundel.\n\n\nSetup and Requirements\n\nYou will need a GitHub account for key sections of this course. If you already have an account, you should be all set and no further action is needed. If you do not, creating an account is free. While version control itself is not a major focus of the course, we will discuss how certain elements can play an important role in application development and deployment. A great resource for getting a basic familiarity with Git version control is Jenny Bryan’s Happy Git and GitHub for the useR online book (also freely available).\nRStudio will provide a dedicated workspace for this course on the RStudio Cloud platform. This can be run directly from a web browser, and all system and R dependencies will be configured already. However, if you wish to use your local laptop to participate, you will need the following:\n\nR version 4.1.3 or later.\nYour preferred integrated development environment for R, such as RStudio Desktop or Visual Studio Code with the R Extension.\nThe {renv} package to manage package dependencies for the workshop.\nThe Git version control system. For installation instructions on each OS, please see the Install Git chapter from Jenny Bryan’s Happy Git and GitHub for the useR."
+    "text": "We are excited to have you join us for our two-day workshop Building Production-Quality Shiny Applications! The format of the workshop will be a mix of presentation slides, example Shiny applications, and hands-on exercises. To ensure you are ready for the journey, please review the following logistics and instructions:"
+  },
+  {
+    "objectID": "setup.html#pre-work",
+    "href": "setup.html#pre-work",
+    "title": "Setup",
+    "section": "Pre-Work",
+    "text": "Pre-Work\nThis workshop will be a blend of teaching materials, live-coding demonstrations, and hands-on exercises to practice key concepts. RStudio has generously provided us access to a dedicated workshop coding environment using RStudio Cloud, which is accessible with a modern web browser such as Google Chrome, Microsoft Edge, Firefox, or others. In addition, RStudio is also providing a dedicated instance of the RStudio Connect platform ((URL Forthcoming)) for hosting Shiny applications that you create and view throughout the workshop.\nTo leverage these platforms as well as other capabilities, please ensure you have the following established prior to the conference:\n\nAccounts\n\nGitHub account: You can create a GitHub account for free using the instructions provided in the Register for GitHub chapter of Jenny Bryan’s Happy Git and GitHub for the UseR. If you already have an acount, you are welcome to use it for the workshop.\nRStudio Cloud account: Visit rstudio.cloud and click the Sign Up link. Then create a Free account. If you already have an account, you do not need to create a new one.\n\n\n\nEnvironment Configuration\nIn the first session of the workshop, we will provide you with the instructions for connecting to the workshop environment within RStudio Cloud and the workshop RStudio Connect server. You can view the steps in the screencasts below, or view the written instructions.\n\nRStudio Connect Account & API KeyIntegrating RStudio Connect & RStudio Cloud\n\n\nsomething\n\n\nelse\n\n\n\n\n\nSetup and Requirements\n\nYou will need a GitHub account for key sections of this course. If you already have an account, you should be all set and no further action is needed. If you do not, creating an account is free. While version control itself is not a major focus of the course, we will discuss how certain elements can play an important role in application development and deployment. A great resource for getting a basic familiarity with Git version control is Jenny Bryan’s Happy Git and GitHub for the useR online book (also freely available).\nRStudio will provide a dedicated workspace for this course on the RStudio Cloud platform. This can be run directly from a web browser, and all system and R dependencies will be configured already. However, if you wish to use your local laptop to participate, you will need the following:\n\nR version 4.1.3 or later.\nYour preferred integrated development environment for R, such as RStudio Desktop or Visual Studio Code with the R Extension.\nThe {renv} package to manage package dependencies for the workshop.\nThe Git version control system. For installation instructions on each OS, please see the Install Git chapter from Jenny Bryan’s Happy Git and GitHub for the useR."
   },
   {
     "objectID": "units/d1-01-welcome.html",
     "href": "units/d1-01-welcome.html",
-    "title": "Welcome & Reactivity",
+    "title": "Welcome & Setup",
     "section": "",
     "text": "Warning\n\n\n\nThis page is under construction and will be updated continuously until the workshop date."
   },
   {
     "objectID": "units/d1-01-welcome.html#outline",
     "href": "units/d1-01-welcome.html#outline",
-    "title": "Welcome & Reactivity",
+    "title": "Welcome & Setup",
     "section": "Outline",
     "text": "Outline"
   },
   {
     "objectID": "units/d1-01-welcome.html#slides",
     "href": "units/d1-01-welcome.html#slides",
-    "title": "Welcome & Reactivity",
+    "title": "Welcome & Setup",
     "section": "Slides",
     "text": "Slides\nView slides in full screen"
   },
   {
     "objectID": "units/d1-01-welcome.html#exercises",
     "href": "units/d1-01-welcome.html#exercises",
-    "title": "Welcome & Reactivity",
+    "title": "Welcome & Setup",
     "section": "Exercises",
     "text": "Exercises\n\n\n\n\n\n\nExercise\n\n\nTitle\n\n\n\n\n\n\n\n\nNo matching items"
   },
   {
-    "objectID": "units/d1-01b-break.html",
-    "href": "units/d1-01b-break.html",
-    "title": "Coffee & refreshments break",
-    "section": "",
-    "text": "It’s time for a well-deserved break! Coffee and refreshments are served at Break location TBD. If you have any questions during the break, please discuss with the workshop instructor or a workshop TA."
-  },
-  {
-    "objectID": "units/d1-02-user-experience.html",
-    "href": "units/d1-02-user-experience.html",
-    "title": "Design & User Experience",
+    "objectID": "units/d1-02-reactivity.html",
+    "href": "units/d1-02-reactivity.html",
+    "title": "Reactivity",
     "section": "",
     "text": "Warning\n\n\n\nThis page is under construction and will be updated continuously until the workshop date."
   },
   {
-    "objectID": "units/d1-02-user-experience.html#outline",
-    "href": "units/d1-02-user-experience.html#outline",
-    "title": "Design & User Experience",
+    "objectID": "units/d1-02-reactivity.html#outline",
+    "href": "units/d1-02-reactivity.html#outline",
+    "title": "Reactivity",
     "section": "Outline",
     "text": "Outline"
   },
   {
-    "objectID": "units/d1-02-user-experience.html#slides",
-    "href": "units/d1-02-user-experience.html#slides",
-    "title": "Design & User Experience",
+    "objectID": "units/d1-02-reactivity.html#slides",
+    "href": "units/d1-02-reactivity.html#slides",
+    "title": "Reactivity",
     "section": "Slides",
     "text": "Slides\nView slides in full screen"
   },
   {
-    "objectID": "units/d1-02-user-experience.html#exercises",
-    "href": "units/d1-02-user-experience.html#exercises",
-    "title": "Design & User Experience",
+    "objectID": "units/d1-02-reactivity.html#exercises",
+    "href": "units/d1-02-reactivity.html#exercises",
+    "title": "Reactivity",
     "section": "Exercises",
-    "text": "Exercises\n\n\n\n\n\n\nExercise\n\n\nTitle\n\n\n\n\n\n\n\n\nNo matching items"
+    "text": "Exercises\n\n\n\n\n\n\nExercise\n\n\nTitle\n\n\n\n\n\n\nExercise 1\n\n\nReactivity Enhancement\n\n\n\n\nExercise 2\n\n\nMultiple Controls\n\n\n\n\n\n\nNo matching items"
   },
   {
-    "objectID": "units/d1-02b-lunch.html",
-    "href": "units/d1-02b-lunch.html",
-    "title": "Lunch break",
+    "objectID": "units/d1-02b-break.html",
+    "href": "units/d1-02b-break.html",
+    "title": "Coffee & refreshments break",
     "section": "",
-    "text": "Write one positive thing such as a new technique/capability you learned on a green sticky note\nWrite one item that could use improvement, such as a topic going too fast or not clear enough on a pink sticky note.\n\nYour workshop team is also using this time to re-charge. If you have any questions, please wait to ask until we re-convene for the next unit."
+    "text": "It’s time for a well-deserved break! Coffee and refreshments are served at Break location TBD. If you have any questions during the break, please discuss with the workshop instructor or a workshop TA."
   },
   {
     "objectID": "units/d1-03-modules.html",
@@ -189,36 +581,71 @@
     "text": "Exercises\n\n\n\n\n\n\nExercise\n\n\nTitle\n\n\n\n\n\n\n\n\nNo matching items"
   },
   {
-    "objectID": "units/d1-03b-break.html",
-    "href": "units/d1-03b-break.html",
+    "objectID": "units/d1-03b-lunch.html",
+    "href": "units/d1-03b-lunch.html",
+    "title": "Lunch break",
+    "section": "",
+    "text": "Write one positive thing such as a new technique/capability you learned on a green sticky note\nWrite one item that could use improvement, such as a topic going too fast or not clear enough on a pink sticky note.\n\nYour workshop team is also using this time to re-charge. If you have any questions, please wait to ask until we re-convene for the next unit."
+  },
+  {
+    "objectID": "units/d1-04-design-ux.html",
+    "href": "units/d1-04-design-ux.html",
+    "title": "Design & User Experience",
+    "section": "",
+    "text": "Warning\n\n\n\nThis page is under construction and will be updated continuously until the workshop date."
+  },
+  {
+    "objectID": "units/d1-04-design-ux.html#outline",
+    "href": "units/d1-04-design-ux.html#outline",
+    "title": "Design & User Experience",
+    "section": "Outline",
+    "text": "Outline"
+  },
+  {
+    "objectID": "units/d1-04-design-ux.html#slides",
+    "href": "units/d1-04-design-ux.html#slides",
+    "title": "Design & User Experience",
+    "section": "Slides",
+    "text": "Slides\nView slides in full screen"
+  },
+  {
+    "objectID": "units/d1-04-design-ux.html#exercises",
+    "href": "units/d1-04-design-ux.html#exercises",
+    "title": "Design & User Experience",
+    "section": "Exercises",
+    "text": "Exercises\n\n\n\n\n\n\nExercise\n\n\nTitle\n\n\n\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "units/d1-04b-break.html",
+    "href": "units/d1-04b-break.html",
     "title": "Coffee & refreshments break",
     "section": "",
     "text": "It’s time for a well-deserved break! Coffee and refreshments are served at Break location TBD. If you have any questions during the break, please discuss with the workshop instructor or a workshop TA."
   },
   {
-    "objectID": "units/d1-04-db-api.html",
-    "href": "units/d1-04-db-api.html",
+    "objectID": "units/d1-05-db-api.html",
+    "href": "units/d1-05-db-api.html",
     "title": "Databases & APIs",
     "section": "",
     "text": "Warning\n\n\n\nThis page is under construction and will be updated continuously until the workshop date."
   },
   {
-    "objectID": "units/d1-04-db-api.html#outline",
-    "href": "units/d1-04-db-api.html#outline",
+    "objectID": "units/d1-05-db-api.html#outline",
+    "href": "units/d1-05-db-api.html#outline",
     "title": "Databases & APIs",
     "section": "Outline",
     "text": "Outline"
   },
   {
-    "objectID": "units/d1-04-db-api.html#slides",
-    "href": "units/d1-04-db-api.html#slides",
+    "objectID": "units/d1-05-db-api.html#slides",
+    "href": "units/d1-05-db-api.html#slides",
     "title": "Databases & APIs",
     "section": "Slides",
     "text": "Slides\nView slides in full screen"
   },
   {
-    "objectID": "units/d1-04-db-api.html#exercises",
-    "href": "units/d1-04-db-api.html#exercises",
+    "objectID": "units/d1-05-db-api.html#exercises",
+    "href": "units/d1-05-db-api.html#exercises",
     "title": "Databases & APIs",
     "section": "Exercises",
     "text": "Exercises\n\n\n\n\n\n\nExercise\n\n\nTitle\n\n\n\n\n\n\n\n\nNo matching items"
@@ -259,29 +686,29 @@
     "text": "It’s time for a well-deserved break! Coffee and refreshments are served at Break location TBD. If you have any questions during the break, please discuss with the workshop instructor or a workshop TA."
   },
   {
-    "objectID": "units/d2-02-dev-best-practices.html",
-    "href": "units/d2-02-dev-best-practices.html",
+    "objectID": "units/d2-02-dev-practices.html",
+    "href": "units/d2-02-dev-practices.html",
     "title": "Development Best Practices",
     "section": "",
     "text": "Warning\n\n\n\nThis page is under construction and will be updated continuously until the workshop date."
   },
   {
-    "objectID": "units/d2-02-dev-best-practices.html#outline",
-    "href": "units/d2-02-dev-best-practices.html#outline",
+    "objectID": "units/d2-02-dev-practices.html#outline",
+    "href": "units/d2-02-dev-practices.html#outline",
     "title": "Development Best Practices",
     "section": "Outline",
     "text": "Outline"
   },
   {
-    "objectID": "units/d2-02-dev-best-practices.html#slides",
-    "href": "units/d2-02-dev-best-practices.html#slides",
+    "objectID": "units/d2-02-dev-practices.html#slides",
+    "href": "units/d2-02-dev-practices.html#slides",
     "title": "Development Best Practices",
     "section": "Slides",
     "text": "Slides\nView slides in full screen"
   },
   {
-    "objectID": "units/d2-02-dev-best-practices.html#exercises",
-    "href": "units/d2-02-dev-best-practices.html#exercises",
+    "objectID": "units/d2-02-dev-practices.html#exercises",
+    "href": "units/d2-02-dev-practices.html#exercises",
     "title": "Development Best Practices",
     "section": "Exercises",
     "text": "Exercises\n\n\n\n\n\n\nExercise\n\n\nTitle\n\n\n\n\n\n\n\n\nNo matching items"

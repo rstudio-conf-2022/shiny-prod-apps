@@ -2,82 +2,126 @@
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
   <url>
     <loc>https://shinyprod.com/about.html</loc>
-    <lastmod>2022-06-22T17:50:56.705Z</lastmod>
+    <lastmod>2022-07-17T18:37:34.665Z</lastmod>
   </url>
   <url>
     <loc>https://shinyprod.com/index.html</loc>
-    <lastmod>2022-06-22T17:50:57.821Z</lastmod>
+    <lastmod>2022-07-17T18:37:35.833Z</lastmod>
   </url>
   <url>
     <loc>https://shinyprod.com/materials/d1-01-welcome/index.html</loc>
-    <lastmod>2022-06-22T17:50:59.821Z</lastmod>
+    <lastmod>2022-07-17T18:37:38.721Z</lastmod>
+  </url>
+  <url>
+    <loc>https://shinyprod.com/materials/d1-02-reactivity/ex-1.html</loc>
+    <lastmod>2022-07-17T18:37:39.725Z</lastmod>
+  </url>
+  <url>
+    <loc>https://shinyprod.com/materials/d1-02-reactivity/ex-2.html</loc>
+    <lastmod>2022-07-17T18:37:40.041Z</lastmod>
+  </url>
+  <url>
+    <loc>https://shinyprod.com/materials/d1-02-reactivity/index.html</loc>
+    <lastmod>2022-07-17T18:37:42.149Z</lastmod>
+  </url>
+  <url>
+    <loc>https://shinyprod.com/materials/d1-03-modules/index.html</loc>
+    <lastmod>2022-07-17T18:37:42.677Z</lastmod>
+  </url>
+  <url>
+    <loc>https://shinyprod.com/materials/d1-04-design-ux/index.html</loc>
+    <lastmod>2022-07-17T18:37:42.961Z</lastmod>
+  </url>
+  <url>
+    <loc>https://shinyprod.com/materials/d1-05-db-api/index.html</loc>
+    <lastmod>2022-07-17T18:37:43.249Z</lastmod>
+  </url>
+  <url>
+    <loc>https://shinyprod.com/materials/d2-01-user-patterns/index.html</loc>
+    <lastmod>2022-07-17T18:37:43.537Z</lastmod>
+  </url>
+  <url>
+    <loc>https://shinyprod.com/materials/d2-02-dev-practices/index.html</loc>
+    <lastmod>2022-07-17T18:37:43.825Z</lastmod>
+  </url>
+  <url>
+    <loc>https://shinyprod.com/materials/d2-03-rsconnect/index.html</loc>
+    <lastmod>2022-07-17T18:37:44.113Z</lastmod>
+  </url>
+  <url>
+    <loc>https://shinyprod.com/materials/d2-04-storytime/index.html</loc>
+    <lastmod>2022-07-17T18:37:44.381Z</lastmod>
   </url>
   <url>
     <loc>https://shinyprod.com/resources.html</loc>
-    <lastmod>2022-06-22T17:51:02.973Z</lastmod>
+    <lastmod>2022-07-17T18:37:46.537Z</lastmod>
   </url>
   <url>
     <loc>https://shinyprod.com/schedule.html</loc>
-    <lastmod>2022-06-22T17:51:03.489Z</lastmod>
+    <lastmod>2022-07-17T18:37:47.097Z</lastmod>
   </url>
   <url>
     <loc>https://shinyprod.com/setup.html</loc>
-    <lastmod>2022-06-22T17:51:03.833Z</lastmod>
+    <lastmod>2022-07-17T18:37:47.553Z</lastmod>
   </url>
   <url>
     <loc>https://shinyprod.com/units/d1-01-welcome.html</loc>
-    <lastmod>2022-06-22T17:51:04.209Z</lastmod>
+    <lastmod>2022-07-17T18:37:47.909Z</lastmod>
   </url>
   <url>
-    <loc>https://shinyprod.com/units/d1-01b-break.html</loc>
-    <lastmod>2022-06-22T17:51:04.529Z</lastmod>
+    <loc>https://shinyprod.com/units/d1-02-reactivity.html</loc>
+    <lastmod>2022-07-17T18:37:48.277Z</lastmod>
   </url>
   <url>
-    <loc>https://shinyprod.com/units/d1-02-user-experience.html</loc>
-    <lastmod>2022-06-22T17:51:04.873Z</lastmod>
-  </url>
-  <url>
-    <loc>https://shinyprod.com/units/d1-02b-lunch.html</loc>
-    <lastmod>2022-06-22T17:51:05.213Z</lastmod>
+    <loc>https://shinyprod.com/units/d1-02b-break.html</loc>
+    <lastmod>2022-07-17T18:37:48.613Z</lastmod>
   </url>
   <url>
     <loc>https://shinyprod.com/units/d1-03-modules.html</loc>
-    <lastmod>2022-06-22T17:51:05.569Z</lastmod>
+    <lastmod>2022-07-17T18:37:48.953Z</lastmod>
   </url>
   <url>
-    <loc>https://shinyprod.com/units/d1-03b-break.html</loc>
-    <lastmod>2022-06-22T17:51:05.881Z</lastmod>
+    <loc>https://shinyprod.com/units/d1-03b-lunch.html</loc>
+    <lastmod>2022-07-17T18:37:49.285Z</lastmod>
   </url>
   <url>
-    <loc>https://shinyprod.com/units/d1-04-db-api.html</loc>
-    <lastmod>2022-06-22T17:51:06.213Z</lastmod>
+    <loc>https://shinyprod.com/units/d1-04-design-ux.html</loc>
+    <lastmod>2022-07-17T18:37:49.649Z</lastmod>
+  </url>
+  <url>
+    <loc>https://shinyprod.com/units/d1-04b-break.html</loc>
+    <lastmod>2022-07-17T18:37:49.989Z</lastmod>
+  </url>
+  <url>
+    <loc>https://shinyprod.com/units/d1-05-db-api.html</loc>
+    <lastmod>2022-07-17T18:37:50.353Z</lastmod>
   </url>
   <url>
     <loc>https://shinyprod.com/units/d2-01-user-patterns.html</loc>
-    <lastmod>2022-06-22T17:51:06.569Z</lastmod>
+    <lastmod>2022-07-17T18:37:50.693Z</lastmod>
   </url>
   <url>
     <loc>https://shinyprod.com/units/d2-01b-break.html</loc>
-    <lastmod>2022-06-22T17:51:06.897Z</lastmod>
+    <lastmod>2022-07-17T18:37:51.025Z</lastmod>
   </url>
   <url>
-    <loc>https://shinyprod.com/units/d2-02-dev-best-practices.html</loc>
-    <lastmod>2022-06-22T17:51:07.229Z</lastmod>
+    <loc>https://shinyprod.com/units/d2-02-dev-practices.html</loc>
+    <lastmod>2022-07-17T18:37:51.393Z</lastmod>
   </url>
   <url>
     <loc>https://shinyprod.com/units/d2-02b-lunch.html</loc>
-    <lastmod>2022-06-22T17:51:07.541Z</lastmod>
+    <lastmod>2022-07-17T18:37:51.721Z</lastmod>
   </url>
   <url>
     <loc>https://shinyprod.com/units/d2-03-rsconnect.html</loc>
-    <lastmod>2022-06-22T17:51:07.901Z</lastmod>
+    <lastmod>2022-07-17T18:37:52.053Z</lastmod>
   </url>
   <url>
     <loc>https://shinyprod.com/units/d2-03b-break.html</loc>
-    <lastmod>2022-06-22T17:51:08.209Z</lastmod>
+    <lastmod>2022-07-17T18:37:52.365Z</lastmod>
   </url>
   <url>
     <loc>https://shinyprod.com/units/d2-04-storytime.html</loc>
-    <lastmod>2022-06-22T17:51:08.541Z</lastmod>
+    <lastmod>2022-07-17T18:37:52.701Z</lastmod>
   </url>
 </urlset>

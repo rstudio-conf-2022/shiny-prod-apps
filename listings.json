@@ -3,15 +3,16 @@
     "listing": "/schedule.html",
     "items": [
       "/units/d1-01-welcome.html",
-      "/units/d1-01b-break.html",
-      "/units/d1-02-user-experience.html",
-      "/units/d1-02b-lunch.html",
+      "/units/d1-02-reactivity.html",
+      "/units/d1-02b-break.html",
       "/units/d1-03-modules.html",
-      "/units/d1-03b-break.html",
-      "/units/d1-04-db-api.html",
+      "/units/d1-03b-lunch.html",
+      "/units/d1-04-design-ux.html",
+      "/units/d1-04b-break.html",
+      "/units/d1-05-db-api.html",
       "/units/d2-01-user-patterns.html",
       "/units/d2-01b-break.html",
-      "/units/d2-02-dev-best-practices.html",
+      "/units/d2-02-dev-practices.html",
       "/units/d2-02b-lunch.html",
       "/units/d2-03-rsconnect.html",
       "/units/d2-03b-break.html",
@@ -23,15 +24,22 @@
     "items": []
   },
   {
-    "listing": "/units/d1-02-user-experience.html",
-    "items": []
+    "listing": "/units/d1-02-reactivity.html",
+    "items": [
+      "/materials/d1-02-reactivity/ex-1.html",
+      "/materials/d1-02-reactivity/ex-2.html"
+    ]
   },
   {
     "listing": "/units/d1-03-modules.html",
     "items": []
   },
   {
-    "listing": "/units/d1-04-db-api.html",
+    "listing": "/units/d1-04-design-ux.html",
+    "items": []
+  },
+  {
+    "listing": "/units/d1-05-db-api.html",
     "items": []
   },
   {
@@ -39,7 +47,7 @@
     "items": []
   },
   {
-    "listing": "/units/d2-02-dev-best-practices.html",
+    "listing": "/units/d2-02-dev-practices.html",
     "items": []
   },
   {

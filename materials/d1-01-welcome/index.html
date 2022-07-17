@@ -6,11 +6,12 @@
 <script src="../../site_libs/quarto-html/popper.min.js"></script>
 <script src="../../site_libs/quarto-html/tippy.umd.min.js"></script>
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-html.min.css" rel="stylesheet">
-<link href="../../site_libs/quarto-html/quarto-syntax-highlighting-dark.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
-  <meta name="generator" content="quarto-0.9.612">
+<link href="../../site_libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
+<link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
+  <meta name="generator" content="quarto-1.0.28">
 
-  <title>prod-shiny-workshop - Building Production-Quality Shiny Applications</title>
+  <meta name="author" content="Eric Nantz">
+  <title>prod-shiny-workshop - Welcome!</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -25,6 +26,7 @@
     ul.task-list{list-style: none;}
   </style>
   <link rel="stylesheet" href="../../site_libs/revealjs/dist/theme/quarto.css" id="theme">
+  <link rel="stylesheet" href="assets/web/postit.css">
   <link href="../../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
   <link href="../../site_libs/revealjs/plugin/reveal-menu/menu.css" rel="stylesheet">
   <link href="../../site_libs/revealjs/plugin/reveal-menu/quarto-menu.css" rel="stylesheet">
@@ -316,26 +318,403 @@
   </style>
   <link href="../../site_libs/countdown-0.3.5/countdown.css" rel="stylesheet">
   <script src="../../site_libs/countdown-0.3.5/countdown.js"></script>
-<meta name="twitter:title" content="prod-shiny-workshop - Building Production-Quality Shiny Applications">
+<meta name="twitter:title" content="prod-shiny-workshop - Welcome!">
+<meta name="twitter:description" content="rstudio::conf(2022)  Building Production-Quality Shiny Applications">
 <meta name="twitter:image" content="https://shinyprod.com//images/twitter-card.png">
 <meta name="twitter:creator" content="@theRcast">
 <meta name="twitter:image-height" content="675">
 <meta name="twitter:image-width" content="1200">
 <meta name="twitter:card" content="summary_large_image">
 </head>
-<body>
+<body class="quarto-light">
   <div class="reveal">
     <div class="slides">
 
-<section id="title-slide" data-background-image="assets/img/bg/vincentiu-solomon-ln5drpv_ImI-unsplash.jpg" class="center">
-  <h1 class="title">Building Production-Quality Shiny Applications</h1>
+<section id="title-slide" class="center">
+  <h1 class="title">Welcome!</h1>
+  <p class="subtitle">rstudio::conf(2022) <br> Building Production-Quality Shiny Applications</p>
+  <p class="author">Eric Nantz</p>
 </section>
 
-<section id="hello" class="slide level2">
-<h2>Hello!</h2>
-<p>Welcome to making Production Quality Shiny Apps!</p>
-
-<img data-src="assets/img/Shiny.png" class="r-stretch"></section>
+<section id="more-to-come" class="slide level2">
+<h2>More to come</h2>
+<div class="callout callout-warning callout-captioned callout-style-default">
+<div class="callout-body">
+<div class="callout-caption">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Warning</strong></p>
+</div>
+<div class="callout-content">
+<p>These slides are under construction and will be updated continuously until the workshop date.</p>
+</div>
+</div>
+</div>
+</section>
+<section id="welcome-to-rstudioconf2022" class="slide level2">
+<h2>Welcome to <code>rstudio::conf(2022)</code>!</h2>
+<div class="callout callout-warning callout-captioned callout-style-default">
+<div class="callout-body">
+<div class="callout-caption">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Warning</strong></p>
+</div>
+<div class="callout-content">
+<p>Add fun image</p>
+</div>
+</div>
+</div>
+</section>
+<section id="workshop-policies" class="slide level2">
+<h2>Workshop Policies</h2>
+<aside class="notes">
+<p>Verify location of quiet room and if wearing red lanyards will be happening again</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+<div>
+<div style="font-size: 0.9em;">
+<ol type="1">
+<li><p>Identify the exits closes to you in case of emergency</p></li>
+<li><p>Please review the <code>rstudio::conf</code> Code of Conduct &amp; COVID <a href="https://www.rstudio.com/conference/2022/2022-conf-code-of-conduct/">Policy</a> that applies to all workshops. Issues can be addressed in three ways</p>
+<ol type="1">
+<li><strong>In person:</strong> contact an <code>rstudio::conf</code> staff member or the conference registration desk</li>
+<li><strong>By email:</strong> send a message to <code>conf@rstudio.com</code>.</li>
+<li><strong>By phone:</strong> call 844—448—1212</li>
+</ol></li>
+<li><p>A quiet room is available for neurologically diverse attendees at Quiet location TBD.</p></li>
+</ol>
+</div>
+</div>
+</section>
+<section id="meet-the-team" class="slide level2">
+<h2>Meet the Team!</h2>
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="assets/img/people/enantz.jpg" alt="Eric Nantz" style="width:25.0%"></p>
+</figure>
+</div>
+<div class="columns">
+<div class="column" style="width:20%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="assets/img/people/tcashorali.png" alt="{{< var people.tcashorali.name >}}"></p>
+</figure>
+</div>
+</div><div class="column" style="width:20%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="assets/img/people/idinnie.jpeg" alt="{{< var people.idinnie.name >}}"></p>
+</figure>
+</div>
+</div><div class="column" style="width:20%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="assets/img/people/ajacobs.jpg" alt="{{< var people.ajacobs.name >}}"></p>
+</figure>
+</div>
+</div><div class="column" style="width:20%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="assets/img/people/dkearney.jpeg" alt="{{< var people.dkearney.name >}}"></p>
+</figure>
+</div>
+</div><div class="column" style="width:20%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="assets/img/people/kobriant.jpeg" alt="{{< var people.kobriant.name >}}"></p>
+</figure>
+</div>
+</div>
+</div>
+</section>
+<section id="your-turn" class="slide level2">
+<h2>Your Turn</h2>
+<p>Introduce yourself to your neighbor(s)</p>
+<p>Have fun!</p>
+<div class="cell">
+<div class="cell-output-display">
+<div class="countdown" id="timer_62d4596a" style="right:0;bottom:0;" data-warnwhen="0">
+<code class="countdown-time"><span class="countdown-digits minutes">02</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
+</div>
+</div>
+</div>
+</section>
+<section id="about-those-post-its" class="slide level2">
+<h2>About those post-its</h2>
+<div class="columns v-center-container">
+<div class="column" style="width:50%;">
+<ul id="notes-green">
+    <li>
+        <p>Done with activity</p>
+    </li>
+</ul>
+</div><div class="column" style="width:50%;">
+<ul id="notes-pink">
+    <li>
+        <p>I'd like help</p>
+    </li>
+</ul>
+</div>
+</div>
+</section>
+<section id="the-beginning" class="slide level2" data-background-color="black" data-background-image="assets/img/bg/beginning.png" data-background-size="cover">
+<h2>The Beginning …</h2>
+<aside class="notes">
+<ul>
+<li>You’ve seen Shiny could be a game-changer for a project</li>
+<li>Build an application quickly, purely with R code</li>
+<li>You send it to a key stakeholder, and they love it</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="enter-a-new-world" class="slide level2">
+<h2>Enter a new world</h2>
+<div class="callout callout-warning callout-captioned callout-style-default">
+<div class="callout-body">
+<div class="callout-caption">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Warning</strong></p>
+</div>
+<div class="callout-content">
+<p>Add fun image</p>
+</div>
+</div>
+</div>
+<aside class="notes">
+<ul>
+<li>Everyone who sees it thinks the app is amazing</li>
+<li>Suddenly you are asked (or told) this needs to get into PRODUCTION</li>
+<li>….. and now what?</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="your-turn-1" class="slide level2">
+<h2>Your Turn</h2>
+<p>What does <em>production-quality</em> mean to you?</p>
+<div class="cell">
+<div class="cell-output-display">
+<div class="countdown" id="timer_62d458dc" style="right:0;bottom:0;" data-warnwhen="0">
+<code class="countdown-time"><span class="countdown-digits minutes">02</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
+</div>
+</div>
+</div>
+</section>
+<section id="many-users" class="slide level2">
+<h2>Many Users</h2>
+<div class="callout callout-warning callout-captioned callout-style-default">
+<div class="callout-body">
+<div class="callout-caption">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Warning</strong></p>
+</div>
+<div class="callout-content">
+<p>add image with big crowd</p>
+</div>
+</div>
+</div>
+</section>
+<section id="high-profile-situations" class="slide level2">
+<h2>High-Profile Situations</h2>
+<div class="callout callout-warning callout-captioned callout-style-default">
+<div class="callout-body">
+<div class="callout-caption">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Warning</strong></p>
+</div>
+<div class="callout-content">
+<p>add with people watching an important demo or presentation or a pilot in a space shuttle</p>
+</div>
+</div>
+</div>
+</section>
+<section id="part-of-a-critical-pipeline" class="slide level2">
+<h2>Part of a Critical Pipeline</h2>
+<div class="callout callout-warning callout-captioned callout-style-default">
+<div class="callout-body">
+<div class="callout-caption">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Warning</strong></p>
+</div>
+<div class="callout-content">
+<p>add image of a key technology network</p>
+</div>
+</div>
+</div>
+</section>
+<section id="the-personas-behind-the-app" class="slide level2">
+<h2>The Personas Behind the App</h2>
+<aside class="notes">
+<p>Find images that convey the UI/UX, Backend Logic, External Connections, and Dev Best Practices</p>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="the-journey-ahead" class="slide level2">
+<h2>The Journey Ahead</h2>
+<div class="callout callout-warning callout-captioned callout-style-default">
+<div class="callout-body">
+<div class="callout-caption">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Warning</strong></p>
+</div>
+<div class="callout-content">
+<p>Add fun image in side, other side is text</p>
+</div>
+</div>
+</div>
+<aside class="notes">
+<ul>
+<li>Production can mean many different things to different people</li>
+<li>In my opinion, production means it is never just Shiny</li>
+<li>Not meant to be scary!</li>
+<li>The tooling in the R ecosystem, especially around Shiny today, is able to create another pit of success</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="section" class="slide level2" data-background-iframe="https://player.vimeo.com/video/652518341?background=1">
+<h2></h2>
+<aside class="notes">
+<ul>
+<li>Play this video as background in slide https://player.vimeo.com/video/652518341?background=1</li>
+<li>The Metropolitan Museum of Art (aka the MET) was founded in 1870</li>
+<li>Two locations in New York</li>
+<li>Over 5,000 years of art from around the world</li>
+<li>While we can’t visit the museum ourselves right now, we have another way …</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="the-met-collection-api" class="slide level2">
+<h2>The MET Collection API</h2>
+<div class="callout callout-warning callout-captioned callout-style-default">
+<div class="callout-body">
+<div class="callout-caption">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Warning</strong></p>
+</div>
+<div class="callout-content">
+<p>Add mini slide-show on side with a few example images</p>
+</div>
+</div>
+</div>
+<aside class="notes">
+<ul>
+<li>https://www.metmuseum.org/blogs/now-at-the-met/2018/met-collection-api</li>
+<li>Launched in 2018</li>
+<li>Over 400,000 art pieces without copyright</li>
+<li>Rich amount of metadata associated with each piece of art</li>
+<li>Images themselves have potential to obtain additional data thanks to the Google Vision APIs</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
+<section id="previewing-the-workshop-data" class="slide level2">
+<h2>Previewing the workshop data</h2>
+<ul>
+<li class="fragment">Over 112,000 works across 17 collection departments</li>
+<li class="fragment">A full history going all the way back to the Lower Paleolithic Period up to the last century</li>
+</ul>
+</section>
+<section id="the-art-science-of-building-shiny-apps" class="slide level2">
+<h2>The Art &amp; Science of Building Shiny Apps</h2>
+<aside class="notes">
+<ul>
+<li>In today’s workshop, we’re going to take solid first-draft of Shiny apps and up their quality to be production ready</li>
+<li>Like most of R itself, there are certainly more than one way to solve the issues we discuss in the next two days</li>
+<li>My goals are to share not just solutions, but give you a lense into the thought process and creativity that many times happens organically.</li>
+</ul>
+<style type="text/css">
+        span.MJX_Assistive_MathML {
+          position:absolute!important;
+          clip: rect(1px, 1px, 1px, 1px);
+          padding: 1px 0 0 0!important;
+          border: 0!important;
+          height: 1px!important;
+          width: 1px!important;
+          overflow: hidden!important;
+          display:block!important;
+      }</style></aside>
+</section>
 <section id="overview" class="slide level2">
 <h2>Overview</h2>
 <ol type="1">
@@ -376,14 +755,14 @@
 <h2>Timer</h2>
 <div class="cell">
 <div class="cell-output-display">
-<div class="countdown" id="timer_62b356bd" style="right:0;bottom:0;" data-warnwhen="0">
+<div class="countdown" id="timer_62d458ba" style="right:0;bottom:0;" data-warnwhen="0">
 <code class="countdown-time"><span class="countdown-digits minutes">00</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">45</span></code>
 </div>
 </div>
 </div>
 
 <div class="footer footer-default">
-
+<p><a href="https://shinyprod.com">shinyprod.com</a></p>
 </div>
 </section>
     </div>
@@ -641,6 +1020,24 @@
 
     <script id="quarto-html-after-body" type="application/javascript">
     window.document.addEventListener("DOMContentLoaded", function (event) {
+      const toggleBodyColorMode = (bsSheetEl) => {
+        const mode = bsSheetEl.getAttribute("data-mode");
+        const bodyEl = window.document.querySelector("body");
+        if (mode === "dark") {
+          bodyEl.classList.add("quarto-dark");
+          bodyEl.classList.remove("quarto-light");
+        } else {
+          bodyEl.classList.add("quarto-light");
+          bodyEl.classList.remove("quarto-dark");
+        }
+      }
+      const toggleBodyColorPrimary = () => {
+        const bsSheetEl = window.document.querySelector("link#quarto-bootstrap");
+        if (bsSheetEl) {
+          toggleBodyColorMode(bsSheetEl);
+        }
+      }
+      toggleBodyColorPrimary();  
       const tabsets =  window.document.querySelectorAll(".panel-tabset-tabby")
       tabsets.forEach(function(tabset) {
         const tabby = new Tabby('#' + tabset.id);
