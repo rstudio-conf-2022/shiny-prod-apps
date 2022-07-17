@@ -1,4 +1,31 @@
 version: 0.1
 break_location: "Break location TBD"
 lunch_location: "Lunch location TBD"
+quiet_location: "Quiet location TBD"
 room: "Room ID"
+rsconnect_url: "(URL Forthcoming)"
+people:
+  ajacobs:
+    name: "Aaron Jacobs"
+    org: "RStudio"
+    web: "https://unconj.ca/blog"
+  dkearney:
+    name: "Derrick Kearney"
+    org: "RStudio"
+    web: "http://dskard.github.io"
+  enantz:
+    name: "Eric Nantz"
+    org: "Eli Lilly"
+    web: "https://shinydevseries.com"
+  idinnie:
+    name: "Ian Dinnie"
+    org: "RStudio"
+    web: "https://www.linkedin.com/in/ian-dinnie"
+  kobriant:
+    name: "Kelly O'Briant"
+    org: "RStudio"
+    web: "https://kellobri.github.io"
+  tcashorali:
+    name: "Tanya Cashorali"
+    org: "TCB Analytics"
+    web: "https://tcbanalytics.com"

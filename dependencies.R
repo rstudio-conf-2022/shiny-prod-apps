@@ -36,10 +36,16 @@ library(withr)
 library(fs)
 library(reactlog)
 library(dbplot)
+library(pins)
+library(paws.storage)
+library(reactable)
 
 ## GitHub (dev) packages
 # renv::install("rstudio/connectapi")
 library(connectapi)
+
+# renv::install("rpodcast/shinyprod")
+library(shinyprod)
 
 # renv::install("ewenme/shinya11y")
 library(shinya11y)

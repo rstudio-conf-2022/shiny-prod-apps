@@ -1,6 +1,6 @@
 ---
-title: "Welcome & Reactivity"
-subtitle: "9:00 - 10:30"
+title: "Welcome & Setup"
+subtitle: "9:00 - 9:30"
 author: "Eric Nantz"
 date: "2022-07-25"
 listing:

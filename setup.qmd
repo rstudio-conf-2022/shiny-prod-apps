@@ -1,17 +1,54 @@
 ---
 title: "Setup"
-format: html
+format: 
+  html:
+    link-external-newwindow: true
+
 ---
 
-We are excited to have you join us for our two-day workshop on building production-quality Shiny applications! The format of the workshop will be a mix of presentation slides, example Shiny applications, and hands-on exercises. To ensure you are ready for the journey, please review the following logistics and instructions:
+We are excited to have you join us for our two-day workshop **Building Production-Quality Shiny Applications**! The format of the workshop will be a mix of presentation slides, example Shiny applications, and hands-on exercises. To ensure you are ready for the journey, please review the following logistics and instructions:
+
+### Assumptions
+
+This workshop assumes you have intermediate knowledge of Shiny application development. Specifically, that you have basic familiarity with binding inputs to outputs and application layout. If you consider yourself a beginner with Shiny, the material in this workshop may be difficult to follow during the two days. If you intended to enroll in a  workshop geared towards an introduction to Shiny, please contact RStudio to see if you can switch to the **Getting Started with Shiny** workshop led by Colin Rundel. 
+
+Although Shiny is certainly the main focus of this workshop, we will be leveraging other capabilities of R in the materials and example applications:
+
+* We will be using packages from the [tidyverse](https://www.tidyverse.org/) to assist with data munging and processing. The majority of example code and exercises will provide the necessary code, but if you wish to make modifications we recommend [R for Data Science](https://r4ds.had.co.nz/) as a great reference for becoming familiar with the tidyverse.
+* In certain situations the Shiny applications we create will leverage APIs deployed via the [`{plumber}`](https://www.rplumber.io/) package. You won't be expected to create APIs from scratch in the workshop, but you are welcome to visit the package website to learn more about how APIs are created with plumber. To invoke the APIs from Shiny, we will leverage the [`{httr2}`](https://httr2.r-lib.org/) package.
 
 ### Logistics
 
 Each day of the workshop will start at 9 AM and end at 5 PM, with multiple coffee breaks and a lunch break throughout. I will be presenting the majority of the content, but we have an amazing collection of five teaching assistants ready to assist with any technical issues or questions. All materials for the course will be viewable online at [shinyprod.com](https://shinyprod.com) and hosted on GitHub at [github.com/rstudio-conf-2022/shiny-prod-apps](https://github.com/rstudio-conf-2022/shiny-prod-apps). We also have a [discussion board](https://github.com/rstudio-conf-2022/shiny-prod-apps/discussions) within the GitHub repository available for collaboration on questions and issues. Also, be aware that the workshop materials are in active development, so please check back to the site and GitHub repository regularly before the workshop. We plan on sending additional emails as we get closer to the workshop dates.
 
-### Assumptions
+## Pre-Work
 
-This workshop assumes you have intermediate knowledge of Shiny application development. Specifically, that you have familiarity with the concepts of reactivity and binding inputs to outputs. If you consider yourself a beginner with Shiny, the material in this workshop may be difficult to follow during the two days. If you intended to enroll in a  workshop geared towards an introduction to Shiny, please contact RStudio to see if you can switch to the **Getting Started with Shiny** workshop led by Colin Rundel.
+This workshop will be a blend of teaching materials, live-coding demonstrations, and hands-on exercises to practice key concepts. RStudio has generously provided us access to a dedicated workshop coding environment using [RStudio Cloud](https://rstudio.cloud), which is accessible with a modern web browser such as Google Chrome, Microsoft Edge, Firefox, or others. In addition, RStudio is also providing a dedicated instance of the **RStudio Connect** platform ({{< var rsconnect_url >}}) for hosting Shiny applications that you create and view throughout the workshop. 
+
+To leverage these platforms as well as other capabilities, please ensure you have the following established prior to the conference:
+
+### Accounts 
+
+* GitHub account: You can create a GitHub account for free using the instructions provided in the [Register for GitHub](https://happygitwithr.com/github-acct.html#github-acct) chapter of Jenny Bryan's [Happy Git and GitHub for the UseR](https://happygitwithr.com/index.html). If you already have an acount, you are welcome to use it for the workshop.
+* RStudio Cloud account: Visit [rstudio.cloud](https://rstudio.cloud) and click the Sign Up link. Then create a **Free** account. If you already have an account, you do not need to create a new one.
+
+### Environment Configuration
+
+In the first session of the workshop, we will provide you with the instructions for connecting to the workshop environment within RStudio Cloud and the workshop RStudio Connect server. You can view the steps in the screencasts below, or view the written instructions.
+
+::: {.panel-tabset}
+
+#### RStudio Connect Account & API Key
+
+something
+
+#### Integrating RStudio Connect & RStudio Cloud
+
+else
+
+:::
+
+
 
 ### Setup and Requirements
 

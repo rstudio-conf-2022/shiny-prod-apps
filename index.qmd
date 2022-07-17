@@ -3,6 +3,7 @@ title: "Building Production-Quality Shiny Applications"
 format:
   html:
     css: youtube.css
+    link-external-newwindow: true
 ---
 
 
@@ -26,3 +27,38 @@ format:
 
 
 Shiny empowers R users to create innovative web applications, without requiring substantial expertise in web development frameworks to get up and running. The positive impact of Shiny in data science workflows across academia and a variety of industries is well-known and growing by the year. It is quite common for an early prototype of a Shiny app to generate tremendous excitement for key stakeholders and decision makers, often leading to requests for enhancements and ultimately be included in a production pipeline or process. The road to meeting this goal is challenging, especially for data scientists and statisticians not accustomed to software development!
+
+## Prework & Setup
+
+You can find complete details on the required pre-work and setup instructions at the [setup](setup.qmd) tab. 
+
+## Meet the Workshop Team
+
+### Instructor 
+
+![](materials/d1-01-welcome/assets/img/people/enantz.jpg){style="float:right;padding: 0 0 0 10px;" fig-alt="{{< var people.enantz.name >}}" width="200"}
+**{{< var people.enantz.name >}}** is a director within the statistical innovation center at Eli Lilly and Company, creating analytical pipelines and capabilities of advanced statistical methodologies for clinical design used in multiple phases of development. Outside of his day job, Eric is passionate about connecting with and showcasing the brilliant R community in multiple ways. You may recognize his voice from the [R-Podcast](https://r-podcast.org) that he launched in 2012. Eric is also the creator of the [Shiny Developer Series](https://shinydevseries.com) where he interviews authors of Shiny-related packages and practitioners developing applications, as well as sharing his own R and Shiny adventures via livestreams on his [Twitch channel](https://twitch.tv/rpodcast). In addition, Eric is a curator for the [RWeekly project](https://rweekly.org) and co-host of the [RWeekly Highlights podcast](https://rweekly.fireside.fm) which accompanies every issue.
+
+### Teaching Assistants
+
+![](materials/d1-01-welcome/assets/img/people/tcashorali.png){style="float:right;padding: 0 0 0 10px;" fig-alt="{{< var people.tcashorali.name >}}" width="200"}
+
+**{{< var people.tcashorali.name >}}** is the founder of [TCB Analytics](https://tcbanalytics.com), a boutique data and analytics consultancy. After graduating from Northeastern University with dual Computer Science and Biology degrees, Tanya started her career in the data-rich field of bioinformatics in the early 2000s. The next decade of Tanya’s career included more commercial use cases for data science and analytics. Tanya also hosts a world-wide community network of over 500 data enthusiasts, has helped universities launch data science programs, and is a frequent speaker at tech conferences.
+
+![](materials/d1-01-welcome/assets/img/people/idinnie.jpeg){style="float:right;padding: 0 0 0 10px;" fig-alt="{{< var people.idinnie.name >}}" width="200"}
+
+**{{< var people.idinnie.name >}}**'s background is in social science. Prior to joining RStudio's customer success team, Ian worked for a non-profit economic and public policy consulting company based in Massachusetts, where he worked on projects primarily regarding economic impact analysis, demography, and housing policy. During his time there, he developed a shiny app that displayed enrollment projections for the state's public universities and community colleges.
+
+![](materials/d1-01-welcome/assets/img/people/ajacobs.jpg){style="float:right;padding: 0 0 0 10px;" fig-alt="{{< var people.ajacobs.name >}}" width="200"}
+
+**{{< var people.ajacobs.name >}}** biography forthcoming. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam pharetra dui sit amet est volutpat efficitur ut et tortor. Nam in metus ligula. Aliquam pellentesque finibus ligula quis dignissim. Vestibulum at erat a enim tincidunt elementum. Phasellus ornare velit nec lorem varius rutrum. In scelerisque lectus vitae elit blandit, ut finibus dui aliquam. Morbi sit amet blandit dolor. Praesent cursus magna eu ligula faucibus fermentum. Curabitur condimentum neque a orci imperdiet egestas. Duis venenatis, erat et fringilla tincidunt, sapien elit dictum risus, vel tincidunt sapien magna et libero. Donec vel ultricies nunc, ut porttitor elit. Mauris vitae libero consequat, ultrices lectus quis, pharetra mauris. Quisque eget condimentum nisi. 
+
+![](materials/d1-01-welcome/assets/img/people/dkearney.jpeg){style="float:right;padding: 0 0 0 10px;" fig-alt="{{< var people.dkearney.name >}}" width="200"}
+
+**{{< var people.dkearney.name >}}** biography forthcoming. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam pharetra dui sit amet est volutpat efficitur ut et tortor. Nam in metus ligula. Aliquam pellentesque finibus ligula quis dignissim. Vestibulum at erat a enim tincidunt elementum. Phasellus ornare velit nec lorem varius rutrum. In scelerisque lectus vitae elit blandit, ut finibus dui aliquam. Morbi sit amet blandit dolor. Praesent cursus magna eu ligula faucibus fermentum. Curabitur condimentum neque a orci imperdiet egestas. Duis venenatis, erat et fringilla tincidunt, sapien elit dictum risus, vel tincidunt sapien magna et libero. Donec vel ultricies nunc, ut porttitor elit. Mauris vitae libero consequat, ultrices lectus quis, pharetra mauris. Quisque eget condimentum nisi. 
+
+![](materials/d1-01-welcome/assets/img/people/kobriant.jpeg){style="float:right;padding: 0 0 0 10px;" fig-alt="{{< var people.kobriant.name >}}" width="200"}
+
+**{{< var people.kobriant.name >}}** biography forthcoming. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam pharetra dui sit amet est volutpat efficitur ut et tortor. Nam in metus ligula. Aliquam pellentesque finibus ligula quis dignissim. Vestibulum at erat a enim tincidunt elementum. Phasellus ornare velit nec lorem varius rutrum. In scelerisque lectus vitae elit blandit, ut finibus dui aliquam. Morbi sit amet blandit dolor. Praesent cursus magna eu ligula faucibus fermentum. Curabitur condimentum neque a orci imperdiet egestas. Duis venenatis, erat et fringilla tincidunt, sapien elit dictum risus, vel tincidunt sapien magna et libero. Donec vel ultricies nunc, ut porttitor elit. Mauris vitae libero consequat, ultrices lectus quis, pharetra mauris. Quisque eget condimentum nisi. 
+
+

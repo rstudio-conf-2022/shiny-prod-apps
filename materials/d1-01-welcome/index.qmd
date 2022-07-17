@@ -1,22 +1,228 @@
 ---
-title: "Building Production-Quality Shiny Applications"
+title: "Welcome!"
+subtitle: "rstudio::conf(2022) <br> Building Production-Quality Shiny Applications"
+author: "Eric Nantz"
+footer: "[shinyprod.com](https://shinyprod.com)"
 format: 
   revealjs:
-    theme: [moon] # moon= teal bg  |  dark
+    theme: [default, ../slides.scss] # moon= teal bg  |  dark
+    css: assets/web/postit.css
     scrollable: true
     incremental: true
     slide-number: c/t # c/t | c | h/v | h.v
     slide-tone: false #true
-    title-slide-attributes:
-      data-background-image: assets/img/bg/vincentiu-solomon-ln5drpv_ImI-unsplash.jpg
+    code-line-numbers: false
+    #title-slide-attributes:
+      #data-background-image: assets/img/bg/vincentiu-solomon-ln5drpv_ImI-unsplash.jpg
     
 ---
 
-## Hello!
+## More to come
 
-Welcome to making Production Quality Shiny Apps!
+::: callout-warning
+These slides are under construction and will be updated continuously until the workshop date.
+:::
 
-![](assets/img/Shiny.png)
+## Welcome to `rstudio::conf(2022)`!
+
+::: callout-warning
+Add fun image
+:::
+
+## Workshop Policies
+
+::: {.notes}
+Verify location of quiet room and if wearing red lanyards will be happening again
+:::
+
+::: {.nonincremental}
+::: {style="font-size: 0.9em;"}
+1. Identify the exits closes to you in case of emergency
+
+1. Please review the `rstudio::conf` Code of Conduct & COVID [Policy](https://www.rstudio.com/conference/2022/2022-conf-code-of-conduct/) that applies to all workshops. Issues can be addressed in three ways
+     1. **In person:** contact an `rstudio::conf` staff member or the conference registration desk
+     1. **By email:** send a message to `conf@rstudio.com`.
+     1. **By phone:** call 844—448—1212 
+
+1. A quiet room is available for neurologically diverse attendees at {{< var quiet_location >}}.
+:::
+:::
+
+## Meet the Team!
+
+![](assets/img/people/enantz.jpg){fig-alt="Eric Nantz" fig-align="center" width="25%"}
+
+:::: {.columns}
+
+::: {.column width="20%"}
+![](assets/img/people/tcashorali.png){fig-alt="{{< var people.tcashorali.name >}}" fig-align="center"}
+:::
+
+::: {.column width="20%"}
+![](assets/img/people/idinnie.jpeg){fig-alt="{{< var people.idinnie.name >}}" fig-align="center"}
+:::
+
+::: {.column width="20%"}
+![](assets/img/people/ajacobs.jpg){fig-alt="{{< var people.ajacobs.name >}}" fig-align="center"}
+:::
+
+::: {.column width="20%"}
+![](assets/img/people/dkearney.jpeg){fig-alt="{{< var people.dkearney.name >}}" fig-align="center"}
+:::
+
+::: {.column width="20%"}
+![](assets/img/people/kobriant.jpeg){fig-alt="{{< var people.kobriant.name >}}" fig-align="center"}
+:::
+
+::::
+
+## Your Turn
+
+Introduce yourself to your neighbor(s)
+
+Have fun!
+
+```{r}
+#| label: intro-timer
+library(countdown)
+countdown(minutes = 2, seconds =0)
+```
+
+
+## About those post-its
+
+:::: {.columns .v-center-container}
+
+::: {.column width="50%"}
+
+```{=html}
+<ul id="notes-green">
+    <li>
+        <p>Done with activity</p>
+    </li>
+</ul>
+```
+
+:::
+
+::: {.column width="50%"}
+
+```{=html}
+<ul id="notes-pink">
+    <li>
+        <p>I'd like help</p>
+    </li>
+</ul>
+```
+
+:::
+
+:::
+
+## The Beginning ... {background-color="black" background-image="assets/img/bg/beginning.png" background-size="cover"}
+
+::: {.notes}
+* You've seen Shiny could be a game-changer for a project
+* Build an application quickly, purely with R code
+* You send it to a key stakeholder, and they love it
+:::
+
+## Enter a new world
+
+::: callout-warning
+Add fun image
+:::
+
+::: {.notes}
+* Everyone who sees it thinks the app is amazing
+* Suddenly you are asked (or told) this needs to get into PRODUCTION
+* ..... and now what?
+:::
+
+## Your Turn
+
+What does *production-quality* mean to you?
+
+```{r}
+#| label: timer-prodquality
+library(countdown)
+countdown(minutes = 2, seconds = 0)
+```
+
+## Many Users
+
+::: callout-warning
+add image with big crowd
+:::
+
+## High-Profile Situations
+
+::: callout-warning
+add with people watching an important demo or presentation or a pilot in a space shuttle
+:::
+
+## Part of a Critical Pipeline
+
+::: callout-warning
+add image of a key technology network
+:::
+
+## The Personas Behind the App
+
+::: {.notes}
+Find images that convey the UI/UX, Backend Logic, External Connections, and Dev Best Practices
+:::
+
+## The Journey Ahead
+
+::: callout-warning
+Add fun image in side, other side is text
+:::
+
+::: {.notes}
+* Production can mean many different things to different people
+* In my opinion, production means it is never just Shiny
+* Not meant to be scary! 
+* The tooling in the R ecosystem, especially around Shiny today, is able to create another pit of success
+:::
+
+## {background-iframe="https://player.vimeo.com/video/652518341?background=1"}
+
+::: {.notes}
+* Play this video as background in slide https://player.vimeo.com/video/652518341?background=1
+* The Metropolitan Museum of Art (aka the MET) was founded in 1870
+* Two locations in New York
+* Over 5,000 years of art from around the world
+* While we can't visit the museum ourselves right now, we have another way ...
+:::
+
+## The MET Collection API
+
+::: callout-warning
+Add mini slide-show on side with a few example images
+:::
+
+::: {.notes}
+* https://www.metmuseum.org/blogs/now-at-the-met/2018/met-collection-api
+* Launched in 2018
+* Over 400,000 art pieces without copyright 
+* Rich amount of metadata associated with each piece of art
+* Images themselves have potential to obtain additional data thanks to the Google Vision APIs
+:::
+
+## Previewing the workshop data
+
+* Over 112,000 works across 17 collection departments
+* A full history going all the way back to the Lower Paleolithic Period up to the last century
+
+
+## The Art & Science of Building Shiny Apps
+
+::: {.notes}
+* In today's workshop, we're going to take solid first-draft of Shiny apps and up their quality to be production ready
+* Like most of R itself, there are certainly more than one way to solve the issues we discuss in the next two days
+* My goals are to share not just solutions, but give you a lense into the thought process and creativity that many times happens organically.
+:::
 
 ## Overview 
 
@@ -32,9 +238,6 @@ Welcome to making Production Quality Shiny Apps!
 - world 
 - will 
 - change !
-
-
-
 
 
 ## Next day

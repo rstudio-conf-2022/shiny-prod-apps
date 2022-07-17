@@ -1,0 +1,306 @@
+---
+title: "Windows of Reactivity"
+subtitle: "rstudio::conf(2022) <br> Building Production-Quality Shiny Applications"
+author: "Eric Nantz"
+footer: "[shinyprod.com](https://shinyprod.com)"
+format: 
+  revealjs:
+    theme: [default, ../slides.scss] # moon= teal bg  |  dark
+    scrollable: true
+    incremental: true
+    slide-number: c/t # c/t | c | h/v | h.v
+    slide-tone: false #true
+    code-line-numbers: false
+    #title-slide-attributes:
+      #data-background-image: assets/img/bg/vincentiu-solomon-ln5drpv_ImI-unsplash.jpg
+    
+---
+
+## More to come
+
+::: callout-warning
+These slides are under construction and will be updated continuously until the workshop date.
+:::
+
+## Default Perspective
+
+:::: {.columns}
+
+::: {.column width="50%"}
+
+![](assets/img/reactlog/select_input_big.png)
+
+:::
+
+::: {.column width="50%"}
+
+![](assets/img/reactlog/plot_output.png)
+
+:::
+
+::::
+
+## Default Perspective
+
+:::: {.columns}
+
+::: {.column width="45%"}
+
+```{r}
+#| label: input-code
+#| echo: true
+#| eval: false
+selectInput(
+  "dept",
+  "Select Department",
+  choices = dept_choices,
+  selected = dept_choices[1],
+  multiple = FALSE
+)
+```
+
+:::
+
+::: {.column width="55%"}
+
+```{r}
+#| label: plot-code
+#| echo: true
+#| eval: false
+output$top_objects <- renderPlot({
+  df <- art_data |>
+    filter(department == input$dept)
+  
+  # more data processing ....
+  
+  ggplot(df, aes(x = name, y = n)) +
+    geom_col() +
+    xlab(NULL) +
+    ylab("Frequency of Annotation") +
+    ggtitle("Top 5 Objects Annotated")
+})
+```
+
+:::
+
+::::
+
+## Default Perspecive
+
+:::: {.columns}
+
+::: {.column width="50%"}
+
+![reactive input: input$dept](assets/img/reactlog/input-value_ready.svg)
+:::
+
+::: {.column width="50%"}
+
+![output: output$top_objects](assets/img/reactlog/output_ready.svg)
+
+:::
+
+::::
+
+The beginning (and end) of a typical Shiny interaction
+
+* Can this approach scale to multiple inputs?
+
+## Default Perspective
+
+:::: {.columns}
+
+::: {.column width="50%"}
+
+![](assets/img/reactlog/select_input_big.png)
+
+![](assets/img/reactlog/slider_input_big.png)
+
+:::
+
+::: {.column width="50%"}
+
+![](assets/img/reactlog/plot_output.png)
+
+:::
+
+::::
+
+## Default Perspective
+
+:::: {.columns}
+
+::: {.column width="45%"}
+
+```{r}
+#| label: input-code2
+#| echo: true
+#| eval: false
+selectInput(
+  "dept",
+  "Select Department",
+  choices = dept_choices,
+  selected = dept_choices[1],
+  multiple = FALSE
+)
+
+sliderInput(
+  "n_top",
+  "Top Annotations",
+  min = 1,
+  max = 10,
+  value = 5,
+  step = 1
+)
+```
+
+:::
+
+::: {.column width="55%"}
+
+```{r}
+#| label: plot-code2
+#| echo: true
+#| eval: false
+output$top_objects <- renderPlot({
+  df <- art_data |>
+    filter(department == input$dept)
+  
+  df2 <- df |>
+    # more data processing 
+    # using input$n_top
+  
+  ggplot(df2, aes(x = name, y = n)) +
+    geom_col() +
+    xlab(NULL) +
+    ylab("Frequency of Annotation")
+})
+```
+
+:::
+
+::::
+
+## Your Turn
+
+
+
+## The Middle
+
+:::: {.columns}
+
+::: {.column width="33%"}
+
+![](assets/img/reactlog/input-value_ready.svg)
+:::
+
+::: {.column width="33%"}
+
+![](assets/img/reactlog/reactive_ready.svg)
+
+![reactive expressions](assets/img/reactlog/reactive_ready.svg)
+
+:::
+
+::: {.column width="33%"}
+
+![](assets/img/reactlog/output_ready.svg)
+
+:::
+
+::::
+
+## The Building Blocks of Reactivity {.smaller}
+
+::: {.panel-tabset}
+
+### Inputs & Reactive Values
+
+The **sources** used in downstream endpoints
+
+::: {.nonincremental}
+* Not only the classic input widgets within your UI
+:::
+
+### Reactive Expressions
+
+Intermediate bridges between sources and endpoints. 
+
+::: {.nonincremental}
+* Both **consume** and **produce**
+:::
+
+### Outputs & Observers
+
+Consumers of one or more sources. 
+
+::: {.nonincremental}
+* Goal is to produce a side-effect
+:::
+
+:::
+
+## {background-image="https://media.giphy.com/media/l41YBHH1A6OPQ5iXS/giphy.gif"}
+
+## The metaphor
+
+TODO: Make side by side images of a cat waiting to do something and a dog going crazy
+
+Cat https://i.redd.it/ld6eza8y2o591.jpg (credit catswithjobs reddit https://www.reddit.com/r/Catswithjobs/comments/vcfvqz/barista_cat/)
+
+Dog 
+
+
+
+## The `reactive`
+
+
+```r
+current_image_df <- reactive({
+  dplyr::filter(art_random, department == input$dept)
+})
+```
+
+## Overview 
+
+1. intro 
+2. breaks
+3. hammer time
+4. deploy it
+
+
+## July 26
+
+- your 
+- world 
+- will 
+- change !
+
+
+
+
+
+## Next day
+
+:::: panel-tabset
+### Deploy App
+
+Learn where to deploy your Shiny app
+
+### Monitor App
+
+Now your app is in the wild, watch over it like a hawk 
+::::
+
+
+## Libraries 
+
+![apps](assets/img/apps.png)
+
+## Timer
+
+```{r}
+#| label: timer
+library(countdown)
+countdown(minutes = 0, seconds = 45)
+```
