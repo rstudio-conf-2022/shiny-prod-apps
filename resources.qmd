@@ -12,29 +12,13 @@ execute:
 
 ```{r}
 #| label: setup
-library(pins)
 library(reactable)
 library(htmltools)
 library(dplyr)
 
-# register board for pins package
-# TODO: Switch back to S3 board once workshop ends
-# board <- board_s3(
-#   bucket = "shinyworkshop-pinboard",
-#   prefix = "data_dictionary/",
-#   versioned = TRUE,
-#   access_key = Sys.getenv("AWS_ACCESS_KEY_ID"),
-#   secret_access_key = Sys.getenv("AWS_SECRET_ACCESS_KEY_ID"),
-#   region = Sys.getenv("AWS_REGION")
-# )
+source(file.path(here::here(), "R", "gen_art_metadata.R"))
 
-
-board <- board_rsconnect(
-  auth = "envvar",
-  server = Sys.getenv("CONNECT_SERVER")
-)
-
-df <- board %>% pin_read("rpodcast/dictionary_list")
+df <- gen_art_metadata()
 df_names <- names(df)
 
 df <- purrr::map2(df, df_names, ~{
