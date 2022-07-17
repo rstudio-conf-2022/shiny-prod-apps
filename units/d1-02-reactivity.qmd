@@ -29,7 +29,7 @@ This page is under construction and will be updated continuously until the works
 [View slides in full screen](../materials/d1-02-reactivity/index.html)
 
 ```{=html}
-<iframe class="slide-deck" src="../materials/d1-02-user-experience/" height="420" width="747" style="border: 1px solid #2e3846;"></iframe>
+<iframe class="slide-deck" src="../materials/d1-02-reactivity/" height="420" width="747" style="border: 1px solid #2e3846;"></iframe>
 ```
 
 ## Exercises
