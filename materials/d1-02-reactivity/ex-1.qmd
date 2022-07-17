@@ -7,4 +7,4 @@ subtitle: "Exercise 1"
 This page is under construction and will be updated as the materials are posted online.
 :::
 
-The application contained in the `materials/d1-01-welcome/ex-1/app.R` script has two inputs utilized for a visualization of the most annotated objects within the art collection of particular departments. Nothing is causing errors during app runtime, however the reactivity flow within the server-side processing is not optimal. Take the next 5 minutes to find ways of improving the structure of reactive components.
+The application contained in the `ex-1/app.R` script has two inputs utilized for a visualization of the most annotated objects within the art collection of particular departments. Nothing is causing errors during app runtime, however the reactivity flow within the server-side processing is not optimal. Take the next 5 minutes to find ways of improving the structure of reactive components.
