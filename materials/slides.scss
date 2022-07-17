@@ -6,3 +6,10 @@
 $font-family-sans-serif: "Play", sans-serif;
 // $presentation-heading-color: #7090A5;
 // $presentation-title-slide-text-align: "left";
+
+.v-center-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 90%;
+}

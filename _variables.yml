@@ -3,6 +3,7 @@ break_location: "Break location TBD"
 lunch_location: "Lunch location TBD"
 quiet_location: "Quiet location TBD"
 room: "Room ID"
+rsconnect_url: "(URL Forthcoming)"
 people:
   ajacobs:
     name: "Aaron Jacobs"

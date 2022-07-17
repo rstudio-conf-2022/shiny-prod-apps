@@ -44,6 +44,9 @@ library(reactable)
 # renv::install("rstudio/connectapi")
 library(connectapi)
 
+# renv::install("rpodcast/shinyprod")
+library(shinyprod)
+
 # renv::install("ewenme/shinya11y")
 library(shinya11y)
 

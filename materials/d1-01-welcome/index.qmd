@@ -17,6 +17,12 @@ format:
     
 ---
 
+## More to come
+
+::: callout-warning
+These slides are under construction and will be updated continuously until the workshop date.
+:::
+
 ## Welcome to `rstudio::conf(2022)`!
 
 ::: callout-warning
@@ -36,7 +42,7 @@ Verify location of quiet room and if wearing red lanyards will be happening agai
 1. Please review the `rstudio::conf` Code of Conduct & COVID [Policy](https://www.rstudio.com/conference/2022/2022-conf-code-of-conduct/) that applies to all workshops. Issues can be addressed in three ways
      1. **In person:** contact an `rstudio::conf` staff member or the conference registration desk
      1. **By email:** send a message to `conf@rstudio.com`.
-     1. **By phone:** call 844—448—1212 (monitored for duration of event)
+     1. **By phone:** call 844—448—1212 
 
 1. A quiet room is available for neurologically diverse attendees at {{< var quiet_location >}}.
 :::
@@ -85,7 +91,7 @@ countdown(minutes = 2, seconds =0)
 
 ## About those post-its
 
-:::: {.columns}
+:::: {.columns .v-center-container}
 
 ::: {.column width="50%"}
 
@@ -133,9 +139,35 @@ Add fun image
 * ..... and now what?
 :::
 
+## Your Turn
+
+What does *production-quality* mean to you?
+
+```{r}
+#| label: timer-prodquality
+library(countdown)
+countdown(minutes = 2, seconds = 0)
+```
+
+## Many Users
+
+::: callout-warning
+add image with big crowd
+:::
+
+## High-Profile Situations
+
+::: callout-warning
+add with people watching an important demo or presentation or a pilot in a space shuttle
+:::
+
+## Part of a Critical Pipeline
+
+::: callout-warning
+add image of a key technology network
+:::
+
 ## The Personas Behind the App
-
-
 
 ::: {.notes}
 Find images that convey the UI/UX, Backend Logic, External Connections, and Dev Best Practices
@@ -192,21 +224,6 @@ Add mini slide-show on side with a few example images
 * My goals are to share not just solutions, but give you a lense into the thought process and creativity that many times happens organically.
 :::
 
-# Reactivity Primer
-
-## The `reactive`
-
-
-```r
-current_image_df <- reactive({
-  dplyr::filter(art_random, department == input$dept)
-})
-```
-
-## Rendering a reactivelog
-
-
-
 ## Overview 
 
 1. intro 
@@ -221,9 +238,6 @@ current_image_df <- reactive({
 - world 
 - will 
 - change !
-
-
-
 
 
 ## Next day

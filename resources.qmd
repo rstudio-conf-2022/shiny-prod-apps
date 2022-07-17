@@ -3,6 +3,7 @@ title: "Resources for Building Production-Quality Shiny Applications"
 format:
   html:
     page-layout: full
+    link-external-newwindow: true
 execute:
   echo: false
   message: false
@@ -44,14 +45,16 @@ df_all <- dplyr::bind_rows(df) %>%
 This page is under construction and will be updated as the materials are posted online.
 :::
 
+
+
 ## Workshop Data Guide
 
-Throughout this workshop, each of the exercises and live-coding sessions will utilize data from the [Metropolitan Museum of Art](https://www.metmuseum.org){target="_blank"}, otherwise known as the MET, located in New York, United States. The museum offers data sets associated with the art and objects hosted in the museum via their public [API](https://metmuseum.github.io){target="_blank"}. Additional metadata associated with each image of the art piece or object was also generated using the [Google Vision API](https://cloud.google.com/vision){target="_blank"}, and in particular the following methods:
+Throughout this workshop, each of the exercises and live-coding sessions will utilize data from the [Metropolitan Museum of Art](https://www.metmuseum.org), otherwise known as the MET, located in New York, United States. The museum offers data sets associated with the art and objects hosted in the museum via their public [API](https://metmuseum.github.io). Additional metadata associated with each image of the art piece or object was also generated using the [Google Vision API](https://cloud.google.com/vision), and in particular the following methods:
 
-* [Label detection](https://cloud.google.com/vision/docs/labels){target="_blank"}: Detect and extract information about entities in an image across a broad group of categories.
-* [Object annotation](https://cloud.google.com/vision/docs/object-localizer){target="_blank"}: Detect and extract information about multiple objects in an image.
-* [Image properties](https://cloud.google.com/vision/docs/detecting-properties){target="_blank"}: Detect color attributes of an image.
-* [Crop hints](https://cloud.google.com/vision/docs/detecting-crop-hints){target="_blank"}: Obtain vertices of a cropped region for an image.
+* [Label detection](https://cloud.google.com/vision/docs/labels): Detect and extract information about entities in an image across a broad group of categories.
+* [Object annotation](https://cloud.google.com/vision/docs/object-localizer): Detect and extract information about multiple objects in an image.
+* [Image properties](https://cloud.google.com/vision/docs/detecting-properties): Detect color attributes of an image.
+* [Crop hints](https://cloud.google.com/vision/docs/detecting-crop-hints): Obtain vertices of a cropped region for an image.
 
 ```{r}
 #| label: art-metadata
