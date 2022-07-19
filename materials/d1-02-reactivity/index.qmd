@@ -257,10 +257,42 @@ library(countdown)
 countdown(minutes = 5, seconds =0)
 ```
 
+## Navigating Reactivity: `{reactlog}`
+
+:::: {.columns}
+
+::: {.column width="40%"}
+
+```r
+library(shiny)
+library(reactlog)
+
+reactlog_enable()
+
+# remaining app logic
+```
+
+:::
+
+::: {.column width="60%"}
+
+::: {.nonincremental}
+
+* Complete overhaul of Shiny's interactive reactive flow visualization
+* Powered by the [`{reactlog}`](https://rstudio.github.io/reactlog/index.html) package
+* Essential for answering **what** (and potentially **why**) your app behaves a certain way
+
+:::
+
+:::
+
+::::
+
+# Demo Time!
 
 ## {background-image="https://media.giphy.com/media/l41YBHH1A6OPQ5iXS/giphy.gif"}
 
-## {auto-animate=false}
+---
 
 . . .
 
@@ -375,3 +407,14 @@ server <- function(input, output, session) {
   })
 }
 ```
+
+## Code-Along with Me
+
+[Code-Along 1](codealong-1.html){target="_blank"}: Building the MET image viewer foundations
+
+## More from the Reactivity Bank
+
+* `invalidateLater`: Use running time as a source to reactivity
+* `isolate`: Prevent reactivity
+* `req`: Ensure pre-conditions are met before proceeding
+* `debounce/throttle`: Limit rate of reactive changes

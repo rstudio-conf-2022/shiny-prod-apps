@@ -1,0 +1,26 @@
+---
+title: "Building the Image Viewer"
+subtitle: "Reactivity Code-Along 1"
+---
+
+::: callout-warning
+This page is under construction and will be updated as the materials are posted online.
+:::
+
+We are going to code together an initial prototype of the MET Art Image viewer as a building block for the rest of the workshop. Open the `codealong-1/app.R` script in RStudio to follow along and code with me. 
+
+### High-Level Requirements
+
+Our goal is to let the user view an artwork piece inside the app by displaying the image of the artwork using the `image_url` value inside the `art_sub` data frame for a given artwork. On top of the image display, here are additional requirements:
+
+* Display metadata alongside the image so the user can view details about the artwork. 
+* Ability to filter choice of images by department
+* Let the user either approve the image for their virtual collection, or to reject the image and not have it displayed to them again. 
+
+While the workshop will continuously progress us to creating the production version of the application, this code-along will get us the basic functionality as a foundation for further development.
+
+### Development Strategy
+
+1. Assemble an input data set based on the (optional) department selected.
+1. Use a single art item to ensure the image and metadata display works correctly, while thinking about the dynamic nature later on.
+1. 
