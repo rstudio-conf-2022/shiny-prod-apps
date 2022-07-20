@@ -28,6 +28,19 @@ format:
 
 Shiny empowers R users to create innovative web applications, without requiring substantial expertise in web development frameworks to get up and running. The positive impact of Shiny in data science workflows across academia and a variety of industries is well-known and growing by the year. It is quite common for an early prototype of a Shiny app to generate tremendous excitement for key stakeholders and decision makers, often leading to requests for enhancements and ultimately be included in a production pipeline or process. The road to meeting this goal is challenging, especially for data scientists and statisticians not accustomed to software development!
 
+## Logistics
+
+Each day of the workshop will start at 9 AM and end at 5 PM, with multiple coffee breaks and a lunch break throughout. All materials for the course will be viewable online at [shinyprod.com](https://shinyprod.com) and hosted on GitHub at [github.com/rstudio-conf-2022/shiny-prod-apps](https://github.com/rstudio-conf-2022/shiny-prod-apps). We also have a [discussion board](https://github.com/rstudio-conf-2022/shiny-prod-apps/discussions) within the GitHub repository available for collaboration on questions and issues. For real-time messaging, we will be using a specific channel within the rstudio::conf(2022) Discord. Additional details for onboarding will be sent prior to the workshop.
+
+## Assumptions
+
+This workshop assumes you have intermediate knowledge of Shiny application development. Specifically, that you have basic familiarity with binding inputs to outputs and application layout. If you consider yourself a beginner with Shiny, the material in this workshop may be difficult to follow during the two days. If you intended to enroll in a  workshop geared towards an introduction to Shiny, please contact RStudio to see if you can switch to the **Getting Started with Shiny** workshop led by Colin Rundel. 
+
+Although Shiny is certainly the main focus of this workshop, we will be leveraging other capabilities of R in the materials and example applications:
+
+* We will be using packages from the [tidyverse](https://www.tidyverse.org/) to assist with data munging and processing. The majority of example code and exercises will provide the necessary code, but if you wish to make modifications we recommend [R for Data Science](https://r4ds.had.co.nz/) as a great reference for becoming familiar with the tidyverse.
+* In certain situations the Shiny applications we create will leverage APIs deployed via the [`{plumber}`](https://www.rplumber.io/) package. You won't be expected to create APIs from scratch in the workshop, but you are welcome to visit the package website to learn more about how APIs are created with plumber. To invoke the APIs from Shiny, we will leverage the [`{httr2}`](https://httr2.r-lib.org/) package.
+
 ## Prework & Setup
 
 You can find complete details on the required pre-work and setup instructions at the [setup](setup.qmd) tab. 
@@ -59,6 +72,6 @@ You can find complete details on the required pre-work and setup instructions at
 
 ![](materials/d1-01-welcome/assets/img/people/kobriant.jpeg){style="float:right;padding: 0 0 0 10px;" fig-alt="{{< var people.kobriant.name >}}" width="200"}
 
-**{{< var people.kobriant.name >}}** biography forthcoming. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam pharetra dui sit amet est volutpat efficitur ut et tortor. Nam in metus ligula. Aliquam pellentesque finibus ligula quis dignissim. Vestibulum at erat a enim tincidunt elementum. Phasellus ornare velit nec lorem varius rutrum. In scelerisque lectus vitae elit blandit, ut finibus dui aliquam. Morbi sit amet blandit dolor. Praesent cursus magna eu ligula faucibus fermentum. Curabitur condimentum neque a orci imperdiet egestas. Duis venenatis, erat et fringilla tincidunt, sapien elit dictum risus, vel tincidunt sapien magna et libero. Donec vel ultricies nunc, ut porttitor elit. Mauris vitae libero consequat, ultrices lectus quis, pharetra mauris. Quisque eget condimentum nisi. 
+**{{< var people.kobriant.name >}}** is the Product Manager for [RStudio Connect](https://www.rstudio.com/products/connect/).
 
 

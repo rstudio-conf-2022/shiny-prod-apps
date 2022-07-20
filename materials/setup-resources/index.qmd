@@ -1,0 +1,51 @@
+---
+title: "Workshop Environment Setup"
+subtitle: "Screenshots"
+author: "Eric Nantz"
+footer: "[shinyprod.com](https://shinyprod.com)"
+format: 
+  revealjs:
+    theme: [default, ../slides.scss] # moon= teal bg  |  dark
+    scrollable: true
+    incremental: true
+    slide-number: c/t # c/t | c | h/v | h.v
+    slide-tone: false #true
+    code-line-numbers: false
+    history: true
+---
+
+# Create RStudio Connect Account
+
+## {background-image="assets/screenshots/rsconnect_login_1.png" background-size="contain"}
+
+## {background-image="assets/screenshots/rsconnect_login_2.png" background-size="contain"}
+
+# Create RStudio Connect API Key 
+
+## {background-image="assets/screenshots/rsconnect_apikey_1.png" background-size="contain"}
+
+## {background-image="assets/screenshots/rsconnect_apikey_2.png" background-size="contain"}
+
+## {background-image="assets/screenshots/rsconnect_apikey_3.png" background-size="contain"}
+
+## {background-image="assets/screenshots/rsconnect_apikey_4.png" background-size="contain"}
+
+# RStudio Cloud Setup
+
+## {background-image="assets/screenshots/rscloud_1.png" background-size="contain"}
+
+## {background-image="assets/screenshots/rscloud_2.png" background-size="contain"}
+
+## {background-image="assets/screenshots/rscloud_3.png" background-size="contain"}
+
+# Account Integrations
+
+## {background-image="assets/screenshots/account_integrate_1.png" background-size="contain"}
+
+## {background-image="assets/screenshots/account_integrate_2.png" background-size="contain"}
+
+## {background-image="assets/screenshots/account_integrate_3.png" background-size="contain"}
+
+## {background-image="assets/screenshots/account_integrate_4.png" background-size="contain"}
+
+## {background-image="assets/screenshots/account_integrate_5.png" background-size="contain"}
