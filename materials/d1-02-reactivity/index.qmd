@@ -374,7 +374,7 @@ When constructing a Shiny app, lazy is not a bad thing for reactives!
 
 ::: {.column width="50%"}
 
-![](assets/img/joe_shinydevcon.png)
+![Joe Cheng at Shiny Dev Con 2016](assets/img/joe_shinydevcon.png)
 
 :::
 
@@ -408,13 +408,19 @@ server <- function(input, output, session) {
 }
 ```
 
-## Code-Along with Me
+# `r fontawesome::fa("people-carry", "white")` Code-Along {background-color="#17395c"}
 
-[Code-Along 1](codealong-1.html){target="_blank"}: Building the MET image viewer foundations
+[Code-Along 1](codealong-1.html){target="_blank"}: Building the MET image viewer foundation
 
 ## More from the Reactivity Bank
 
-* `invalidateLater`: Use running time as a source to reactivity
-* `isolate`: Prevent reactivity
-* `req`: Ensure pre-conditions are met before proceeding
-* `debounce/throttle`: Limit rate of reactive changes
+* [`bindEvent`](https://shiny.rstudio.com/reference/shiny/1.6.0/bindEvent.html): Modify an object to support event-like triggers
+* [`invalidateLater`](https://shiny.rstudio.com/reference/shiny/1.6.0/invalidateLater.html): Use running time as a source to reactivity
+* [`isolate`](https://shiny.rstudio.com/reference/shiny/1.6.0/isolate.html): Prevent reactivity
+* [`req`](https://shiny.rstudio.com/reference/shiny/1.6.0/req.html): Ensure pre-conditions are met before proceeding
+* [`debounce/throttle`](https://shiny.rstudio.com/reference/shiny/1.6.0/debounce.html): Slow the reactive-roll down
+
+## Additional Resources
+
+* [Mastering Reactivity](https://mastering-shiny.org/reactivity-intro.html) chapters from Hadley Wickham's [Mastering Shiny](https://mastering-shiny.org/index.html)
+* 
