@@ -8,7 +8,7 @@
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="../../site_libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
 <link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.0.28">
+  <meta name="generator" content="quarto-1.0.32">
 
   <meta name="author" content="Eric Nantz">
   <title>prod-shiny-workshop - Windows of Reactivity</title>
@@ -532,8 +532,16 @@
 </div>
 </div>
 </section>
-<section id="your-turn" class="slide level2">
-<h2>Your Turn</h2>
+<section id="your-turn-exercise-1" class="slide level2">
+<h2>Your Turn: <a href="ex-1.html" target="_blank">Exercise 1</a></h2>
+<p>Open the application in <code>ex-1/app.R</code> and see if you can improve the reactivity flow in the next 5 minutes. View more details at the <a href="https://shinydevseries.com" target="_blank">Exercise 1</a> page.</p>
+<div class="cell">
+<div class="cell-output-display">
+<div class="countdown" id="timer_62d7910e" style="right:0;bottom:0;" data-warnwhen="0">
+<code class="countdown-time"><span class="countdown-digits minutes">05</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
+</div>
+</div>
+</div>
 </section>
 <section id="the-middle" class="slide level2">
 <h2>The Middle</h2>
@@ -585,71 +593,171 @@
 </div>
 </div>
 </section>
+<section id="your-turn-exercise-2" class="slide level2">
+<h2>Your Turn: <a href="ex-2.html" target="_blank">Exercise 2</a></h2>
+<p>Open the application in <code>ex-2/app.R</code> which has 2 inputs that drive the visualization. See if you can optimize the reactive calculations in the next 5 minutes.</p>
+<div class="cell">
+<div class="cell-output-display">
+<div class="countdown" id="timer_62d78e3d" style="right:0;bottom:0;" data-warnwhen="0">
+<code class="countdown-time"><span class="countdown-digits minutes">05</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
+</div>
+</div>
+</div>
+</section>
+<section id="navigating-reactivity-reactlog" class="slide level2">
+<h2>Navigating Reactivity: <code>{reactlog}</code></h2>
+<div class="columns">
+<div class="column" style="width:40%;">
+<div class="sourceCode" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(shiny)</span>
+<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a><span class="fu">library</span>(reactlog)</span>
+<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-4"><a href="#cb5-4" aria-hidden="true" tabindex="-1"></a><span class="fu">reactlog_enable</span>()</span>
+<span id="cb5-5"><a href="#cb5-5" aria-hidden="true" tabindex="-1"></a></span>
+<span id="cb5-6"><a href="#cb5-6" aria-hidden="true" tabindex="-1"></a><span class="co"># remaining app logic</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div><div class="column" style="width:60%;">
+<div>
+<ul>
+<li>Complete overhaul of Shiny’s interactive reactive flow visualization</li>
+<li>Powered by the <a href="https://rstudio.github.io/reactlog/index.html"><code>{reactlog}</code></a> package</li>
+<li>Essential for answering <strong>what</strong> (and potentially <strong>why</strong>) your app behaves a certain way</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<section>
+<section id="demo-time" class="title-slide slide level1 center">
+<h1>Demo Time!</h1>
+
+</section>
 <section id="section" class="slide level2" data-background-image="https://media.giphy.com/media/l41YBHH1A6OPQ5iXS/giphy.gif">
 <h2></h2>
 </section>
-<section id="the-metaphor" class="slide level2">
-<h2>The metaphor</h2>
-<p>TODO: Make side by side images of a cat waiting to do something and a dog going crazy</p>
-<p>Cat https://i.redd.it/ld6eza8y2o591.jpg (credit catswithjobs reddit https://www.reddit.com/r/Catswithjobs/comments/vcfvqz/barista_cat/)</p>
-<p>Dog</p>
+<section class="slide level2">
+
+<div class="fragment">
+<p><img data-src="https://i.redd.it/ld6eza8y2o591.jpg" class="absolute" style="top: 100px; left: 0px; width: 400px; height: 500px; "></p>
+</div>
+<div class="fragment">
+<p><img data-src="https://media.giphy.com/media/Q60iJpkD9URe2DpQgd/giphy.gif" class="absolute" style="top: 100px; left: 550px; width: 450px; height: 500px; "></p>
+</div>
+<div class="fragment">
+<div class="columns">
+<div class="column" style="width:50%;">
+<h3 id="reactive">Reactive</h3>
+</div><div class="column" style="width:50%;">
+<h3 id="observer">Observer</h3>
+</div>
+</div>
+</div>
 </section>
-<section id="the-reactive" class="slide level2">
-<h2>The <code>reactive</code></h2>
-<div class="sourceCode" id="cb5"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1" aria-hidden="true" tabindex="-1"></a>current_image_df <span class="ot">&lt;-</span> <span class="fu">reactive</span>({</span>
-<span id="cb5-2"><a href="#cb5-2" aria-hidden="true" tabindex="-1"></a>  dplyr<span class="sc">::</span><span class="fu">filter</span>(art_random, department <span class="sc">==</span> input<span class="sc">$</span>dept)</span>
-<span id="cb5-3"><a href="#cb5-3" aria-hidden="true" tabindex="-1"></a>})</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</section>
-<section id="overview" class="slide level2">
-<h2>Overview</h2>
-<ol type="1">
-<li class="fragment">intro</li>
-<li class="fragment">breaks</li>
-<li class="fragment">hammer time</li>
-<li class="fragment">deploy it</li>
-</ol>
-</section>
-<section id="july-26" class="slide level2">
-<h2>July 26</h2>
+<section id="section-1" class="slide level2" data-auto-animate="false">
+<h2 data-id="quarto-animate-title"></h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<h3 id="reactive-1">Reactive</h3>
 <ul>
-<li class="fragment">your</li>
-<li class="fragment">world</li>
-<li class="fragment">will</li>
-<li class="fragment">change !</li>
+<li class="fragment">Use for <strong>calculations</strong></li>
+<li class="fragment">Lazy</li>
+<li class="fragment">Cached</li>
+<li class="fragment">Returns a value</li>
+<li class="fragment">Absolutely no side effects</li>
+</ul>
+</div><div class="column" style="width:50%;">
+<h3 id="observer-1">Observer</h3>
+<ul>
+<li class="fragment">Use for <strong>side effects</strong></li>
+<li class="fragment"><strong>Very</strong> eager</li>
+<li class="fragment">Forgetful (no caching)</li>
+<li class="fragment">No return value</li>
+<li class="fragment"><strong>Only</strong> for side effects</li>
+</ul>
+</div>
+</div>
+</section>
+<section id="isnt-lazy-a-." class="slide level2">
+<h2>Isn’t Lazy a ….</h2>
+<p>When constructing a Shiny app, lazy is not a bad thing for reactives!</p>
+<ul>
+<li class="fragment">Only preform calculations when absolutely necessary</li>
+<li class="fragment">Intentional design will reward you with efficient performance</li>
 </ul>
 </section>
-<section id="next-day" class="slide level2">
-<h2>Next day</h2>
-<div class="panel-tabset">
-<ul id="tabset-2" class="panel-tabset-tabby"><li><a data-tabby-default="" href="#tabset-2-1">Deploy App</a></li><li><a href="#tabset-2-2">Monitor App</a></li></ul>
-<div class="tab-content">
-<div id="tabset-2-1">
-<p>Learn where to deploy your Shiny app</p>
+<section id="those-troublesome-observers" class="slide level2">
+<h2>Those Troublesome Observers</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div>
+<ul>
+<li>Observers may cause reactive chaos in your app</li>
+<li>But with a little control, they can be just as valuable</li>
+</ul>
 </div>
-<div id="tabset-2-2">
-<p>Now your app is in the wild, watch over it like a hawk</p>
+</div><div class="column" style="width:50%;">
+<div class="quarto-figure quarto-figure-center">
+<figure>
+<p><img data-src="assets/img/joe_shinydevcon.png"></p>
+<p></p><figcaption>Joe Cheng at Shiny Dev Con 2016</figcaption><p></p>
+</figure>
 </div>
 </div>
 </div>
 </section>
-<section id="libraries" class="slide level2">
-<h2>Libraries</h2>
-
-<img data-src="assets/img/apps.png" class="r-stretch quarto-figure-center"><p class="caption">apps</p></section>
-<section id="timer" class="slide level2">
-<h2>Timer</h2>
-<div class="cell">
-<div class="cell-output-display">
-<div class="countdown" id="timer_62d4856b" style="right:0;bottom:0;" data-warnwhen="0">
-<code class="countdown-time"><span class="countdown-digits minutes">00</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">45</span></code>
-</div>
-</div>
-</div>
+<section id="event-driven-processing" class="slide level2">
+<h2>Event-driven Processing</h2>
+<p><code>observeEvent</code> ensures processing only happens based on a <strong>single</strong> trigger</p>
+<ul>
+<li class="fragment">Button click</li>
+<li class="fragment">Updated reactive expression</li>
+<li class="fragment">Updated <code>reactiveValues</code> or <code>reactiveVal</code></li>
+</ul>
+</section>
+<section id="inputs-from-the-server" class="slide level2">
+<h2>Inputs from the Server</h2>
+<ul>
+<li class="fragment">Users typically drive processing through the Shiny UI</li>
+<li class="fragment">Sometimes you need to create a dynamic version that can be updated within the server-side logic</li>
+<li class="fragment">The MVPs: <code>reactiveValues</code> and <code>reactiveVal</code></li>
+</ul>
+</section>
+<section id="inputs-from-the-server-1" class="slide level2">
+<h2>Inputs from the Server</h2>
+<div class="sourceCode" id="cb6"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1" aria-hidden="true" tabindex="-1"></a>server <span class="ot">&lt;-</span> <span class="cf">function</span>(input, output, session) {</span>
+<span id="cb6-2"><a href="#cb6-2" aria-hidden="true" tabindex="-1"></a>  rv <span class="ot">&lt;-</span> <span class="fu">reactiveValues</span>(<span class="at">x =</span> <span class="dv">0</span>)</span>
+<span id="cb6-3"><a href="#cb6-3" aria-hidden="true" tabindex="-1"></a>  rv2 <span class="ot">&lt;-</span> <span class="fu">reactiveVal</span>(<span class="dv">0</span>)</span>
+<span id="cb6-4"><a href="#cb6-4" aria-hidden="true" tabindex="-1"></a>  </span>
+<span id="cb6-5"><a href="#cb6-5" aria-hidden="true" tabindex="-1"></a>  <span class="fu">observeEvent</span>(input<span class="sc">$</span>btn, {</span>
+<span id="cb6-6"><a href="#cb6-6" aria-hidden="true" tabindex="-1"></a>    rv<span class="sc">$</span>x <span class="ot">&lt;-</span> rv<span class="sc">$</span>x <span class="sc">+</span> <span class="dv">1</span></span>
+<span id="cb6-7"><a href="#cb6-7" aria-hidden="true" tabindex="-1"></a>    <span class="fu">rv2</span>(<span class="fu">rv2</span>() <span class="sc">+</span> <span class="dv">1</span>)</span>
+<span id="cb6-8"><a href="#cb6-8" aria-hidden="true" tabindex="-1"></a>  })</span>
+<span id="cb6-9"><a href="#cb6-9" aria-hidden="true" tabindex="-1"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</section></section>
+<section>
+<section id="code-along" class="title-slide slide level1 center" data-background-color="#17395c">
+<h1><svg aria-hidden="true" role="img" viewbox="0 0 640 512" style="height:1em;width:1.25em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:white;overflow:visible;position:relative;"><path d="M128 96c26.5 0 48-21.5 48-48S154.5 0 128 0 80 21.5 80 48s21.5 48 48 48zm384 0c26.5 0 48-21.5 48-48S538.5 0 512 0s-48 21.5-48 48 21.5 48 48 48zm125.7 372.1l-44-110-41.1 46.4-2 18.2 27.7 69.2c5 12.5 17 20.1 29.7 20.1 4 0 8-.7 11.9-2.3 16.4-6.6 24.4-25.2 17.8-41.6zm-34.2-209.8L585 178.1c-4.6-20-18.6-36.8-37.5-44.9-18.5-8-39-6.7-56.1 3.3-22.7 13.4-39.7 34.5-48.1 59.4L432 229.8 416 240v-96c0-8.8-7.2-16-16-16H240c-8.8 0-16 7.2-16 16v96l-16.1-10.2-11.3-33.9c-8.3-25-25.4-46-48.1-59.4-17.2-10-37.6-11.3-56.1-3.3-18.9 8.1-32.9 24.9-37.5 44.9l-18.4 80.2c-4.6 20 .7 41.2 14.4 56.7l67.2 75.9 10.1 92.6C130 499.8 143.8 512 160 512c1.2 0 2.3-.1 3.5-.2 17.6-1.9 30.2-17.7 28.3-35.3l-10.1-92.8c-1.5-13-6.9-25.1-15.6-35l-43.3-49 17.6-70.3 6.8 20.4c4.1 12.5 11.9 23.4 24.5 32.6l51.1 32.5c4.6 2.9 12.1 4.6 17.2 5h160c5.1-.4 12.6-2.1 17.2-5l51.1-32.5c12.6-9.2 20.4-20 24.5-32.6l6.8-20.4 17.6 70.3-43.3 49c-8.7 9.9-14.1 22-15.6 35l-10.1 92.8c-1.9 17.6 10.8 33.4 28.3 35.3 1.2.1 2.3.2 3.5.2 16.1 0 30-12.1 31.8-28.5l10.1-92.6 67.2-75.9c13.6-15.5 19-36.7 14.4-56.7zM46.3 358.1l-44 110c-6.6 16.4 1.4 35 17.8 41.6 16.8 6.6 35.1-1.7 41.6-17.8l27.7-69.2-2-18.2-41.1-46.4z"></path></svg> Code-Along</h1>
+<p><a href="codealong-1.html" target="_blank">Code-Along 1</a>: Building the MET image viewer foundation</p>
+</section>
+<section id="more-from-the-reactivity-bank" class="slide level2">
+<h2>More from the Reactivity Bank</h2>
+<ul>
+<li class="fragment"><a href="https://shiny.rstudio.com/reference/shiny/1.6.0/bindEvent.html"><code>bindEvent</code></a>: Modify an object to support event-like triggers</li>
+<li class="fragment"><a href="https://shiny.rstudio.com/reference/shiny/1.6.0/invalidateLater.html"><code>invalidateLater</code></a>: Use running time as a source to reactivity</li>
+<li class="fragment"><a href="https://shiny.rstudio.com/reference/shiny/1.6.0/isolate.html"><code>isolate</code></a>: Prevent reactivity</li>
+<li class="fragment"><a href="https://shiny.rstudio.com/reference/shiny/1.6.0/req.html"><code>req</code></a>: Ensure pre-conditions are met before proceeding</li>
+<li class="fragment"><a href="https://shiny.rstudio.com/reference/shiny/1.6.0/debounce.html"><code>debounce/throttle</code></a>: Slow the reactive-roll down</li>
+</ul>
+</section>
+<section id="additional-resources" class="slide level2">
+<h2>Additional Resources</h2>
+<ul>
+<li class="fragment"><a href="https://mastering-shiny.org/reactivity-intro.html">Mastering Reactivity</a> chapters from Hadley Wickham’s <a href="https://mastering-shiny.org/index.html">Mastering Shiny</a></li>
+<li class="fragment"></li>
+</ul>
 
 <div class="footer footer-default">
 <p><a href="https://shinyprod.com">shinyprod.com</a></p>
 </div>
-</section>
+</section></section>
     </div>
   </div>
 

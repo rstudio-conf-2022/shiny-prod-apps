@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.0.28">
+<meta name="generator" content="quarto-1.0.32">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -15,6 +15,69 @@ span.underline{text-decoration: underline;}
 div.column{display: inline-block; vertical-align: top; width: 50%;}
 div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
 ul.task-list{list-style: none;}
+pre > code.sourceCode { white-space: pre; position: relative; }
+pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+pre > code.sourceCode > span:empty { height: 1.2em; }
+.sourceCode { overflow: visible; }
+code.sourceCode > span { color: inherit; text-decoration: inherit; }
+div.sourceCode { margin: 1em 0; }
+pre.sourceCode { margin: 0; }
+@media screen {
+div.sourceCode { overflow: auto; }
+}
+@media print {
+pre > code.sourceCode { white-space: pre-wrap; }
+pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+}
+pre.numberSource code
+  { counter-reset: source-line 0; }
+pre.numberSource code > span
+  { position: relative; left: -4em; counter-increment: source-line; }
+pre.numberSource code > span > a:first-child::before
+  { content: counter(source-line);
+    position: relative; left: -1em; text-align: right; vertical-align: baseline;
+    border: none; display: inline-block;
+    -webkit-touch-callout: none; -webkit-user-select: none;
+    -khtml-user-select: none; -moz-user-select: none;
+    -ms-user-select: none; user-select: none;
+    padding: 0 4px; width: 4em;
+    color: #aaaaaa;
+  }
+pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+div.sourceCode
+  {   }
+@media screen {
+pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+}
+code span.al { color: #ff0000; font-weight: bold; } /* Alert */
+code span.an { color: #60a0b0; font-weight: bold; font-style: italic; } /* Annotation */
+code span.at { color: #7d9029; } /* Attribute */
+code span.bn { color: #40a070; } /* BaseN */
+code span.bu { } /* BuiltIn */
+code span.cf { color: #007020; font-weight: bold; } /* ControlFlow */
+code span.ch { color: #4070a0; } /* Char */
+code span.cn { color: #880000; } /* Constant */
+code span.co { color: #60a0b0; font-style: italic; } /* Comment */
+code span.cv { color: #60a0b0; font-weight: bold; font-style: italic; } /* CommentVar */
+code span.do { color: #ba2121; font-style: italic; } /* Documentation */
+code span.dt { color: #902000; } /* DataType */
+code span.dv { color: #40a070; } /* DecVal */
+code span.er { color: #ff0000; font-weight: bold; } /* Error */
+code span.ex { } /* Extension */
+code span.fl { color: #40a070; } /* Float */
+code span.fu { color: #06287e; } /* Function */
+code span.im { } /* Import */
+code span.in { color: #60a0b0; font-weight: bold; font-style: italic; } /* Information */
+code span.kw { color: #007020; font-weight: bold; } /* Keyword */
+code span.op { color: #666666; } /* Operator */
+code span.ot { color: #007020; } /* Other */
+code span.pp { color: #bc7a00; } /* Preprocessor */
+code span.sc { color: #4070a0; } /* SpecialChar */
+code span.ss { color: #bb6688; } /* SpecialString */
+code span.st { color: #4070a0; } /* String */
+code span.va { color: #19177c; } /* Variable */
+code span.vs { color: #4070a0; } /* VerbatimString */
+code span.wa { color: #60a0b0; font-weight: bold; font-style: italic; } /* Warning */
 </style>
 
 
@@ -127,14 +190,10 @@ ul.task-list{list-style: none;}
     <h2 id="toc-title">On this page</h2>
    
   <ul>
-  <li><a href="#assumptions" id="toc-assumptions" class="nav-link active" data-scroll-target="#assumptions">Assumptions</a></li>
-  <li><a href="#logistics" id="toc-logistics" class="nav-link" data-scroll-target="#logistics">Logistics</a></li>
-  <li><a href="#pre-work" id="toc-pre-work" class="nav-link" data-scroll-target="#pre-work">Pre-Work</a>
-  <ul class="collapse">
+  <li><a href="#pre-work" id="toc-pre-work" class="nav-link active" data-scroll-target="#pre-work">Pre-Work</a></li>
   <li><a href="#accounts" id="toc-accounts" class="nav-link" data-scroll-target="#accounts">Accounts</a></li>
+  <li><a href="#local-clone-of-repository" id="toc-local-clone-of-repository" class="nav-link" data-scroll-target="#local-clone-of-repository">Local Clone of Repository</a></li>
   <li><a href="#environment-configuration" id="toc-environment-configuration" class="nav-link" data-scroll-target="#environment-configuration">Environment Configuration</a></li>
-  <li><a href="#setup-and-requirements" id="toc-setup-and-requirements" class="nav-link" data-scroll-target="#setup-and-requirements">Setup and Requirements</a></li>
-  </ul></li>
   </ul>
 <div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/rstudio-conf-2022/shiny-prod-apps/edit/main/setup.qmd" class="toc-action">Edit this page</a></p><p><a href="https://github.com/rstudio-conf-2022/shiny-prod-apps/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
     </div>
@@ -157,61 +216,122 @@ ul.task-list{list-style: none;}
 
 </header>
 
-<p>We are excited to have you join us for our two-day workshop <strong>Building Production-Quality Shiny Applications</strong>! The format of the workshop will be a mix of presentation slides, example Shiny applications, and hands-on exercises. To ensure you are ready for the journey, please review the following logistics and instructions:</p>
-<section id="assumptions" class="level3">
-<h3 class="anchored" data-anchor-id="assumptions">Assumptions</h3>
-<p>This workshop assumes you have intermediate knowledge of Shiny application development. Specifically, that you have basic familiarity with binding inputs to outputs and application layout. If you consider yourself a beginner with Shiny, the material in this workshop may be difficult to follow during the two days. If you intended to enroll in a workshop geared towards an introduction to Shiny, please contact RStudio to see if you can switch to the <strong>Getting Started with Shiny</strong> workshop led by Colin Rundel.</p>
-<p>Although Shiny is certainly the main focus of this workshop, we will be leveraging other capabilities of R in the materials and example applications:</p>
-<ul>
-<li>We will be using packages from the <a href="https://www.tidyverse.org/">tidyverse</a> to assist with data munging and processing. The majority of example code and exercises will provide the necessary code, but if you wish to make modifications we recommend <a href="https://r4ds.had.co.nz/">R for Data Science</a> as a great reference for becoming familiar with the tidyverse.</li>
-<li>In certain situations the Shiny applications we create will leverage APIs deployed via the <a href="https://www.rplumber.io/"><code>{plumber}</code></a> package. You won’t be expected to create APIs from scratch in the workshop, but you are welcome to visit the package website to learn more about how APIs are created with plumber. To invoke the APIs from Shiny, we will leverage the <a href="https://httr2.r-lib.org/"><code>{httr2}</code></a> package.</li>
-</ul>
-</section>
-<section id="logistics" class="level3">
-<h3 class="anchored" data-anchor-id="logistics">Logistics</h3>
-<p>Each day of the workshop will start at 9 AM and end at 5 PM, with multiple coffee breaks and a lunch break throughout. I will be presenting the majority of the content, but we have an amazing collection of five teaching assistants ready to assist with any technical issues or questions. All materials for the course will be viewable online at <a href="https://shinyprod.com">shinyprod.com</a> and hosted on GitHub at <a href="https://github.com/rstudio-conf-2022/shiny-prod-apps">github.com/rstudio-conf-2022/shiny-prod-apps</a>. We also have a <a href="https://github.com/rstudio-conf-2022/shiny-prod-apps/discussions">discussion board</a> within the GitHub repository available for collaboration on questions and issues. Also, be aware that the workshop materials are in active development, so please check back to the site and GitHub repository regularly before the workshop. We plan on sending additional emails as we get closer to the workshop dates.</p>
-</section>
+<p>We are excited to have you join us for our two-day workshop <strong>Building Production-Quality Shiny Applications</strong>! The format of the workshop will be a mix of presentation slides, example Shiny applications, and hands-on exercises. To ensure you are ready for the journey, please review the following instructions.</p>
 <section id="pre-work" class="level2">
 <h2 class="anchored" data-anchor-id="pre-work">Pre-Work</h2>
-<p>This workshop will be a blend of teaching materials, live-coding demonstrations, and hands-on exercises to practice key concepts. RStudio has generously provided us access to a dedicated workshop coding environment using <a href="https://rstudio.cloud">RStudio Cloud</a>, which is accessible with a modern web browser such as Google Chrome, Microsoft Edge, Firefox, or others. In addition, RStudio is also providing a dedicated instance of the <strong>RStudio Connect</strong> platform ((URL Forthcoming)) for hosting Shiny applications that you create and view throughout the workshop.</p>
-<p>To leverage these platforms as well as other capabilities, please ensure you have the following established prior to the conference:</p>
-<section id="accounts" class="level3">
-<h3 class="anchored" data-anchor-id="accounts">Accounts</h3>
+<p>This workshop will be a blend of teaching materials, live-coding demonstrations, and hands-on exercises to practice key concepts. RStudio has generously provided us access to a dedicated workshop coding environment using <a href="https://rstudio.cloud">RStudio Cloud</a>, which is accessible with a modern web browser such as Google Chrome, Microsoft Edge, Firefox, or others. In addition, RStudio is also providing a dedicated instance of the <strong>RStudio Connect</strong> platform for hosting Shiny applications that you create and view throughout the workshop.</p>
+<p>In the first session of the workshop, we will allocate time for everyone to configure their accounts and development environments. If you would like to complete these steps before the workshop, you can follow the procedures detailed in <strong>Environment Configuration</strong> below.</p>
+</section>
+<section id="accounts" class="level2">
+<h2 class="anchored" data-anchor-id="accounts">Accounts</h2>
 <ul>
-<li>GitHub account: You can create a GitHub account for free using the instructions provided in the <a href="https://happygitwithr.com/github-acct.html#github-acct">Register for GitHub</a> chapter of Jenny Bryan’s <a href="https://happygitwithr.com/index.html">Happy Git and GitHub for the UseR</a>. If you already have an acount, you are welcome to use it for the workshop.</li>
+<li>GitHub account: You can create a GitHub account for free using the instructions provided in the <a href="https://happygitwithr.com/github-acct.html#github-acct">Register for GitHub</a> chapter of Jenny Bryan’s <a href="https://happygitwithr.com/index.html">Happy Git and GitHub for the UseR</a>. If you already have an account, you are welcome to use it for the workshop. While version control itself is not a major focus of the course, we will discuss how certain elements can play an important role in application development and deployment. A great resource for getting a basic familiarity with Git version control is Jenny Bryan’s <a href="https://happygitwithr.com/index.html">Happy Git and GitHub for the useR</a> online book.</li>
 <li>RStudio Cloud account: Visit <a href="https://rstudio.cloud">rstudio.cloud</a> and click the Sign Up link. Then create a <strong>Free</strong> account. If you already have an account, you do not need to create a new one.</li>
 </ul>
 </section>
-<section id="environment-configuration" class="level3">
-<h3 class="anchored" data-anchor-id="environment-configuration">Environment Configuration</h3>
-<p>In the first session of the workshop, we will provide you with the instructions for connecting to the workshop environment within RStudio Cloud and the workshop RStudio Connect server. You can view the steps in the screencasts below, or view the written instructions.</p>
-<div class="panel-tabset">
-<ul class="nav nav-tabs" role="tablist"><li class="nav-item" role="presentation"><a class="nav-link active" id="tabset-1-1-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-1" role="tab" aria-controls="tabset-1-1" aria-selected="true">RStudio Connect Account &amp; API Key</a></li><li class="nav-item" role="presentation"><a class="nav-link" id="tabset-1-2-tab" data-bs-toggle="tab" data-bs-target="#tabset-1-2" role="tab" aria-controls="tabset-1-2" aria-selected="false">Integrating RStudio Connect &amp; RStudio Cloud</a></li></ul>
-<div class="tab-content">
-<div id="tabset-1-1" class="tab-pane active" role="tabpanel" aria-labelledby="tabset-1-1-tab">
-<p>something</p>
-</div>
-<div id="tabset-1-2" class="tab-pane" role="tabpanel" aria-labelledby="tabset-1-2-tab">
-<p>else</p>
-</div>
-</div>
-</div>
+<section id="local-clone-of-repository" class="level2">
+<h2 class="anchored" data-anchor-id="local-clone-of-repository">Local Clone of Repository</h2>
+<p>If we encounter any technical issues with the cloud-based environments, it is a good idea to have a clone of this repository on your local laptop as a backup.</p>
 </section>
-<section id="setup-and-requirements" class="level3">
-<h3 class="anchored" data-anchor-id="setup-and-requirements">Setup and Requirements</h3>
+<section id="environment-configuration" class="level2">
+<h2 class="anchored" data-anchor-id="environment-configuration">Environment Configuration</h2>
+<p>Please view the information in the callouts below for step-by-step instructions on configuring your accounts and environments. While RStudio Cloud is the preferred development environment, you may utilize your local installation of R and RStudio if you prefer.</p>
+<div class="callout-tip callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-1-contents" aria-controls="callout-1" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+RStudio Connect
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-1" class="callout-1-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><a href="materials/setup-resources/index.html#/rcreate-rstudio-connect-account">View screenshots in full screen</a></p>
+<iframe class="slide-deck" src="materials/setup-resources/#/create-rstudio-connect-account" height="420" width="747" style="border: 1px solid #2e3846;"></iframe>
 <ol type="1">
-<li><p>You will need a <a href="https://github.com">GitHub</a> account for key sections of this course. If you already have an account, you should be all set and no further action is needed. If you do not, creating an account is free. While version control itself is not a major focus of the course, we will discuss how certain elements can play an important role in application development and deployment. A great resource for getting a basic familiarity with Git version control is Jenny Bryan’s <a href="https://happygitwithr.com/index.html">Happy Git and GitHub for the useR</a> online book (also freely available).</p></li>
-<li><p>RStudio will provide a dedicated workspace for this course on the <a href="https://rstudio.cloud/">RStudio Cloud</a> platform. This can be run directly from a web browser, and all system and R dependencies will be configured already. However, if you wish to use your local laptop to participate, you will need the following:</p>
-<ul>
-<li>R version 4.1.3 or later.</li>
-<li>Your preferred integrated development environment for R, such as <a href="https://www.rstudio.com/products/rstudio/download/">RStudio Desktop</a> or <a href="https://code.visualstudio.com/">Visual Studio Code</a> with the <a href="https://marketplace.visualstudio.com/items?itemName=REditorSupport.r">R Extension</a>.</li>
-<li>The <a href="https://rstudio.github.io/renv/"><code>{renv}</code></a> package to manage package dependencies for the workshop.</li>
-<li>The Git version control system. For installation instructions on each OS, please see the <a href="https://happygitwithr.com/install-git.html">Install Git</a> chapter from Jenny Bryan’s <a href="https://happygitwithr.com/index.html">Happy Git and GitHub for the useR</a>.</li>
-</ul></li>
+<li>Create an account on the workshop RStudio Connect server by visiting ((URL Forthcoming)) and clicking the <strong>login</strong> link in the upper right corner.</li>
+<li>You will see a window that asks for either an email/password or to use a GitHub account. Please choose the GitHub option and follow the instructions to authorize RStudio Connect to your GitHub account.</li>
+<li>You should now be logged in to RStudio Connect. Please create an API key for your account by following the RStudio Connect User Guide instructions on <a href="https://docs.rstudio.com/connect/user/api-keys/">creasting an API key</a>. Save it to a secure place as you will need it for account integration.</li>
 </ol>
+</div>
+</div>
+</div>
+<div class="callout-tip callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-2-contents" aria-controls="callout-2" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+RStudio Cloud
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-2" class="callout-2-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><a href="materials/setup-resources/index.html#/rstudio-cloud-setup">View screenshots in full screen</a></p>
+<iframe class="slide-deck" src="materials/setup-resources/#/rstudio-cloud-setup" height="420" width="747" style="border: 1px solid #2e3846;"></iframe>
+<ol type="1">
+<li>Join the RStudio Cloud Workspace dedicated to this workshop by visiting this URL: ((URL Forthcoming)). If you already have an RStudio Cloud account, you are welcome to use it for the workshop. Otherwise, you can create a new account for free.</li>
+<li>You will see a project called <em>shiny-prod-apps</em>. Open that project and create a saved copy. This process could take a couple of minutes depending on server load.</li>
+<li>After the project loads, you will see messages in the R console about restoring or repairing the package library. Execute <code>renv::restore(prompt = FALSE)</code> to install packages into the project. This process should complete in one or two minutes.</li>
+</ol>
+</div>
+</div>
+</div>
+<div class="callout-caution callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-3-contents" aria-controls="callout-3" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Local R &amp; RStudio
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-3" class="callout-3-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p>If you prefer to use a local installation of R and RStudio, ensure you setup meets the following requirements:</p>
+<ul>
+<li>R version 4.1 or later</li>
+<li>Latest released version of RStudio, <a href="https://www.rstudio.com/products/rstudio/download/#download"><code>v2022.07.0-548</code> or later</a></li>
+<li>The <a href="https://rstudio.github.io/renv/articles/renv.html"><code>{renv}</code></a> package.</li>
+</ul>
+</div>
+</div>
+</div>
+<div class="callout-tip callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center" data-bs-toggle="collapse" data-bs-target=".callout-4-contents" aria-controls="callout-4" aria-expanded="false" aria-label="Toggle callout">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Account Integration
+</div>
+<div class="callout-btn-toggle d-inline-block border-0 py-1 ps-1 pe-0 float-end"><i class="callout-toggle"></i></div>
+</div>
+<div id="callout-4" class="callout-4-contents callout-collapse collapse">
+<div class="callout-body-container callout-body">
+<p><a href="materials/setup-resources/index.html#/account-integrations">View screenshots in full screen</a></p>
+<iframe class="slide-deck" src="materials/setup-resources/#/account-integrations" height="420" width="747" style="border: 1px solid #2e3846;"></iframe>
+<ol type="1">
+<li>Navigate back to your RStudio Project created earlier. Create a new file called <code>.Renviron</code> withing your project directory by running the following in the R Console: <code>usethis::edit_r_environ(scope = "project"</code>)</li>
+<li>Inside the <code>.Renviron</code> file, add the RStudio Connect URL and your account API key using the following format (substitute values as appropriate)</li>
+</ol>
+<pre><code>CONNECT_SERVER=server-address
+CONNECT_API_KEY=abcdefghijklmnopqrstuvwxyz</code></pre>
+<ol type="1">
+<li>Link your RStudio Connect account to RStudio by going to <code>Tools -&gt; Global Options -&gt; Publishing</code> and click <strong>Connect</strong> to follow the prompts.</li>
+<li>Restart your R session by going to <code>Session -&gt; Restart R</code> inside RStudio. Verify that your environment variables were successfully registered by printing them into your R console with the following commands:</li>
+</ol>
+<div class="sourceCode" id="cb2"><pre class="sourceCode r code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1" aria-hidden="true" tabindex="-1"></a><span class="fu">Sys.getenv</span>(<span class="st">"CONNECT_SERVER"</span>)</span>
+<span id="cb2-2"><a href="#cb2-2" aria-hidden="true" tabindex="-1"></a><span class="fu">Sys.getenv</span>(<span class="st">"CONNECT_API_KEY"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+</div>
 
 
-</section>
 </section>
 
 </main> <!-- /main -->

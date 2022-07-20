@@ -2,7 +2,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.0.28">
+<meta name="generator" content="quarto-1.0.32">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
@@ -129,6 +129,8 @@ ul.task-list{list-style: none;}
    
   <ul>
   <li><a href="#overview" id="toc-overview" class="nav-link active" data-scroll-target="#overview">Overview</a></li>
+  <li><a href="#logistics" id="toc-logistics" class="nav-link" data-scroll-target="#logistics">Logistics</a></li>
+  <li><a href="#assumptions" id="toc-assumptions" class="nav-link" data-scroll-target="#assumptions">Assumptions</a></li>
   <li><a href="#prework-setup" id="toc-prework-setup" class="nav-link" data-scroll-target="#prework-setup">Prework &amp; Setup</a></li>
   <li><a href="#meet-the-workshop-team" id="toc-meet-the-workshop-team" class="nav-link" data-scroll-target="#meet-the-workshop-team">Meet the Workshop Team</a>
   <ul class="collapse">
@@ -169,6 +171,19 @@ ul.task-list{list-style: none;}
 <p><br></p>
 <p>Shiny empowers R users to create innovative web applications, without requiring substantial expertise in web development frameworks to get up and running. The positive impact of Shiny in data science workflows across academia and a variety of industries is well-known and growing by the year. It is quite common for an early prototype of a Shiny app to generate tremendous excitement for key stakeholders and decision makers, often leading to requests for enhancements and ultimately be included in a production pipeline or process. The road to meeting this goal is challenging, especially for data scientists and statisticians not accustomed to software development!</p>
 </section>
+<section id="logistics" class="level2">
+<h2 class="anchored" data-anchor-id="logistics">Logistics</h2>
+<p>Each day of the workshop will start at 9 AM and end at 5 PM, with multiple coffee breaks and a lunch break throughout. All materials for the course will be viewable online at <a href="https://shinyprod.com">shinyprod.com</a> and hosted on GitHub at <a href="https://github.com/rstudio-conf-2022/shiny-prod-apps">github.com/rstudio-conf-2022/shiny-prod-apps</a>. We also have a <a href="https://github.com/rstudio-conf-2022/shiny-prod-apps/discussions">discussion board</a> within the GitHub repository available for collaboration on questions and issues. For real-time messaging, we will be using a specific channel within the rstudio::conf(2022) Discord. Additional details for onboarding will be sent prior to the workshop.</p>
+</section>
+<section id="assumptions" class="level2">
+<h2 class="anchored" data-anchor-id="assumptions">Assumptions</h2>
+<p>This workshop assumes you have intermediate knowledge of Shiny application development. Specifically, that you have basic familiarity with binding inputs to outputs and application layout. If you consider yourself a beginner with Shiny, the material in this workshop may be difficult to follow during the two days. If you intended to enroll in a workshop geared towards an introduction to Shiny, please contact RStudio to see if you can switch to the <strong>Getting Started with Shiny</strong> workshop led by Colin Rundel.</p>
+<p>Although Shiny is certainly the main focus of this workshop, we will be leveraging other capabilities of R in the materials and example applications:</p>
+<ul>
+<li>We will be using packages from the <a href="https://www.tidyverse.org/">tidyverse</a> to assist with data munging and processing. The majority of example code and exercises will provide the necessary code, but if you wish to make modifications we recommend <a href="https://r4ds.had.co.nz/">R for Data Science</a> as a great reference for becoming familiar with the tidyverse.</li>
+<li>In certain situations the Shiny applications we create will leverage APIs deployed via the <a href="https://www.rplumber.io/"><code>{plumber}</code></a> package. You won’t be expected to create APIs from scratch in the workshop, but you are welcome to visit the package website to learn more about how APIs are created with plumber. To invoke the APIs from Shiny, we will leverage the <a href="https://httr2.r-lib.org/"><code>{httr2}</code></a> package.</li>
+</ul>
+</section>
 <section id="prework-setup" class="level2">
 <h2 class="anchored" data-anchor-id="prework-setup">Prework &amp; Setup</h2>
 <p>You can find complete details on the required pre-work and setup instructions at the <a href="./setup.html">setup</a> tab.</p>
@@ -190,7 +205,7 @@ ul.task-list{list-style: none;}
 <p><img src="materials/d1-01-welcome/assets/img/people/dkearney.jpeg" class="img-fluid" style="float:right;padding: 0 0 0 10px;" alt="{{< var people.dkearney.name >}}" width="200"></p>
 <p><strong>Derrick Kearney</strong> biography forthcoming. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam pharetra dui sit amet est volutpat efficitur ut et tortor. Nam in metus ligula. Aliquam pellentesque finibus ligula quis dignissim. Vestibulum at erat a enim tincidunt elementum. Phasellus ornare velit nec lorem varius rutrum. In scelerisque lectus vitae elit blandit, ut finibus dui aliquam. Morbi sit amet blandit dolor. Praesent cursus magna eu ligula faucibus fermentum. Curabitur condimentum neque a orci imperdiet egestas. Duis venenatis, erat et fringilla tincidunt, sapien elit dictum risus, vel tincidunt sapien magna et libero. Donec vel ultricies nunc, ut porttitor elit. Mauris vitae libero consequat, ultrices lectus quis, pharetra mauris. Quisque eget condimentum nisi.</p>
 <p><img src="materials/d1-01-welcome/assets/img/people/kobriant.jpeg" class="img-fluid" style="float:right;padding: 0 0 0 10px;" alt="{{< var people.kobriant.name >}}" width="200"></p>
-<p><strong>Kelly O’Briant</strong> biography forthcoming. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam pharetra dui sit amet est volutpat efficitur ut et tortor. Nam in metus ligula. Aliquam pellentesque finibus ligula quis dignissim. Vestibulum at erat a enim tincidunt elementum. Phasellus ornare velit nec lorem varius rutrum. In scelerisque lectus vitae elit blandit, ut finibus dui aliquam. Morbi sit amet blandit dolor. Praesent cursus magna eu ligula faucibus fermentum. Curabitur condimentum neque a orci imperdiet egestas. Duis venenatis, erat et fringilla tincidunt, sapien elit dictum risus, vel tincidunt sapien magna et libero. Donec vel ultricies nunc, ut porttitor elit. Mauris vitae libero consequat, ultrices lectus quis, pharetra mauris. Quisque eget condimentum nisi.</p>
+<p><strong>Kelly O’Briant</strong> is the Product Manager for <a href="https://www.rstudio.com/products/connect/">RStudio Connect</a>.</p>
 
 
 </section>
