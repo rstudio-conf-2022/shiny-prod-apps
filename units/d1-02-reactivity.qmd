@@ -15,6 +15,17 @@ listing:
     sort-ui: false
     filter-ui: false
     image-placeholder: assets/img/placeholder.png
+  - id: code-along
+    contents:
+      - ../materials/d1-02-reactivity/codealong-*.qmd
+    type: table
+    fields: [subtitle, title]
+    field-display-names: 
+      subtitle: "Code-Along"
+    sort: [filename]
+    sort-ui: false
+    filter-ui: false
+    image-placeholder: assets/img/placeholder.png
 tbl-colwidths: [5,20,75]
 ---
 
@@ -31,6 +42,11 @@ This page is under construction and will be updated continuously until the works
 ```{=html}
 <iframe class="slide-deck" src="../materials/d1-02-reactivity/" height="420" width="747" style="border: 1px solid #2e3846;"></iframe>
 ```
+
+## Code-Along Examples
+
+::: {#code-along}
+:::
 
 ## Exercises
 
