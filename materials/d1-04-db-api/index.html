@@ -8,10 +8,10 @@
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="../../site_libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
 <link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.0.32">
+  <meta name="generator" content="quarto-1.0.36">
 
   <meta name="author" content="Eric Nantz">
-  <title>prod-shiny-workshop - Exploring App Usage Patterns</title>
+  <title>prod-shiny-workshop - Databases &amp; APIs</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -24,6 +24,70 @@
     div.column{display: inline-block; vertical-align: top; width: 50%;}
     div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
     ul.task-list{list-style: none;}
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+        color: #aaaaaa;
+      }
+    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+    div.sourceCode
+      { color: #003b4f; background-color: #f1f3f5; }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span { color: #003b4f; } /* Normal */
+    code span.al { color: #ad0000; } /* Alert */
+    code span.an { color: #5e5e5e; } /* Annotation */
+    code span.at { color: #657422; } /* Attribute */
+    code span.bn { color: #ad0000; } /* BaseN */
+    code span.bu { } /* BuiltIn */
+    code span.cf { color: #003b4f; } /* ControlFlow */
+    code span.ch { color: #20794d; } /* Char */
+    code span.cn { color: #8f5902; } /* Constant */
+    code span.co { color: #5e5e5e; } /* Comment */
+    code span.cv { color: #5e5e5e; font-style: italic; } /* CommentVar */
+    code span.do { color: #5e5e5e; font-style: italic; } /* Documentation */
+    code span.dt { color: #ad0000; } /* DataType */
+    code span.dv { color: #ad0000; } /* DecVal */
+    code span.er { color: #ad0000; } /* Error */
+    code span.ex { } /* Extension */
+    code span.fl { color: #ad0000; } /* Float */
+    code span.fu { color: #4758ab; } /* Function */
+    code span.im { color: #00769e; } /* Import */
+    code span.in { color: #5e5e5e; } /* Information */
+    code span.kw { color: #003b4f; } /* Keyword */
+    code span.op { color: #5e5e5e; } /* Operator */
+    code span.ot { color: #003b4f; } /* Other */
+    code span.pp { color: #ad0000; } /* Preprocessor */
+    code span.sc { color: #5e5e5e; } /* SpecialChar */
+    code span.ss { color: #20794d; } /* SpecialString */
+    code span.st { color: #20794d; } /* String */
+    code span.va { color: #111111; } /* Variable */
+    code span.vs { color: #20794d; } /* VerbatimString */
+    code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   </style>
   <link rel="stylesheet" href="../../site_libs/revealjs/dist/theme/quarto.css" id="theme">
   <link href="../../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
@@ -317,7 +381,9 @@
       margin-right: 0; 
     }
   </style>
-<meta name="twitter:title" content="prod-shiny-workshop - Exploring App Usage Patterns">
+  <link href="../../site_libs/countdown-0.3.5/countdown.css" rel="stylesheet">
+  <script src="../../site_libs/countdown-0.3.5/countdown.js"></script>
+<meta name="twitter:title" content="prod-shiny-workshop - Databases &amp; APIs">
 <meta name="twitter:description" content="rstudio::conf(2022)  Building Production-Quality Shiny Applications">
 <meta name="twitter:image" content="https://shinyprod.com//images/twitter-card.png">
 <meta name="twitter:creator" content="@theRcast">
@@ -330,11 +396,17 @@
     <div class="slides">
 
 <section id="title-slide" class="center">
-  <h1 class="title">Exploring App Usage Patterns</h1>
+  <h1 class="title">Databases &amp; APIs</h1>
   <p class="subtitle">rstudio::conf(2022) <br> Building Production-Quality Shiny Applications</p>
   <p class="author">Eric Nantz</p>
 </section>
 
+<section class="slide level2">
+
+<div class="cell">
+
+</div>
+</section>
 <section id="more-to-come" class="slide level2">
 <h2>More to come</h2>
 <div class="callout callout-warning callout-captioned callout-style-default">
@@ -350,11 +422,303 @@
 </div>
 </div>
 </div>
+</section>
+<section id="the-r-process-in-shiny" class="slide level2" data-background-image="assets/img/samus_managing.png" data-background-size="80%">
+<h2>The R Process in Shiny</h2>
+</section>
+<section id="powerup-with-delegation" class="slide level2" data-background-image="assets/img/samus_powerup.jpg" data-background-size="80%">
+<h2>Powerup with Delegation</h2>
+<div class="fragment">
+<p><img data-src="assets/img/memory.jpg" class="absolute" style="top: 250px; left: 100px; width: 30%; "></p>
+</div>
+<div class="fragment">
+<p><img data-src="assets/img/cpu.jpg" class="absolute" style="top: 250px; left: 650px; width: 30%; "></p>
+</div>
+</section>
+<section>
+<section id="databases-and-shiny" class="title-slide slide level1 center">
+<h1>Databases and Shiny</h1>
+
+</section>
+<section class="slide level2">
+
+<div class="columns">
+<h3 id="sql-jedi">SQL Jedi</h3>
+<div class="column" style="width:50%;">
+<p><img data-src="assets/img/c3po.png" style="width:45.0%"></p>
+</div><div class="column" style="width:&quot;50%;">
+<h3 id="dplyr-jedi"><code>{dplyr}</code> Jedi</h3>
+<p><img data-src="assets/img/r2-d2.png" style="width:70.0%"></p>
+</div>
+</div>
+</section>
+<section id="interface-to-databases-dbi" class="slide level2">
+<h2>Interface to Databases: <code>{DBI}</code></h2>
+<p>Unified set of methods &amp; classes bridging interfacing R to database management systems (DBMS)</p>
+<ul>
+<li class="fragment">Connect and disconnect from DB</li>
+<li class="fragment">Execute queries</li>
+<li class="fragment">Extract results</li>
+<li class="fragment">Obtain metadata when available</li>
+<li class="fragment">Each DBMS supported by a dedicated package</li>
+</ul>
+</section>
+<section id="all-about-connections" class="slide level2">
+<h2>All About Connections</h2>
+<p>You have used connections in R (and may not realize it)</p>
+<div class="sourceCode" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a><span class="fu">read.csv</span>(<span class="st">"path/to/file.csv"</span>, <span class="at">stringsAsFactors =</span> <span class="cn">FALSE</span>)</span>
+<span id="cb1-2"><a href="#cb1-2"></a></span>
+<span id="cb1-3"><a href="#cb1-3"></a>readr<span class="sc">::</span><span class="fu">read_csv</span>(<span class="st">"path/to/file.csv"</span>)</span>
+<span id="cb1-4"><a href="#cb1-4"></a></span>
+<span id="cb1-5"><a href="#cb1-5"></a>openxlsx<span class="sc">::</span><span class="fu">write.xlsx</span>(df, <span class="at">file =</span> <span class="st">"/path/to/file.xlsx"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="fragment">
+<p><br></p>
+<blockquote>
+<p>Behind the scenes: connections are dynamically created (and terminated) during file input/output.</p>
+</blockquote>
+</div>
+</section>
+<section id="database-options" class="slide level2">
+<h2>Database Options</h2>
+<div>
+<ul>
+<li>Relational databases come in many flavors</li>
+</ul>
+</div>
+<div class="columns">
+<div class="column">
+<h3 id="sqlite"><a href="https://www.sqlite.org/index.html">SQLite</a></h3>
+<p><br></p>
+<p><svg aria-hidden="true" role="img" viewbox="0 0 384 512" style="height:1em;width:0.75em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M224 136V0H24C10.7 0 0 10.7 0 24v464c0 13.3 10.7 24 24 24h336c13.3 0 24-10.7 24-24V160H248c-13.2 0-24-10.8-24-24zm160-14.1v6.1H256V0h6.1c6.4 0 12.5 2.5 17 7l97.9 98c4.5 4.5 7 10.6 7 16.9z"></path></svg> Written to file</p>
+<p><svg aria-hidden="true" role="img" viewbox="0 0 640 512" style="height:1em;width:1.25em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M624 448h-80V113.45C544 86.19 522.47 64 496 64H384v64h96v384h144c8.84 0 16-7.16 16-16v-32c0-8.84-7.16-16-16-16zM312.24 1.01l-192 49.74C105.99 54.44 96 67.7 96 82.92V448H16c-8.84 0-16 7.16-16 16v32c0 8.84 7.16 16 16 16h336V33.18c0-21.58-19.56-37.41-39.76-32.17zM264 288c-13.25 0-24-14.33-24-32s10.75-32 24-32 24 14.33 24 32-10.75 32-24 32z"></path></svg> Open access</p>
+<p><svg aria-hidden="true" role="img" viewbox="0 0 581 512" style="height:1em;width:1.13em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M581 226.6C581 119.1 450.9 32 290.5 32S0 119.1 0 226.6C0 322.4 103.3 402 239.4 418.1V480h99.1v-61.5c24.3-2.7 47.6-7.4 69.4-13.9L448 480h112l-67.4-113.7c54.5-35.4 88.4-84.9 88.4-139.7zm-466.8 14.5c0-73.5 98.9-133 220.8-133s211.9 40.7 211.9 133c0 50.1-26.5 85-70.3 106.4-2.4-1.6-4.7-2.9-6.4-3.7-10.2-5.2-27.8-10.5-27.8-10.5s86.6-6.4 86.6-92.7-90.6-87.9-90.6-87.9h-199V361c-74.1-21.5-125.2-67.1-125.2-119.9zm225.1 38.3v-55.6c57.8 0 87.8-6.8 87.8 27.3 0 36.5-38.2 28.3-87.8 28.3zm-.9 72.5H365c10.8 0 18.9 11.7 24 19.2-16.1 1.9-33 2.8-50.6 2.9v-22.1z"></path></svg> <a href="https://rsqlite.r-dbi.org/"><code>{RSQLite}</code></a></p>
+<p>Ideal for prototyping DB solutions</p>
+</div><div class="column">
+<h3 id="postgresql"><a href="https://www.postgresql.org/">PostGreSQL</a></h3>
+<p><br></p>
+<p><svg aria-hidden="true" role="img" viewbox="0 0 448 512" style="height:1em;width:0.88em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M448 73.143v45.714C448 159.143 347.667 192 224 192S0 159.143 0 118.857V73.143C0 32.857 100.333 0 224 0s224 32.857 224 73.143zM448 176v102.857C448 319.143 347.667 352 224 352S0 319.143 0 278.857V176c48.125 33.143 136.208 48.572 224 48.572S399.874 209.143 448 176zm0 160v102.857C448 479.143 347.667 512 224 512S0 479.143 0 438.857V336c48.125 33.143 136.208 48.572 224 48.572S399.874 369.143 448 336z"></path></svg> Hosted on server</p>
+<p><svg aria-hidden="true" role="img" viewbox="0 0 448 512" style="height:1em;width:0.88em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M400 224h-24v-72C376 68.2 307.8 0 224 0S72 68.2 72 152v72H48c-26.5 0-48 21.5-48 48v192c0 26.5 21.5 48 48 48h352c26.5 0 48-21.5 48-48V272c0-26.5-21.5-48-48-48zm-104 0H152v-72c0-39.7 32.3-72 72-72s72 32.3 72 72v72z"></path></svg> Access via authentication</p>
+<p><svg aria-hidden="true" role="img" viewbox="0 0 581 512" style="height:1em;width:1.13em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:currentColor;overflow:visible;position:relative;"><path d="M581 226.6C581 119.1 450.9 32 290.5 32S0 119.1 0 226.6C0 322.4 103.3 402 239.4 418.1V480h99.1v-61.5c24.3-2.7 47.6-7.4 69.4-13.9L448 480h112l-67.4-113.7c54.5-35.4 88.4-84.9 88.4-139.7zm-466.8 14.5c0-73.5 98.9-133 220.8-133s211.9 40.7 211.9 133c0 50.1-26.5 85-70.3 106.4-2.4-1.6-4.7-2.9-6.4-3.7-10.2-5.2-27.8-10.5-27.8-10.5s86.6-6.4 86.6-92.7-90.6-87.9-90.6-87.9h-199V361c-74.1-21.5-125.2-67.1-125.2-119.9zm225.1 38.3v-55.6c57.8 0 87.8-6.8 87.8 27.3 0 36.5-38.2 28.3-87.8 28.3zm-.9 72.5H365c10.8 0 18.9 11.7 24 19.2-16.1 1.9-33 2.8-50.6 2.9v-22.1z"></path></svg> <a href="https://rpostgres.r-dbi.org/"><code>{RPostgres}</code></a></p>
+<p>Ideal for production-grade DB workflows</p>
+</div>
+</div>
+</section>
+<section id="defining-connection" class="slide level2">
+<h2>Defining Connection</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1"></a><span class="fu">library</span>(DBI)</span>
+<span id="cb2-2"><a href="#cb2-2"></a><span class="fu">library</span>(RSQLite)</span>
+<span id="cb2-3"><a href="#cb2-3"></a></span>
+<span id="cb2-4"><a href="#cb2-4"></a><span class="co"># initialize connection object</span></span>
+<span id="cb2-5"><a href="#cb2-5"></a>con <span class="ot">&lt;-</span> <span class="fu">dbConnect</span>(</span>
+<span id="cb2-6"><a href="#cb2-6"></a>  <span class="at">drv =</span> RSQLite<span class="sc">::</span><span class="fu">SQLite</span>(),</span>
+<span id="cb2-7"><a href="#cb2-7"></a>  <span class="at">dbname =</span> <span class="st">":memory:"</span></span>
+<span id="cb2-8"><a href="#cb2-8"></a>)</span>
+<span id="cb2-9"><a href="#cb2-9"></a></span>
+<span id="cb2-10"><a href="#cb2-10"></a><span class="co"># send data frame to a table</span></span>
+<span id="cb2-11"><a href="#cb2-11"></a><span class="fu">dbWriteTable</span>(con, <span class="st">"sample_data"</span>, <span class="fu">as.data.frame</span>(sample_data))</span>
+<span id="cb2-12"><a href="#cb2-12"></a></span>
+<span id="cb2-13"><a href="#cb2-13"></a><span class="co"># disconnect when done</span></span>
+<span id="cb2-14"><a href="#cb2-14"></a><span class="co">#dbDisconnect(con)</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="applying-your-dplyr-skillz" class="slide level2">
+<h2>Applying your <code>{dplyr}</code> Skillz</h2>
+<p><code>{dbplyr}</code> provides automatic translation from dplyr syntax to SQL statements</p>
+<ul>
+<li class="fragment">Integrates with connection objects created by <code>{DBI}</code></li>
+<li class="fragment">Calls are evaluated <strong>lazily</strong>: Only when you request results</li>
+<li class="fragment">Common dplyr verbs supported out of the box</li>
+</ul>
+</section>
+<section id="applying-your-dplyr-skillz-1" class="slide level2">
+<h2>Applying your <code>{dplyr}</code> Skillz</h2>
+<div class="cell">
+<div class="sourceCode cell-code" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1"></a><span class="fu">library</span>(dplyr)</span>
+<span id="cb3-2"><a href="#cb3-2"></a></span>
+<span id="cb3-3"><a href="#cb3-3"></a>sample_db <span class="ot">&lt;-</span> <span class="fu">tbl</span>(con, <span class="st">"sample_data"</span>)</span>
+<span id="cb3-4"><a href="#cb3-4"></a></span>
+<span id="cb3-5"><a href="#cb3-5"></a>sample_db <span class="sc">%&gt;%</span></span>
+<span id="cb3-6"><a href="#cb3-6"></a>  <span class="fu">group_by</span>(department) <span class="sc">%&gt;%</span></span>
+<span id="cb3-7"><a href="#cb3-7"></a>  <span class="fu">summarize</span>(<span class="at">total_objects =</span> <span class="fu">sum</span>(n_objects, <span class="at">na.rm =</span> <span class="cn">TRUE</span>))</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<div class="cell-output cell-output-stdout">
+<pre><code># Source:   lazy query [?? x 2]
+# Database: sqlite 3.39.1 [:memory:]
+   department                                total_objects
+   &lt;chr&gt;                                             &lt;int&gt;
+ 1 Ancient Near Eastern Art                            116
+ 2 Arms and Armor                                       68
+ 3 Arts of Africa, Oceania, and the Americas            88
+ 4 Asian Art                                            32
+ 5 Costume Institute                                   104
+ 6 Drawings and Prints                                  60
+ 7 Egyptian Art                                        128
+ 8 European Sculpture and Decorative Arts              360
+ 9 Greek and Roman Art                                 424
+10 Islamic Art                                         164
+# … with more rows</code></pre>
+</div>
+</div>
+</section>
+<section id="your-turn-exercise-1" class="slide level2">
+<h2>Your Turn: <a href="ex-1.html" target="_blank">Exercise 1</a></h2>
+<p>In the application <code>ex-1/app.R</code>, pivot the backend to leverage a SQLite database. See the <a href="ex-1.html" target="_blank">Exercise 1</a> page for additional details.</p>
+<div class="cell">
+<div class="cell-output-display">
+<div class="countdown" id="timer_62dd3d76" style="right:0;bottom:0;" data-warnwhen="0">
+<code class="countdown-time"><span class="countdown-digits minutes">10</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
+</div>
+</div>
+</div>
+</section>
+<section id="connections-in-shiny" class="slide level2">
+<h2>Connections in Shiny</h2>
+<div class="columns">
+<div class="column" style="width:40%;">
+<p><img data-src="assets/img/one_user.png"></p>
+</div><div class="column" style="width:60%;">
+<p>Logical ways to manage connections when developing solo</p>
+</div>
+</div>
+</section>
+<section id="connections-in-shiny-1" class="slide level2">
+<h2>Connections in Shiny</h2>
+<div class="columns">
+<div class="column" style="width:70%;">
+<p><img data-src="assets/img/computer_party.jpg"></p>
+</div><div class="column" style="width:30%;">
+<div>
+<ul>
+<li>Many users creating connections</li>
+<li>Potential for degraded performance in your app</li>
+</ul>
+</div>
+</div>
+</div>
+</section>
+<section id="enter-the-pool" class="slide level2">
+<h2>Enter the <a href="https://github.com/rstudio/pool"><code>{pool}</code></a>!</h2>
+<blockquote>
+<p>Abstraction layer on top of database connection objects</p>
+</blockquote>
+<ul>
+<li class="fragment">Holds a group of connections to database</li>
+<li class="fragment">Knows to expand or reduce connections as needed</li>
+</ul>
+</section>
+<section id="lets-dive-in" class="slide level2">
+<h2>Let’s Dive In</h2>
+<div class="columns">
+<div class="column" style="width:50%;">
+<div class="sourceCode" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb5-1"><a href="#cb5-1"></a>con <span class="ot">&lt;-</span> <span class="fu">dbConnect</span>(</span>
+<span id="cb5-2"><a href="#cb5-2"></a>  <span class="at">drv =</span> RSQLite<span class="sc">::</span><span class="fu">SQLite</span>(),</span>
+<span id="cb5-3"><a href="#cb5-3"></a>  <span class="at">dbname =</span> <span class="st">":memory:"</span></span>
+<span id="cb5-4"><a href="#cb5-4"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div><div class="column" style="width:50%;">
+<div class="sourceCode" id="cb6"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb6-1"><a href="#cb6-1"></a>pool <span class="ot">&lt;-</span> <span class="fu">dbPool</span>(</span>
+<span id="cb6-2"><a href="#cb6-2"></a>  <span class="at">drv =</span> RSQLite<span class="sc">::</span><span class="fu">SQLite</span>(),</span>
+<span id="cb6-3"><a href="#cb6-3"></a>  <span class="at">dbname =</span> <span class="st">":memory:"</span></span>
+<span id="cb6-4"><a href="#cb6-4"></a>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</div>
+<div>
+<ul>
+<li><strong>pool</strong> object a drop-in replacement for <strong>con</strong></li>
+<li>Each query goes to the pool first, then fetches or initializes a connection</li>
+<li>Not necessary to create connections yourself</li>
+</ul>
+</div>
+</section></section>
+<section>
+<section id="executing-apis-from-shiny" class="title-slide slide level1 center">
+<h1>Executing APIs from Shiny</h1>
+
+</section>
+<section id="ap---what" class="slide level2">
+<h2>AP - What?</h2>
+<blockquote>
+<p>Application Programming Interface: Method of communicating between different <strong>software services</strong></p>
+</blockquote>
+<div class="fragment">
+<p><img data-src="assets/img/flynn_computer.png" class="absolute" style="top: 250px; left: 70px; width: 30%; "></p>
+</div>
+<div class="fragment">
+<p><img data-src="assets/img/red_x.png" class="absolute" style="top: 250px; left: 70px; width: 30%; "></p>
+</div>
+<div class="fragment">
+<p><img data-src="assets/img/tron-lightcycles.jpg" class="absolute" style="top: 300px; left: 450px; width: 50%; "></p>
+</div>
+</section>
+<section id="benefits-of-apis" class="slide level2">
+<h2>Benefits of APIs</h2>
+<ul>
+<li class="fragment">Communication using a <strong>standard set</strong> of web request protocols</li>
+<li class="fragment"><strong>Agnostic</strong> to the software or language performing the request</li>
+<li class="fragment">Capable of producing many types of output</li>
+</ul>
+<div class="fragment">
+<h3 id="how-can-we-communicate-and-create-apis-in-r">How can we communicate (and create) APIs in R?</h3>
+</div>
+</section>
+<section id="httr2" class="slide level2">
+<h2><a href="https://httr2.r-lib.org"><code>{httr2}</code></a></h2>
+<blockquote>
+<p>A ground-up rewrite of <code>{httr}</code> providing a pipeable API</p>
+</blockquote>
+<ul>
+<li class="fragment">Build a <em>request</em> object to facilitate different pieces of a request workflow</li>
+<li class="fragment">Ability to perform dry-runs <strong>before</strong> actually sending the request</li>
+<li class="fragment">Automatic conversion of HTTP errors to native R errors</li>
+</ul>
+</section></section>
+<section>
+<section id="code-along" class="title-slide slide level1 center" data-background-color="#17395c">
+<h1><svg aria-hidden="true" role="img" viewbox="0 0 640 512" style="height:1em;width:1.25em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:white;overflow:visible;position:relative;"><path d="M128 96c26.5 0 48-21.5 48-48S154.5 0 128 0 80 21.5 80 48s21.5 48 48 48zm384 0c26.5 0 48-21.5 48-48S538.5 0 512 0s-48 21.5-48 48 21.5 48 48 48zm125.7 372.1l-44-110-41.1 46.4-2 18.2 27.7 69.2c5 12.5 17 20.1 29.7 20.1 4 0 8-.7 11.9-2.3 16.4-6.6 24.4-25.2 17.8-41.6zm-34.2-209.8L585 178.1c-4.6-20-18.6-36.8-37.5-44.9-18.5-8-39-6.7-56.1 3.3-22.7 13.4-39.7 34.5-48.1 59.4L432 229.8 416 240v-96c0-8.8-7.2-16-16-16H240c-8.8 0-16 7.2-16 16v96l-16.1-10.2-11.3-33.9c-8.3-25-25.4-46-48.1-59.4-17.2-10-37.6-11.3-56.1-3.3-18.9 8.1-32.9 24.9-37.5 44.9l-18.4 80.2c-4.6 20 .7 41.2 14.4 56.7l67.2 75.9 10.1 92.6C130 499.8 143.8 512 160 512c1.2 0 2.3-.1 3.5-.2 17.6-1.9 30.2-17.7 28.3-35.3l-10.1-92.8c-1.5-13-6.9-25.1-15.6-35l-43.3-49 17.6-70.3 6.8 20.4c4.1 12.5 11.9 23.4 24.5 32.6l51.1 32.5c4.6 2.9 12.1 4.6 17.2 5h160c5.1-.4 12.6-2.1 17.2-5l51.1-32.5c12.6-9.2 20.4-20 24.5-32.6l6.8-20.4 17.6 70.3-43.3 49c-8.7 9.9-14.1 22-15.6 35l-10.1 92.8c-1.9 17.6 10.8 33.4 28.3 35.3 1.2.1 2.3.2 3.5.2 16.1 0 30-12.1 31.8-28.5l10.1-92.6 67.2-75.9c13.6-15.5 19-36.7 14.4-56.7zM46.3 358.1l-44 110c-6.6 16.4 1.4 35 17.8 41.6 16.8 6.6 35.1-1.7 41.6-17.8l27.7-69.2-2-18.2-41.1-46.4z"></path></svg> Code-Along</h1>
+<p><a href="codealong-1.html" target="_blank">Code-Along 1</a>: Calling the MET Museum API using <code>{httr2}</code></p>
+</section>
+<section id="your-turn-exercise-3" class="slide level2">
+<h2>Your Turn: <a href="ex-3.html" target="_blank">Exercise 3</a></h2>
+<p>Call the MET Museum API and a custom image overlay API within the Shiny app. See the <a href="ex-3.html" target="_blank">Exercise 3</a> page for additional details.</p>
+<div class="cell">
+<div class="cell-output-display">
+<div class="countdown" id="timer_62dd3c5e" style="right:0;bottom:0;" data-warnwhen="0">
+<code class="countdown-time"><span class="countdown-digits minutes">10</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
+</div>
+</div>
+</div>
+</section>
+<section id="database-resources" class="slide level2">
+<h2>Database Resources</h2>
+<div>
+<ul>
+<li><a href="https://emilyriederer.netlify.app/post/shiny-db/">Using databases with Shiny</a> blog post by Emily Riederer</li>
+<li><a href="https://db.rstudio.com/">Databases using R</a></li>
+<li><a href="https://dbi.r-dbi.org/"><code>{DBI}</code></a>: R Database Interface</li>
+<li><a href="https://dbplyr.tidyverse.org/"><code>{dbplyr}</code></a>: A <code>{dplyr}</code> backend for databases</li>
+<li><a href="">TidyX</a> episodes</li>
+<li><a href="https://cynkra.github.io/dm/"><code>{dm}</code></a>: Relational data models</li>
+<li><a href="https://www.rstudio.com/blog/shiny-and-arrow/">Shiny and Arrow</a> blog post by Michael Thomas</li>
+</ul>
+</div>
+</section>
+<section id="api-resources" class="slide level2">
+<h2>API Resources</h2>
+<div>
+<ul>
+<li><a href="https://www.rplumber.io/"><code>{plumber}</code></a>: An API generator for R</li>
+</ul>
+</div>
+</section>
+<section id="cleaning-up" class="slide level2">
+<h2>Cleaning Up</h2>
+<div class="cell">
+
+</div>
 
 <div class="footer footer-default">
 <p><a href="https://shinyprod.com">shinyprod.com</a></p>
 </div>
-</section>
+</section></section>
     </div>
   </div>
 
@@ -568,6 +932,48 @@
         ]
       });
     </script>
+    
+    <script>
+      // htmlwidgets need to know to resize themselves when slides are shown/hidden.
+      // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
+      // slide changes (different for each slide format).
+      (function () {
+        function fireSlideChanged(previousSlide, currentSlide) {
+
+          // dispatch for htmlwidgets
+          const event = window.document.createEvent("Event");
+          event.initEvent("slideenter", true, true);
+          window.document.dispatchEvent(event);
+
+          // dispatch for shiny
+          if (window.jQuery) {
+            if (previousSlide) {
+              window.jQuery(previousSlide).trigger("hidden");
+            }
+            if (currentSlide) {
+              window.jQuery(currentSlide).trigger("shown");
+            }
+          }
+        }
+
+        // hookup for reveal
+        if (window.Reveal) {
+          window.Reveal.addEventListener("slidechanged", function(event) {
+            fireSlideChanged(event.previousSlide, event.currentSlide);
+          });
+        }
+
+        // hookup for slidy
+        if (window.w3c_slidy) {
+          window.w3c_slidy.add_observer(function (slide_num) {
+            // slide_num starts at position 1
+            fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);
+          });
+        }
+
+      })();
+    </script>
+
     <script id="quarto-html-after-body" type="application/javascript">
     window.document.addEventListener("DOMContentLoaded", function (event) {
       const toggleBodyColorMode = (bsSheetEl) => {

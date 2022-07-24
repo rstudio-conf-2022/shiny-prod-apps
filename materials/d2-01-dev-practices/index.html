@@ -8,10 +8,10 @@
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="../../site_libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
 <link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.0.32">
+  <meta name="generator" content="quarto-1.0.36">
 
   <meta name="author" content="Eric Nantz">
-  <title>prod-shiny-workshop - Design &amp; User Experience</title>
+  <title>prod-shiny-workshop - Development Best Practices</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -24,6 +24,70 @@
     div.column{display: inline-block; vertical-align: top; width: 50%;}
     div.hanging-indent{margin-left: 1.5em; text-indent: -1.5em;}
     ul.task-list{list-style: none;}
+    pre > code.sourceCode { white-space: pre; position: relative; }
+    pre > code.sourceCode > span { display: inline-block; line-height: 1.25; }
+    pre > code.sourceCode > span:empty { height: 1.2em; }
+    .sourceCode { overflow: visible; }
+    code.sourceCode > span { color: inherit; text-decoration: inherit; }
+    div.sourceCode { margin: 1em 0; }
+    pre.sourceCode { margin: 0; }
+    @media screen {
+    div.sourceCode { overflow: auto; }
+    }
+    @media print {
+    pre > code.sourceCode { white-space: pre-wrap; }
+    pre > code.sourceCode > span { text-indent: -5em; padding-left: 5em; }
+    }
+    pre.numberSource code
+      { counter-reset: source-line 0; }
+    pre.numberSource code > span
+      { position: relative; left: -4em; counter-increment: source-line; }
+    pre.numberSource code > span > a:first-child::before
+      { content: counter(source-line);
+        position: relative; left: -1em; text-align: right; vertical-align: baseline;
+        border: none; display: inline-block;
+        -webkit-touch-callout: none; -webkit-user-select: none;
+        -khtml-user-select: none; -moz-user-select: none;
+        -ms-user-select: none; user-select: none;
+        padding: 0 4px; width: 4em;
+        color: #aaaaaa;
+      }
+    pre.numberSource { margin-left: 3em; border-left: 1px solid #aaaaaa;  padding-left: 4px; }
+    div.sourceCode
+      { color: #003b4f; background-color: #f1f3f5; }
+    @media screen {
+    pre > code.sourceCode > span > a:first-child::before { text-decoration: underline; }
+    }
+    code span { color: #003b4f; } /* Normal */
+    code span.al { color: #ad0000; } /* Alert */
+    code span.an { color: #5e5e5e; } /* Annotation */
+    code span.at { color: #657422; } /* Attribute */
+    code span.bn { color: #ad0000; } /* BaseN */
+    code span.bu { } /* BuiltIn */
+    code span.cf { color: #003b4f; } /* ControlFlow */
+    code span.ch { color: #20794d; } /* Char */
+    code span.cn { color: #8f5902; } /* Constant */
+    code span.co { color: #5e5e5e; } /* Comment */
+    code span.cv { color: #5e5e5e; font-style: italic; } /* CommentVar */
+    code span.do { color: #5e5e5e; font-style: italic; } /* Documentation */
+    code span.dt { color: #ad0000; } /* DataType */
+    code span.dv { color: #ad0000; } /* DecVal */
+    code span.er { color: #ad0000; } /* Error */
+    code span.ex { } /* Extension */
+    code span.fl { color: #ad0000; } /* Float */
+    code span.fu { color: #4758ab; } /* Function */
+    code span.im { color: #00769e; } /* Import */
+    code span.in { color: #5e5e5e; } /* Information */
+    code span.kw { color: #003b4f; } /* Keyword */
+    code span.op { color: #5e5e5e; } /* Operator */
+    code span.ot { color: #003b4f; } /* Other */
+    code span.pp { color: #ad0000; } /* Preprocessor */
+    code span.sc { color: #5e5e5e; } /* SpecialChar */
+    code span.ss { color: #20794d; } /* SpecialString */
+    code span.st { color: #20794d; } /* String */
+    code span.va { color: #111111; } /* Variable */
+    code span.vs { color: #20794d; } /* VerbatimString */
+    code span.wa { color: #5e5e5e; font-style: italic; } /* Warning */
   </style>
   <link rel="stylesheet" href="../../site_libs/revealjs/dist/theme/quarto.css" id="theme">
   <link href="../../site_libs/revealjs/plugin/quarto-line-highlight/line-highlight.css" rel="stylesheet">
@@ -317,7 +381,7 @@
       margin-right: 0; 
     }
   </style>
-<meta name="twitter:title" content="prod-shiny-workshop - Design &amp; User Experience">
+<meta name="twitter:title" content="prod-shiny-workshop - Development Best Practices">
 <meta name="twitter:description" content="rstudio::conf(2022)  Building Production-Quality Shiny Applications">
 <meta name="twitter:image" content="https://shinyprod.com//images/twitter-card.png">
 <meta name="twitter:creator" content="@theRcast">
@@ -330,7 +394,7 @@
     <div class="slides">
 
 <section id="title-slide" class="center">
-  <h1 class="title">Design &amp; User Experience</h1>
+  <h1 class="title">Development Best Practices</h1>
   <p class="subtitle">rstudio::conf(2022) <br> Building Production-Quality Shiny Applications</p>
   <p class="author">Eric Nantz</p>
 </section>
@@ -350,11 +414,244 @@
 </div>
 </div>
 </div>
+</section>
+<section id="all-about-perspective" class="slide level2">
+<h2>All About Perspective</h2>
+
+<img data-src="https://d33wubrfki0l68.cloudfront.net/571b056757d68e6df81a3e3853f54d3c76ad6efc/32d37/diagrams/data-science.png" class="r-stretch"><p>R is the standard-bearer for data analysis tooling</p>
+</section>
+<section id="shiny-app-development" class="slide level2">
+<h2>Shiny App Development</h2>
+<p>Not just providing another interface for data analysis</p>
+<div class="fragment">
+<p>You are engineering an <strong>entire workflow</strong></p>
+</div>
+</section>
+<section id="this-could-happen-to-you" class="slide level2">
+<h2>This Could Happen to You</h2>
+<div class="r-stack">
+<p><img data-src="assets/img/messydesk.svg" class="fragment" width="550"></p>
+<p><img data-src="assets/img/works_my_machine.jpg" class="fragment" width="500" height="570"></p>
+<p><img data-src="assets/img/conflicts.jpg" class="fragment" width="600" height="400"></p>
+</div>
+</section>
+<section id="thinking-of-you" class="slide level2">
+<h2>Thinking of You</h2>
+<p>These principles can guide (future) you on the right path:</p>
+<ul>
+<li class="fragment">Rapid prototyping in design process</li>
+<li class="fragment">Deliberate control of app dependencies</li>
+<li class="fragment">Managing code complexity with native R frameworks</li>
+<li class="fragment">Defending against regressions with testing</li>
+<li class="fragment">Version control for collaboration and peace of mind</li>
+</ul>
+</section>
+<section>
+<section id="rapid-prototyping" class="title-slide slide level1 center" data-background-image="assets/img/rapid_prototyping.jpg" data-background-size="cover" data-background-color="black">
+<h1>Rapid Prototyping</h1>
+
+</section>
+<section class="slide level2">
+
+
+<img data-src="assets/img/shinycal.png" class="r-stretch"><div class="footer">
+<p><a href="https://rpodcast.shinyapps.io/shinycal">rpodcast.shinyapps.io/shinycal</a></p>
+</div>
+</section>
+<section id="section" class="slide level2" data-background-video="https://shinydevseries-assets.us-east-1.linodeobjects.com/rpharma_demo_final.mp4" data-background-video-loop="true" data-background-size="contain">
+<h2></h2>
+</section>
+<section id="blueprint-for-rapid-prototyping" class="slide level2">
+<h2>Blueprint for Rapid Prototyping</h2>
+<ul>
+<li class="fragment">Elicit goals &amp; requirements from customers <strong>early</strong> and <strong>often</strong></li>
+<li class="fragment">Resist urge to perfect server-side processing right away</li>
+<li class="fragment">Bring a minimum viable product (MVP) to customers for feedback</li>
+</ul>
+</section>
+<section class="slide level2">
+
+
+<img data-src="assets/img/whiteboard_design.jpg" class="r-stretch"></section></section>
+<section>
+<section id="code-along" class="title-slide slide level1 center" data-background-color="#17395c">
+<h1><svg aria-hidden="true" role="img" viewbox="0 0 640 512" style="height:1em;width:1.25em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:white;overflow:visible;position:relative;"><path d="M128 96c26.5 0 48-21.5 48-48S154.5 0 128 0 80 21.5 80 48s21.5 48 48 48zm384 0c26.5 0 48-21.5 48-48S538.5 0 512 0s-48 21.5-48 48 21.5 48 48 48zm125.7 372.1l-44-110-41.1 46.4-2 18.2 27.7 69.2c5 12.5 17 20.1 29.7 20.1 4 0 8-.7 11.9-2.3 16.4-6.6 24.4-25.2 17.8-41.6zm-34.2-209.8L585 178.1c-4.6-20-18.6-36.8-37.5-44.9-18.5-8-39-6.7-56.1 3.3-22.7 13.4-39.7 34.5-48.1 59.4L432 229.8 416 240v-96c0-8.8-7.2-16-16-16H240c-8.8 0-16 7.2-16 16v96l-16.1-10.2-11.3-33.9c-8.3-25-25.4-46-48.1-59.4-17.2-10-37.6-11.3-56.1-3.3-18.9 8.1-32.9 24.9-37.5 44.9l-18.4 80.2c-4.6 20 .7 41.2 14.4 56.7l67.2 75.9 10.1 92.6C130 499.8 143.8 512 160 512c1.2 0 2.3-.1 3.5-.2 17.6-1.9 30.2-17.7 28.3-35.3l-10.1-92.8c-1.5-13-6.9-25.1-15.6-35l-43.3-49 17.6-70.3 6.8 20.4c4.1 12.5 11.9 23.4 24.5 32.6l51.1 32.5c4.6 2.9 12.1 4.6 17.2 5h160c5.1-.4 12.6-2.1 17.2-5l51.1-32.5c12.6-9.2 20.4-20 24.5-32.6l6.8-20.4 17.6 70.3-43.3 49c-8.7 9.9-14.1 22-15.6 35l-10.1 92.8c-1.9 17.6 10.8 33.4 28.3 35.3 1.2.1 2.3.2 3.5.2 16.1 0 30-12.1 31.8-28.5l10.1-92.6 67.2-75.9c13.6-15.5 19-36.7 14.4-56.7zM46.3 358.1l-44 110c-6.6 16.4 1.4 35 17.8 41.6 16.8 6.6 35.1-1.7 41.6-17.8l27.7-69.2-2-18.2-41.1-46.4z"></path></svg> Code-Along</h1>
+<p><a href="codealong-1.html" target="_blank">Code-Along 1</a>: Using the <code>{shinipsum}</code> package for rapid UI prototyping</p>
+</section>
+<section id="additional-tools" class="slide level2">
+<h2>Additional Tools</h2>
+<div>
+<ul>
+<li><a href="https://moqups.com/">moqups.com</a>: Streamlined web app to create wireframes, mockups, diagrams, and more</li>
+<li><a href="https://excalidraw.com/">excalidraw.com</a>: Collaborative whiteboard tool for sketching diagrams</li>
+<li>Any presentation software (yes, even PowerPoint)</li>
+</ul>
+</div>
+</section></section>
+<section>
+<section id="application-dependencies" class="title-slide slide level1 center">
+<h1>Application Dependencies</h1>
+
+</section>
+<section id="its-never-just-shiny" class="slide level2">
+<h2>It’s Never Just Shiny</h2>
+<p>… at least for production-quality apps!</p>
+<ul>
+<li class="fragment">External data sources</li>
+<li class="fragment">Connections to other execution backends</li>
+<li class="fragment">Additional R packages!</li>
+</ul>
+</section>
+<section id="turned-upside-down" class="slide level2">
+<h2>Turned Upside-Down</h2>
+<p>Imagine your application is working great!</p>
+<p><br></p>
+<div class="fragment">
+<div class="columns v-center-container">
+<div class="column" style="width:50%;">
+<div class="sourceCode" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a><span class="fu">update.packages</span>(<span class="at">ask =</span> <span class="cn">FALSE</span>)</span>
+<span id="cb1-2"><a href="#cb1-2"></a>remotes<span class="sc">::</span><span class="fu">install_github</span>(<span class="st">"pkg"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div><div class="column" style="width:&quot;50%;">
+<p><img data-src="https://rfortherestofus.com/wp-content/uploads/2020/09/update-packages-prompt.png"></p>
+</div>
+</div>
+</div>
+</section>
+<section id="turned-upside-down-1" class="slide level2">
+<h2>Turned Upside-Down</h2>
+<div class="columns v-center-container">
+<div class="column" style="width:50%;">
+<p><code>ggplot2</code> version <code>0.9.3</code></p>
+<p><img data-src="assets/img/computer_user_happy.png" style="width:60.0%"></p>
+</div><div class="column" style="width:50%;">
+<p><code>ggplot2</code> version <code>1.0.0</code></p>
+<p><img data-src="http://i.giphy.com/RhEvCHIeZAZ6E.gif"></p>
+</div>
+</div>
+</section>
+<section id="take-control-with-renv" class="slide level2">
+<h2>Take Control with <a href="https://rstudio.github.io/renv/"><code>{renv}</code></a></h2>
+<blockquote>
+<p>Create <strong>r</strong>eproducible <strong>env</strong>ironments for your R projects.</p>
+</blockquote>
+<ul>
+<li class="fragment">Next generation of <code>{packrat}</code></li>
+<li class="fragment">Isolated package library from rest of your system</li>
+<li class="fragment">Transfer projects to different collaborators / platforms</li>
+<li class="fragment"><strong>Reproducible</strong> package installation</li>
+<li class="fragment">Easily create new projects or convert existing projects with RStudio or built-in functions.</li>
+</ul>
+</section>
+<section id="under-the-hood" class="slide level2">
+<h2>Under the Hood</h2>
+<p>Upon initializing a project:</p>
+<ol type="1">
+<li class="fragment">Project-level <code>.Rprofile</code> to activate custom package library on startup</li>
+<li class="fragment">Lockfile <code>renv.lock</code> to describe state of project library</li>
+<li class="fragment"><code>renv/library</code> to hold private project library</li>
+<li class="fragment"><code>renv/activate.R</code> performs activation</li>
+</ol>
+</section>
+<section id="develop-a-routine" class="slide level2">
+<h2>Develop a Routine</h2>
+<p>Sticking with <code>{renv}</code> will pay off (trust me)</p>
+<ul>
+<li class="fragment">Fair play to mix packages from CRAN, GitHub, and proprietary sources</li>
+<li class="fragment">Roll back when a package upgrade doesn’t play nicely</li>
+<li class="fragment"><strong>You</strong> make the call when to update your library!</li>
+</ul>
+</section></section>
+<section>
+<section id="application-structure" class="title-slide slide level1 center">
+<h1>Application Structure</h1>
+
+</section>
+<section id="a-single-point-app.r" class="slide level2">
+<h2>A Single Point: <code>app.R</code></h2>
+<p>Prototype apps can coast by with a single <code>app.R</code></p>
+<ul>
+<li class="fragment">More inputs, visualizations, modules, tabs …</li>
+<li class="fragment">Eventually the <code>app.R</code> almost explodes</li>
+<li class="fragment">Difficult to collaborate without conflicts</li>
+</ul>
+</section>
+<section id="r-directory" class="slide level2">
+<h2><code>R</code> Directory</h2>
+<ul>
+<li class="fragment">Shiny supports auto-loading scripts in an <code>R</code> directory</li>
+<li class="fragment">Nested directories not supported</li>
+<li class="fragment">More information on the <a href="https://shiny.rstudio.com/articles/app-formats.html">App Formats</a> article</li>
+</ul>
+</section>
+<section id="enter-the-golem" class="slide level2">
+<h2>Enter the <a href="https://thinkr-open.github.io/golem/"><code>{golem}</code></a></h2>
+<blockquote>
+<p>Opinionated framework for building production-grade Shiny applications as <strong>R packages</strong></p>
+</blockquote>
+<ul>
+<li class="fragment">Scripts guide you with first steps akin to <code>{usethis}</code> &amp; <code>{devtools}</code></li>
+<li class="fragment">Encourages Shiny best practices (especially <strong>modules</strong>)</li>
+<li class="fragment">Streamlines deployment on multiple platforms</li>
+</ul>
+</section></section>
+<section>
+<section id="code-along-1" class="title-slide slide level1 center" data-background-color="#17395c">
+<h1><svg aria-hidden="true" role="img" viewbox="0 0 640 512" style="height:1em;width:1.25em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:white;overflow:visible;position:relative;"><path d="M128 96c26.5 0 48-21.5 48-48S154.5 0 128 0 80 21.5 80 48s21.5 48 48 48zm384 0c26.5 0 48-21.5 48-48S538.5 0 512 0s-48 21.5-48 48 21.5 48 48 48zm125.7 372.1l-44-110-41.1 46.4-2 18.2 27.7 69.2c5 12.5 17 20.1 29.7 20.1 4 0 8-.7 11.9-2.3 16.4-6.6 24.4-25.2 17.8-41.6zm-34.2-209.8L585 178.1c-4.6-20-18.6-36.8-37.5-44.9-18.5-8-39-6.7-56.1 3.3-22.7 13.4-39.7 34.5-48.1 59.4L432 229.8 416 240v-96c0-8.8-7.2-16-16-16H240c-8.8 0-16 7.2-16 16v96l-16.1-10.2-11.3-33.9c-8.3-25-25.4-46-48.1-59.4-17.2-10-37.6-11.3-56.1-3.3-18.9 8.1-32.9 24.9-37.5 44.9l-18.4 80.2c-4.6 20 .7 41.2 14.4 56.7l67.2 75.9 10.1 92.6C130 499.8 143.8 512 160 512c1.2 0 2.3-.1 3.5-.2 17.6-1.9 30.2-17.7 28.3-35.3l-10.1-92.8c-1.5-13-6.9-25.1-15.6-35l-43.3-49 17.6-70.3 6.8 20.4c4.1 12.5 11.9 23.4 24.5 32.6l51.1 32.5c4.6 2.9 12.1 4.6 17.2 5h160c5.1-.4 12.6-2.1 17.2-5l51.1-32.5c12.6-9.2 20.4-20 24.5-32.6l6.8-20.4 17.6 70.3-43.3 49c-8.7 9.9-14.1 22-15.6 35l-10.1 92.8c-1.9 17.6 10.8 33.4 28.3 35.3 1.2.1 2.3.2 3.5.2 16.1 0 30-12.1 31.8-28.5l10.1-92.6 67.2-75.9c13.6-15.5 19-36.7 14.4-56.7zM46.3 358.1l-44 110c-6.6 16.4 1.4 35 17.8 41.6 16.8 6.6 35.1-1.7 41.6-17.8l27.7-69.2-2-18.2-41.1-46.4z"></path></svg> Code-Along</h1>
+<p><a href="codealong-2.html" target="_blank">Code-Along 2</a>: Create a new Shiny application using the <code>{golem}</code> framework</p>
+<p>::: footer <a href="https://engineering-shiny.org/">engineering-shiny.org</a></p>
+</section>
+<section id="enter-the-rhino" class="slide level2">
+<h2>Enter the <a href="https://appsilon.github.io/rhino/"><code>{rhino}</code></a></h2>
+<blockquote>
+<p>Create Shiny apps using software engineering best practices and development tools</p>
+</blockquote>
+<ul>
+<li class="fragment">App structure inspired by other web app stacks</li>
+<li class="fragment">Also encourages Shiny <strong>modules</strong></li>
+<li class="fragment">Pre-configured development tools</li>
+<li class="fragment">Relies on <a href="https://klmr.me/box/"><code>{box}</code></a> for importing functions</li>
+<li class="fragment">Automatic configuration of <code>{renv}</code> for package management</li>
+</ul>
+</section></section>
+<section id="code-along-2" class="title-slide slide level1 center" data-background-color="#17395c">
+<h1><svg aria-hidden="true" role="img" viewbox="0 0 640 512" style="height:1em;width:1.25em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:white;overflow:visible;position:relative;"><path d="M128 96c26.5 0 48-21.5 48-48S154.5 0 128 0 80 21.5 80 48s21.5 48 48 48zm384 0c26.5 0 48-21.5 48-48S538.5 0 512 0s-48 21.5-48 48 21.5 48 48 48zm125.7 372.1l-44-110-41.1 46.4-2 18.2 27.7 69.2c5 12.5 17 20.1 29.7 20.1 4 0 8-.7 11.9-2.3 16.4-6.6 24.4-25.2 17.8-41.6zm-34.2-209.8L585 178.1c-4.6-20-18.6-36.8-37.5-44.9-18.5-8-39-6.7-56.1 3.3-22.7 13.4-39.7 34.5-48.1 59.4L432 229.8 416 240v-96c0-8.8-7.2-16-16-16H240c-8.8 0-16 7.2-16 16v96l-16.1-10.2-11.3-33.9c-8.3-25-25.4-46-48.1-59.4-17.2-10-37.6-11.3-56.1-3.3-18.9 8.1-32.9 24.9-37.5 44.9l-18.4 80.2c-4.6 20 .7 41.2 14.4 56.7l67.2 75.9 10.1 92.6C130 499.8 143.8 512 160 512c1.2 0 2.3-.1 3.5-.2 17.6-1.9 30.2-17.7 28.3-35.3l-10.1-92.8c-1.5-13-6.9-25.1-15.6-35l-43.3-49 17.6-70.3 6.8 20.4c4.1 12.5 11.9 23.4 24.5 32.6l51.1 32.5c4.6 2.9 12.1 4.6 17.2 5h160c5.1-.4 12.6-2.1 17.2-5l51.1-32.5c12.6-9.2 20.4-20 24.5-32.6l6.8-20.4 17.6 70.3-43.3 49c-8.7 9.9-14.1 22-15.6 35l-10.1 92.8c-1.9 17.6 10.8 33.4 28.3 35.3 1.2.1 2.3.2 3.5.2 16.1 0 30-12.1 31.8-28.5l10.1-92.6 67.2-75.9c13.6-15.5 19-36.7 14.4-56.7zM46.3 358.1l-44 110c-6.6 16.4 1.4 35 17.8 41.6 16.8 6.6 35.1-1.7 41.6-17.8l27.7-69.2-2-18.2-41.1-46.4z"></path></svg> Code-Along</h1>
+<p><a href="codealong-3.html" target="_blank">Code-Along 3</a>: Create a new Shiny application using the <code>{rhino}</code> framework</p>
+</section>
+
+<section>
+<section id="regression-testing" class="title-slide slide level1 center">
+<h1>Regression Testing</h1>
+
+</section>
+<section id="a-familiar-strategy" class="slide level2">
+<h2>A Familiar Strategy</h2>
+<div class="fragment">
+<p><img data-src="assets/img/hadley-wickham.gif"></p>
+</div>
+<div class="fragment">
+<div class="sourceCode" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1"></a><span class="co">#&gt; Error: Can't access reactive value 'x' outside of reactive consumer</span></span>
+<span id="cb2-2"><a href="#cb2-2"></a><span class="co">#&gt; ℹ Do you need to wrap inside reactive() or observer()?</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+<div class="fragment">
+<div class="sourceCode" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1"></a><span class="co">#&gt; Error: Unexpected character object for output$greeting</span></span>
+<span id="cb3-2"><a href="#cb3-2"></a><span class="co">#&gt; ℹ Did you forget to use a render function?</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div>
+</section>
+<section id="enter-shinytest2" class="slide level2">
+<h2>Enter <a href="https://rstudio.github.io/shinytest2/"><code>{shinytest2}</code></a></h2>
+<blockquote>
+<p><code>{shinytest2}</code> provides a streamlined toolkit for unit testing Shiny applications</p>
+</blockquote>
+<ul>
+<li class="fragment">Next generation of <code>{shinytest}</code></li>
+<li class="fragment">Tightly coupled with <a href="https://testthat.r-lib.org/"><code>{testthat}</code></a>, used widely in package development</li>
+<li class="fragment">Powered by <a href="https://github.com/rstudio/chromote"><code>{chromote}</code></a> to render applications in a headless Chrome browser</li>
+</ul>
 
 <div class="footer footer-default">
 <p><a href="https://shinyprod.com">shinyprod.com</a></p>
 </div>
-</section>
+</section></section>
     </div>
   </div>
 
@@ -568,6 +865,48 @@
         ]
       });
     </script>
+    
+    <script>
+      // htmlwidgets need to know to resize themselves when slides are shown/hidden.
+      // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
+      // slide changes (different for each slide format).
+      (function () {
+        function fireSlideChanged(previousSlide, currentSlide) {
+
+          // dispatch for htmlwidgets
+          const event = window.document.createEvent("Event");
+          event.initEvent("slideenter", true, true);
+          window.document.dispatchEvent(event);
+
+          // dispatch for shiny
+          if (window.jQuery) {
+            if (previousSlide) {
+              window.jQuery(previousSlide).trigger("hidden");
+            }
+            if (currentSlide) {
+              window.jQuery(currentSlide).trigger("shown");
+            }
+          }
+        }
+
+        // hookup for reveal
+        if (window.Reveal) {
+          window.Reveal.addEventListener("slidechanged", function(event) {
+            fireSlideChanged(event.previousSlide, event.currentSlide);
+          });
+        }
+
+        // hookup for slidy
+        if (window.w3c_slidy) {
+          window.w3c_slidy.add_observer(function (slide_num) {
+            // slide_num starts at position 1
+            fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);
+          });
+        }
+
+      })();
+    </script>
+
     <script id="quarto-html-after-body" type="application/javascript">
     window.document.addEventListener("DOMContentLoaded", function (event) {
       const toggleBodyColorMode = (bsSheetEl) => {

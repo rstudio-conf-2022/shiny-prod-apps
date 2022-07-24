@@ -5,14 +5,14 @@
       "/units/d1-01-welcome.html",
       "/units/d1-02-reactivity.html",
       "/units/d1-02b-break.html",
-      "/units/d1-03-modules.html",
+      "/units/d1-03-design-ux.html",
       "/units/d1-03b-lunch.html",
-      "/units/d1-04-design-ux.html",
+      "/units/d1-04-db-api.html",
       "/units/d1-04b-break.html",
-      "/units/d1-05-db-api.html",
-      "/units/d2-01-user-patterns.html",
+      "/units/d1-05-modules.html",
+      "/units/d2-01-dev-practices.html",
       "/units/d2-01b-break.html",
-      "/units/d2-02-dev-practices.html",
+      "/units/d2-02-user-patterns.html",
       "/units/d2-02b-lunch.html",
       "/units/d2-03-rsconnect.html",
       "/units/d2-03b-break.html",
@@ -32,23 +32,35 @@
     ]
   },
   {
-    "listing": "/units/d1-03-modules.html",
+    "listing": "/units/d1-03-design-ux.html",
+    "items": [
+      "/materials/d1-03-design-ux/ex-1.html",
+      "/materials/d1-03-design-ux/ex-2.html",
+      "/materials/d1-03-design-ux/ex-3.html"
+    ]
+  },
+  {
+    "listing": "/units/d1-04-db-api.html",
+    "items": [
+      "/materials/d1-04-db-api/ex-1.html",
+      "/materials/d1-04-db-api/ex-3.html",
+      "/materials/d1-04-db-api/codealong-1.html"
+    ]
+  },
+  {
+    "listing": "/units/d1-05-modules.html",
     "items": []
   },
   {
-    "listing": "/units/d1-04-design-ux.html",
-    "items": []
+    "listing": "/units/d2-01-dev-practices.html",
+    "items": [
+      "/materials/d2-01-dev-practices/codealong-1.html",
+      "/materials/d2-01-dev-practices/codealong-2.html",
+      "/materials/d2-01-dev-practices/codealong-3.html"
+    ]
   },
   {
-    "listing": "/units/d1-05-db-api.html",
-    "items": []
-  },
-  {
-    "listing": "/units/d2-01-user-patterns.html",
-    "items": []
-  },
-  {
-    "listing": "/units/d2-02-dev-practices.html",
+    "listing": "/units/d2-02-user-patterns.html",
     "items": []
   },
   {
