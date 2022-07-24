@@ -1,0 +1,30 @@
+---
+title: "Database within the Art Viewer"
+subtitle: "Exercise 1"
+---
+
+::: callout-warning
+This page is under construction and will be updated as the materials are posted online.
+:::
+
+The application contained in the `ex-1/app.R` is the same as what we built in the reactivity [code-along](../d1-02-reactivity/codealong-1.qmd) activity. But now it is time to pivot our backend to leverage a robust database stored as a SQLite file.
+
+::: callout-tip
+### Pre-work
+
+Copy the SQLite database file to the `data` directory for this application by executing the following snippet in the R console:
+
+```r
+fs::file_copy("materials/db/db_small.sqlite", "materials/d1-05-db-api/exercise-1/data/db_small.sqlite)
+```
+:::
+
+Here are the tasks to complete for this exercise:
+
+* Instead of loading the input data via an RDS file, switch to a database connection using the aforementioned SQLite file.
+* Utilize a table in the database called `choice_data` to store the metadata associated with the user's decision for liking or rejection an art piece. The data should have the following variables: `user`, `img_file`, `decision`
+
+::: callout-tip
+You can obtain the user name by using the function `get_user()` stored in the `R/get_user.R` script.
+:::
+

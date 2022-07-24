@@ -64,7 +64,12 @@ You can find complete details on the required pre-work and setup instructions at
 
 ![](materials/d1-01-welcome/assets/img/people/ajacobs.jpg){style="float:right;padding: 0 0 0 10px;" fig-alt="{{< var people.ajacobs.name >}}" width="200"}
 
-**{{< var people.ajacobs.name >}}** biography forthcoming. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam pharetra dui sit amet est volutpat efficitur ut et tortor. Nam in metus ligula. Aliquam pellentesque finibus ligula quis dignissim. Vestibulum at erat a enim tincidunt elementum. Phasellus ornare velit nec lorem varius rutrum. In scelerisque lectus vitae elit blandit, ut finibus dui aliquam. Morbi sit amet blandit dolor. Praesent cursus magna eu ligula faucibus fermentum. Curabitur condimentum neque a orci imperdiet egestas. Duis venenatis, erat et fringilla tincidunt, sapien elit dictum risus, vel tincidunt sapien magna et libero. Donec vel ultricies nunc, ut porttitor elit. Mauris vitae libero consequat, ultrices lectus quis, pharetra mauris. Quisque eget condimentum nisi. 
+**{{< var people.ajacobs.name >}}** is a Software Engineer at RStudio, working on their pro products. He is a longtime member of the R community and is mostly known for his public work on using R in *production*.
+
+<br>
+<br>
+<br>
+<br>
 
 ![](materials/d1-01-welcome/assets/img/people/dkearney.jpeg){style="float:right;padding: 0 0 0 10px;" fig-alt="{{< var people.dkearney.name >}}" width="200"}
 

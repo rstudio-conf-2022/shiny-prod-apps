@@ -2,7 +2,7 @@ version: 0.1
 break_location: "Break location TBD"
 lunch_location: "Lunch location TBD"
 quiet_location: "Quiet location TBD"
-room: "Room ID"
+room: "National Harbor 2"
 rsconnect_url: "(URL Forthcoming)"
 rstudio_cloud_workspace_url: "(URL Forthcoming)"
 people:

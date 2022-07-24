@@ -1,9 +1,11 @@
 # load packages ----
 library(shiny)
 library(dplyr)
+library(httr2)
 
 # import data ----
 art_sub <- readRDS("data/art_random.rds")
+object_annotation_df <- readRDS("data/object_annotation_df.rds")
 
 # derive key variables used inside application ----
 department_choices <- art_sub %>%
@@ -35,7 +37,8 @@ ui <- fluidPage(
     ),
     column(
       width = 4,
-      uiOutput("metadata")
+      uiOutput("metadata"),
+      DT::DTOutput("object_table")
     )
   ),
   

@@ -44,3 +44,28 @@ display_metadata <- function(df) {
     )
   )
 }
+
+
+extract_var <- function(df, var) {
+  dplyr::pull(df, {{ var }}) |> unique()
+}
+
+process_object_data <- function(df) {
+  # Each object has 4 records in the data frame
+  # - 1 record for each pair of points of the bounding box
+  # - function translates the 4 rows into 1 row with 4 columns of the points
+  x_vals <- dplyr::pull(df, x)
+  y_vals <- dplyr::pull(df, y)
+  
+  new_df <- df %>%
+    dplyr::select(., -x, -y, -image_gs_path) %>%
+    dplyr::distinct() %>%
+    dplyr::mutate(
+      x_left = min(x_vals),
+      x_right = max(x_vals),
+      y_down = min(y_vals),
+      y_up = max(y_vals)
+    )
+  
+  return(new_df)
+}

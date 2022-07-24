@@ -23,4 +23,5 @@ While the workshop will continuously progress us to creating the production vers
 
 1. Assemble an input data set based on the (optional) department selected.
 1. Use a single art item to ensure the image and metadata display works correctly, while thinking about the dynamic nature later on.
-1. 
+1. Create a workflow using a streamlined reactive (and observer) strategy to dynamically record user decision (like or reject) for an art piece, and update available art pieces based on these results.
+1. Display the user decisions in a small table below the art display.
