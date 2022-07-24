@@ -1,0 +1,12 @@
+---
+title: "Prototyping UI wtih `{shinipsum}`"
+subtitle: "Best Practices Code-Along 1"
+---
+
+::: callout-warning
+This page is under construction and will be updated as the materials are posted online.
+:::
+
+We are going to step back in time and imagine we are just beginning to scope out the requirements and design goals for the Art Image Viewer app. We will use the [`{shinipsum}`](https://thinkr-open.github.io/shinipsum/) package authored by Colin Fay to quickly generate a Shiny app serving as a mock-up for our initial design.
+
+**Bonus** Can we build in a theme toggle?

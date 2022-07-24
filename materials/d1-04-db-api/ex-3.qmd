@@ -1,0 +1,21 @@
+---
+title: "Using APIs within the Art Viewer"
+subtitle: "Exercise 3"
+---
+
+::: callout-warning
+This page is under construction and will be updated as the materials are posted online.
+:::
+
+After exploring the use of databases to enhance the backend of the Art Viewer app, it is now time to harness the benefits of external APIs to offload processing. You will leverage the APIs to accomplish the following features:
+
+* Let the user type in a search box to return a collection of objects that contain the search term within their metadata. You will need to use one or more of the API endpoints from the [MET Museum Data API](https://metmuseum.github.io/)
+* Annotate the displayed art object image with a bounding box based on metadata from the included object annotation data set. Use the custom draw box API deployed on the workshop's RStudio Connect server documented at <https://rsc.training.rstudio.com/artdraw>.
+
+The application in `ex-3/app.R` is very similar to the previous exercises, but with placeholders in the UI for you to add widgets supporting the search box, as well as to request a bounding box to appear. 
+
+::: callout-tip
+You can find object annotation data within`data/object_annotation_df.rds`. A description of the columns can be found in the [resources](../../resources.qmd) page, but there is a simple data table in the application that displays row(s) for the object or set of objects with bounding box information. 
+
+When the user clicks a row in that table, DT will expose an input called `input$object_table_rows_selected` which can be used to determine which particular annotation data config was selected.
+:::

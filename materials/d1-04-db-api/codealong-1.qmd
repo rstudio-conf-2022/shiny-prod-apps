@@ -1,0 +1,15 @@
+---
+title: "Caling a RESTful API from R"
+subtitle: "API Code-Along 1"
+---
+
+::: callout-warning
+This page is under construction and will be updated as the materials are posted online.
+:::
+
+We are going to use R and in particular the [`{httr2}`](https://httr2.r-lib.org/index.html) package to interact with the Metropolitan Museum of Art Collection API. In particular, we will leverage the API to answer the following questions:
+
+* What are the departments contained in the museum?
+* How many art pieces contain a shield?
+
+

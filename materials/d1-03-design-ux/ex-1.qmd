@@ -1,0 +1,36 @@
+---
+title: "Styling the Art Image Viewer (Part 1)"
+subtitle: "Exercise 1"
+---
+
+::: callout-warning
+This page is under construction and will be updated as the materials are posted online.
+:::
+
+In the previous exercises, we have constructed a solid start to the backend functionality of the MET Art Image Viewer application. Now we will start to improve the overall appearance of the application. In particular, you will use the power of CSS to optimize the display of the art image itself to accomplish the following goals:
+
+* Reduce the maximum width the image uses when rendered in the application UI.
+* Add a stylish border to the image display using customized CSS. Thanks to Cyndi Kirkpatrick for her [tutorial](https://web.archive.org/web/20210418211642/https://cyndikirkpatrick.com/texture-tiles/picture-borders/) with accompanying css and image assets.
+
+::: callout-tip
+### Pre-work
+
+Use the following CSS code to produce the picture border. The required image file `border.png` is already present in the `www` subdirectory of the exercise directory.
+
+```
+.borderedpicture3 {
+  background-color: #7d7d7d;
+  background-image: url("border.png");
+  width: 70%;
+  max-width: 70%;
+  height: auto;
+  padding: 10px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0
+      rgba(0, 0, 0, 0.19);
+}
+```
+:::
+
+Additional hints:
+
+* Refer to the [Resize images proportionally with CSS](https://www.geeksforgeeks.org/resize-image-proportionally-with-css/) tutorial for guidance on setting the image maximum width.

@@ -1,9 +1,11 @@
 # load packages ----
 library(shiny)
 library(dplyr)
+library(httr2)
 
 # import data ----
 art_sub <- readRDS("data/art_random.rds")
+object_annotation_df <- readRDS("data/object_annotation_df.rds")
 
 # derive key variables used inside application ----
 department_choices <- art_sub %>%
@@ -31,11 +33,13 @@ ui <- fluidPage(
   fluidRow(
     column(
       width = 8,
+      DT::DTOutput("object_table"),
+      #TODO: Add UI for using selected row of object annotation metadata
       uiOutput("img")
     ),
     column(
       width = 4,
-      uiOutput("metadata")
+      uiOutput("metadata"),
     )
   ),
   
@@ -68,7 +72,8 @@ server <- function(input, output, session) {
   image_likes <- reactiveVal(NULL)
   image_rejects <- reactiveVal(NULL)
   
-  # assemble data based on department selected
+  # TODO: This reactive should be filtered using the 
+  # results obtained from the search API
   current_data <- reactive({
     if (input$dept == "Any") {
       return(art_sub)
@@ -91,6 +96,34 @@ server <- function(input, output, session) {
     image_selected <- sample(image_files, 1)
     
     dplyr::filter(df, image_file == image_selected)
+  })
+  
+  # reactive for object annotation data of current image
+  current_object_df <- reactive({
+    req(current_image_df())
+    image_file <- dplyr::pull(current_image_df(), image_file) %>% unique(.)
+    df <- object_annotation_df %>%
+      filter(image_file == !!image_file) %>%
+      process_object_data()
+  })
+  
+  object_table_df <- reactive({
+    req(current_object_df())
+    dplyr::select(current_object_df(), name, score, x_left, x_right, y_up, y_down)
+  })
+  
+  # display table of results
+  output$object_table <- DT::renderDT({
+    req(object_table_df())
+    DT::datatable(
+      object_table_df(),
+      rownames = NULL,
+      selection = "single",
+      options = list(
+        dom = "t",
+        ordering = FALSE
+      )
+    )
   })
   
   # render image

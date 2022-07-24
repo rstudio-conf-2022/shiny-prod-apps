@@ -1,14 +1,23 @@
 # load packages ----
 library(shiny)
 library(dplyr)
+library(dbplyr)
+library(pool)
+library(DBI)
 
 # import data ----
-art_sub <- readRDS("data/art_random.rds")
+pool <- dbPool(
+  drv = RSQLite::SQLite(),
+  dbname = "data/db_small.sqlite"
+)
+
+art_sub <- tbl(pool, "art")
 
 # derive key variables used inside application ----
 department_choices <- art_sub %>%
   select(department) %>%
   distinct() %>%
+  collect() %>%
   arrange(department) %>%
   pull(department)
 
@@ -71,9 +80,10 @@ server <- function(input, output, session) {
   # assemble data based on department selected
   current_data <- reactive({
     if (input$dept == "Any") {
-      return(art_sub)
+     df <- art_sub %>%
+       collect()
     } else {
-      dplyr::filter(art_sub, department %in% input$dept)
+      dplyr::filter(art_sub, department %in% input$dept) %>% collect()
     }
   })
   
@@ -122,15 +132,17 @@ server <- function(input, output, session) {
   choice_data <- reactive({
     req(image_views())
     # filter for images evaluated
+    browser()
     df <- art_sub %>%
-      filter(image_file %in% image_views()) %>%
+      filter(image_file %in% !!image_views()) %>%
+      collect() %>%
       mutate(decision = case_when(
         image_file %in% image_likes() ~ "like",
         image_file %in% image_rejects() ~ "reject",
         TRUE ~ "unknown"
       )) %>%
       mutate(time = Sys.time(),
-             user = get_user(session))
+             user = get_user(session)) 
   })
   
   # display user choices
@@ -138,6 +150,14 @@ server <- function(input, output, session) {
     req(choice_data())
     choice_data() %>%
       select(user, title, department, decision, time)
+  })
+  
+  observeEvent(choice_data(), {
+    df <- choice_data() %>%
+      select(image_file, user, decision, time)
+    
+    DBI::dbAppendTable(pool, "user_choice", df)
+    
   })
 }
 

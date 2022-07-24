@@ -1,0 +1,14 @@
+---
+title: "Styling the Art Image Viewer (Part 2)"
+subtitle: "Exercise 2"
+---
+
+::: callout-warning
+This page is under construction and will be updated as the materials are posted online.
+:::
+
+Let's continue on the journey to bring a little extra style and aesthetic flair to the MET Image Viewer. Using the [`{bslib}`](https://rstudio.github.io/bslib/articles/bslib.html) package, try customizing the application's fonts and various colors. If you want to achieve an overall look similar to the [MET brand](https://www.metmuseum.org/blogs/now-at-the-met/2016/brand-identity), you could start with the [Arvo](https://fonts.google.com/specimen/Arvo?category=Serif) or [Gelasio](https://fonts.google.com/specimen/Gelasio?category=Serif) Google Fonts. Most importantly, have fun!
+
+::: callout-tip
+You are welcome to deploy your app on the workshop RStudio Connect server! Run `shinyprod::deploy_app()` in the R console or select the **Deploy Shiny App** RStudio add-in.
+:::

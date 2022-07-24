@@ -1,0 +1,10 @@
+---
+title: "Creating a new `{rhino}` Shiny app"
+subtitle: "Best Practices Code-Along 3"
+---
+
+::: callout-warning
+This page is under construction and will be updated as the materials are posted online.
+:::
+
+Let's try creating a brand-new application structure using the  [`{rhino}`](https://appsilon.github.io/rhino/index.html) package! After the initial setup, we will practice migrating one of our earlier versions of the Art Viewer application to a `{rhino}` framework.

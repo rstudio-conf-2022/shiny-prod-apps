@@ -14,6 +14,9 @@ department_choices <- art_sub %>%
 
 # define application user interface ----
 ui <- fluidPage(
+  tags$head(
+    tags$link(rel = "stylesheet", type = "text/css", href = "custom.css")
+  ),
   h2("The MET Art Viewer!"),
   fluidRow(
     column(
@@ -96,7 +99,7 @@ server <- function(input, output, session) {
   # render image
   output$img <- renderUI({
     image_url <- dplyr::pull(current_image_df(), image_small_url)
-    tags$img(src = image_url)
+    tags$img(src = image_url, class = "borderedpicture3")
   })
   
   # render metadata
