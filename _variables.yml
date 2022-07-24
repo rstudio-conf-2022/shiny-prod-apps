@@ -26,6 +26,10 @@ people:
     name: "Kelly O'Briant"
     org: "RStudio"
     web: "https://kellobri.github.io"
+  nstrayer:
+    name: "Nick Strayer"
+    org: "RStudio"
+    web: "https://nickstrayer.me"
   tcashorali:
     name: "Tanya Cashorali"
     org: "TCB Analytics"

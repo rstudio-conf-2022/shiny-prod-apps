@@ -55,25 +55,30 @@ Verify location of quiet room and if wearing red lanyards will be happening agai
 
 :::: {.columns}
 
-::: {.column width="20%"}
+::: {.column width="16%"}
 ![](assets/img/people/tcashorali.png){fig-alt="{{< var people.tcashorali.name >}}" fig-align="center"}
 :::
 
-::: {.column width="20%"}
+::: {.column width="16%"}
 ![](assets/img/people/idinnie.jpeg){fig-alt="{{< var people.idinnie.name >}}" fig-align="center"}
 :::
 
-::: {.column width="20%"}
+::: {.column width="16%"}
 ![](assets/img/people/ajacobs.jpg){fig-alt="{{< var people.ajacobs.name >}}" fig-align="center"}
 :::
 
-::: {.column width="20%"}
+::: {.column width="16%"}
 ![](assets/img/people/dkearney.jpeg){fig-alt="{{< var people.dkearney.name >}}" fig-align="center"}
 :::
 
-::: {.column width="20%"}
+::: {.column width="16%"}
 ![](assets/img/people/kobriant.jpeg){fig-alt="{{< var people.kobriant.name >}}" fig-align="center"}
 :::
+
+::: {.column width="16%"}
+![](assets/img/people/nstrayer.png){fig-alt="{{<var people.nstrayer.name >}}" fig-align="center"}
+:::
+
 
 ::::
 

@@ -75,8 +75,10 @@ You can find complete details on the required pre-work and setup instructions at
 
 **{{< var people.dkearney.name >}}** biography forthcoming. Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam pharetra dui sit amet est volutpat efficitur ut et tortor. Nam in metus ligula. Aliquam pellentesque finibus ligula quis dignissim. Vestibulum at erat a enim tincidunt elementum. Phasellus ornare velit nec lorem varius rutrum. In scelerisque lectus vitae elit blandit, ut finibus dui aliquam. Morbi sit amet blandit dolor. Praesent cursus magna eu ligula faucibus fermentum. Curabitur condimentum neque a orci imperdiet egestas. Duis venenatis, erat et fringilla tincidunt, sapien elit dictum risus, vel tincidunt sapien magna et libero. Donec vel ultricies nunc, ut porttitor elit. Mauris vitae libero consequat, ultrices lectus quis, pharetra mauris. Quisque eget condimentum nisi. 
 
+![](materials/d1-01-welcome/assets/img/people/nstrayer.png){style="float:right;padding: 0 0 0 10px;" fig-alt="{{< var people.nstrayer.name >}}" width="200"}
+
+**{{< var people.nstrayer.name >}}** is a software engineer on the Shiny team at RStudio. Nick has been at the forefront of telling powerful stories through data analyses and visualization, such as in his previous roles at the New York Times and the Johns Hopkins Data Science Lab. He has authored many R packages leveraging the power of javascript within R & Shiny, such as  [shinysense](http://nickstrayer.me/shinysense) and [manhattanPlotr](https://github.com/nstrayer/manhattanPlotr).
+
 ![](materials/d1-01-welcome/assets/img/people/kobriant.jpeg){style="float:right;padding: 0 0 0 10px;" fig-alt="{{< var people.kobriant.name >}}" width="200"}
 
 **{{< var people.kobriant.name >}}** is the Product Manager for [RStudio Connect](https://www.rstudio.com/products/connect/).
-
-
