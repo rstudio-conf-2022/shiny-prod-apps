@@ -18,17 +18,7 @@ format:
     
 ---
 
-## More to come
-
-::: callout-warning
-These slides are under construction and will be updated continuously until the workshop date.
-:::
-
-## Welcome to `rstudio::conf(2022)`!
-
-::: callout-warning
-Add fun image
-:::
+## Welcome to rstudio::conf(2022)! {background-color="black" background-image="assets/img/bg/rstudioconf_crowd.jpg" background-size="cover"}
 
 ## Conference Logistics
 
@@ -88,23 +78,27 @@ Add fun image
 
 ::::
 
+::: footer
+[shinyprod.com/#meet-the-workshop-team](https://shinyprod.com/#meet-the-workshop-team)
+:::
+
 ## Your Turn
 
 Introduce yourself to your neighbor(s)
 
-Have fun!
+What does *production-quality* mean to you?
 
 ```{r}
-#| label: intro-timer
+#| label: timer-prodquality
 library(countdown)
-countdown(minutes = 2, seconds =0)
+countdown(minutes = 2, seconds = 0)
 ```
 
 ---
 
 :::: {.columns .v-center-container}
 
-::: {.column width="50%"}
+::: {.column width="23%"}
 
 ### WiFi
 
@@ -118,7 +112,13 @@ countdown(minutes = 2, seconds =0)
 
 :::
 
-::: {.column width="50%"}
+::: {.column width="47%"}
+
+![](assets/img/bg/surf_internet.jpg)
+
+:::
+
+::: {.column width="30%"}
 
 ### Password
 
@@ -164,6 +164,14 @@ countdown(minutes = 2, seconds =0)
 
 :::
 
+## Power-On (Setup)
+
+Follow [Setup Procedure](../setup.qmd) to connect with the workshop resources:
+
+* RStudio Connect
+* RStudio Cloud
+* Account Integrations
+
 # The Beginning ... {background-color="black" background-image="assets/img/bg/beginning.png" background-size="cover"}
 
 ::: {.notes}
@@ -180,49 +188,27 @@ countdown(minutes = 2, seconds =0)
 * ..... and now what?
 :::
 
-## Your Turn
 
-What does *production-quality* mean to you?
+## Many Users {background-image="assets/img/bg/many_users.jpg" background-size="contain" background-color="black"}
 
-```{r}
-#| label: timer-prodquality
-library(countdown)
-countdown(minutes = 2, seconds = 0)
-```
-
-## Many Users
-
-::: callout-warning
-add image with big crowd
-:::
-
-## High-Profile Situations
+## High-Profile Situations {background-image="assets/img/bg/nasa_mission_control.jpg" background-size="contain" background-color="black"}
 
 
-## Part of a Critical Pipeline
-
-::: callout-warning
-add image of a key technology network
-:::
-
-## The Personas Behind the App
-
-::: {.notes}
-Find images that convey the UI/UX, Backend Logic, External Connections, and Dev Best Practices
-:::
+## Part of a Critical Pipeline {background-image="assets/img/bg/pinky_brain_take_over_world.jpg" background-size="contain" background-color="black"}
 
 ## The Journey Ahead
 
-::: callout-warning
-Add fun image in side, other side is text
-:::
+<br> 
 
-::: {.notes}
-* Production can mean many different things to different people
-* In my opinion, production means it is never just Shiny
-* Not meant to be scary! 
-* The tooling in the R ecosystem, especially around Shiny today, is able to create another pit of success
-:::
+**Production** has more than one meaning for Shiny apps
+
+. . .
+
+<br>
+
+The tooling & principles discussed in this workshop will guide you to the destination
+
+
 
 ## {background-iframe="https://player.vimeo.com/video/652518341?background=1"}
 
@@ -234,30 +220,40 @@ Add fun image in side, other side is text
 * While we can't visit the museum ourselves right now, we have another way ...
 :::
 
-## The MET Collection API
+## The (Digital) MET Collection
 
-::: callout-warning
-Add mini slide-show on side with a few example images
-:::
+:::: {.columns}
 
-::: {.notes}
-* https://www.metmuseum.org/blogs/now-at-the-met/2018/met-collection-api
-* Launched in 2018
-* Over 400,000 art pieces without copyright 
-* Rich amount of metadata associated with each piece of art
-* Images themselves have potential to obtain additional data thanks to the Google Vision APIs
-:::
+::: {.column width="50%"}
 
-## Previewing the workshop data
-
+::: {.nonincremental}
 * Over 112,000 works across 17 collection departments
-* A full history going all the way back to the Lower Paleolithic Period up to the last century
-
-
-## The Art & Science of Building Shiny Apps
-
-::: {.notes}
-* In today's workshop, we're going to take solid first-draft of Shiny apps and up their quality to be production ready
-* Like most of R itself, there are certainly more than one way to solve the issues we discuss in the next two days
-* My goals are to share not just solutions, but give you a lense into the thought process and creativity that many times happens organically.
+* API access launched in 2018
+* Metadata associated with each piece
+* Augment with image-recognition APIs
 :::
+
+:::
+
+::: {.column width="50%"}
+
+![](assets/img/bg/met_preview.png){width="00%}
+:::
+
+::::
+
+::: footer
+[metmuseum.github.io](https://metmuseum.github.io/)
+:::
+
+## Your Turn [Exercise 0](ex-0.html){target="_blank"}
+
+Use the [`{shinyprod}`](https://github.com/rpodcast/shinyprod) package to deploy a simple Shiny app to RStudio Connect
+
+```{r}
+#| label: timer-ex0
+library(countdown)
+countdown(minutes = 2, seconds = 0)
+```
+
+

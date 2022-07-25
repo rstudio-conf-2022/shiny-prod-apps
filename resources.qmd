@@ -31,11 +31,13 @@ df_all <- dplyr::bind_rows(df) %>%
   arrange(dataset, variable)
 ```
 
+## Important Links
 
-::: callout-warning
-This page is under construction and will be updated as the materials are posted online.
-:::
-
+* RStudio Cloud [Workspace]({{< var rstudio_cloud_workspace_url >}}): Click to automatically join the RStudio Cloud Project for this workshop
+* RStudio Connect: [rsc.training.rstudio.com](https://rsc.training.rstudio.com)
+* GitHub Discussion Board: [github.com/rstudio-conf-2022/shiny-prod-apps/discussions](https://github.com/rstudio-conf-2022/shiny-prod-apps/discussions)
+* Collaborate Google Doc: [bitl.y/shinynotes](https://bit.ly/shinynotes)
+* Discord channel: `#building-production-quality-shiny-applications`
 
 
 ## Workshop Data Guide

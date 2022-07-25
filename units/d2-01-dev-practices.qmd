@@ -29,12 +29,6 @@ listing:
 tbl-colwidths: [5,20,75]
 ---
 
-::: callout-warning
-This page is under construction and will be updated continuously until the workshop date.
-:::
-
-## Outline
-
 ## Slides
 
 [View slides in full screen](../materials/d2-01-dev-practices/index.html)
