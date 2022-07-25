@@ -30,22 +30,29 @@ These slides are under construction and will be updated continuously until the w
 Add fun image
 :::
 
-## Workshop Policies
+## Conference Logistics
 
-::: {.notes}
-Verify location of quiet room and if wearing red lanyards will be happening again
+::: {.nonincremental}
+1. Identify the exits closes to you in case of emergency
+1. Gender neutral bathrooms located {{< var bathrooms_location >}}
+1. Lactation room located at {{< var lactation_location >}}
+1. A meditation room is available at {{< var quiet_location >}} (Open 8 AM - 5 PM).
+1. Please do not photograph anyone wearing red lanyards
 :::
+
+
+## Workshop Policies {.smaller}
 
 ::: {.nonincremental}
 ::: {style="font-size: 0.9em;"}
-1. Identify the exits closes to you in case of emergency
+1. Please review the `rstudio::conf` Code of Conduct & COVID [Policy](https://www.rstudio.com/conference/2022/2022-conf-code-of-conduct/) that applies to all workshops.
+     1. RStudio requires that you wear a mask that fully covers your mouth and nose at all times in all public spaces.
+     1. We strongly recommend that you use a correctly fitted N95, KN95, or similar particulate filtering mask; we will have a limited supply available upon request.
+1. Issues can be addressed in following ways:
+     1. **In person:** Contact any rstudio::conf staff member, identifiable by their staff t-shirt shirt, or visit the conference registration desk.
+     1. **By email:** Send a message to `conf@rstudio.com`; event organizers will respond promptly.
+     1. **By phone:** call `844—448—1212`
 
-1. Please review the `rstudio::conf` Code of Conduct & COVID [Policy](https://www.rstudio.com/conference/2022/2022-conf-code-of-conduct/) that applies to all workshops. Issues can be addressed in three ways
-     1. **In person:** contact an `rstudio::conf` staff member or the conference registration desk
-     1. **By email:** send a message to `conf@rstudio.com`.
-     1. **By phone:** call 844—448—1212 
-
-1. A quiet room is available for neurologically diverse attendees at {{< var quiet_location >}}.
 :::
 :::
 
@@ -72,13 +79,12 @@ Verify location of quiet room and if wearing red lanyards will be happening agai
 :::
 
 ::: {.column width="16%"}
-![](assets/img/people/kobriant.jpeg){fig-alt="{{< var people.kobriant.name >}}" fig-align="center"}
+![](assets/img/people/adevries.jpg){fig-alt="{{< var people.adevries.name >}}" fig-align="center"}
 :::
 
 ::: {.column width="16%"}
 ![](assets/img/people/nstrayer.png){fig-alt="{{<var people.nstrayer.name >}}" fig-align="center"}
 :::
-
 
 ::::
 
@@ -94,6 +100,39 @@ library(countdown)
 countdown(minutes = 2, seconds =0)
 ```
 
+---
+
+:::: {.columns .v-center-container}
+
+::: {.column width="50%"}
+
+### WiFi
+
+<br> 
+
+`r fontawesome::fa("wifi", height="3em", fill = "blue")`
+
+<br>
+
+### `{{< var wifi_username >}}`
+
+:::
+
+::: {.column width="50%"}
+
+### Password
+
+<br>
+
+`r fontawesome::fa("key", height="3em", fill = "blue")`
+
+<br>
+
+### `{{< var wifi_password >}}`
+
+:::
+
+::::
 
 ## About those post-its
 
@@ -125,7 +164,7 @@ countdown(minutes = 2, seconds =0)
 
 :::
 
-## The Beginning ... {background-color="black" background-image="assets/img/bg/beginning.png" background-size="cover"}
+# The Beginning ... {background-color="black" background-image="assets/img/bg/beginning.png" background-size="cover"}
 
 ::: {.notes}
 * You've seen Shiny could be a game-changer for a project
@@ -133,11 +172,7 @@ countdown(minutes = 2, seconds =0)
 * You send it to a key stakeholder, and they love it
 :::
 
-## Enter a new world
-
-::: callout-warning
-Add fun image
-:::
+# A New World {background-image="assets/img/bg/metroid_ship.jpg" background-size="cover" background-color="black"}
 
 ::: {.notes}
 * Everyone who sees it thinks the app is amazing
@@ -163,9 +198,6 @@ add image with big crowd
 
 ## High-Profile Situations
 
-::: callout-warning
-add with people watching an important demo or presentation or a pilot in a space shuttle
-:::
 
 ## Part of a Critical Pipeline
 
@@ -229,44 +261,3 @@ Add mini slide-show on side with a few example images
 * Like most of R itself, there are certainly more than one way to solve the issues we discuss in the next two days
 * My goals are to share not just solutions, but give you a lense into the thought process and creativity that many times happens organically.
 :::
-
-## Overview 
-
-1. intro 
-2. breaks
-3. hammer time
-4. deploy it
-
-
-## July 26
-
-- your 
-- world 
-- will 
-- change !
-
-
-## Next day
-
-:::: panel-tabset
-### Deploy App
-
-Learn where to deploy your Shiny app
-
-### Monitor App
-
-Now your app is in the wild, watch over it like a hawk 
-::::
-
-
-## Libraries 
-
-![apps](assets/img/apps.png)
-
-## Timer
-
-```{r}
-#| label: timer
-library(countdown)
-countdown(minutes = 0, seconds = 45)
-```
