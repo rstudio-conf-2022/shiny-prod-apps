@@ -3,10 +3,6 @@ title: "Styling the Art Image Viewer (Part 1)"
 subtitle: "Exercise 1"
 ---
 
-::: callout-warning
-This page is under construction and will be updated as the materials are posted online.
-:::
-
 In the previous exercises, we have constructed a solid start to the backend functionality of the MET Art Image Viewer application. Now we will start to improve the overall appearance of the application. In particular, you will use the power of CSS to optimize the display of the art image itself to accomplish the following goals:
 
 * Reduce the maximum width the image uses when rendered in the application UI.
