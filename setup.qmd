@@ -37,7 +37,7 @@ Please view the information in the callouts below for step-by-step instructions 
 <iframe class="slide-deck" src="materials/setup-resources/#/create-rstudio-connect-account" height="420" width="747" style="border: 1px solid #2e3846;"></iframe>
 ```
 
-1. Create an account on the workshop RStudio Connect server by visiting ({{< var rsconnect_url >}}) and clicking the **login** link in the upper right corner.
+1. Create an account on the workshop RStudio Connect server by visiting [{{< var rsconnect_url >}}]({{< var rsconnect_url >}}) and clicking the **login** link in the upper right corner.
 1. You will see a window that asks for either an email/password or to use a GitHub account. Please choose the GitHub option and follow the instructions to authorize RStudio Connect to your GitHub account.
 1. You should now be logged in to RStudio Connect. Please create an API key for your account by following the RStudio Connect User Guide instructions on [creasting an API key](https://docs.rstudio.com/connect/user/api-keys/). Save it to a secure place as you will need it for account integration.
 
@@ -53,7 +53,7 @@ Please view the information in the callouts below for step-by-step instructions 
 <iframe class="slide-deck" src="materials/setup-resources/#/rstudio-cloud-setup" height="420" width="747" style="border: 1px solid #2e3846;"></iframe>
 ```
 
-1. Join the RStudio Cloud Workspace dedicated to this workshop by visiting this URL: ({{< var rstudio_cloud_workspace_url >}}). If you already have an RStudio Cloud account, you are welcome to use it for the workshop. Otherwise, you can create a new account for free.
+1. Join the RStudio Cloud Workspace dedicated to this workshop by visiting this [customized invitation URL]({{< var rstudio_cloud_workspace_url >}}). If you already have an RStudio Cloud account, you are welcome to use it for the workshop. Otherwise, you can create a new account for free.
 1. You will see a project called *shiny-prod-apps*. Open that project and create a saved copy. This process could take a couple of minutes depending on server load.
 1. After the project loads, you will see messages in the R console about restoring or repairing the package library. Execute `renv::restore(prompt = FALSE)` to install packages into the project. This process should complete in one or two minutes.
 
@@ -85,7 +85,7 @@ If you prefer to use a local installation of R and RStudio, ensure you setup mee
 1. Inside the `.Renviron` file, add the RStudio Connect URL and your account API key using the following format (substitute values as appropriate)
 
 ```
-CONNECT_SERVER=server-address
+CONNECT_SERVER={{< var rsconnect_url >}}
 CONNECT_API_KEY=abcdefghijklmnopqrstuvwxyz
 ```
 

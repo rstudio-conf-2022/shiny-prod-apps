@@ -18,34 +18,31 @@ format:
     
 ---
 
-## More to come
+## Welcome to rstudio::conf(2022)! {background-color="black" background-image="assets/img/bg/rstudioconf_crowd.jpg" background-size="cover"}
 
-::: callout-warning
-These slides are under construction and will be updated continuously until the workshop date.
+## Conference Logistics
+
+::: {.nonincremental}
+1. Identify the exits closes to you in case of emergency
+1. Gender neutral bathrooms located {{< var bathrooms_location >}}
+1. Lactation room located at {{< var lactation_location >}}
+1. A meditation room is available at {{< var quiet_location >}} (Open 8 AM - 5 PM).
+1. Please do not photograph anyone wearing red lanyards
 :::
 
-## Welcome to `rstudio::conf(2022)`!
 
-::: callout-warning
-Add fun image
-:::
-
-## Workshop Policies
-
-::: {.notes}
-Verify location of quiet room and if wearing red lanyards will be happening again
-:::
+## Workshop Policies {.smaller}
 
 ::: {.nonincremental}
 ::: {style="font-size: 0.9em;"}
-1. Identify the exits closes to you in case of emergency
+1. Please review the `rstudio::conf` Code of Conduct & COVID [Policy](https://www.rstudio.com/conference/2022/2022-conf-code-of-conduct/) that applies to all workshops.
+     1. RStudio requires that you wear a mask that fully covers your mouth and nose at all times in all public spaces.
+     1. We strongly recommend that you use a correctly fitted N95, KN95, or similar particulate filtering mask; we will have a limited supply available upon request.
+1. Issues can be addressed in following ways:
+     1. **In person:** Contact any rstudio::conf staff member, identifiable by their staff t-shirt shirt, or visit the conference registration desk.
+     1. **By email:** Send a message to `conf@rstudio.com`; event organizers will respond promptly.
+     1. **By phone:** call `844—448—1212`
 
-1. Please review the `rstudio::conf` Code of Conduct & COVID [Policy](https://www.rstudio.com/conference/2022/2022-conf-code-of-conduct/) that applies to all workshops. Issues can be addressed in three ways
-     1. **In person:** contact an `rstudio::conf` staff member or the conference registration desk
-     1. **By email:** send a message to `conf@rstudio.com`.
-     1. **By phone:** call 844—448—1212 
-
-1. A quiet room is available for neurologically diverse attendees at {{< var quiet_location >}}.
 :::
 :::
 
@@ -55,40 +52,87 @@ Verify location of quiet room and if wearing red lanyards will be happening agai
 
 :::: {.columns}
 
-::: {.column width="20%"}
+::: {.column width="16%"}
 ![](assets/img/people/tcashorali.png){fig-alt="{{< var people.tcashorali.name >}}" fig-align="center"}
 :::
 
-::: {.column width="20%"}
+::: {.column width="16%"}
 ![](assets/img/people/idinnie.jpeg){fig-alt="{{< var people.idinnie.name >}}" fig-align="center"}
 :::
 
-::: {.column width="20%"}
+::: {.column width="16%"}
 ![](assets/img/people/ajacobs.jpg){fig-alt="{{< var people.ajacobs.name >}}" fig-align="center"}
 :::
 
-::: {.column width="20%"}
+::: {.column width="16%"}
 ![](assets/img/people/dkearney.jpeg){fig-alt="{{< var people.dkearney.name >}}" fig-align="center"}
 :::
 
-::: {.column width="20%"}
-![](assets/img/people/kobriant.jpeg){fig-alt="{{< var people.kobriant.name >}}" fig-align="center"}
+::: {.column width="16%"}
+![](assets/img/people/adevries.jpg){fig-alt="{{< var people.adevries.name >}}" fig-align="center"}
+:::
+
+::: {.column width="16%"}
+![](assets/img/people/nstrayer.png){fig-alt="{{<var people.nstrayer.name >}}" fig-align="center"}
 :::
 
 ::::
+
+::: footer
+[shinyprod.com/#meet-the-workshop-team](https://shinyprod.com/#meet-the-workshop-team)
+:::
 
 ## Your Turn
 
 Introduce yourself to your neighbor(s)
 
-Have fun!
+What does *production-quality* mean to you?
 
 ```{r}
-#| label: intro-timer
+#| label: timer-prodquality
 library(countdown)
-countdown(minutes = 2, seconds =0)
+countdown(minutes = 2, seconds = 0)
 ```
 
+---
+
+:::: {.columns .v-center-container}
+
+::: {.column width="23%"}
+
+### WiFi
+
+<br> 
+
+`r fontawesome::fa("wifi", height="3em", fill = "blue")`
+
+<br>
+
+### `{{< var wifi_username >}}`
+
+:::
+
+::: {.column width="47%"}
+
+![](assets/img/bg/surf_internet.jpg)
+
+:::
+
+::: {.column width="30%"}
+
+### Password
+
+<br>
+
+`r fontawesome::fa("key", height="3em", fill = "blue")`
+
+<br>
+
+### `{{< var wifi_password >}}`
+
+:::
+
+::::
 
 ## About those post-its
 
@@ -120,7 +164,15 @@ countdown(minutes = 2, seconds =0)
 
 :::
 
-## The Beginning ... {background-color="black" background-image="assets/img/bg/beginning.png" background-size="cover"}
+## Power-On (Setup)
+
+Follow [Setup Procedure](../setup.qmd) to connect with the workshop resources:
+
+* RStudio Connect
+* RStudio Cloud
+* Account Integrations
+
+# The Beginning ... {background-color="black" background-image="assets/img/bg/beginning.png" background-size="cover"}
 
 ::: {.notes}
 * You've seen Shiny could be a game-changer for a project
@@ -128,11 +180,7 @@ countdown(minutes = 2, seconds =0)
 * You send it to a key stakeholder, and they love it
 :::
 
-## Enter a new world
-
-::: callout-warning
-Add fun image
-:::
+# A New World {background-image="assets/img/bg/metroid_ship.jpg" background-size="cover" background-color="black"}
 
 ::: {.notes}
 * Everyone who sees it thinks the app is amazing
@@ -140,52 +188,27 @@ Add fun image
 * ..... and now what?
 :::
 
-## Your Turn
 
-What does *production-quality* mean to you?
+## Many Users {background-image="assets/img/bg/many_users.jpg" background-size="contain" background-color="black"}
 
-```{r}
-#| label: timer-prodquality
-library(countdown)
-countdown(minutes = 2, seconds = 0)
-```
+## High-Profile Situations {background-image="assets/img/bg/nasa_mission_control.jpg" background-size="contain" background-color="black"}
 
-## Many Users
 
-::: callout-warning
-add image with big crowd
-:::
-
-## High-Profile Situations
-
-::: callout-warning
-add with people watching an important demo or presentation or a pilot in a space shuttle
-:::
-
-## Part of a Critical Pipeline
-
-::: callout-warning
-add image of a key technology network
-:::
-
-## The Personas Behind the App
-
-::: {.notes}
-Find images that convey the UI/UX, Backend Logic, External Connections, and Dev Best Practices
-:::
+## Part of a Critical Pipeline {background-image="assets/img/bg/pinky_brain_take_over_world.jpg" background-size="contain" background-color="black"}
 
 ## The Journey Ahead
 
-::: callout-warning
-Add fun image in side, other side is text
-:::
+<br> 
 
-::: {.notes}
-* Production can mean many different things to different people
-* In my opinion, production means it is never just Shiny
-* Not meant to be scary! 
-* The tooling in the R ecosystem, especially around Shiny today, is able to create another pit of success
-:::
+**Production** has more than one meaning for Shiny apps
+
+. . .
+
+<br>
+
+The tooling & principles discussed in this workshop will guide you to the destination
+
+
 
 ## {background-iframe="https://player.vimeo.com/video/652518341?background=1"}
 
@@ -197,71 +220,40 @@ Add fun image in side, other side is text
 * While we can't visit the museum ourselves right now, we have another way ...
 :::
 
-## The MET Collection API
+## The (Digital) MET Collection
 
-::: callout-warning
-Add mini slide-show on side with a few example images
-:::
+:::: {.columns}
 
-::: {.notes}
-* https://www.metmuseum.org/blogs/now-at-the-met/2018/met-collection-api
-* Launched in 2018
-* Over 400,000 art pieces without copyright 
-* Rich amount of metadata associated with each piece of art
-* Images themselves have potential to obtain additional data thanks to the Google Vision APIs
-:::
+::: {.column width="50%"}
 
-## Previewing the workshop data
-
+::: {.nonincremental}
 * Over 112,000 works across 17 collection departments
-* A full history going all the way back to the Lower Paleolithic Period up to the last century
-
-
-## The Art & Science of Building Shiny Apps
-
-::: {.notes}
-* In today's workshop, we're going to take solid first-draft of Shiny apps and up their quality to be production ready
-* Like most of R itself, there are certainly more than one way to solve the issues we discuss in the next two days
-* My goals are to share not just solutions, but give you a lense into the thought process and creativity that many times happens organically.
+* API access launched in 2018
+* Metadata associated with each piece
+* Augment with image-recognition APIs
 :::
 
-## Overview 
+:::
 
-1. intro 
-2. breaks
-3. hammer time
-4. deploy it
+::: {.column width="50%"}
 
+![](assets/img/bg/met_preview.png){width="00%}
+:::
 
-## July 26
-
-- your 
-- world 
-- will 
-- change !
-
-
-## Next day
-
-:::: panel-tabset
-### Deploy App
-
-Learn where to deploy your Shiny app
-
-### Monitor App
-
-Now your app is in the wild, watch over it like a hawk 
 ::::
 
+::: footer
+[metmuseum.github.io](https://metmuseum.github.io/)
+:::
 
-## Libraries 
+## Your Turn [Exercise 0](ex-0.html){target="_blank"}
 
-![apps](assets/img/apps.png)
-
-## Timer
+Use the [`{shinyprod}`](https://github.com/rpodcast/shinyprod) package to deploy a simple Shiny app to RStudio Connect
 
 ```{r}
-#| label: timer
+#| label: timer-ex0
 library(countdown)
-countdown(minutes = 0, seconds = 45)
+countdown(minutes = 2, seconds = 0)
 ```
+
+

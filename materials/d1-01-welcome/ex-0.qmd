@@ -1,0 +1,10 @@
+---
+title: "Application Deployment using `{shinyprod}`"
+subtitle: "Exercise 0"
+---
+
+The remaining step of our workshop setup is for you to test an automatic deployment of Shiny apps to the custom RStudio Connect Server! 
+
+1. Open the application file `app.R` contained in the `ex-0` directory. Verify it works correctly by clicing **Run App** inside RStudio.
+1. Deploy the application by either selecting the **Deploy Shiny App** RStudio Addin or by running this function within the R console: `shinyprod::shinyprod_deploy()`
+1. You should see two URLs displayed in the R console upon successful deployment. Open new tabs in your browser for each of them and verify that the application was deployed under your account.

@@ -3,8 +3,4 @@ title: "Multiple Controls"
 subtitle: "Exercise 2"
 ---
 
-::: callout-warning
-This page is under construction and will be updated as the materials are posted online.
-:::
-
 The application contained in the `ex-2/app.R` script introduces an additional input defining the range of confidence scores to subset the derived data for the visualization. Once again, the application code does not contain errors that prevent execution. But there are multiple issues to solve regarding validity of results and to minimize unneccessary calculations. Take the next 5 minutes to pinpoint the logic error and to further streamline the reactive flow of the backend processing.
