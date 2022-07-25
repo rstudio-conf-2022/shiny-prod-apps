@@ -21,7 +21,9 @@
   },
   {
     "listing": "/units/d1-01-welcome.html",
-    "items": []
+    "items": [
+      "/materials/d1-01-welcome/ex-0.html"
+    ]
   },
   {
     "listing": "/units/d1-02-reactivity.html",

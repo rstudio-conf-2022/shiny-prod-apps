@@ -251,7 +251,7 @@ RStudio Connect
 <p><a href="materials/setup-resources/index.html#/rcreate-rstudio-connect-account">View screenshots in full screen</a></p>
 <iframe class="slide-deck" src="materials/setup-resources/#/create-rstudio-connect-account" height="420" width="747" style="border: 1px solid #2e3846;"></iframe>
 <ol type="1">
-<li>Create an account on the workshop RStudio Connect server by visiting ((URL Forthcoming)) and clicking the <strong>login</strong> link in the upper right corner.</li>
+<li>Create an account on the workshop RStudio Connect server by visiting <a href="https://rsc.training.rstudio.com">https://rsc.training.rstudio.com</a> and clicking the <strong>login</strong> link in the upper right corner.</li>
 <li>You will see a window that asks for either an email/password or to use a GitHub account. Please choose the GitHub option and follow the instructions to authorize RStudio Connect to your GitHub account.</li>
 <li>You should now be logged in to RStudio Connect. Please create an API key for your account by following the RStudio Connect User Guide instructions on <a href="https://docs.rstudio.com/connect/user/api-keys/">creasting an API key</a>. Save it to a secure place as you will need it for account integration.</li>
 </ol>
@@ -273,7 +273,7 @@ RStudio Cloud
 <p><a href="materials/setup-resources/index.html#/rstudio-cloud-setup">View screenshots in full screen</a></p>
 <iframe class="slide-deck" src="materials/setup-resources/#/rstudio-cloud-setup" height="420" width="747" style="border: 1px solid #2e3846;"></iframe>
 <ol type="1">
-<li>Join the RStudio Cloud Workspace dedicated to this workshop by visiting this URL: ((URL Forthcoming)). If you already have an RStudio Cloud account, you are welcome to use it for the workshop. Otherwise, you can create a new account for free.</li>
+<li>Join the RStudio Cloud Workspace dedicated to this workshop by visiting this <a href="https://rstudio.cloud/spaces/233623/join?access_code=qgH-Ex8bTRirvHt5uqYHKCgswSXh2KpPIlsormqD">customized invitation URL</a>. If you already have an RStudio Cloud account, you are welcome to use it for the workshop. Otherwise, you can create a new account for free.</li>
 <li>You will see a project called <em>shiny-prod-apps</em>. Open that project and create a saved copy. This process could take a couple of minutes depending on server load.</li>
 <li>After the project loads, you will see messages in the R console about restoring or repairing the package library. Execute <code>renv::restore(prompt = FALSE)</code> to install packages into the project. This process should complete in one or two minutes.</li>
 </ol>
@@ -319,7 +319,7 @@ Account Integration
 <li>Navigate back to your RStudio Project created earlier. Create a new file called <code>.Renviron</code> withing your project directory by running the following in the R Console: <code>usethis::edit_r_environ(scope = "project"</code>)</li>
 <li>Inside the <code>.Renviron</code> file, add the RStudio Connect URL and your account API key using the following format (substitute values as appropriate)</li>
 </ol>
-<pre><code>CONNECT_SERVER=server-address
+<pre><code>CONNECT_SERVER=https://rsc.training.rstudio.com
 CONNECT_API_KEY=abcdefghijklmnopqrstuvwxyz</code></pre>
 <ol type="1">
 <li>Link your RStudio Connect account to RStudio by going to <code>Tools -&gt; Global Options -&gt; Publishing</code> and click <strong>Connect</strong> to follow the prompts.</li>

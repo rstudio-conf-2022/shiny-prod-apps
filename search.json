@@ -53,42 +53,49 @@
     "href": "index.html#meet-the-workshop-team",
     "title": "Building Production-Quality Shiny Applications",
     "section": "Meet the Workshop Team",
-    "text": "Meet the Workshop Team\n\nInstructor\n Eric Nantz is a director within the statistical innovation center at Eli Lilly and Company, creating analytical pipelines and capabilities of advanced statistical methodologies for clinical design used in multiple phases of development. Outside of his day job, Eric is passionate about connecting with and showcasing the brilliant R community in multiple ways. You may recognize his voice from the R-Podcast that he launched in 2012. Eric is also the creator of the Shiny Developer Series where he interviews authors of Shiny-related packages and practitioners developing applications, as well as sharing his own R and Shiny adventures via livestreams on his Twitch channel. In addition, Eric is a curator for the RWeekly project and co-host of the RWeekly Highlights podcast which accompanies every issue.\n\n\nTeaching Assistants\n\nTanya Cashorali is the founder of TCB Analytics, a boutique data and analytics consultancy. After graduating from Northeastern University with dual Computer Science and Biology degrees, Tanya started her career in the data-rich field of bioinformatics in the early 2000s. The next decade of Tanya’s career included more commercial use cases for data science and analytics. Tanya also hosts a world-wide community network of over 500 data enthusiasts, has helped universities launch data science programs, and is a frequent speaker at tech conferences.\n\nIan Dinnie’s background is in social science. Prior to joining RStudio’s customer success team, Ian worked for a non-profit economic and public policy consulting company based in Massachusetts, where he worked on projects primarily regarding economic impact analysis, demography, and housing policy. During his time there, he developed a shiny app that displayed enrollment projections for the state’s public universities and community colleges.\n\nAaron Jacobs is a Software Engineer at RStudio, working on their pro products. He is a longtime member of the R community and is mostly known for his public work on using R in production.\n   \n\nDerrick Kearney is a member of RStudio’s Quality team. He is intentionally curious and appreciates software that works as intended.\n\nKelly O’Briant is the Product Manager for RStudio Connect."
+    "text": "Meet the Workshop Team\n\nInstructor\n Eric Nantz is a director within the statistical innovation center at Eli Lilly and Company, creating analytical pipelines and capabilities of advanced statistical methodologies for clinical design used in multiple phases of development. Outside of his day job, Eric is passionate about connecting with and showcasing the brilliant R community in multiple ways. You may recognize his voice from the R-Podcast that he launched in 2012. Eric is also the creator of the Shiny Developer Series where he interviews authors of Shiny-related packages and practitioners developing applications, as well as sharing his own R and Shiny adventures via livestreams on his Twitch channel. In addition, Eric is a curator for the RWeekly project and co-host of the RWeekly Highlights podcast which accompanies every issue.\n\n\nTeaching Assistants\n\nTanya Cashorali is the founder of TCB Analytics, a boutique data and analytics consultancy. After graduating from Northeastern University with dual Computer Science and Biology degrees, Tanya started her career in the data-rich field of bioinformatics in the early 2000s. The next decade of Tanya’s career included more commercial use cases for data science and analytics. Tanya also hosts a world-wide community network of over 500 data enthusiasts, has helped universities launch data science programs, and is a frequent speaker at tech conferences.\n\nIan Dinnie’s background is in social science. Prior to joining RStudio’s customer success team, Ian worked for a non-profit economic and public policy consulting company based in Massachusetts, where he worked on projects primarily regarding economic impact analysis, demography, and housing policy. During his time there, he developed a shiny app that displayed enrollment projections for the state’s public universities and community colleges.\n\nAaron Jacobs is a Software Engineer at RStudio, working on their pro products. He is a longtime member of the R community and is mostly known for his public work on using R in production.\n   \n\nDerrick Kearney is a member of RStudio’s Quality team. He is intentionally curious and appreciates software that works as intended.\n\nNick Strayer is a software engineer on the Shiny team at RStudio. Nick has been at the forefront of telling powerful stories through data analyses and visualization, such as in his previous roles at the New York Times and the Johns Hopkins Data Science Lab. He has authored many R packages leveraging the power of javascript within R & Shiny, such as shinysense and manhattanPlotr.\n\nAndrie De Vries started using R in 2009 for market research statistics. He is a regular contributor to StackOverflow and co-author of “R for Dummies”. He contributed several R packages to CRAN, including miniCRAN, checkpoint, ggdendro, sss, and surveydata, and regularly speaks at industry events and R user groups. He is a qualified yoga teacher, and continues to study yoga therapy annually in Chennai, India."
   },
   {
-    "objectID": "materials/d1-01-welcome/index.html#more-to-come",
-    "href": "materials/d1-01-welcome/index.html#more-to-come",
-    "title": "Welcome!",
-    "section": "More to come",
-    "text": "More to come\n\n\n\n\n\n\nWarning\n\n\nThese slides are under construction and will be updated continuously until the workshop date."
+    "objectID": "materials/d1-01-welcome/ex-0.html",
+    "href": "materials/d1-01-welcome/ex-0.html",
+    "title": "Application Deployment using {shinyprod}",
+    "section": "",
+    "text": "Open the application file app.R contained in the ex-0 directory. Verify it works correctly by clicing Run App inside RStudio.\nDeploy the application by either selecting the Deploy Shiny App RStudio Addin or by running this function within the R console: shinyprod::shinyprod_deploy()\nYou should see two URLs displayed in the R console upon successful deployment. Open new tabs in your browser for each of them and verify that the application was deployed under your account."
   },
   {
     "objectID": "materials/d1-01-welcome/index.html#welcome-to-rstudioconf2022",
     "href": "materials/d1-01-welcome/index.html#welcome-to-rstudioconf2022",
     "title": "Welcome!",
     "section": "Welcome to rstudio::conf(2022)!",
-    "text": "Welcome to rstudio::conf(2022)!\n\n\n\n\n\n\nWarning\n\n\nAdd fun image"
+    "text": "Welcome to rstudio::conf(2022)!"
+  },
+  {
+    "objectID": "materials/d1-01-welcome/index.html#conference-logistics",
+    "href": "materials/d1-01-welcome/index.html#conference-logistics",
+    "title": "Welcome!",
+    "section": "Conference Logistics",
+    "text": "Conference Logistics\n\n\nIdentify the exits closes to you in case of emergency\nGender neutral bathrooms located near National Harbor Rooms\nLactation room located at Potomac Dressing Room\nA meditation room is available at National Harbor 9 (Open 8 AM - 5 PM).\nPlease do not photograph anyone wearing red lanyards"
   },
   {
     "objectID": "materials/d1-01-welcome/index.html#workshop-policies",
     "href": "materials/d1-01-welcome/index.html#workshop-policies",
     "title": "Welcome!",
     "section": "Workshop Policies",
-    "text": "Workshop Policies\n\nVerify location of quiet room and if wearing red lanyards will be happening again\n\n\n\n\nIdentify the exits closes to you in case of emergency\nPlease review the rstudio::conf Code of Conduct & COVID Policy that applies to all workshops. Issues can be addressed in three ways\n\nIn person: contact an rstudio::conf staff member or the conference registration desk\nBy email: send a message to conf@rstudio.com.\nBy phone: call 844—448—1212\n\nA quiet room is available for neurologically diverse attendees at Quiet location TBD."
+    "text": "Workshop Policies\n\n\n\nPlease review the rstudio::conf Code of Conduct & COVID Policy that applies to all workshops.\n\nRStudio requires that you wear a mask that fully covers your mouth and nose at all times in all public spaces.\nWe strongly recommend that you use a correctly fitted N95, KN95, or similar particulate filtering mask; we will have a limited supply available upon request.\n\nIssues can be addressed in following ways:\n\nIn person: Contact any rstudio::conf staff member, identifiable by their staff t-shirt shirt, or visit the conference registration desk.\nBy email: Send a message to conf@rstudio.com; event organizers will respond promptly.\nBy phone: call 844—448—1212"
   },
   {
     "objectID": "materials/d1-01-welcome/index.html#meet-the-team",
     "href": "materials/d1-01-welcome/index.html#meet-the-team",
     "title": "Welcome!",
     "section": "Meet the Team!",
-    "text": "Meet the Team!"
+    "text": "Meet the Team!\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nshinyprod.com/#meet-the-workshop-team"
   },
   {
     "objectID": "materials/d1-01-welcome/index.html#your-turn",
     "href": "materials/d1-01-welcome/index.html#your-turn",
     "title": "Welcome!",
     "section": "Your Turn",
-    "text": "Your Turn\nIntroduce yourself to your neighbor(s)\nHave fun!\n\n\n\n02:00"
+    "text": "Your Turn\nIntroduce yourself to your neighbor(s)\nWhat does production-quality mean to you?\n\n\n\n02:00"
   },
   {
     "objectID": "materials/d1-01-welcome/index.html#about-those-post-its",
@@ -98,60 +105,39 @@
     "text": "About those post-its\n\n\n\n    \n        Done with activity\n    \n\n\n\n    \n        I'd like help"
   },
   {
-    "objectID": "materials/d1-01-welcome/index.html#the-beginning",
-    "href": "materials/d1-01-welcome/index.html#the-beginning",
+    "objectID": "materials/d1-01-welcome/index.html#power-on-setup",
+    "href": "materials/d1-01-welcome/index.html#power-on-setup",
     "title": "Welcome!",
-    "section": "The Beginning …",
-    "text": "The Beginning …\n\n\nYou’ve seen Shiny could be a game-changer for a project\nBuild an application quickly, purely with R code\nYou send it to a key stakeholder, and they love it"
-  },
-  {
-    "objectID": "materials/d1-01-welcome/index.html#enter-a-new-world",
-    "href": "materials/d1-01-welcome/index.html#enter-a-new-world",
-    "title": "Welcome!",
-    "section": "Enter a new world",
-    "text": "Enter a new world\n\n\n\n\n\n\nWarning\n\n\nAdd fun image\n\n\n\n\n\nEveryone who sees it thinks the app is amazing\nSuddenly you are asked (or told) this needs to get into PRODUCTION\n….. and now what?"
-  },
-  {
-    "objectID": "materials/d1-01-welcome/index.html#your-turn-1",
-    "href": "materials/d1-01-welcome/index.html#your-turn-1",
-    "title": "Welcome!",
-    "section": "Your Turn",
-    "text": "Your Turn\nWhat does production-quality mean to you?\n\n\n\n02:00"
+    "section": "Power-On (Setup)",
+    "text": "Power-On (Setup)\nFollow Setup Procedure to connect with the workshop resources:\n\nRStudio Connect\nRStudio Cloud\nAccount Integrations"
   },
   {
     "objectID": "materials/d1-01-welcome/index.html#many-users",
     "href": "materials/d1-01-welcome/index.html#many-users",
     "title": "Welcome!",
     "section": "Many Users",
-    "text": "Many Users\n\n\n\n\n\n\nWarning\n\n\nadd image with big crowd"
+    "text": "Many Users"
   },
   {
     "objectID": "materials/d1-01-welcome/index.html#high-profile-situations",
     "href": "materials/d1-01-welcome/index.html#high-profile-situations",
     "title": "Welcome!",
     "section": "High-Profile Situations",
-    "text": "High-Profile Situations\n\n\n\n\n\n\nWarning\n\n\nadd with people watching an important demo or presentation or a pilot in a space shuttle"
+    "text": "High-Profile Situations"
   },
   {
     "objectID": "materials/d1-01-welcome/index.html#part-of-a-critical-pipeline",
     "href": "materials/d1-01-welcome/index.html#part-of-a-critical-pipeline",
     "title": "Welcome!",
     "section": "Part of a Critical Pipeline",
-    "text": "Part of a Critical Pipeline\n\n\n\n\n\n\nWarning\n\n\nadd image of a key technology network"
-  },
-  {
-    "objectID": "materials/d1-01-welcome/index.html#the-personas-behind-the-app",
-    "href": "materials/d1-01-welcome/index.html#the-personas-behind-the-app",
-    "title": "Welcome!",
-    "section": "The Personas Behind the App",
-    "text": "The Personas Behind the App\n\nFind images that convey the UI/UX, Backend Logic, External Connections, and Dev Best Practices"
+    "text": "Part of a Critical Pipeline"
   },
   {
     "objectID": "materials/d1-01-welcome/index.html#the-journey-ahead",
     "href": "materials/d1-01-welcome/index.html#the-journey-ahead",
     "title": "Welcome!",
     "section": "The Journey Ahead",
-    "text": "The Journey Ahead\n\n\n\n\n\n\nWarning\n\n\nAdd fun image in side, other side is text\n\n\n\n\n\nProduction can mean many different things to different people\nIn my opinion, production means it is never just Shiny\nNot meant to be scary!\nThe tooling in the R ecosystem, especially around Shiny today, is able to create another pit of success"
+    "text": "The Journey Ahead\n\nProduction has more than one meaning for Shiny apps\n\n\nThe tooling & principles discussed in this workshop will guide you to the destination"
   },
   {
     "objectID": "materials/d1-01-welcome/index.html#section",
@@ -161,60 +147,18 @@
     "text": "Play this video as background in slide https://player.vimeo.com/video/652518341?background=1\nThe Metropolitan Museum of Art (aka the MET) was founded in 1870\nTwo locations in New York\nOver 5,000 years of art from around the world\nWhile we can’t visit the museum ourselves right now, we have another way …"
   },
   {
-    "objectID": "materials/d1-01-welcome/index.html#the-met-collection-api",
-    "href": "materials/d1-01-welcome/index.html#the-met-collection-api",
+    "objectID": "materials/d1-01-welcome/index.html#the-digital-met-collection",
+    "href": "materials/d1-01-welcome/index.html#the-digital-met-collection",
     "title": "Welcome!",
-    "section": "The MET Collection API",
-    "text": "The MET Collection API\n\n\n\n\n\n\nWarning\n\n\nAdd mini slide-show on side with a few example images\n\n\n\n\n\nhttps://www.metmuseum.org/blogs/now-at-the-met/2018/met-collection-api\nLaunched in 2018\nOver 400,000 art pieces without copyright\nRich amount of metadata associated with each piece of art\nImages themselves have potential to obtain additional data thanks to the Google Vision APIs"
+    "section": "The (Digital) MET Collection",
+    "text": "The (Digital) MET Collection\n\n\n\n\nOver 112,000 works across 17 collection departments\nAPI access launched in 2018\nMetadata associated with each piece\nAugment with image-recognition APIs\n\n\n\n\n\n\n\nmetmuseum.github.io"
   },
   {
-    "objectID": "materials/d1-01-welcome/index.html#previewing-the-workshop-data",
-    "href": "materials/d1-01-welcome/index.html#previewing-the-workshop-data",
+    "objectID": "materials/d1-01-welcome/index.html#your-turn-exercise-0",
+    "href": "materials/d1-01-welcome/index.html#your-turn-exercise-0",
     "title": "Welcome!",
-    "section": "Previewing the workshop data",
-    "text": "Previewing the workshop data\n\nOver 112,000 works across 17 collection departments\nA full history going all the way back to the Lower Paleolithic Period up to the last century"
-  },
-  {
-    "objectID": "materials/d1-01-welcome/index.html#the-art-science-of-building-shiny-apps",
-    "href": "materials/d1-01-welcome/index.html#the-art-science-of-building-shiny-apps",
-    "title": "Welcome!",
-    "section": "The Art & Science of Building Shiny Apps",
-    "text": "The Art & Science of Building Shiny Apps\n\n\nIn today’s workshop, we’re going to take solid first-draft of Shiny apps and up their quality to be production ready\nLike most of R itself, there are certainly more than one way to solve the issues we discuss in the next two days\nMy goals are to share not just solutions, but give you a lense into the thought process and creativity that many times happens organically."
-  },
-  {
-    "objectID": "materials/d1-01-welcome/index.html#overview",
-    "href": "materials/d1-01-welcome/index.html#overview",
-    "title": "Welcome!",
-    "section": "Overview",
-    "text": "Overview\n\nintro\nbreaks\nhammer time\ndeploy it"
-  },
-  {
-    "objectID": "materials/d1-01-welcome/index.html#july-26",
-    "href": "materials/d1-01-welcome/index.html#july-26",
-    "title": "Welcome!",
-    "section": "July 26",
-    "text": "July 26\n\nyour\nworld\nwill\nchange !"
-  },
-  {
-    "objectID": "materials/d1-01-welcome/index.html#next-day",
-    "href": "materials/d1-01-welcome/index.html#next-day",
-    "title": "Welcome!",
-    "section": "Next day",
-    "text": "Next day\n\nDeploy AppMonitor App\n\n\nLearn where to deploy your Shiny app\n\n\nNow your app is in the wild, watch over it like a hawk"
-  },
-  {
-    "objectID": "materials/d1-01-welcome/index.html#libraries",
-    "href": "materials/d1-01-welcome/index.html#libraries",
-    "title": "Welcome!",
-    "section": "Libraries",
-    "text": "Libraries\n\napps"
-  },
-  {
-    "objectID": "materials/d1-01-welcome/index.html#timer",
-    "href": "materials/d1-01-welcome/index.html#timer",
-    "title": "Welcome!",
-    "section": "Timer",
-    "text": "Timer\n\n\n\n00:45\n\n\n\n\n\nshinyprod.com"
+    "section": "Your Turn Exercise 0",
+    "text": "Your Turn Exercise 0\nUse the {shinyprod} package to deploy a simple Shiny app to RStudio Connect\n\n\n\n02:00\n\n\n\n\n\nshinyprod.com"
   },
   {
     "objectID": "materials/d1-02-reactivity/codealong-1.html",
@@ -980,6 +924,13 @@
     "text": "shinyprod.com"
   },
   {
+    "objectID": "resources.html#important-links",
+    "href": "resources.html#important-links",
+    "title": "Resources for Building Production-Quality Shiny Applications",
+    "section": "Important Links",
+    "text": "Important Links\n\nRStudio Cloud Workspace: Click to automatically join the RStudio Cloud Project for this workshop\nRStudio Connect: rsc.training.rstudio.com\nGitHub Discussion Board: github.com/rstudio-conf-2022/shiny-prod-apps/discussions\nCollaborate Google Doc: bitl.y/shinynotes\nDiscord channel: #building-production-quality-shiny-applications"
+  },
+  {
     "objectID": "resources.html#workshop-data-guide",
     "href": "resources.html#workshop-data-guide",
     "title": "Resources for Building Production-Quality Shiny Applications",
@@ -1026,35 +977,21 @@
     "href": "setup.html#environment-configuration",
     "title": "Setup",
     "section": "Environment Configuration",
-    "text": "Environment Configuration\nPlease view the information in the callouts below for step-by-step instructions on configuring your accounts and environments. While RStudio Cloud is the preferred development environment, you may utilize your local installation of R and RStudio if you prefer.\n\n\n\n\n\n\nRStudio Connect\n\n\n\n\n\nView screenshots in full screen\n\n\nCreate an account on the workshop RStudio Connect server by visiting ((URL Forthcoming)) and clicking the login link in the upper right corner.\nYou will see a window that asks for either an email/password or to use a GitHub account. Please choose the GitHub option and follow the instructions to authorize RStudio Connect to your GitHub account.\nYou should now be logged in to RStudio Connect. Please create an API key for your account by following the RStudio Connect User Guide instructions on creasting an API key. Save it to a secure place as you will need it for account integration.\n\n\n\n\n\n\n\n\n\n\nRStudio Cloud\n\n\n\n\n\nView screenshots in full screen\n\n\nJoin the RStudio Cloud Workspace dedicated to this workshop by visiting this URL: ((URL Forthcoming)). If you already have an RStudio Cloud account, you are welcome to use it for the workshop. Otherwise, you can create a new account for free.\nYou will see a project called shiny-prod-apps. Open that project and create a saved copy. This process could take a couple of minutes depending on server load.\nAfter the project loads, you will see messages in the R console about restoring or repairing the package library. Execute renv::restore(prompt = FALSE) to install packages into the project. This process should complete in one or two minutes.\n\n\n\n\n\n\n\n\n\n\nLocal R & RStudio\n\n\n\n\n\nIf you prefer to use a local installation of R and RStudio, ensure you setup meets the following requirements:\n\nR version 4.1 or later\nLatest released version of RStudio, v2022.07.0-548 or later\nThe {renv} package.\n\n\n\n\n\n\n\n\n\n\nAccount Integration\n\n\n\n\n\nView screenshots in full screen\n\n\nNavigate back to your RStudio Project created earlier. Create a new file called .Renviron withing your project directory by running the following in the R Console: usethis::edit_r_environ(scope = \"project\")\nInside the .Renviron file, add the RStudio Connect URL and your account API key using the following format (substitute values as appropriate)\n\nCONNECT_SERVER=server-address\nCONNECT_API_KEY=abcdefghijklmnopqrstuvwxyz\n\nLink your RStudio Connect account to RStudio by going to Tools -> Global Options -> Publishing and click Connect to follow the prompts.\nRestart your R session by going to Session -> Restart R inside RStudio. Verify that your environment variables were successfully registered by printing them into your R console with the following commands:\n\nSys.getenv(\"CONNECT_SERVER\")\nSys.getenv(\"CONNECT_API_KEY\")"
+    "text": "Environment Configuration\nPlease view the information in the callouts below for step-by-step instructions on configuring your accounts and environments. While RStudio Cloud is the preferred development environment, you may utilize your local installation of R and RStudio if you prefer.\n\n\n\n\n\n\nRStudio Connect\n\n\n\n\n\nView screenshots in full screen\n\n\nCreate an account on the workshop RStudio Connect server by visiting https://rsc.training.rstudio.com and clicking the login link in the upper right corner.\nYou will see a window that asks for either an email/password or to use a GitHub account. Please choose the GitHub option and follow the instructions to authorize RStudio Connect to your GitHub account.\nYou should now be logged in to RStudio Connect. Please create an API key for your account by following the RStudio Connect User Guide instructions on creasting an API key. Save it to a secure place as you will need it for account integration.\n\n\n\n\n\n\n\n\n\n\nRStudio Cloud\n\n\n\n\n\nView screenshots in full screen\n\n\nJoin the RStudio Cloud Workspace dedicated to this workshop by visiting this customized invitation URL. If you already have an RStudio Cloud account, you are welcome to use it for the workshop. Otherwise, you can create a new account for free.\nYou will see a project called shiny-prod-apps. Open that project and create a saved copy. This process could take a couple of minutes depending on server load.\nAfter the project loads, you will see messages in the R console about restoring or repairing the package library. Execute renv::restore(prompt = FALSE) to install packages into the project. This process should complete in one or two minutes.\n\n\n\n\n\n\n\n\n\n\nLocal R & RStudio\n\n\n\n\n\nIf you prefer to use a local installation of R and RStudio, ensure you setup meets the following requirements:\n\nR version 4.1 or later\nLatest released version of RStudio, v2022.07.0-548 or later\nThe {renv} package.\n\n\n\n\n\n\n\n\n\n\nAccount Integration\n\n\n\n\n\nView screenshots in full screen\n\n\nNavigate back to your RStudio Project created earlier. Create a new file called .Renviron withing your project directory by running the following in the R Console: usethis::edit_r_environ(scope = \"project\")\nInside the .Renviron file, add the RStudio Connect URL and your account API key using the following format (substitute values as appropriate)\n\nCONNECT_SERVER=https://rsc.training.rstudio.com\nCONNECT_API_KEY=abcdefghijklmnopqrstuvwxyz\n\nLink your RStudio Connect account to RStudio by going to Tools -> Global Options -> Publishing and click Connect to follow the prompts.\nRestart your R session by going to Session -> Restart R inside RStudio. Verify that your environment variables were successfully registered by printing them into your R console with the following commands:\n\nSys.getenv(\"CONNECT_SERVER\")\nSys.getenv(\"CONNECT_API_KEY\")"
   },
   {
     "objectID": "units/d1-01-welcome.html",
     "href": "units/d1-01-welcome.html",
     "title": "Welcome & Setup",
     "section": "",
-    "text": "Warning\n\n\n\nThis page is under construction and will be updated continuously until the workshop date."
-  },
-  {
-    "objectID": "units/d1-01-welcome.html#outline",
-    "href": "units/d1-01-welcome.html#outline",
-    "title": "Welcome & Setup",
-    "section": "Outline",
-    "text": "Outline"
-  },
-  {
-    "objectID": "units/d1-01-welcome.html#slides",
-    "href": "units/d1-01-welcome.html#slides",
-    "title": "Welcome & Setup",
-    "section": "Slides",
-    "text": "Slides\nView slides in full screen"
+    "text": "View slides in full screen"
   },
   {
     "objectID": "units/d1-01-welcome.html#exercises",
     "href": "units/d1-01-welcome.html#exercises",
     "title": "Welcome & Setup",
     "section": "Exercises",
-    "text": "Exercises\n\n\n\n\n\n\nExercise\n\n\nTitle\n\n\n\n\n\n\n\n\nNo matching items"
+    "text": "Exercises\n\n\n\n\n\n\nExercise\n\n\nTitle\n\n\n\n\n\n\nExercise 0\n\n\nApplication Deployment using {shinyprod}\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "units/d1-02-reactivity.html",
@@ -1103,21 +1040,7 @@
     "href": "units/d1-03-design-ux.html",
     "title": "Design & User Experience",
     "section": "",
-    "text": "Warning\n\n\n\nThis page is under construction and will be updated continuously until the workshop date."
-  },
-  {
-    "objectID": "units/d1-03-design-ux.html#outline",
-    "href": "units/d1-03-design-ux.html#outline",
-    "title": "Design & User Experience",
-    "section": "Outline",
-    "text": "Outline"
-  },
-  {
-    "objectID": "units/d1-03-design-ux.html#slides",
-    "href": "units/d1-03-design-ux.html#slides",
-    "title": "Design & User Experience",
-    "section": "Slides",
-    "text": "Slides\nView slides in full screen"
+    "text": "View slides in full screen"
   },
   {
     "objectID": "units/d1-03-design-ux.html#code-along-examples",
@@ -1145,21 +1068,7 @@
     "href": "units/d1-04-db-api.html",
     "title": "Databases & APIs",
     "section": "",
-    "text": "Warning\n\n\n\nThis page is under construction and will be updated continuously until the workshop date."
-  },
-  {
-    "objectID": "units/d1-04-db-api.html#outline",
-    "href": "units/d1-04-db-api.html#outline",
-    "title": "Databases & APIs",
-    "section": "Outline",
-    "text": "Outline"
-  },
-  {
-    "objectID": "units/d1-04-db-api.html#slides",
-    "href": "units/d1-04-db-api.html#slides",
-    "title": "Databases & APIs",
-    "section": "Slides",
-    "text": "Slides\nView slides in full screen"
+    "text": "View slides in full screen"
   },
   {
     "objectID": "units/d1-04-db-api.html#code-along-examples",
@@ -1187,21 +1096,7 @@
     "href": "units/d1-05-modules.html",
     "title": "All About Modules",
     "section": "",
-    "text": "Warning\n\n\n\nThis page is under construction and will be updated continuously until the workshop date."
-  },
-  {
-    "objectID": "units/d1-05-modules.html#outline",
-    "href": "units/d1-05-modules.html#outline",
-    "title": "All About Modules",
-    "section": "Outline",
-    "text": "Outline"
-  },
-  {
-    "objectID": "units/d1-05-modules.html#slides",
-    "href": "units/d1-05-modules.html#slides",
-    "title": "All About Modules",
-    "section": "Slides",
-    "text": "Slides\nView slides in full screen"
+    "text": "View slides in full screen"
   },
   {
     "objectID": "units/d1-05-modules.html#code-along-examples",
@@ -1222,21 +1117,7 @@
     "href": "units/d2-01-dev-practices.html",
     "title": "Development Best Practices",
     "section": "",
-    "text": "Warning\n\n\n\nThis page is under construction and will be updated continuously until the workshop date."
-  },
-  {
-    "objectID": "units/d2-01-dev-practices.html#outline",
-    "href": "units/d2-01-dev-practices.html#outline",
-    "title": "Development Best Practices",
-    "section": "Outline",
-    "text": "Outline"
-  },
-  {
-    "objectID": "units/d2-01-dev-practices.html#slides",
-    "href": "units/d2-01-dev-practices.html#slides",
-    "title": "Development Best Practices",
-    "section": "Slides",
-    "text": "Slides\nView slides in full screen"
+    "text": "View slides in full screen"
   },
   {
     "objectID": "units/d2-01-dev-practices.html#code-along-examples",
