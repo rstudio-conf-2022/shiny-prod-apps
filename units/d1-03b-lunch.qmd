@@ -6,7 +6,7 @@ image: "assets/img/lunch.png"
 image-alt: "Lunch time image"
 ---
 
-It's time to replenish that Shiny learning energy with a delicious lunch! Before you head over to the {{< var lunch_location> }}, we would greatly appreciate if you take a minute to provide your feedback on how the workshop is going so far:
+It's time to replenish that Shiny learning energy with a delicious lunch! Before you head over to the {{< var lunch_location >}}, we would greatly appreciate if you take a minute to provide your feedback on how the workshop is going so far:
 
 * Write one positive thing such as a new technique/capability you learned on a green sticky note
 * Write one item that could use improvement, such as a topic going too fast or not clear enough on a pink sticky note. 
