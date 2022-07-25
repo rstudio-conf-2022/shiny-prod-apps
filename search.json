@@ -182,13 +182,6 @@
     "text": "The application contained in the ex-2/app.R script introduces an additional input defining the range of confidence scores to subset the derived data for the visualization. Once again, the application code does not contain errors that prevent execution. But there are multiple issues to solve regarding validity of results and to minimize unneccessary calculations. Take the next 5 minutes to pinpoint the logic error and to further streamline the reactive flow of the backend processing."
   },
   {
-    "objectID": "materials/d1-02-reactivity/index.html#more-to-come",
-    "href": "materials/d1-02-reactivity/index.html#more-to-come",
-    "title": "Windows of Reactivity",
-    "section": "More to come",
-    "text": "More to come\n\n\n\n\n\n\nWarning\n\n\nThese slides are under construction and will be updated continuously until the workshop date."
-  },
-  {
     "objectID": "materials/d1-02-reactivity/index.html#default-perspective",
     "href": "materials/d1-02-reactivity/index.html#default-perspective",
     "title": "Windows of Reactivity",
@@ -305,42 +298,35 @@
     "href": "materials/d1-02-reactivity/index.html#more-from-the-reactivity-bank",
     "title": "Windows of Reactivity",
     "section": "More from the Reactivity Bank",
-    "text": "More from the Reactivity Bank\n\nbindEvent: Modify an object to support event-like triggers\ninvalidateLater: Use running time as a source to reactivity\nisolate: Prevent reactivity\nreq: Ensure pre-conditions are met before proceeding\ndebounce/throttle: Slow the reactive-roll down"
+    "text": "More from the Reactivity Bank\n\nbindEvent: Modify an object to support triggers\ninvalidateLater: Use running time as a source to reactivity\nreactivePoll: Create a reactive data source invalidated by a check function\nisolate: Prevent reactivity\nreq: Ensure pre-conditions are met before proceeding\ndebounce/throttle: Slow the reactive-roll down"
   },
   {
     "objectID": "materials/d1-02-reactivity/index.html#additional-resources",
     "href": "materials/d1-02-reactivity/index.html#additional-resources",
     "title": "Windows of Reactivity",
     "section": "Additional Resources",
-    "text": "Additional Resources\n\nMastering Reactivity chapters from Hadley Wickham’s Mastering Shiny\n\n\n\n\nshinyprod.com"
+    "text": "Additional Resources\n\n\nMastering Reactivity chapters from Hadley Wickham’s Mastering Shiny\nJoe Cheng’s Effective Reactive Programming: Part 1 and Part 2\nShiny Developer Series Episode 12 with Barret Schloerke\n\n\n\n\nshinyprod.com"
   },
   {
     "objectID": "materials/d1-03-design-ux/ex-1.html",
     "href": "materials/d1-03-design-ux/ex-1.html",
     "title": "Styling the Art Image Viewer (Part 1)",
     "section": "",
-    "text": "In the previous exercises, we have constructed a solid start to the backend functionality of the MET Art Image Viewer application. Now we will start to improve the overall appearance of the application. In particular, you will use the power of CSS to optimize the display of the art image itself to accomplish the following goals:\n\nReduce the maximum width the image uses when rendered in the application UI.\nAdd a stylish border to the image display using customized CSS. Thanks to Cyndi Kirkpatrick for her tutorial with accompanying css and image assets.\n\n\n\n\n\n\n\nPre-work\n\n\n\nUse the following CSS code to produce the picture border. The required image file border.png is already present in the www subdirectory of the exercise directory.\n.borderedpicture3 {\n  background-color: #7d7d7d;\n  background-image: url(\"border.png\");\n  width: 70%;\n  max-width: 70%;\n  height: auto;\n  padding: 10px;\n  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0\n      rgba(0, 0, 0, 0.19);\n}\n\n\nAdditional hints:\n\nRefer to the Resize images proportionally with CSS tutorial for guidance on setting the image maximum width."
+    "text": "Reduce the maximum width the image uses when rendered in the application UI.\nAdd a stylish border to the image display using customized CSS. Thanks to Cyndi Kirkpatrick for her tutorial with accompanying css and image assets.\n\n\n\n\n\n\n\nPre-work\n\n\n\nUse the following CSS code to produce the picture border. The required image file border.png is already present in the www subdirectory of the exercise directory.\n.borderedpicture3 {\n  background-color: #7d7d7d;\n  background-image: url(\"border.png\");\n  width: 70%;\n  max-width: 70%;\n  height: auto;\n  padding: 10px;\n  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0\n      rgba(0, 0, 0, 0.19);\n}\n\n\nAdditional hints:\n\nRefer to the Resize images proportionally with CSS tutorial for guidance on setting the image maximum width."
   },
   {
     "objectID": "materials/d1-03-design-ux/ex-2.html",
     "href": "materials/d1-03-design-ux/ex-2.html",
     "title": "Styling the Art Image Viewer (Part 2)",
     "section": "",
-    "text": "Let’s continue on the journey to bring a little extra style and aesthetic flair to the MET Image Viewer. Using the {bslib} package, try customizing the application’s fonts and various colors. If you want to achieve an overall look similar to the MET brand, you could start with the Arvo or Gelasio Google Fonts. Most importantly, have fun!\n\n\n\n\n\n\nTip\n\n\n\nYou are welcome to deploy your app on the workshop RStudio Connect server! Run shinyprod::deploy_app() in the R console or select the Deploy Shiny App RStudio add-in."
+    "text": "Tip\n\n\n\nYou are welcome to deploy your app on the workshop RStudio Connect server! Run shinyprod::deploy_app() in the R console or select the Deploy Shiny App RStudio add-in."
   },
   {
     "objectID": "materials/d1-03-design-ux/ex-3.html",
     "href": "materials/d1-03-design-ux/ex-3.html",
     "title": "Extending the Art Viewer UX",
     "section": "",
-    "text": "Let’s turn our attention to enhancing the user experience of the Art Viewer application. In the current state, the app does not contain any guidance on what the various input controls are used for, and the image displayed has a default view that some might consider too big or too small for their screen. Your task is to give the Art Viewer a couple of usability enhancements:\n\nLeverage the {cicerone} package to add an interactive help guide covering the key inputs such as department selection and approval / rejection of art pieces.\nIncorporate custom JavaScript code to create a zoom-in and zoom-out capability for the image viewer. See the reference below for a starting point.\n\n\n\n\n\n\n\nTip\n\n\n\nA convenient set of JavaScript code for performing image zoom is available on Mickey Aharony’s Cool Tricks for Resising Images in JavaScript blog post. For convenience, here are two functions derived from that post which could be useful:\nzoomin = function() {\n  var myImg = document.getElementById(\"imgid\");\n  var currWidth = myImg.clientWidth;\n  console.log('image width before zoomin is ' + currWidth);\n  if(currWidth >= 10000){\n      alert(\"You’re fully zoomed in!\");\n  } else{\n      myImg.style.width = (currWidth + 100) + \"px\";\n      var nextWidth = myImg.clientWidth;\n      console.log('image width after zoomin is ' + nextWidth);\n  } \n}\n\nzoomout = function() {\n  var myImg = document.getElementById(\"imgid\");\n  var currWidth = myImg.clientWidth;\n  console.log('image width before zoomin is ' + currWidth);\n  if(currWidth <= 20){\n      alert(\"That’s as small as it gets.\");\n  } else{\n      myImg.style.width = (currWidth - 100) + \"px\";\n      var nextWidth = myImg.clientWidth;\n      console.log('image width after zoomin is ' + nextWidth);\n  }\n}\nNote the use of the getElementById(\"imgid\") call. This tells the script to apply the function code to an element in the web application with that particular ID."
-  },
-  {
-    "objectID": "materials/d1-03-design-ux/index.html#more-to-come",
-    "href": "materials/d1-03-design-ux/index.html#more-to-come",
-    "title": "prod-shiny-workshop",
-    "section": "More to come",
-    "text": "More to come\n\n\n\n\n\n\nWarning\n\n\nThese slides are under construction and will be updated continuously until the workshop date."
+    "text": "Leverage the {cicerone} package to add an interactive help guide covering the key inputs such as department selection and approval / rejection of art pieces.\nIncorporate custom JavaScript code to create a zoom-in and zoom-out capability for the image viewer. See the reference below for a starting point.\n\n\n\n\n\n\n\nTip\n\n\n\nA convenient set of JavaScript code for performing image zoom is available on Mickey Aharony’s Cool Tricks for Resising Images in JavaScript blog post. For convenience, here are two functions derived from that post which could be useful:\nzoomin = function() {\n  var myImg = document.getElementById(\"imgid\");\n  var currWidth = myImg.clientWidth;\n  console.log('image width before zoomin is ' + currWidth);\n  if(currWidth >= 10000){\n      alert(\"You’re fully zoomed in!\");\n  } else{\n      myImg.style.width = (currWidth + 100) + \"px\";\n      var nextWidth = myImg.clientWidth;\n      console.log('image width after zoomin is ' + nextWidth);\n  } \n}\n\nzoomout = function() {\n  var myImg = document.getElementById(\"imgid\");\n  var currWidth = myImg.clientWidth;\n  console.log('image width before zoomin is ' + currWidth);\n  if(currWidth <= 20){\n      alert(\"That’s as small as it gets.\");\n  } else{\n      myImg.style.width = (currWidth - 100) + \"px\";\n      var nextWidth = myImg.clientWidth;\n      console.log('image width after zoomin is ' + nextWidth);\n  }\n}\nNote the use of the getElementById(\"imgid\") call. This tells the script to apply the function code to an element in the web application with that particular ID."
   },
   {
     "objectID": "materials/d1-03-design-ux/index.html#but-im-not-a-web-designer",
@@ -411,6 +397,13 @@
     "title": "prod-shiny-workshop",
     "section": "Your Turn: Exercise 2",
     "text": "Your Turn: Exercise 2\nBuilding upon the app from exercise 1, use {bslib} to customize font and other theme elements!\n\n\n\n05:00"
+  },
+  {
+    "objectID": "materials/d1-03-design-ux/index.html#accessibility",
+    "href": "materials/d1-03-design-ux/index.html#accessibility",
+    "title": "prod-shiny-workshop",
+    "section": "Accessibility",
+    "text": "Accessibility\nPrioritizing accessibility leads to better UX!\n\n\nKeyboard navigation (without mouse)\nVisualization color palettes accounting for vision deficiencies\nMetadata for HTML tag attributes"
   },
   {
     "objectID": "materials/d1-03-design-ux/index.html#guides-with-cicerone",
@@ -502,13 +495,6 @@
     "title": "Using APIs within the Art Viewer",
     "section": "",
     "text": "After exploring the use of databases to enhance the backend of the Art Viewer app, it is now time to harness the benefits of external APIs to offload processing. You will leverage the APIs to accomplish the following features:\n\nLet the user type in a search box to return a collection of objects that contain the search term within their metadata. You will need to use one or more of the API endpoints from the MET Museum Data API\nAnnotate the displayed art object image with a bounding box based on metadata from the included object annotation data set. Use the custom draw box API deployed on the workshop’s RStudio Connect server documented at https://rsc.training.rstudio.com/artdraw.\n\nThe application in ex-3/app.R is very similar to the previous exercises, but with placeholders in the UI for you to add widgets supporting the search box, as well as to request a bounding box to appear.\n\n\n\n\n\n\nTip\n\n\n\nYou can find object annotation data withindata/object_annotation_df.rds. A description of the columns can be found in the resources page, but there is a simple data table in the application that displays row(s) for the object or set of objects with bounding box information.\nWhen the user clicks a row in that table, DT will expose an input called input$object_table_rows_selected which can be used to determine which particular annotation data config was selected."
-  },
-  {
-    "objectID": "materials/d1-04-db-api/index.html#more-to-come",
-    "href": "materials/d1-04-db-api/index.html#more-to-come",
-    "title": "Databases & APIs",
-    "section": "More to come",
-    "text": "More to come\n\n\n\n\n\n\nWarning\n\n\nThese slides are under construction and will be updated continuously until the workshop date."
   },
   {
     "objectID": "materials/d1-04-db-api/index.html#the-r-process-in-shiny",
@@ -651,95 +637,102 @@
     "text": "Cleaning Up\n\n\n\n\n\nshinyprod.com"
   },
   {
-    "objectID": "materials/d1-05-modules/index.html#more-to-come",
-    "href": "materials/d1-05-modules/index.html#more-to-come",
-    "title": "Modules",
-    "section": "More to come",
-    "text": "More to come\n\n\n\n\n\n\nWarning\n\n\nThese slides are under construction and will be updated continuously until the workshop date."
+    "objectID": "materials/d1-05-modules/ex-1.html",
+    "href": "materials/d1-05-modules/ex-1.html",
+    "title": "Creating a image viewer module",
+    "section": "",
+    "text": "While our current Art Image Viewer application has mostly centered around a single page, the future of this application going to production requires that we support viewing the image in multiple parts of the user interface. Your goal for this exercise is to re-factor the image viewing portion of the application contained in ex-1/app.R into a Shiny module. Ideally, the module should only require the metadata associated with a particular art image."
   },
   {
     "objectID": "materials/d1-05-modules/index.html#what-are-modules",
     "href": "materials/d1-05-modules/index.html#what-are-modules",
-    "title": "Modules",
+    "title": "All About Modules",
     "section": "What are Modules?",
-    "text": "What are Modules?\nBuilding blocks to compose any Shiny app out of smaller, more understandable pieces\n\nAvoids namespace collisions when using same widget across different areas of your app\nAllow you to encapsulate distinct app interfaces\nOrganize code into logical and easy-to-understand components\nFacilitate collaboration"
+    "text": "What are Modules?\n\nBuilding blocks to compose any Shiny app out of smaller, more understandable pieces\n\nAvoids namespace collisions when using same widget across different areas of your app\nAllow you to encapsulate distinct app interfaces\nOrganize code into logical and easy-to-understand components\nFacilitate collaboration"
   },
   {
     "objectID": "materials/d1-05-modules/index.html#sound-familiar",
     "href": "materials/d1-05-modules/index.html#sound-familiar",
-    "title": "Modules",
+    "title": "All About Modules",
     "section": "Sound familiar?",
     "text": "Sound familiar?\n\nR functions also help avoid collisions in variable names with general R code\nEssential for creating non-trivial and extensive workflows"
   },
   {
     "objectID": "materials/d1-05-modules/index.html#anatomy-of-a-function-ui",
     "href": "materials/d1-05-modules/index.html#anatomy-of-a-function-ui",
-    "title": "Modules",
+    "title": "All About Modules",
     "section": "Anatomy of a Function (UI)",
     "text": "Anatomy of a Function (UI)\n\n\nartUI <- function() {\n  tagList(\n    checkboxInput(\n      \"input1\",\n      \"Check Here\"\n    ),\n    selectInput(\n      \"input2\",\n      \"Select Object\",\n      choices = c(\"jar\", \"vase\"),\n      selected = \"jar\",\n      multiple = FALSE\n    ),\n    plotOutput(\"plot1\")\n  )\n}"
   },
   {
     "objectID": "materials/d1-05-modules/index.html#anatomy-of-a-module-ui",
     "href": "materials/d1-05-modules/index.html#anatomy-of-a-module-ui",
-    "title": "Modules",
+    "title": "All About Modules",
     "section": "Anatomy of a Module (UI)",
     "text": "Anatomy of a Module (UI)\n\n\nartUI <- function(id) {\n  ns <- NS(id)\n  tagList(\n    checkboxInput(\n      ns(\"input1\"),\n      \"Check Here\"\n    ),\n    selectInput(\n      ns(\"input2\"),\n      \"Select Object\",\n      choices = c(\"jar\", \"vase\"),\n      selected = \"jar\",\n      multiple = FALSE\n    ),\n    plotOutput(ns(\"plot1\"))\n  )\n}"
   },
   {
     "objectID": "materials/d1-05-modules/index.html#anatomy-of-a-module-ui-1",
     "href": "materials/d1-05-modules/index.html#anatomy-of-a-module-ui-1",
-    "title": "Modules",
+    "title": "All About Modules",
     "section": "Anatomy of a Module (UI)",
     "text": "Anatomy of a Module (UI)\n\n\nartUI <- function(id) {\n  ns <- NS(id)\n  tagList(\n    checkboxInput(\n      ns(\"input1\"),\n      \"Check Here\"\n    ),\n    selectInput(\n      ns(\"input2\"),\n      \"Select Object\",\n      choices = c(\"jar\", \"vase\"),\n      selected = \"jar\",\n      multiple = FALSE\n    )\n  )\n}\n\n\nid: String to use for namespace\nns <- NS(id): Create proper namespace function"
   },
   {
     "objectID": "materials/d1-05-modules/index.html#anatomy-of-a-module-server",
     "href": "materials/d1-05-modules/index.html#anatomy-of-a-module-server",
-    "title": "Modules",
+    "title": "All About Modules",
     "section": "Anatomy of a Module (Server)",
     "text": "Anatomy of a Module (Server)\n\n\nartServer <- function(input, output, session) {\n  df <- reactive({\n    # do something fancy\n  })\n  \n  output$plot1 <- renderPlot({\n    ggplot(df(), aes(x = x, y = y)) +\n      geom_point()\n  })\n}\n\nHello"
   },
   {
     "objectID": "materials/d1-05-modules/index.html#anatomy-of-a-module-server-1",
     "href": "materials/d1-05-modules/index.html#anatomy-of-a-module-server-1",
-    "title": "Modules",
+    "title": "All About Modules",
     "section": "Anatomy of a Module (Server)",
-    "text": "Anatomy of a Module (Server)\n\n\nartServer <- function(id) {\n  moduleServer(\n    id,\n    function(input, output, session) {\n      df <- reactive({\n        # do something fancy\n      })\n      \n      output$plot1 <- renderPlot({\n        ggplot(df(), aes(x = x, y = y)) +\n          geom_point()\n      })\n    }\n  )\n}\n\nHello"
+    "text": "Anatomy of a Module (Server)\n\n\nartServer <- function(id) {\n  moduleServer(\n    id,\n    function(input, output, session) {\n      df <- reactive({\n        # do something fancy\n      })\n      \n      output$plot1 <- renderPlot({\n        ggplot(df(), aes(x = x, y = y)) +\n          geom_point()\n      })\n    }\n  )\n}\n\nMinimal changes necessary"
   },
   {
     "objectID": "materials/d1-05-modules/index.html#anatomy-of-a-module-server-2",
     "href": "materials/d1-05-modules/index.html#anatomy-of-a-module-server-2",
-    "title": "Modules",
+    "title": "All About Modules",
     "section": "Anatomy of a Module (Server)",
     "text": "Anatomy of a Module (Server)\n\n\nartServer <- function(id) {\n  moduleServer(id,\n    function(input, output, session) {\n      df <- reactive({\n        # do something fancy\n      })\n      \n      output$plot1 <- renderPlot({\n        ggplot(df(), aes(x = x, y = y)) +\n          geom_point()\n      })\n    }\n  )\n}\n\n🤔 id\n\n\n\n`moduleServer(): Encapsulate server-side logic with namespace applied."
   },
   {
     "objectID": "materials/d1-05-modules/index.html#invoking-modules",
     "href": "materials/d1-05-modules/index.html#invoking-modules",
-    "title": "Modules",
+    "title": "All About Modules",
     "section": "Invoking Modules",
     "text": "Invoking Modules\nui <- fluidPage(\n  fluidRow(\n    artUI(\"mod1\")\n  )\n)\n\nserver <- function(input, output, session) {\n  artServer(\"mod1\")\n}\n\nshinyApp(ui, server)"
   },
   {
     "objectID": "materials/d1-05-modules/index.html#giving-and-receiving",
     "href": "materials/d1-05-modules/index.html#giving-and-receiving",
-    "title": "Modules",
+    "title": "All About Modules",
     "section": "Giving and Receiving",
     "text": "Giving and Receiving\n\n\nartUI <- function(id, choices = c(\"jar\", \"vase\")) {\n  ns <- NS(id)\n  tagList(\n    checkboxInput(\n      ns(\"input1\"),\n      \"Check Here\"\n    ),\n    selectInput(\n      ns(\"input2\"),\n      \"Select Object\",\n      choices = choices,\n      selected = choices[1],\n      multiple = FALSE\n    ),\n    plotOutput(ns(\"plot1\"))\n  )\n}\n\n\nReasonable inputs: static values, vectors, flags\nAvoid reactive parameters\nReturn value: tagList() of inputs, output placeholders, and other UI elements"
   },
   {
     "objectID": "materials/d1-05-modules/index.html#giving-and-receiving-1",
     "href": "materials/d1-05-modules/index.html#giving-and-receiving-1",
-    "title": "Modules",
+    "title": "All About Modules",
     "section": "Giving and Receiving",
-    "text": "Giving and Receiving\nartServer <- function(id, df, title = \"My Plot\") {\n  moduleServer(id,\n    function(input, output, session) {\n      user_selections <- reactive({\n        list(input1 = input$input1,\n             input2 = input$input2)\n      })\n      \n      output$plot1 <- renderPlot({\n        ggplot(df(), aes(x = x, y = y)) +\n          geom_point() +\n          ggtitle(title)\n      })\n      \n      user_selections\n    }\n  )\n}\n\nInput parameters (and return values) can be a mix of static and reactive objects"
+    "text": "Giving and Receiving\nartServer <- function(id, df, title = \"My Plot\") {\n  moduleServer(id,\n    function(input, output, session) {\n      user_selections <- reactive({\n        list(input1 = input$input1, input2 = input$input2)\n      })\n      \n      output$plot1 <- renderPlot({\n        ggplot(df(), aes(x = x, y = y)) +\n          geom_point() +\n          ggtitle(title)\n      })\n      \n      user_selections\n    }\n  )\n}\n\nInput parameters (and return values) can be a mix of static and reactive objects"
   },
   {
     "objectID": "materials/d1-05-modules/index.html#to-or-not-to",
     "href": "materials/d1-05-modules/index.html#to-or-not-to",
-    "title": "Modules",
+    "title": "All About Modules",
     "section": "To () or not to ()",
-    "text": "To () or not to ()\n\n\n# app server\ndf <- reactive({\n  art_data |>\n    filter(dept == input$dept)\n})\n\nartServer(\"mod1\", df)\n\nartServer <- function(id, df, title = \"Amazing\") {\n  moduleServer(id,\n    function(input, output, session) {\n      user_selections <- reactive({\n        list(input1 = input$input1,\n             input2 = input$input2)\n      })\n      \n      output$plot1 <- renderPlot({\n        ggplot(df(), aes(x = x, y = y)) +\n          geom_point() +\n          ggtitle(title)\n      })\n      \n      user_selections\n    }\n  )\n}\n\n\n\nReactive parameters reference by name: df\nInside module, invoke reactive parameter as you would any other reactive in Shiny: df()\nAny reactive(s) returned by module should also be reference by name: user_selections, user_selections()\n\n\n\nshinyprod.com"
+    "text": "To () or not to ()\n\n\n# app server\ndf <- reactive({\n  art_data |>\n    filter(dept == input$dept)\n})\n\nartServer(\"mod1\", df)\n\nartServer <- function(id, df, title = \"Amazing\") {\n  moduleServer(id,\n    function(input, output, session) {\n      user_selections <- reactive({\n        list(input1 = input$input1,\n             input2 = input$input2)\n      })\n      \n      output$plot1 <- renderPlot({\n        ggplot(df(), aes(x = x, y = y)) +\n          geom_point() +\n          ggtitle(title)\n      })\n      \n      user_selections\n    }\n  )\n}\n\n\n\nReactive parameters reference by name: df\nInside module, invoke reactive parameter as you would any other reactive in Shiny: df()\nAny reactive(s) returned by module should also be reference by name: user_selections, user_selections()"
+  },
+  {
+    "objectID": "materials/d1-05-modules/index.html#your-turn-exercise-1",
+    "href": "materials/d1-05-modules/index.html#your-turn-exercise-1",
+    "title": "All About Modules",
+    "section": "Your Turn: Exercise 1",
+    "text": "Your Turn: Exercise 1\nCreate a Shiny module for the core image viewer portion of the application in ex-1/app.R\n\n\n\n10:00\n\n\n\n\n\nshinyprod.com"
   },
   {
     "objectID": "materials/d2-01-dev-practices/codealong-1.html",
@@ -1110,7 +1103,7 @@
     "href": "units/d1-05-modules.html#exercises",
     "title": "All About Modules",
     "section": "Exercises",
-    "text": "Exercises\n\n\n\n\n\n\nExercise\n\n\nTitle\n\n\n\n\n\n\n\n\nNo matching items"
+    "text": "Exercises\n\n\n\n\n\n\nExercise\n\n\nTitle\n\n\n\n\n\n\nExercise 1\n\n\nCreating a image viewer module\n\n\n\n\n\n\nNo matching items"
   },
   {
     "objectID": "units/d2-01-dev-practices.html",

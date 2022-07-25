@@ -11,7 +11,7 @@
   <meta name="generator" content="quarto-1.0.36">
 
   <meta name="author" content="Eric Nantz">
-  <title>prod-shiny-workshop - Modules</title>
+  <title>prod-shiny-workshop - All About Modules</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -381,7 +381,9 @@
       margin-right: 0; 
     }
   </style>
-<meta name="twitter:title" content="prod-shiny-workshop - Modules">
+  <link href="../../site_libs/countdown-0.3.5/countdown.css" rel="stylesheet">
+  <script src="../../site_libs/countdown-0.3.5/countdown.js"></script>
+<meta name="twitter:title" content="prod-shiny-workshop - All About Modules">
 <meta name="twitter:description" content="rstudio::conf(2022)  Building Production-Quality Shiny Applications">
 <meta name="twitter:image" content="https://shinyprod.com//images/twitter-card.png">
 <meta name="twitter:creator" content="@theRcast">
@@ -394,29 +396,14 @@
     <div class="slides">
 
 <section id="title-slide" class="center">
-  <h1 class="title">Modules</h1>
+  <h1 class="title">All About Modules</h1>
   <p class="subtitle">rstudio::conf(2022) <br> Building Production-Quality Shiny Applications</p>
   <p class="author">Eric Nantz</p>
 </section>
 
-<section id="more-to-come" class="slide level2">
-<h2>More to come</h2>
-<div class="callout callout-warning callout-captioned callout-style-default">
-<div class="callout-body">
-<div class="callout-caption">
-<div class="callout-icon-container">
-<i class="callout-icon"></i>
-</div>
-<p><strong>Warning</strong></p>
-</div>
-<div class="callout-content">
-<p>These slides are under construction and will be updated continuously until the workshop date.</p>
-</div>
-</div>
-</div>
-</section>
 <section id="what-are-modules" class="slide level2">
 <h2>What are Modules?</h2>
+<div class="fragment">
 <h3 id="building-blocks-to-compose-any-shiny-app-out-of-smaller-more-understandable-pieces">Building blocks to compose any Shiny app out of smaller, more understandable pieces</h3>
 <ul>
 <li class="fragment">Avoids namespace collisions when using same widget across different areas of your app</li>
@@ -424,6 +411,7 @@
 <li class="fragment">Organize code into logical and easy-to-understand components</li>
 <li class="fragment">Facilitate collaboration</li>
 </ul>
+</div>
 </section>
 <section id="sound-familiar" class="slide level2">
 <h2>Sound familiar?</h2>
@@ -550,7 +538,7 @@
 <span id="cb5-14" class="hljs-ln-code"><a href="#cb5-14"></a>  )</span>
 <span id="cb5-15" class="hljs-ln-code"><a href="#cb5-15"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div><div class="column" style="width:25%;">
-<p>Hello</p>
+<p>Minimal changes necessary</p>
 </div>
 </div>
 </section>
@@ -594,7 +582,7 @@
 <span id="cb7-10"><a href="#cb7-10"></a></span>
 <span id="cb7-11"><a href="#cb7-11"></a><span class="fu">shinyApp</span>(ui, server)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </section>
-<section id="giving-and-receiving" class="slide level2 smaller">
+<section id="giving-and-receiving" class="slide level2">
 <h2>Giving and Receiving</h2>
 <div class="columns">
 <div class="column" style="width:60%;">
@@ -624,26 +612,25 @@
 </div>
 </div>
 </section>
-<section id="giving-and-receiving-1" class="slide level2 smaller">
+<section id="giving-and-receiving-1" class="slide level2">
 <h2>Giving and Receiving</h2>
 <div class="sourceCode" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1"></a>artServer <span class="ot">&lt;-</span> <span class="cf">function</span>(id, df, <span class="at">title =</span> <span class="st">"My Plot"</span>) {</span>
 <span id="cb9-2"><a href="#cb9-2"></a>  <span class="fu">moduleServer</span>(id,</span>
 <span id="cb9-3"><a href="#cb9-3"></a>    <span class="cf">function</span>(input, output, session) {</span>
 <span id="cb9-4"><a href="#cb9-4"></a>      user_selections <span class="ot">&lt;-</span> <span class="fu">reactive</span>({</span>
-<span id="cb9-5"><a href="#cb9-5"></a>        <span class="fu">list</span>(<span class="at">input1 =</span> input<span class="sc">$</span>input1,</span>
-<span id="cb9-6"><a href="#cb9-6"></a>             <span class="at">input2 =</span> input<span class="sc">$</span>input2)</span>
-<span id="cb9-7"><a href="#cb9-7"></a>      })</span>
-<span id="cb9-8"><a href="#cb9-8"></a>      </span>
-<span id="cb9-9"><a href="#cb9-9"></a>      output<span class="sc">$</span>plot1 <span class="ot">&lt;-</span> <span class="fu">renderPlot</span>({</span>
-<span id="cb9-10"><a href="#cb9-10"></a>        <span class="fu">ggplot</span>(<span class="fu">df</span>(), <span class="fu">aes</span>(<span class="at">x =</span> x, <span class="at">y =</span> y)) <span class="sc">+</span></span>
-<span id="cb9-11"><a href="#cb9-11"></a>          <span class="fu">geom_point</span>() <span class="sc">+</span></span>
-<span id="cb9-12"><a href="#cb9-12"></a>          <span class="fu">ggtitle</span>(title)</span>
-<span id="cb9-13"><a href="#cb9-13"></a>      })</span>
-<span id="cb9-14"><a href="#cb9-14"></a>      </span>
-<span id="cb9-15"><a href="#cb9-15"></a>      user_selections</span>
-<span id="cb9-16"><a href="#cb9-16"></a>    }</span>
-<span id="cb9-17"><a href="#cb9-17"></a>  )</span>
-<span id="cb9-18"><a href="#cb9-18"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<span id="cb9-5"><a href="#cb9-5"></a>        <span class="fu">list</span>(<span class="at">input1 =</span> input<span class="sc">$</span>input1, <span class="at">input2 =</span> input<span class="sc">$</span>input2)</span>
+<span id="cb9-6"><a href="#cb9-6"></a>      })</span>
+<span id="cb9-7"><a href="#cb9-7"></a>      </span>
+<span id="cb9-8"><a href="#cb9-8"></a>      output<span class="sc">$</span>plot1 <span class="ot">&lt;-</span> <span class="fu">renderPlot</span>({</span>
+<span id="cb9-9"><a href="#cb9-9"></a>        <span class="fu">ggplot</span>(<span class="fu">df</span>(), <span class="fu">aes</span>(<span class="at">x =</span> x, <span class="at">y =</span> y)) <span class="sc">+</span></span>
+<span id="cb9-10"><a href="#cb9-10"></a>          <span class="fu">geom_point</span>() <span class="sc">+</span></span>
+<span id="cb9-11"><a href="#cb9-11"></a>          <span class="fu">ggtitle</span>(title)</span>
+<span id="cb9-12"><a href="#cb9-12"></a>      })</span>
+<span id="cb9-13"><a href="#cb9-13"></a>      </span>
+<span id="cb9-14"><a href="#cb9-14"></a>      user_selections</span>
+<span id="cb9-15"><a href="#cb9-15"></a>    }</span>
+<span id="cb9-16"><a href="#cb9-16"></a>  )</span>
+<span id="cb9-17"><a href="#cb9-17"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 <ul>
 <li class="fragment">Input parameters (and return values) can be a mix of static and <strong>reactive</strong> objects</li>
 </ul>
@@ -685,6 +672,17 @@
 <li class="fragment">Inside module, <strong>invoke</strong> reactive parameter as you would any other reactive in Shiny: <code>df()</code></li>
 <li class="fragment">Any reactive(s) returned by module should also be reference by <strong>name</strong>: <code>user_selections</code>, <del><code>user_selections()</code></del></li>
 </ul>
+</section>
+<section id="your-turn-exercise-1" class="slide level2">
+<h2>Your Turn: <a href="ex-1.html" target="_blank">Exercise 1</a></h2>
+<p>Create a Shiny module for the core image viewer portion of the application in <code>ex-1/app.R</code></p>
+<div class="cell">
+<div class="cell-output-display">
+<div class="countdown" id="timer_62de382a" style="right:0;bottom:0;" data-warnwhen="0">
+<code class="countdown-time"><span class="countdown-digits minutes">10</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
+</div>
+</div>
+</div>
 
 <div class="footer footer-default">
 <p><a href="https://shinyprod.com">shinyprod.com</a></p>
@@ -903,6 +901,48 @@
         ]
       });
     </script>
+    
+    <script>
+      // htmlwidgets need to know to resize themselves when slides are shown/hidden.
+      // Fire the "slideenter" event (handled by htmlwidgets.js) when the current
+      // slide changes (different for each slide format).
+      (function () {
+        function fireSlideChanged(previousSlide, currentSlide) {
+
+          // dispatch for htmlwidgets
+          const event = window.document.createEvent("Event");
+          event.initEvent("slideenter", true, true);
+          window.document.dispatchEvent(event);
+
+          // dispatch for shiny
+          if (window.jQuery) {
+            if (previousSlide) {
+              window.jQuery(previousSlide).trigger("hidden");
+            }
+            if (currentSlide) {
+              window.jQuery(currentSlide).trigger("shown");
+            }
+          }
+        }
+
+        // hookup for reveal
+        if (window.Reveal) {
+          window.Reveal.addEventListener("slidechanged", function(event) {
+            fireSlideChanged(event.previousSlide, event.currentSlide);
+          });
+        }
+
+        // hookup for slidy
+        if (window.w3c_slidy) {
+          window.w3c_slidy.add_observer(function (slide_num) {
+            // slide_num starts at position 1
+            fireSlideChanged(null, w3c_slidy.slides[slide_num - 1]);
+          });
+        }
+
+      })();
+    </script>
+
     <script id="quarto-html-after-body" type="application/javascript">
     window.document.addEventListener("DOMContentLoaded", function (event) {
       const toggleBodyColorMode = (bsSheetEl) => {

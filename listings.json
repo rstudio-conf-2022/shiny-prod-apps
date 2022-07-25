@@ -51,7 +51,9 @@
   },
   {
     "listing": "/units/d1-05-modules.html",
-    "items": []
+    "items": [
+      "/materials/d1-05-modules/ex-1.html"
+    ]
   },
   {
     "listing": "/units/d2-01-dev-practices.html",
