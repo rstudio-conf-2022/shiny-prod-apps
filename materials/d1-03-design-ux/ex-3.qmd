@@ -3,10 +3,6 @@ title: "Extending the Art Viewer UX"
 subtitle: "Exercise 3"
 ---
 
-::: callout-warning
-This page is under construction and will be updated as the materials are posted online.
-:::
-
 Let's turn our attention to enhancing the user experience of the Art Viewer application. In the current state, the app does not contain any guidance on what the various input controls are used for, and the image displayed has a default view that some might consider too big or too small for their screen. Your task is to give the Art Viewer a couple of usability enhancements:
 
 * Leverage the [`{cicerone}`](https://cicerone.john-coene.com/index.html) package to add an interactive help guide covering the key inputs such as department selection and approval / rejection of art pieces.

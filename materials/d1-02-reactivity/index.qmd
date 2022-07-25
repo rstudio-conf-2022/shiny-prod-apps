@@ -17,12 +17,6 @@ format:
     
 ---
 
-## More to come
-
-::: callout-warning
-These slides are under construction and will be updated continuously until the workshop date.
-:::
-
 ## Default Perspective
 
 :::: {.columns}
@@ -414,13 +408,17 @@ server <- function(input, output, session) {
 
 ## More from the Reactivity Bank
 
-* [`bindEvent`](https://shiny.rstudio.com/reference/shiny/1.6.0/bindEvent.html): Modify an object to support event-like triggers
+* [`bindEvent`](https://shiny.rstudio.com/reference/shiny/1.6.0/bindEvent.html): Modify an object to support triggers
 * [`invalidateLater`](https://shiny.rstudio.com/reference/shiny/1.6.0/invalidateLater.html): Use running time as a source to reactivity
+* [`reactivePoll`](https://shiny.rstudio.com/reference/shiny/latest/reactivePoll.html): Create a reactive data source invalidated by a check function
 * [`isolate`](https://shiny.rstudio.com/reference/shiny/1.6.0/isolate.html): Prevent reactivity
 * [`req`](https://shiny.rstudio.com/reference/shiny/1.6.0/req.html): Ensure pre-conditions are met before proceeding
 * [`debounce/throttle`](https://shiny.rstudio.com/reference/shiny/1.6.0/debounce.html): Slow the reactive-roll down
 
 ## Additional Resources
 
+::: {.nonincremental}
 * [Mastering Reactivity](https://mastering-shiny.org/reactivity-intro.html) chapters from Hadley Wickham's [Mastering Shiny](https://mastering-shiny.org/index.html)
-* 
+* Joe Cheng's Effective Reactive Programming: [Part 1](https://rstudio.com/resources/shiny-dev-con/reactivity-pt-1-joe-cheng/) and [Part 2](https://rstudio.com/resources/shiny-dev-con/reactivity-pt-2/)
+* Shiny Developer Series [Episode 12](https://shinydevseries.com/interview/ep012/) with Barret Schloerke
+:::

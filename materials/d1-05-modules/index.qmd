@@ -1,5 +1,5 @@
 ---
-title: "Modules"
+title: "All About Modules"
 subtitle: "rstudio::conf(2022) <br> Building Production-Quality Shiny Applications"
 author: "Eric Nantz"
 footer: "[shinyprod.com](https://shinyprod.com)"
@@ -19,13 +19,9 @@ format:
     
 ---
 
-## More to come
-
-::: callout-warning
-These slides are under construction and will be updated continuously until the workshop date.
-:::
-
 ## What are Modules?
+
+. . .
 
 ### Building blocks to compose any Shiny app out of smaller, more understandable pieces
 
@@ -197,7 +193,7 @@ artServer <- function(id) {
 
 ::: {.column width="25%"}
 
-Hello
+Minimal changes necessary
 
 :::
 
@@ -254,7 +250,7 @@ server <- function(input, output, session) {
 shinyApp(ui, server)
 ```
 
-## Giving and Receiving {.smaller}
+## Giving and Receiving 
 
 :::: {.columns}
 
@@ -291,15 +287,14 @@ artUI <- function(id, choices = c("jar", "vase")) {
 
 ::::
 
-## Giving and Receiving {.smaller}
+## Giving and Receiving 
 
 ```{.r}
 artServer <- function(id, df, title = "My Plot") {
   moduleServer(id,
     function(input, output, session) {
       user_selections <- reactive({
-        list(input1 = input$input1,
-             input2 = input$input2)
+        list(input1 = input$input1, input2 = input$input2)
       })
       
       output$plot1 <- renderPlot({
@@ -364,3 +359,14 @@ artServer <- function(id, df, title = "Amazing") {
 * Reactive parameters reference by **name**: `df`
 * Inside module, **invoke** reactive parameter as you would any other reactive in Shiny: `df()`
 * Any reactive(s) returned by module should also be reference by **name**: `user_selections`,  ~~`user_selections()`~~
+
+## Your Turn: [Exercise 1](ex-1.html){target="_blank"}
+
+Create a Shiny module for the core image viewer portion of the application in `ex-1/app.R`
+
+```{r}
+#| label: ex-1-timer
+library(countdown)
+countdown(minutes = 10, seconds = 0)
+```
+

@@ -18,15 +18,7 @@ format:
 
 # Design & User Experience {background-image="assets/img/city.jpg" background-size="cover" background-color="black"}
 
-## More to come
-
-::: callout-warning
-These slides are under construction and will be updated continuously until the workshop date.
-:::
-
 ---
-
-Shiny apps can be amazingly sophisticated, but ...
 
 :::: {.columns .v-center-container}
 
@@ -38,7 +30,7 @@ Shiny apps can be amazingly sophisticated, but ...
 
 ::: {.column width="50%"}
 
-![](assets/img/sign-east-east.png){width="70%"}
+![](assets/img/sign-east-east.png){width="90%"}
 
 :::
 
@@ -270,6 +262,16 @@ countdown(minutes = 5, seconds = 0)
 ```
 
 # Boosting User Experience (UX)
+
+## Accessibility
+
+Prioritizing accessibility leads to better UX!
+
+::: {.nonincremental}
+* Keyboard navigation (without mouse)
+* Visualization color palettes accounting for vision deficiencies
+* Metadata for HTML tag attributes 
+:::
 
 ## Guides with [`{cicerone}`](https://cicerone.john-coene.com/index.html)
 

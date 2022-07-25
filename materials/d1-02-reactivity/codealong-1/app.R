@@ -19,7 +19,7 @@ ui <- fluidPage(
     column(
       width = 4,
       selectInput(
-        "dept_viewer",
+        "dept",
         "Select Department",
         choices = c("Any", department_choices),
         multiple = FALSE
