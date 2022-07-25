@@ -79,6 +79,6 @@ You can find complete details on the required pre-work and setup instructions at
 
 **{{< var people.nstrayer.name >}}** is a software engineer on the Shiny team at RStudio. Nick has been at the forefront of telling powerful stories through data analyses and visualization, such as in his previous roles at the New York Times and the Johns Hopkins Data Science Lab. He has authored many R packages leveraging the power of javascript within R & Shiny, such as  [shinysense](http://nickstrayer.me/shinysense) and [manhattanPlotr](https://github.com/nstrayer/manhattanPlotr).
 
-![](materials/d1-01-welcome/assets/img/people/kobriant.jpeg){style="float:right;padding: 0 0 0 10px;" fig-alt="{{< var people.kobriant.name >}}" width="200"}
+![](materials/d1-01-welcome/assets/img/people/adevries.jpg){style="float:right;padding: 0 0 0 10px;" fig-alt="{{< var people.adevries.name >}}" width="200"}
 
-**{{< var people.kobriant.name >}}** is the Product Manager for [RStudio Connect](https://www.rstudio.com/products/connect/).
+**{{< var people.adevries.name >}}** started using R in 2009 for market research statistics. He is a regular contributor to StackOverflow and co-author of “R for Dummies”. He contributed several R packages to CRAN, including miniCRAN, checkpoint, ggdendro, sss, and surveydata, and regularly speaks at industry events and R user groups. He is a qualified yoga teacher, and continues to study yoga therapy annually in Chennai, India.
