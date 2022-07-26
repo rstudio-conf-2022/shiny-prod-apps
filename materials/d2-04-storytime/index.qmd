@@ -19,8 +19,4 @@ format:
     
 ---
 
-## More to come
-
-::: callout-warning
-These slides are under construction and will be updated continuously until the workshop date.
-:::
+# {background-image="assets/img/story_time_image.png" background-size="contain"}
