@@ -1,6 +1,0 @@
----
-title: "Creating a image viewer module"
-subtitle: "Exercise 1"
----
-
-While our current Art Image Viewer application has mostly centered around a single page, the future of this application going to production requires that we support viewing the image in multiple parts of the user interface. Your goal for this exercise is to re-factor the image viewing portion of the application contained in `ex-1/app.R` into a Shiny module. Ideally, the module should only require the metadata associated with a particular art image.

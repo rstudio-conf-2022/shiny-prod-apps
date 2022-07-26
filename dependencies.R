@@ -49,6 +49,8 @@ library(shinyjs)
 library(httr2)
 library(shinipsum)
 library(dockerfiler)
+library(timevis)
+library(echarts4r)
 
 ## GitHub (dev) packages
 # renv::install("rstudio/connectapi")

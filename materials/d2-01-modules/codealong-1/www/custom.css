@@ -1,0 +1,71 @@
+/* Dont let the page get awkwardly wide on big screens */
+body > div {
+  max-width: 1200px;
+}
+
+.center {
+  margin: auto;
+  width: 100%;
+  /*border: 3px solid #73AD21;*/
+  padding: 10px;
+}
+
+/* control image max width */
+img {
+  max-width:40%;
+  height:auto;
+}
+
+#header {
+  margin: 1rem auto;
+  width: 768px;
+  display: -ms-flexbox;
+  display: flex;
+}
+
+#header > div {
+  display: inline-block;
+}
+
+/* Makes the label for header inputs sit centered on top */
+#header > * > span {
+  display: block;
+  text-align: center;
+}
+
+/* Padding around key inputs in first row to add space */
+#dept-selector {
+  margin: 0 34px; /* 300 + 34 + 400 + 34 + 300 = 768 */
+}
+
+#like_btn {
+  margin: 0 18px; /* 300 + 34 + 400 + 34 + 300 = 768 */
+}
+
+#dislike_btn {
+  margin: 0 18px; /* 300 + 34 + 400 + 34 + 300 = 768 */
+}
+
+/* Create a border around picture */
+/* https://cyndikirkpatrick.com/texture-tiles/picture-borders/ */
+
+.borderedpicture {
+  background-color: #7d7d7d;
+  background-image: url("eos_4sqr2c.png");
+  max-width: 40%;
+  height: auto;
+  margin: 40px 0;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0
+      rgba(0, 0, 0, 0.19);
+}
+
+.borderedpicture3 {
+  background-color: #7d7d7d;
+  background-image: url("eos_4sqr2c.png");
+  width: 70%;
+  max-width: 70%;
+  height: auto;
+  padding: 10px;
+  box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2), 0 6px 20px 0
+      rgba(0, 0, 0, 0.19);
+}
