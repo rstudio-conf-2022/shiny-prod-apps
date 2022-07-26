@@ -1,6 +1,6 @@
 ---
 title: "Development Best Practices"
-subtitle: "9:00 - 10:30"
+subtitle: "11:00 - 12:30"
 author: "Eric Nantz"
 date: "2022-07-26"
 listing:
@@ -31,10 +31,10 @@ tbl-colwidths: [5,20,75]
 
 ## Slides
 
-[View slides in full screen](../materials/d2-01-dev-practices/index.html)
+[View slides in full screen](../materials/d2-02-dev-practices/index.html)
 
 ```{=html}
-<iframe class="slide-deck" src="../materials/d2-01-dev-practices/" height="420" width="747" style="border: 1px solid #2e3846;"></iframe>
+<iframe class="slide-deck" src="../materials/d2-02-dev-practices/" height="420" width="747" style="border: 1px solid #2e3846;"></iframe>
 ```
 
 ## Code-Along Examples

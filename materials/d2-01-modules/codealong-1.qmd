@@ -1,0 +1,22 @@
+---
+title: "A Modularized Art Image Viewer"
+subtitle: "Modules Code-Along 1"
+---
+
+As you make the transition to building production Shiny applications, Shiny modules are a very important tool to improve code organization and overall flow of your application. We will work together to build a modularized Shiny app building upon principles we learned in day one, while taking advantage of an interesting package to give a different perspective on presenting results to the user.
+
+### High-Level Requirements
+
+Our goal is to leverage the MET Image Viewer API directly to provide an easy way for users to search for the images they'd like to view based on a keyword search using techniques discussed in the [Databases & APIs](../../d1-04-db-api) section. Once the search is executed, we want to use the powerful [`{timevis}`](https://daattali.com/shiny/timevis-demo/) HTML widget R package to show a timeline visualization of the art pieces year acquired by the MET, or the duration of an art piece's age. This widget supports the ability to click on an entry, and we will display the image picture alongside its metadata like we did in earlier applications. 
+
+We have a rough idea of the application structure, and we will take advantage of backend custom R functions to begin scoping out three different modules:
+
+* Search module
+* Timevis visualization module
+* Image viewer module
+
+While we are focused on the process of creating and networking modules together, we will see a blend of design, user experience, and defensive programming needed to create a smooth experience for the user.
+
+::: callout-tip
+You can easily insert a template Shiny module in an open file within RStudio by taking advantage of RStudio snippets. Just type `shinymod` and it will offer an auto-completion with the UI and server functions based on the name you give the module.
+:::

@@ -159,8 +159,6 @@ artServer <- function(input, output, session) {
 
 ::: {.column width="25%"}
 
-Hello
-
 :::
 
 ::::

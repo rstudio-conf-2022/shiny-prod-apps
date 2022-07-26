@@ -309,6 +309,26 @@
       "Hash": "976cf154dfb043c012d87cddd8bca363",
       "Requirements": []
     },
+    "broom": {
+      "Package": "broom",
+      "Version": "1.0.0",
+      "Source": "Repository",
+      "Repository": "RSPM",
+      "Hash": "c948329889c7b24a4201df3aef5058c2",
+      "Requirements": [
+        "backports",
+        "dplyr",
+        "ellipsis",
+        "generics",
+        "ggplot2",
+        "glue",
+        "purrr",
+        "rlang",
+        "stringr",
+        "tibble",
+        "tidyr"
+      ]
+    },
     "bslib": {
       "Package": "bslib",
       "Version": "0.3.1",
@@ -460,6 +480,14 @@
         "yaml"
       ]
     },
+    "corrplot": {
+      "Package": "corrplot",
+      "Version": "0.92",
+      "Source": "Repository",
+      "Repository": "RSPM",
+      "Hash": "fcf11a91936fd5047b2ee9bc00595e36",
+      "Requirements": []
+    },
     "countdown": {
       "Package": "countdown",
       "Version": "0.3.5",
@@ -476,6 +504,14 @@
         "htmltools",
         "whisker"
       ]
+    },
+    "countrycode": {
+      "Package": "countrycode",
+      "Version": "1.4.0",
+      "Source": "Repository",
+      "Repository": "RSPM",
+      "Hash": "2d162e8f29eec5526e362a7415d980ab",
+      "Requirements": []
     },
     "cpp11": {
       "Package": "cpp11",
@@ -696,6 +732,26 @@
         "magrittr",
         "xts",
         "zoo"
+      ]
+    },
+    "echarts4r": {
+      "Package": "echarts4r",
+      "Version": "0.4.4",
+      "Source": "Repository",
+      "Repository": "RSPM",
+      "Hash": "1ba0af31b6e1aaeaac2817f72135f260",
+      "Requirements": [
+        "broom",
+        "corrplot",
+        "countrycode",
+        "dplyr",
+        "htmltools",
+        "htmlwidgets",
+        "jsonlite",
+        "purrr",
+        "rstudioapi",
+        "scales",
+        "shiny"
       ]
     },
     "ellipsis": {
@@ -2266,6 +2322,22 @@
         "purrr",
         "rlang",
         "vctrs"
+      ]
+    },
+    "timevis": {
+      "Package": "timevis",
+      "Version": "2.0.0",
+      "Source": "Repository",
+      "Repository": "RSPM",
+      "Hash": "89b92c61f3afb4720dcba9767e7c512b",
+      "Requirements": [
+        "htmltools",
+        "htmlwidgets",
+        "jsonlite",
+        "lubridate",
+        "magrittr",
+        "rmarkdown",
+        "shiny"
       ]
     },
     "tinytex": {

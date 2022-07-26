@@ -1,12 +1,12 @@
 ---
 title: "All About Modules"
-subtitle: "15:30 - 17:00"
+subtitle: "9:00 - 10:30"
 author: "Eric Nantz"
 date: "2022-07-25"
 listing:
   - id: exercises
     contents:
-      - ../materials/d1-05-modules/ex-*.qmd
+      - ../materials/d2-01-modules/ex-*.qmd
     type: table
     fields: [subtitle, title]
     field-display-names: 
@@ -17,7 +17,7 @@ listing:
     image-placeholder: assets/img/placeholder.png
   - id: code-along
     contents:
-      - ../materials/d1-05-modules/codealong-*.qmd
+      - ../materials/d2-01-modules/codealong-*.qmd
     type: table
     fields: [subtitle, title]
     field-display-names: 
@@ -31,10 +31,10 @@ tbl-colwidths: [5,20,75]
 
 ## Slides
 
-[View slides in full screen](../materials/d1-05-modules/index.html)
+[View slides in full screen](../materials/d2-01-modules/index.html)
 
 ```{=html}
-<iframe class="slide-deck" src="../materials/d1-05-modules/" height="420" width="747" style="border: 1px solid #2e3846;"></iframe>
+<iframe class="slide-deck" src="../materials/d2-01-modules/" height="420" width="747" style="border: 1px solid #2e3846;"></iframe>
 ```
 
 ## Code-Along Examples
