@@ -9,10 +9,9 @@
       "/units/d1-03b-lunch.html",
       "/units/d1-04-db-api.html",
       "/units/d1-04b-break.html",
-      "/units/d1-05-modules.html",
-      "/units/d2-01-dev-practices.html",
+      "/units/d2-01-modules.html",
       "/units/d2-01b-break.html",
-      "/units/d2-02-user-patterns.html",
+      "/units/d2-02-dev-practices.html",
       "/units/d2-02b-lunch.html",
       "/units/d2-03-rsconnect.html",
       "/units/d2-03b-break.html",
@@ -50,21 +49,13 @@
     ]
   },
   {
-    "listing": "/units/d1-05-modules.html",
+    "listing": "/units/d2-01-modules.html",
     "items": [
-      "/materials/d1-05-modules/ex-1.html"
+      "/materials/d2-01-modules/codealong-1.html"
     ]
   },
   {
-    "listing": "/units/d2-01-dev-practices.html",
-    "items": [
-      "/materials/d2-01-dev-practices/codealong-1.html",
-      "/materials/d2-01-dev-practices/codealong-2.html",
-      "/materials/d2-01-dev-practices/codealong-3.html"
-    ]
-  },
-  {
-    "listing": "/units/d2-02-user-patterns.html",
+    "listing": "/units/d2-02-dev-practices.html",
     "items": []
   },
   {

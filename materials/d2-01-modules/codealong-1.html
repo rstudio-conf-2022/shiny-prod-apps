@@ -2,12 +2,12 @@
 <html xmlns="http://www.w3.org/1999/xhtml" lang="en" xml:lang="en"><head>
 
 <meta charset="utf-8">
-<meta name="generator" content="quarto-1.0.36">
+<meta name="generator" content="quarto-1.0.37">
 
 <meta name="viewport" content="width=device-width, initial-scale=1.0, user-scalable=yes">
 
 
-<title>prod-shiny-workshop - Creating a image viewer module</title>
+<title>prod-shiny-workshop - A Modularized Art Image Viewer</title>
 <style>
 code{white-space: pre-wrap;}
 span.smallcaps{font-variant: small-caps;}
@@ -58,8 +58,8 @@ ul.task-list{list-style: none;}
 }</script>
 
 
-<meta name="twitter:title" content="prod-shiny-workshop - Creating a image viewer module">
-<meta name="twitter:description" content="Exercise 1">
+<meta name="twitter:title" content="prod-shiny-workshop - A Modularized Art Image Viewer">
+<meta name="twitter:description" content="Modules Code-Along 1">
 <meta name="twitter:image" content="https://shinyprod.com//images/twitter-card.png">
 <meta name="twitter:creator" content="@theRcast">
 <meta name="twitter:image-height" content="675">
@@ -123,15 +123,21 @@ ul.task-list{list-style: none;}
 <!-- sidebar -->
 <!-- margin-sidebar -->
     <div id="quarto-margin-sidebar" class="sidebar margin-sidebar">
-        
+        <nav id="TOC" role="doc-toc">
+    <h2 id="toc-title">On this page</h2>
+   
+  <ul>
+  <li><a href="#high-level-requirements" id="toc-high-level-requirements" class="nav-link active" data-scroll-target="#high-level-requirements">High-Level Requirements</a></li>
+  </ul>
+<div class="toc-actions"><div><i class="bi bi-github"></i></div><div class="action-links"><p><a href="https://github.com/rstudio-conf-2022/shiny-prod-apps/edit/main/materials/d2-01-modules/codealong-1.qmd" class="toc-action">Edit this page</a></p><p><a href="https://github.com/rstudio-conf-2022/shiny-prod-apps/issues/new" class="toc-action">Report an issue</a></p></div></div></nav>
     </div>
 <!-- main -->
 <main class="content" id="quarto-document-content">
 
 <header id="title-block-header" class="quarto-title-block default">
 <div class="quarto-title">
-<h1 class="title">Creating a image viewer module</h1>
-<p class="subtitle lead">Exercise 1</p>
+<h1 class="title">A Modularized Art Image Viewer</h1>
+<p class="subtitle lead">Modules Code-Along 1</p>
 </div>
 
 
@@ -145,9 +151,33 @@ ul.task-list{list-style: none;}
 
 </header>
 
-<p>While our current Art Image Viewer application has mostly centered around a single page, the future of this application going to production requires that we support viewing the image in multiple parts of the user interface. Your goal for this exercise is to re-factor the image viewing portion of the application contained in <code>ex-1/app.R</code> into a Shiny module. Ideally, the module should only require the metadata associated with a particular art image.</p>
+<p>As you make the transition to building production Shiny applications, Shiny modules are a very important tool to improve code organization and overall flow of your application. We will work together to build a modularized Shiny app building upon principles we learned in day one, while taking advantage of an interesting package to give a different perspective on presenting results to the user.</p>
+<section id="high-level-requirements" class="level3">
+<h3 class="anchored" data-anchor-id="high-level-requirements">High-Level Requirements</h3>
+<p>Our goal is to leverage the MET Image Viewer API directly to provide an easy way for users to search for the images they’d like to view based on a keyword search using techniques discussed in the <a href="../../d1-04-db-api">Databases &amp; APIs</a> section. Once the search is executed, we want to use the powerful <a href="https://daattali.com/shiny/timevis-demo/"><code>{timevis}</code></a> HTML widget R package to show a timeline visualization of the art pieces year acquired by the MET, or the duration of an art piece’s age. This widget supports the ability to click on an entry, and we will display the image picture alongside its metadata like we did in earlier applications.</p>
+<p>We have a rough idea of the application structure, and we will take advantage of backend custom R functions to begin scoping out three different modules:</p>
+<ul>
+<li>Search module</li>
+<li>Timevis visualization module</li>
+<li>Image viewer module</li>
+</ul>
+<p>While we are focused on the process of creating and networking modules together, we will see a blend of design, user experience, and defensive programming needed to create a smooth experience for the user.</p>
+<div class="callout-tip callout callout-style-default callout-captioned">
+<div class="callout-header d-flex align-content-center">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<div class="callout-caption-container flex-fill">
+Tip
+</div>
+</div>
+<div class="callout-body-container callout-body">
+<p>You can easily insert a template Shiny module in an open file within RStudio by taking advantage of RStudio snippets. Just type <code>shinymod</code> and it will offer an auto-completion with the UI and server functions based on the name you give the module.</p>
+</div>
+</div>
 
 
+</section>
 
 </main> <!-- /main -->
 <script id="quarto-html-after-body" type="application/javascript">

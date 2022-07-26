@@ -8,10 +8,10 @@
 <link href="../../site_libs/quarto-html/tippy.css" rel="stylesheet">
 <link href="../../site_libs/quarto-html/quarto-html.min.css" rel="stylesheet" data-mode="light">
 <link href="../../site_libs/quarto-html/quarto-syntax-highlighting.css" rel="stylesheet" id="quarto-text-highlighting-styles"><meta charset="utf-8">
-  <meta name="generator" content="quarto-1.0.36">
+  <meta name="generator" content="quarto-1.0.37">
 
   <meta name="author" content="Eric Nantz">
-  <title>prod-shiny-workshop - All About Modules</title>
+  <title>prod-shiny-workshop - Development Best Practices</title>
   <meta name="apple-mobile-web-app-capable" content="yes">
   <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
   <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no, minimal-ui">
@@ -381,9 +381,7 @@
       margin-right: 0; 
     }
   </style>
-  <link href="../../site_libs/countdown-0.3.5/countdown.css" rel="stylesheet">
-  <script src="../../site_libs/countdown-0.3.5/countdown.js"></script>
-<meta name="twitter:title" content="prod-shiny-workshop - All About Modules">
+<meta name="twitter:title" content="prod-shiny-workshop - Development Best Practices">
 <meta name="twitter:description" content="rstudio::conf(2022)  Building Production-Quality Shiny Applications">
 <meta name="twitter:image" content="https://shinyprod.com//images/twitter-card.png">
 <meta name="twitter:creator" content="@theRcast">
@@ -396,298 +394,264 @@
     <div class="slides">
 
 <section id="title-slide" class="center">
-  <h1 class="title">All About Modules</h1>
+  <h1 class="title">Development Best Practices</h1>
   <p class="subtitle">rstudio::conf(2022) <br> Building Production-Quality Shiny Applications</p>
   <p class="author">Eric Nantz</p>
 </section>
 
-<section id="what-are-modules" class="slide level2">
-<h2>What are Modules?</h2>
+<section id="more-to-come" class="slide level2">
+<h2>More to come</h2>
+<div class="callout callout-warning callout-captioned callout-style-default">
+<div class="callout-body">
+<div class="callout-caption">
+<div class="callout-icon-container">
+<i class="callout-icon"></i>
+</div>
+<p><strong>Warning</strong></p>
+</div>
+<div class="callout-content">
+<p>These slides are under construction and will be updated continuously until the workshop date.</p>
+</div>
+</div>
+</div>
+</section>
+<section id="all-about-perspective" class="slide level2">
+<h2>All About Perspective</h2>
+
+<img data-src="https://d33wubrfki0l68.cloudfront.net/571b056757d68e6df81a3e3853f54d3c76ad6efc/32d37/diagrams/data-science.png" class="r-stretch"><p>R is the standard-bearer for data analysis tooling</p>
+</section>
+<section id="shiny-app-development" class="slide level2">
+<h2>Shiny App Development</h2>
+<p>Not just providing another interface for data analysis</p>
 <div class="fragment">
-<h3 id="building-blocks-to-compose-any-shiny-app-out-of-smaller-more-understandable-pieces">Building blocks to compose any Shiny app out of smaller, more understandable pieces</h3>
-<ul>
-<li class="fragment">Avoids namespace collisions when using same widget across different areas of your app</li>
-<li class="fragment">Allow you to encapsulate distinct app interfaces</li>
-<li class="fragment">Organize code into logical and easy-to-understand components</li>
-<li class="fragment">Facilitate collaboration</li>
-</ul>
+<p>You are engineering an <strong>entire workflow</strong></p>
 </div>
 </section>
-<section id="sound-familiar" class="slide level2">
-<h2>Sound familiar?</h2>
+<section id="this-could-happen-to-you" class="slide level2">
+<h2>This Could Happen to You</h2>
+<div class="r-stack">
+<p><img data-src="assets/img/messydesk.svg" class="fragment" width="550"></p>
+<p><img data-src="assets/img/works_my_machine.jpg" class="fragment" width="500" height="570"></p>
+<p><img data-src="assets/img/conflicts.jpg" class="fragment" width="600" height="400"></p>
+</div>
+</section>
+<section id="thinking-of-you" class="slide level2">
+<h2>Thinking of You</h2>
+<p>These principles can guide (future) you on the right path:</p>
 <ul>
-<li class="fragment">R functions also help avoid collisions in variable names with general R code</li>
-<li class="fragment">Essential for creating non-trivial and extensive workflows</li>
+<li class="fragment">Rapid prototyping in design process</li>
+<li class="fragment">Deliberate control of app dependencies</li>
+<li class="fragment">Managing code complexity with native R frameworks</li>
+<li class="fragment">Defending against regressions with testing</li>
+<li class="fragment">Version control for collaboration and peace of mind</li>
 </ul>
 </section>
-<section id="anatomy-of-a-function-ui" class="slide level2" data-auto-animate="true">
-<h2 data-id="quarto-animate-title">Anatomy of a Function (UI)</h2>
-<div class="columns">
-<div class="column" style="width:60%;">
-<div class="sourceCode" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy" data-id="quarto-animate-code"><code class="sourceCode r hljs"><span id="cb1-1" class="hljs-ln-code"><a href="#cb1-1"></a>artUI <span class="ot">&lt;-</span> <span class="cf">function</span>() {</span>
-<span id="cb1-2" class="hljs-ln-code"><a href="#cb1-2"></a>  <span class="fu">tagList</span>(</span>
-<span id="cb1-3" class="hljs-ln-code"><a href="#cb1-3"></a>    <span class="fu">checkboxInput</span>(</span>
-<span id="cb1-4" class="hljs-ln-code"><a href="#cb1-4"></a>      <span class="st">"input1"</span>,</span>
-<span id="cb1-5" class="hljs-ln-code"><a href="#cb1-5"></a>      <span class="st">"Check Here"</span></span>
-<span id="cb1-6" class="hljs-ln-code"><a href="#cb1-6"></a>    ),</span>
-<span id="cb1-7" class="hljs-ln-code"><a href="#cb1-7"></a>    <span class="fu">selectInput</span>(</span>
-<span id="cb1-8" class="hljs-ln-code"><a href="#cb1-8"></a>      <span class="st">"input2"</span>,</span>
-<span id="cb1-9" class="hljs-ln-code"><a href="#cb1-9"></a>      <span class="st">"Select Object"</span>,</span>
-<span id="cb1-10" class="hljs-ln-code"><a href="#cb1-10"></a>      <span class="at">choices =</span> <span class="fu">c</span>(<span class="st">"jar"</span>, <span class="st">"vase"</span>),</span>
-<span id="cb1-11" class="hljs-ln-code"><a href="#cb1-11"></a>      <span class="at">selected =</span> <span class="st">"jar"</span>,</span>
-<span id="cb1-12" class="hljs-ln-code"><a href="#cb1-12"></a>      <span class="at">multiple =</span> <span class="cn">FALSE</span></span>
-<span id="cb1-13" class="hljs-ln-code"><a href="#cb1-13"></a>    ),</span>
-<span id="cb1-14" class="hljs-ln-code"><a href="#cb1-14"></a>    <span class="fu">plotOutput</span>(<span class="st">"plot1"</span>)</span>
-<span id="cb1-15" class="hljs-ln-code"><a href="#cb1-15"></a>  )</span>
-<span id="cb1-16" class="hljs-ln-code"><a href="#cb1-16"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div><div class="column" style="width:40%;">
+<section>
+<section id="rapid-prototyping" class="title-slide slide level1 center" data-background-image="assets/img/rapid_prototyping.jpg" data-background-size="cover" data-background-color="black">
+<h1>Rapid Prototyping</h1>
 
-</div>
-</div>
 </section>
-<section id="anatomy-of-a-module-ui" class="slide level2" data-auto-animate="true">
-<h2 data-id="quarto-animate-title">Anatomy of a Module (UI)</h2>
-<div class="columns">
-<div class="column" style="width:60%;">
-<div class="sourceCode" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy" data-id="quarto-animate-code"><code class="sourceCode r hljs"><span id="cb2-1" class="hljs-ln-code"><a href="#cb2-1"></a>artUI <span class="ot">&lt;-</span> <span class="cf">function</span>(id) {</span>
-<span id="cb2-2" class="hljs-ln-code"><a href="#cb2-2"></a>  ns <span class="ot">&lt;-</span> <span class="fu">NS</span>(id)</span>
-<span id="cb2-3" class="hljs-ln-code"><a href="#cb2-3"></a>  <span class="fu">tagList</span>(</span>
-<span id="cb2-4" class="hljs-ln-code"><a href="#cb2-4"></a>    <span class="fu">checkboxInput</span>(</span>
-<span id="cb2-5" class="hljs-ln-code"><a href="#cb2-5"></a>      <span class="fu">ns</span>(<span class="st">"input1"</span>),</span>
-<span id="cb2-6" class="hljs-ln-code"><a href="#cb2-6"></a>      <span class="st">"Check Here"</span></span>
-<span id="cb2-7" class="hljs-ln-code"><a href="#cb2-7"></a>    ),</span>
-<span id="cb2-8" class="hljs-ln-code"><a href="#cb2-8"></a>    <span class="fu">selectInput</span>(</span>
-<span id="cb2-9" class="hljs-ln-code"><a href="#cb2-9"></a>      <span class="fu">ns</span>(<span class="st">"input2"</span>),</span>
-<span id="cb2-10" class="hljs-ln-code"><a href="#cb2-10"></a>      <span class="st">"Select Object"</span>,</span>
-<span id="cb2-11" class="hljs-ln-code"><a href="#cb2-11"></a>      <span class="at">choices =</span> <span class="fu">c</span>(<span class="st">"jar"</span>, <span class="st">"vase"</span>),</span>
-<span id="cb2-12" class="hljs-ln-code"><a href="#cb2-12"></a>      <span class="at">selected =</span> <span class="st">"jar"</span>,</span>
-<span id="cb2-13" class="hljs-ln-code"><a href="#cb2-13"></a>      <span class="at">multiple =</span> <span class="cn">FALSE</span></span>
-<span id="cb2-14" class="hljs-ln-code"><a href="#cb2-14"></a>    ),</span>
-<span id="cb2-15" class="hljs-ln-code"><a href="#cb2-15"></a>    <span class="fu">plotOutput</span>(<span class="fu">ns</span>(<span class="st">"plot1"</span>))</span>
-<span id="cb2-16" class="hljs-ln-code"><a href="#cb2-16"></a>  )</span>
-<span id="cb2-17" class="hljs-ln-code"><a href="#cb2-17"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div><div class="column" style="width:40%;">
+<section class="slide level2">
 
-</div>
+
+<img data-src="assets/img/shinycal.png" class="r-stretch"><div class="footer">
+<p><a href="https://rpodcast.shinyapps.io/shinycal">rpodcast.shinyapps.io/shinycal</a></p>
 </div>
 </section>
-<section id="anatomy-of-a-module-ui-1" class="slide level2">
-<h2>Anatomy of a Module (UI)</h2>
-<div class="columns">
-<div class="column" style="width:60%;">
-<div class="sourceCode" id="cb3" data-code-line-numbers="1,2,5,9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1"></a>artUI <span class="ot">&lt;-</span> <span class="cf">function</span>(id) {</span>
-<span id="cb3-2"><a href="#cb3-2"></a>  ns <span class="ot">&lt;-</span> <span class="fu">NS</span>(id)</span>
-<span id="cb3-3"><a href="#cb3-3"></a>  <span class="fu">tagList</span>(</span>
-<span id="cb3-4"><a href="#cb3-4"></a>    <span class="fu">checkboxInput</span>(</span>
-<span id="cb3-5"><a href="#cb3-5"></a>      <span class="fu">ns</span>(<span class="st">"input1"</span>),</span>
-<span id="cb3-6"><a href="#cb3-6"></a>      <span class="st">"Check Here"</span></span>
-<span id="cb3-7"><a href="#cb3-7"></a>    ),</span>
-<span id="cb3-8"><a href="#cb3-8"></a>    <span class="fu">selectInput</span>(</span>
-<span id="cb3-9"><a href="#cb3-9"></a>      <span class="fu">ns</span>(<span class="st">"input2"</span>),</span>
-<span id="cb3-10"><a href="#cb3-10"></a>      <span class="st">"Select Object"</span>,</span>
-<span id="cb3-11"><a href="#cb3-11"></a>      <span class="at">choices =</span> <span class="fu">c</span>(<span class="st">"jar"</span>, <span class="st">"vase"</span>),</span>
-<span id="cb3-12"><a href="#cb3-12"></a>      <span class="at">selected =</span> <span class="st">"jar"</span>,</span>
-<span id="cb3-13"><a href="#cb3-13"></a>      <span class="at">multiple =</span> <span class="cn">FALSE</span></span>
-<span id="cb3-14"><a href="#cb3-14"></a>    )</span>
-<span id="cb3-15"><a href="#cb3-15"></a>  )</span>
-<span id="cb3-16"><a href="#cb3-16"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div><div class="column" style="width:40%;">
+<section id="section" class="slide level2" data-background-video="https://shinydevseries-assets.us-east-1.linodeobjects.com/rpharma_demo_final.mp4" data-background-video-loop="true" data-background-size="contain">
+<h2></h2>
+</section>
+<section id="blueprint-for-rapid-prototyping" class="slide level2">
+<h2>Blueprint for Rapid Prototyping</h2>
 <ul>
-<li class="fragment"><code>id</code>: String to use for namespace</li>
-<li class="fragment"><code>ns &lt;- NS(id)</code>: Create proper namespace function</li>
-</ul>
-</div>
-</div>
-</section>
-<section id="anatomy-of-a-module-server" class="slide level2" data-auto-animate="true">
-<h2 data-id="quarto-animate-title">Anatomy of a Module (Server)</h2>
-<div class="columns">
-<div class="column" style="width:75%;">
-<div class="sourceCode" id="cb4"><pre class="sourceCode numberSource r number-lines code-with-copy" data-id="quarto-animate-code"><code class="sourceCode r hljs"><span id="cb4-1" class="hljs-ln-code"><a href="#cb4-1"></a>artServer <span class="ot">&lt;-</span> <span class="cf">function</span>(input, output, session) {</span>
-<span id="cb4-2" class="hljs-ln-code"><a href="#cb4-2"></a>  df <span class="ot">&lt;-</span> <span class="fu">reactive</span>({</span>
-<span id="cb4-3" class="hljs-ln-code"><a href="#cb4-3"></a>    <span class="co"># do something fancy</span></span>
-<span id="cb4-4" class="hljs-ln-code"><a href="#cb4-4"></a>  })</span>
-<span id="cb4-5" class="hljs-ln-code"><a href="#cb4-5"></a>  </span>
-<span id="cb4-6" class="hljs-ln-code"><a href="#cb4-6"></a>  output<span class="sc">$</span>plot1 <span class="ot">&lt;-</span> <span class="fu">renderPlot</span>({</span>
-<span id="cb4-7" class="hljs-ln-code"><a href="#cb4-7"></a>    <span class="fu">ggplot</span>(<span class="fu">df</span>(), <span class="fu">aes</span>(<span class="at">x =</span> x, <span class="at">y =</span> y)) <span class="sc">+</span></span>
-<span id="cb4-8" class="hljs-ln-code"><a href="#cb4-8"></a>      <span class="fu">geom_point</span>()</span>
-<span id="cb4-9" class="hljs-ln-code"><a href="#cb4-9"></a>  })</span>
-<span id="cb4-10" class="hljs-ln-code"><a href="#cb4-10"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div><div class="column" style="width:25%;">
-<p>Hello</p>
-</div>
-</div>
-</section>
-<section id="anatomy-of-a-module-server-1" class="slide level2" data-auto-animate="true">
-<h2 data-id="quarto-animate-title">Anatomy of a Module (Server)</h2>
-<div class="columns">
-<div class="column" style="width:75%;">
-<div class="sourceCode" id="cb5"><pre class="sourceCode numberSource r number-lines code-with-copy" data-id="quarto-animate-code"><code class="sourceCode r hljs"><span id="cb5-1" class="hljs-ln-code"><a href="#cb5-1"></a>artServer <span class="ot">&lt;-</span> <span class="cf">function</span>(id) {</span>
-<span id="cb5-2" class="hljs-ln-code"><a href="#cb5-2"></a>  <span class="fu">moduleServer</span>(</span>
-<span id="cb5-3" class="hljs-ln-code"><a href="#cb5-3"></a>    id,</span>
-<span id="cb5-4" class="hljs-ln-code"><a href="#cb5-4"></a>    <span class="cf">function</span>(input, output, session) {</span>
-<span id="cb5-5" class="hljs-ln-code"><a href="#cb5-5"></a>      df <span class="ot">&lt;-</span> <span class="fu">reactive</span>({</span>
-<span id="cb5-6" class="hljs-ln-code"><a href="#cb5-6"></a>        <span class="co"># do something fancy</span></span>
-<span id="cb5-7" class="hljs-ln-code"><a href="#cb5-7"></a>      })</span>
-<span id="cb5-8" class="hljs-ln-code"><a href="#cb5-8"></a>      </span>
-<span id="cb5-9" class="hljs-ln-code"><a href="#cb5-9"></a>      output<span class="sc">$</span>plot1 <span class="ot">&lt;-</span> <span class="fu">renderPlot</span>({</span>
-<span id="cb5-10" class="hljs-ln-code"><a href="#cb5-10"></a>        <span class="fu">ggplot</span>(<span class="fu">df</span>(), <span class="fu">aes</span>(<span class="at">x =</span> x, <span class="at">y =</span> y)) <span class="sc">+</span></span>
-<span id="cb5-11" class="hljs-ln-code"><a href="#cb5-11"></a>          <span class="fu">geom_point</span>()</span>
-<span id="cb5-12" class="hljs-ln-code"><a href="#cb5-12"></a>      })</span>
-<span id="cb5-13" class="hljs-ln-code"><a href="#cb5-13"></a>    }</span>
-<span id="cb5-14" class="hljs-ln-code"><a href="#cb5-14"></a>  )</span>
-<span id="cb5-15" class="hljs-ln-code"><a href="#cb5-15"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div><div class="column" style="width:25%;">
-<p>Minimal changes necessary</p>
-</div>
-</div>
-</section>
-<section id="anatomy-of-a-module-server-2" class="slide level2" data-auto-animate="true">
-<h2 data-id="quarto-animate-title">Anatomy of a Module (Server)</h2>
-<div class="columns">
-<div class="column" style="width:70%;">
-<div class="sourceCode" id="cb6" data-code-line-numbers="1,2"><pre class="sourceCode numberSource r number-lines code-with-copy" data-id="quarto-animate-code"><code class="sourceCode r hljs"><span id="cb6-1" class="hljs-ln-code"><a href="#cb6-1"></a>artServer <span class="ot">&lt;-</span> <span class="cf">function</span>(id) {</span>
-<span id="cb6-2" class="hljs-ln-code"><a href="#cb6-2"></a>  <span class="fu">moduleServer</span>(id,</span>
-<span id="cb6-3" class="hljs-ln-code"><a href="#cb6-3"></a>    <span class="cf">function</span>(input, output, session) {</span>
-<span id="cb6-4" class="hljs-ln-code"><a href="#cb6-4"></a>      df <span class="ot">&lt;-</span> <span class="fu">reactive</span>({</span>
-<span id="cb6-5" class="hljs-ln-code"><a href="#cb6-5"></a>        <span class="co"># do something fancy</span></span>
-<span id="cb6-6" class="hljs-ln-code"><a href="#cb6-6"></a>      })</span>
-<span id="cb6-7" class="hljs-ln-code"><a href="#cb6-7"></a>      </span>
-<span id="cb6-8" class="hljs-ln-code"><a href="#cb6-8"></a>      output<span class="sc">$</span>plot1 <span class="ot">&lt;-</span> <span class="fu">renderPlot</span>({</span>
-<span id="cb6-9" class="hljs-ln-code"><a href="#cb6-9"></a>        <span class="fu">ggplot</span>(<span class="fu">df</span>(), <span class="fu">aes</span>(<span class="at">x =</span> x, <span class="at">y =</span> y)) <span class="sc">+</span></span>
-<span id="cb6-10" class="hljs-ln-code"><a href="#cb6-10"></a>          <span class="fu">geom_point</span>()</span>
-<span id="cb6-11" class="hljs-ln-code"><a href="#cb6-11"></a>      })</span>
-<span id="cb6-12" class="hljs-ln-code"><a href="#cb6-12"></a>    }</span>
-<span id="cb6-13" class="hljs-ln-code"><a href="#cb6-13"></a>  )</span>
-<span id="cb6-14" class="hljs-ln-code"><a href="#cb6-14"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div><div class="column" style="width:30%;">
-<p><span class="emoji" data-emoji="thinking">🤔</span> <code>id</code></p>
-</div>
-</div>
-<ul>
-<li class="fragment">`<code>moduleServer()</code>: Encapsulate server-side logic with namespace applied.</li>
+<li class="fragment">Elicit goals &amp; requirements from customers <strong>early</strong> and <strong>often</strong></li>
+<li class="fragment">Resist urge to perfect server-side processing right away</li>
+<li class="fragment">Bring a minimum viable product (MVP) to customers for feedback</li>
 </ul>
 </section>
-<section id="invoking-modules" class="slide level2">
-<h2>Invoking Modules</h2>
-<div class="sourceCode" id="cb7"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb7-1"><a href="#cb7-1"></a>ui <span class="ot">&lt;-</span> <span class="fu">fluidPage</span>(</span>
-<span id="cb7-2"><a href="#cb7-2"></a>  <span class="fu">fluidRow</span>(</span>
-<span id="cb7-3"><a href="#cb7-3"></a>    <span class="fu">artUI</span>(<span class="st">"mod1"</span>)</span>
-<span id="cb7-4"><a href="#cb7-4"></a>  )</span>
-<span id="cb7-5"><a href="#cb7-5"></a>)</span>
-<span id="cb7-6"><a href="#cb7-6"></a></span>
-<span id="cb7-7"><a href="#cb7-7"></a>server <span class="ot">&lt;-</span> <span class="cf">function</span>(input, output, session) {</span>
-<span id="cb7-8"><a href="#cb7-8"></a>  <span class="fu">artServer</span>(<span class="st">"mod1"</span>)</span>
-<span id="cb7-9"><a href="#cb7-9"></a>}</span>
-<span id="cb7-10"><a href="#cb7-10"></a></span>
-<span id="cb7-11"><a href="#cb7-11"></a><span class="fu">shinyApp</span>(ui, server)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<section class="slide level2">
+
+
+<img data-src="assets/img/whiteboard_design.jpg" class="r-stretch"></section></section>
+<section>
+<section id="code-along" class="title-slide slide level1 center" data-background-color="#17395c">
+<h1><svg aria-hidden="true" role="img" viewbox="0 0 640 512" style="height:1em;width:1.25em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:white;overflow:visible;position:relative;"><path d="M128 96c26.5 0 48-21.5 48-48S154.5 0 128 0 80 21.5 80 48s21.5 48 48 48zm384 0c26.5 0 48-21.5 48-48S538.5 0 512 0s-48 21.5-48 48 21.5 48 48 48zm125.7 372.1l-44-110-41.1 46.4-2 18.2 27.7 69.2c5 12.5 17 20.1 29.7 20.1 4 0 8-.7 11.9-2.3 16.4-6.6 24.4-25.2 17.8-41.6zm-34.2-209.8L585 178.1c-4.6-20-18.6-36.8-37.5-44.9-18.5-8-39-6.7-56.1 3.3-22.7 13.4-39.7 34.5-48.1 59.4L432 229.8 416 240v-96c0-8.8-7.2-16-16-16H240c-8.8 0-16 7.2-16 16v96l-16.1-10.2-11.3-33.9c-8.3-25-25.4-46-48.1-59.4-17.2-10-37.6-11.3-56.1-3.3-18.9 8.1-32.9 24.9-37.5 44.9l-18.4 80.2c-4.6 20 .7 41.2 14.4 56.7l67.2 75.9 10.1 92.6C130 499.8 143.8 512 160 512c1.2 0 2.3-.1 3.5-.2 17.6-1.9 30.2-17.7 28.3-35.3l-10.1-92.8c-1.5-13-6.9-25.1-15.6-35l-43.3-49 17.6-70.3 6.8 20.4c4.1 12.5 11.9 23.4 24.5 32.6l51.1 32.5c4.6 2.9 12.1 4.6 17.2 5h160c5.1-.4 12.6-2.1 17.2-5l51.1-32.5c12.6-9.2 20.4-20 24.5-32.6l6.8-20.4 17.6 70.3-43.3 49c-8.7 9.9-14.1 22-15.6 35l-10.1 92.8c-1.9 17.6 10.8 33.4 28.3 35.3 1.2.1 2.3.2 3.5.2 16.1 0 30-12.1 31.8-28.5l10.1-92.6 67.2-75.9c13.6-15.5 19-36.7 14.4-56.7zM46.3 358.1l-44 110c-6.6 16.4 1.4 35 17.8 41.6 16.8 6.6 35.1-1.7 41.6-17.8l27.7-69.2-2-18.2-41.1-46.4z"></path></svg> Code-Along</h1>
+<p><a href="codealong-1.html" target="_blank">Code-Along 1</a>: Using the <code>{shinipsum}</code> package for rapid UI prototyping</p>
 </section>
-<section id="giving-and-receiving" class="slide level2">
-<h2>Giving and Receiving</h2>
-<div class="columns">
-<div class="column" style="width:60%;">
-<div class="sourceCode" id="cb8"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb8-1"><a href="#cb8-1"></a>artUI <span class="ot">&lt;-</span> <span class="cf">function</span>(id, <span class="at">choices =</span> <span class="fu">c</span>(<span class="st">"jar"</span>, <span class="st">"vase"</span>)) {</span>
-<span id="cb8-2"><a href="#cb8-2"></a>  ns <span class="ot">&lt;-</span> <span class="fu">NS</span>(id)</span>
-<span id="cb8-3"><a href="#cb8-3"></a>  <span class="fu">tagList</span>(</span>
-<span id="cb8-4"><a href="#cb8-4"></a>    <span class="fu">checkboxInput</span>(</span>
-<span id="cb8-5"><a href="#cb8-5"></a>      <span class="fu">ns</span>(<span class="st">"input1"</span>),</span>
-<span id="cb8-6"><a href="#cb8-6"></a>      <span class="st">"Check Here"</span></span>
-<span id="cb8-7"><a href="#cb8-7"></a>    ),</span>
-<span id="cb8-8"><a href="#cb8-8"></a>    <span class="fu">selectInput</span>(</span>
-<span id="cb8-9"><a href="#cb8-9"></a>      <span class="fu">ns</span>(<span class="st">"input2"</span>),</span>
-<span id="cb8-10"><a href="#cb8-10"></a>      <span class="st">"Select Object"</span>,</span>
-<span id="cb8-11"><a href="#cb8-11"></a>      <span class="at">choices =</span> choices,</span>
-<span id="cb8-12"><a href="#cb8-12"></a>      <span class="at">selected =</span> choices[<span class="dv">1</span>],</span>
-<span id="cb8-13"><a href="#cb8-13"></a>      <span class="at">multiple =</span> <span class="cn">FALSE</span></span>
-<span id="cb8-14"><a href="#cb8-14"></a>    ),</span>
-<span id="cb8-15"><a href="#cb8-15"></a>    <span class="fu">plotOutput</span>(<span class="fu">ns</span>(<span class="st">"plot1"</span>))</span>
-<span id="cb8-16"><a href="#cb8-16"></a>  )</span>
-<span id="cb8-17"><a href="#cb8-17"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div><div class="column" style="width:40%;">
+<section id="additional-tools" class="slide level2">
+<h2>Additional Tools</h2>
+<div>
 <ul>
-<li class="fragment">Reasonable inputs: static values, vectors, flags</li>
-<li class="fragment">Avoid <strong>reactive</strong> parameters</li>
-<li class="fragment">Return value: <code>tagList()</code> of inputs, output placeholders, and other UI elements</li>
+<li><a href="https://moqups.com/">moqups.com</a>: Streamlined web app to create wireframes, mockups, diagrams, and more</li>
+<li><a href="https://excalidraw.com/">excalidraw.com</a>: Collaborative whiteboard tool for sketching diagrams</li>
+<li>Any presentation software (yes, even PowerPoint)</li>
 </ul>
 </div>
-</div>
+</section></section>
+<section>
+<section id="application-dependencies" class="title-slide slide level1 center">
+<h1>Application Dependencies</h1>
+
 </section>
-<section id="giving-and-receiving-1" class="slide level2">
-<h2>Giving and Receiving</h2>
-<div class="sourceCode" id="cb9"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb9-1"><a href="#cb9-1"></a>artServer <span class="ot">&lt;-</span> <span class="cf">function</span>(id, df, <span class="at">title =</span> <span class="st">"My Plot"</span>) {</span>
-<span id="cb9-2"><a href="#cb9-2"></a>  <span class="fu">moduleServer</span>(id,</span>
-<span id="cb9-3"><a href="#cb9-3"></a>    <span class="cf">function</span>(input, output, session) {</span>
-<span id="cb9-4"><a href="#cb9-4"></a>      user_selections <span class="ot">&lt;-</span> <span class="fu">reactive</span>({</span>
-<span id="cb9-5"><a href="#cb9-5"></a>        <span class="fu">list</span>(<span class="at">input1 =</span> input<span class="sc">$</span>input1, <span class="at">input2 =</span> input<span class="sc">$</span>input2)</span>
-<span id="cb9-6"><a href="#cb9-6"></a>      })</span>
-<span id="cb9-7"><a href="#cb9-7"></a>      </span>
-<span id="cb9-8"><a href="#cb9-8"></a>      output<span class="sc">$</span>plot1 <span class="ot">&lt;-</span> <span class="fu">renderPlot</span>({</span>
-<span id="cb9-9"><a href="#cb9-9"></a>        <span class="fu">ggplot</span>(<span class="fu">df</span>(), <span class="fu">aes</span>(<span class="at">x =</span> x, <span class="at">y =</span> y)) <span class="sc">+</span></span>
-<span id="cb9-10"><a href="#cb9-10"></a>          <span class="fu">geom_point</span>() <span class="sc">+</span></span>
-<span id="cb9-11"><a href="#cb9-11"></a>          <span class="fu">ggtitle</span>(title)</span>
-<span id="cb9-12"><a href="#cb9-12"></a>      })</span>
-<span id="cb9-13"><a href="#cb9-13"></a>      </span>
-<span id="cb9-14"><a href="#cb9-14"></a>      user_selections</span>
-<span id="cb9-15"><a href="#cb9-15"></a>    }</span>
-<span id="cb9-16"><a href="#cb9-16"></a>  )</span>
-<span id="cb9-17"><a href="#cb9-17"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<section id="its-never-just-shiny" class="slide level2">
+<h2>It’s Never Just Shiny</h2>
+<p>… at least for production-quality apps!</p>
 <ul>
-<li class="fragment">Input parameters (and return values) can be a mix of static and <strong>reactive</strong> objects</li>
+<li class="fragment">External data sources</li>
+<li class="fragment">Connections to other execution backends</li>
+<li class="fragment">Additional R packages!</li>
 </ul>
 </section>
-<section id="to-or-not-to" class="slide level2 smaller">
-<h2>To () or not to ()</h2>
-<div class="columns">
-<div class="column" style="width:40%;">
-<div class="sourceCode" id="cb10"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb10-1"><a href="#cb10-1"></a><span class="co"># app server</span></span>
-<span id="cb10-2"><a href="#cb10-2"></a>df <span class="ot">&lt;-</span> <span class="fu">reactive</span>({</span>
-<span id="cb10-3"><a href="#cb10-3"></a>  art_data <span class="sc">|&gt;</span></span>
-<span id="cb10-4"><a href="#cb10-4"></a>    <span class="fu">filter</span>(dept <span class="sc">==</span> input<span class="sc">$</span>dept)</span>
-<span id="cb10-5"><a href="#cb10-5"></a>})</span>
-<span id="cb10-6"><a href="#cb10-6"></a></span>
-<span id="cb10-7"><a href="#cb10-7"></a><span class="fu">artServer</span>(<span class="st">"mod1"</span>, df)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
-</div><div class="column" style="width:60%;">
-<div class="sourceCode" id="cb11"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb11-1"><a href="#cb11-1"></a>artServer <span class="ot">&lt;-</span> <span class="cf">function</span>(id, df, <span class="at">title =</span> <span class="st">"Amazing"</span>) {</span>
-<span id="cb11-2"><a href="#cb11-2"></a>  <span class="fu">moduleServer</span>(id,</span>
-<span id="cb11-3"><a href="#cb11-3"></a>    <span class="cf">function</span>(input, output, session) {</span>
-<span id="cb11-4"><a href="#cb11-4"></a>      user_selections <span class="ot">&lt;-</span> <span class="fu">reactive</span>({</span>
-<span id="cb11-5"><a href="#cb11-5"></a>        <span class="fu">list</span>(<span class="at">input1 =</span> input<span class="sc">$</span>input1,</span>
-<span id="cb11-6"><a href="#cb11-6"></a>             <span class="at">input2 =</span> input<span class="sc">$</span>input2)</span>
-<span id="cb11-7"><a href="#cb11-7"></a>      })</span>
-<span id="cb11-8"><a href="#cb11-8"></a>      </span>
-<span id="cb11-9"><a href="#cb11-9"></a>      output<span class="sc">$</span>plot1 <span class="ot">&lt;-</span> <span class="fu">renderPlot</span>({</span>
-<span id="cb11-10"><a href="#cb11-10"></a>        <span class="fu">ggplot</span>(<span class="fu">df</span>(), <span class="fu">aes</span>(<span class="at">x =</span> x, <span class="at">y =</span> y)) <span class="sc">+</span></span>
-<span id="cb11-11"><a href="#cb11-11"></a>          <span class="fu">geom_point</span>() <span class="sc">+</span></span>
-<span id="cb11-12"><a href="#cb11-12"></a>          <span class="fu">ggtitle</span>(title)</span>
-<span id="cb11-13"><a href="#cb11-13"></a>      })</span>
-<span id="cb11-14"><a href="#cb11-14"></a>      </span>
-<span id="cb11-15"><a href="#cb11-15"></a>      user_selections</span>
-<span id="cb11-16"><a href="#cb11-16"></a>    }</span>
-<span id="cb11-17"><a href="#cb11-17"></a>  )</span>
-<span id="cb11-18"><a href="#cb11-18"></a>}</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+<section id="turned-upside-down" class="slide level2">
+<h2>Turned Upside-Down</h2>
+<p>Imagine your application is working great!</p>
+<p><br></p>
+<div class="fragment">
+<div class="columns v-center-container">
+<div class="column" style="width:50%;">
+<div class="sourceCode" id="cb1"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb1-1"><a href="#cb1-1"></a><span class="fu">update.packages</span>(<span class="at">ask =</span> <span class="cn">FALSE</span>)</span>
+<span id="cb1-2"><a href="#cb1-2"></a>remotes<span class="sc">::</span><span class="fu">install_github</span>(<span class="st">"pkg"</span>)</span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
+</div><div class="column" style="width:&quot;50%;">
+<p><img data-src="https://rfortherestofus.com/wp-content/uploads/2020/09/update-packages-prompt.png"></p>
 </div>
 </div>
+</div>
+</section>
+<section id="turned-upside-down-1" class="slide level2">
+<h2>Turned Upside-Down</h2>
+<div class="columns v-center-container">
+<div class="column" style="width:50%;">
+<p><code>ggplot2</code> version <code>0.9.3</code></p>
+<p><img data-src="assets/img/computer_user_happy.png" style="width:60.0%"></p>
+</div><div class="column" style="width:50%;">
+<p><code>ggplot2</code> version <code>1.0.0</code></p>
+<p><img data-src="http://i.giphy.com/RhEvCHIeZAZ6E.gif"></p>
+</div>
+</div>
+</section>
+<section id="take-control-with-renv" class="slide level2">
+<h2>Take Control with <a href="https://rstudio.github.io/renv/"><code>{renv}</code></a></h2>
+<blockquote>
+<p>Create <strong>r</strong>eproducible <strong>env</strong>ironments for your R projects.</p>
+</blockquote>
 <ul>
-<li class="fragment">Reactive parameters reference by <strong>name</strong>: <code>df</code></li>
-<li class="fragment">Inside module, <strong>invoke</strong> reactive parameter as you would any other reactive in Shiny: <code>df()</code></li>
-<li class="fragment">Any reactive(s) returned by module should also be reference by <strong>name</strong>: <code>user_selections</code>, <del><code>user_selections()</code></del></li>
+<li class="fragment">Next generation of <code>{packrat}</code></li>
+<li class="fragment">Isolated package library from rest of your system</li>
+<li class="fragment">Transfer projects to different collaborators / platforms</li>
+<li class="fragment"><strong>Reproducible</strong> package installation</li>
+<li class="fragment">Easily create new projects or convert existing projects with RStudio or built-in functions.</li>
 </ul>
 </section>
-<section id="your-turn-exercise-1" class="slide level2">
-<h2>Your Turn: <a href="ex-1.html" target="_blank">Exercise 1</a></h2>
-<p>Create a Shiny module for the core image viewer portion of the application in <code>ex-1/app.R</code></p>
-<div class="cell">
-<div class="cell-output-display">
-<div class="countdown" id="timer_62de7c32" style="right:0;bottom:0;" data-warnwhen="0">
-<code class="countdown-time"><span class="countdown-digits minutes">10</span><span class="countdown-digits colon">:</span><span class="countdown-digits seconds">00</span></code>
+<section id="under-the-hood" class="slide level2">
+<h2>Under the Hood</h2>
+<p>Upon initializing a project:</p>
+<ol type="1">
+<li class="fragment">Project-level <code>.Rprofile</code> to activate custom package library on startup</li>
+<li class="fragment">Lockfile <code>renv.lock</code> to describe state of project library</li>
+<li class="fragment"><code>renv/library</code> to hold private project library</li>
+<li class="fragment"><code>renv/activate.R</code> performs activation</li>
+</ol>
+</section>
+<section id="develop-a-routine" class="slide level2">
+<h2>Develop a Routine</h2>
+<p>Sticking with <code>{renv}</code> will pay off (trust me)</p>
+<ul>
+<li class="fragment">Fair play to mix packages from CRAN, GitHub, and proprietary sources</li>
+<li class="fragment">Roll back when a package upgrade doesn’t play nicely</li>
+<li class="fragment"><strong>You</strong> make the call when to update your library!</li>
+</ul>
+</section></section>
+<section>
+<section id="application-structure" class="title-slide slide level1 center">
+<h1>Application Structure</h1>
+
+</section>
+<section id="a-single-point-app.r" class="slide level2">
+<h2>A Single Point: <code>app.R</code></h2>
+<p>Prototype apps can coast by with a single <code>app.R</code></p>
+<ul>
+<li class="fragment">More inputs, visualizations, modules, tabs …</li>
+<li class="fragment">Eventually the <code>app.R</code> almost explodes</li>
+<li class="fragment">Difficult to collaborate without conflicts</li>
+</ul>
+</section>
+<section id="r-directory" class="slide level2">
+<h2><code>R</code> Directory</h2>
+<ul>
+<li class="fragment">Shiny supports auto-loading scripts in an <code>R</code> directory</li>
+<li class="fragment">Nested directories not supported</li>
+<li class="fragment">More information on the <a href="https://shiny.rstudio.com/articles/app-formats.html">App Formats</a> article</li>
+</ul>
+</section>
+<section id="enter-the-golem" class="slide level2">
+<h2>Enter the <a href="https://thinkr-open.github.io/golem/"><code>{golem}</code></a></h2>
+<blockquote>
+<p>Opinionated framework for building production-grade Shiny applications as <strong>R packages</strong></p>
+</blockquote>
+<ul>
+<li class="fragment">Scripts guide you with first steps akin to <code>{usethis}</code> &amp; <code>{devtools}</code></li>
+<li class="fragment">Encourages Shiny best practices (especially <strong>modules</strong>)</li>
+<li class="fragment">Streamlines deployment on multiple platforms</li>
+</ul>
+</section></section>
+<section>
+<section id="code-along-1" class="title-slide slide level1 center" data-background-color="#17395c">
+<h1><svg aria-hidden="true" role="img" viewbox="0 0 640 512" style="height:1em;width:1.25em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:white;overflow:visible;position:relative;"><path d="M128 96c26.5 0 48-21.5 48-48S154.5 0 128 0 80 21.5 80 48s21.5 48 48 48zm384 0c26.5 0 48-21.5 48-48S538.5 0 512 0s-48 21.5-48 48 21.5 48 48 48zm125.7 372.1l-44-110-41.1 46.4-2 18.2 27.7 69.2c5 12.5 17 20.1 29.7 20.1 4 0 8-.7 11.9-2.3 16.4-6.6 24.4-25.2 17.8-41.6zm-34.2-209.8L585 178.1c-4.6-20-18.6-36.8-37.5-44.9-18.5-8-39-6.7-56.1 3.3-22.7 13.4-39.7 34.5-48.1 59.4L432 229.8 416 240v-96c0-8.8-7.2-16-16-16H240c-8.8 0-16 7.2-16 16v96l-16.1-10.2-11.3-33.9c-8.3-25-25.4-46-48.1-59.4-17.2-10-37.6-11.3-56.1-3.3-18.9 8.1-32.9 24.9-37.5 44.9l-18.4 80.2c-4.6 20 .7 41.2 14.4 56.7l67.2 75.9 10.1 92.6C130 499.8 143.8 512 160 512c1.2 0 2.3-.1 3.5-.2 17.6-1.9 30.2-17.7 28.3-35.3l-10.1-92.8c-1.5-13-6.9-25.1-15.6-35l-43.3-49 17.6-70.3 6.8 20.4c4.1 12.5 11.9 23.4 24.5 32.6l51.1 32.5c4.6 2.9 12.1 4.6 17.2 5h160c5.1-.4 12.6-2.1 17.2-5l51.1-32.5c12.6-9.2 20.4-20 24.5-32.6l6.8-20.4 17.6 70.3-43.3 49c-8.7 9.9-14.1 22-15.6 35l-10.1 92.8c-1.9 17.6 10.8 33.4 28.3 35.3 1.2.1 2.3.2 3.5.2 16.1 0 30-12.1 31.8-28.5l10.1-92.6 67.2-75.9c13.6-15.5 19-36.7 14.4-56.7zM46.3 358.1l-44 110c-6.6 16.4 1.4 35 17.8 41.6 16.8 6.6 35.1-1.7 41.6-17.8l27.7-69.2-2-18.2-41.1-46.4z"></path></svg> Code-Along</h1>
+<p><a href="codealong-2.html" target="_blank">Code-Along 2</a>: Create a new Shiny application using the <code>{golem}</code> framework</p>
+<p>::: footer <a href="https://engineering-shiny.org/">engineering-shiny.org</a></p>
+</section>
+<section id="enter-the-rhino" class="slide level2">
+<h2>Enter the <a href="https://appsilon.github.io/rhino/"><code>{rhino}</code></a></h2>
+<blockquote>
+<p>Create Shiny apps using software engineering best practices and development tools</p>
+</blockquote>
+<ul>
+<li class="fragment">App structure inspired by other web app stacks</li>
+<li class="fragment">Also encourages Shiny <strong>modules</strong></li>
+<li class="fragment">Pre-configured development tools</li>
+<li class="fragment">Relies on <a href="https://klmr.me/box/"><code>{box}</code></a> for importing functions</li>
+<li class="fragment">Automatic configuration of <code>{renv}</code> for package management</li>
+</ul>
+</section></section>
+<section id="code-along-2" class="title-slide slide level1 center" data-background-color="#17395c">
+<h1><svg aria-hidden="true" role="img" viewbox="0 0 640 512" style="height:1em;width:1.25em;vertical-align:-0.125em;margin-left:auto;margin-right:auto;font-size:inherit;fill:white;overflow:visible;position:relative;"><path d="M128 96c26.5 0 48-21.5 48-48S154.5 0 128 0 80 21.5 80 48s21.5 48 48 48zm384 0c26.5 0 48-21.5 48-48S538.5 0 512 0s-48 21.5-48 48 21.5 48 48 48zm125.7 372.1l-44-110-41.1 46.4-2 18.2 27.7 69.2c5 12.5 17 20.1 29.7 20.1 4 0 8-.7 11.9-2.3 16.4-6.6 24.4-25.2 17.8-41.6zm-34.2-209.8L585 178.1c-4.6-20-18.6-36.8-37.5-44.9-18.5-8-39-6.7-56.1 3.3-22.7 13.4-39.7 34.5-48.1 59.4L432 229.8 416 240v-96c0-8.8-7.2-16-16-16H240c-8.8 0-16 7.2-16 16v96l-16.1-10.2-11.3-33.9c-8.3-25-25.4-46-48.1-59.4-17.2-10-37.6-11.3-56.1-3.3-18.9 8.1-32.9 24.9-37.5 44.9l-18.4 80.2c-4.6 20 .7 41.2 14.4 56.7l67.2 75.9 10.1 92.6C130 499.8 143.8 512 160 512c1.2 0 2.3-.1 3.5-.2 17.6-1.9 30.2-17.7 28.3-35.3l-10.1-92.8c-1.5-13-6.9-25.1-15.6-35l-43.3-49 17.6-70.3 6.8 20.4c4.1 12.5 11.9 23.4 24.5 32.6l51.1 32.5c4.6 2.9 12.1 4.6 17.2 5h160c5.1-.4 12.6-2.1 17.2-5l51.1-32.5c12.6-9.2 20.4-20 24.5-32.6l6.8-20.4 17.6 70.3-43.3 49c-8.7 9.9-14.1 22-15.6 35l-10.1 92.8c-1.9 17.6 10.8 33.4 28.3 35.3 1.2.1 2.3.2 3.5.2 16.1 0 30-12.1 31.8-28.5l10.1-92.6 67.2-75.9c13.6-15.5 19-36.7 14.4-56.7zM46.3 358.1l-44 110c-6.6 16.4 1.4 35 17.8 41.6 16.8 6.6 35.1-1.7 41.6-17.8l27.7-69.2-2-18.2-41.1-46.4z"></path></svg> Code-Along</h1>
+<p><a href="codealong-3.html" target="_blank">Code-Along 3</a>: Create a new Shiny application using the <code>{rhino}</code> framework</p>
+</section>
+
+<section>
+<section id="regression-testing" class="title-slide slide level1 center">
+<h1>Regression Testing</h1>
+
+</section>
+<section id="a-familiar-strategy" class="slide level2">
+<h2>A Familiar Strategy</h2>
+<div class="fragment">
+<p><img data-src="assets/img/hadley-wickham.gif"></p>
 </div>
+<div class="fragment">
+<div class="sourceCode" id="cb2"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb2-1"><a href="#cb2-1"></a><span class="co">#&gt; Error: Can't access reactive value 'x' outside of reactive consumer</span></span>
+<span id="cb2-2"><a href="#cb2-2"></a><span class="co">#&gt; ℹ Do you need to wrap inside reactive() or observer()?</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
+<div class="fragment">
+<div class="sourceCode" id="cb3"><pre class="sourceCode numberSource r number-lines code-with-copy"><code class="sourceCode r"><span id="cb3-1"><a href="#cb3-1"></a><span class="co">#&gt; Error: Unexpected character object for output$greeting</span></span>
+<span id="cb3-2"><a href="#cb3-2"></a><span class="co">#&gt; ℹ Did you forget to use a render function?</span></span></code><button title="Copy to Clipboard" class="code-copy-button"><i class="bi"></i></button></pre></div>
 </div>
+</section>
+<section id="enter-shinytest2" class="slide level2">
+<h2>Enter <a href="https://rstudio.github.io/shinytest2/"><code>{shinytest2}</code></a></h2>
+<blockquote>
+<p><code>{shinytest2}</code> provides a streamlined toolkit for unit testing Shiny applications</p>
+</blockquote>
+<ul>
+<li class="fragment">Next generation of <code>{shinytest}</code></li>
+<li class="fragment">Tightly coupled with <a href="https://testthat.r-lib.org/"><code>{testthat}</code></a>, used widely in package development</li>
+<li class="fragment">Powered by <a href="https://github.com/rstudio/chromote"><code>{chromote}</code></a> to render applications in a headless Chrome browser</li>
+</ul>
 
 <div class="footer footer-default">
 <p><a href="https://shinyprod.com">shinyprod.com</a></p>
 </div>
-</section>
+</section></section>
     </div>
   </div>
 
