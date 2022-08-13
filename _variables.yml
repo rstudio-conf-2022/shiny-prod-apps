@@ -7,8 +7,8 @@ bathrooms_location: "near National Harbor Rooms"
 wifi_username: "conf22"
 wifi_password: "together!"
 room: "National Harbor 2"
-rsconnect_url: "https://rsc.training.rstudio.com"
-rstudio_cloud_workspace_url: "https://rstudio.cloud/spaces/233623/join?access_code=qgH-Ex8bTRirvHt5uqYHKCgswSXh2KpPIlsormqD"
+rsconnect_url: "URL Forthcoming"
+rstudio_cloud_workspace_url: "URL Forthcoming"
 people:
   adevries:
     name: "Andrie De Vries"
