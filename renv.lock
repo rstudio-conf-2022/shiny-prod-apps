@@ -331,14 +331,24 @@
     },
     "bslib": {
       "Package": "bslib",
-      "Version": "0.3.1",
-      "Source": "Repository",
-      "Repository": "RSPM",
-      "Hash": "56ae7e1987b340186a8a5a157c2ec358",
+      "Version": "0.4.1.9900",
+      "Source": "GitHub",
+      "RemoteType": "github",
+      "RemoteHost": "api.github.com",
+      "RemoteUsername": "rstudio",
+      "RemoteRepo": "bslib",
+      "RemoteRef": "main",
+      "RemoteSha": "b2c5406d3aa5d82519983610eeb45a6ac13d1b7c",
+      "Remotes": "rstudio/bsicons, rstudio/htmltools, rstudio/shiny,\n    ramnathv/htmlwidgets",
+      "Hash": "a4ae67918a603fb3f10df1e563f15844",
       "Requirements": [
+        "base64enc",
+        "cachem",
         "htmltools",
         "jquerylib",
         "jsonlite",
+        "memoise",
+        "mime",
         "rlang",
         "sass"
       ]
@@ -1067,13 +1077,19 @@
     },
     "htmltools": {
       "Package": "htmltools",
-      "Version": "0.5.2",
-      "Source": "Repository",
-      "Repository": "RSPM",
-      "Hash": "526c484233f42522278ab06fb185cb26",
+      "Version": "0.5.3.9002",
+      "Source": "GitHub",
+      "RemoteType": "github",
+      "RemoteHost": "api.github.com",
+      "RemoteUsername": "rstudio",
+      "RemoteRepo": "htmltools",
+      "RemoteRef": "main",
+      "RemoteSha": "39b3f1f6a4abef8acebc407d506d239d871d6a03",
+      "Hash": "203ce3df520e3543196cbe416180e7c8",
       "Requirements": [
         "base64enc",
         "digest",
+        "ellipsis",
         "fastmap",
         "rlang"
       ]
@@ -2099,7 +2115,7 @@
       "RemoteRef": "main",
       "RemoteSha": "b4da92351a4faa0e984375d7f9d8330ddf0efcd9",
       "Remotes": "rstudio/connectapi",
-      "Hash": "bc0e5bbe32e6592e796958785e52d236",
+      "Hash": "d44fc40b881569e5196ab39300527a6e",
       "Requirements": [
         "cli",
         "connectapi",
